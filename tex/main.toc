@@ -1,0 +1,14 @@
+ \cftsetpnumwidth {\widthof {1}-1pt} 
+ \cftsetpnumwidth {\widthof {2}-1pt} 
+ \cftsetpnumwidth {\widthof {3}-1pt} 
+ \cftsetpnumwidth {\widthof {1}-1pt} 
+ \cftsetpnumwidth {\widthof {2}-1pt} 
+ \cftsetpnumwidth {\widthof {3}-1pt} 
+ \cftsetpnumwidth {\widthof {4}-1pt} 
+ \cftsetpnumwidth {\widthof {5}-1pt} 
+ \cftsetpnumwidth {\widthof {6}-1pt} 
+ \cftsetpnumwidth {\widthof {1}-1pt} 
+\setcounter {tocdepth}{2}
+\contentsline {chapter}{\numberline {第一章}绪\hspace {6pt}论}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}研究工作的背景及意义}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}国内外研究现状}{1}{section.1.2}%
