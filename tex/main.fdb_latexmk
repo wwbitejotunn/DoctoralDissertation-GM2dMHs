@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1637651350 "d:/bjwang/PHD_thesis/LaTexRepo/tex/main.tex" "main.pdf" "main" 1637651393
+["pdflatex"] 1637651350 "d:/bjwang/PHD_thesis/LaTexRepo/tex/main.tex" "main.pdf" "main" 1637665141
   "accomplish.aux" 1637651353 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1637253915 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2021/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1637257910 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -195,14 +195,14 @@
   "main.tex" 1637650895 580 206a20a102baffada8a4c60ad617c232 ""
   "main.toc" 1637651354 660 a1dd34c08ba162c56eac0e58a8ba9b30 "pdflatex"
   "misc/chineseAbstract.tex" 1637651332 120 458f86905d44b10243a35f074682c7ee ""
-  "misc/englishAbstract.tex" 1637651392 131 4df2c9ddf222e25e04756023e5bc2a96 ""
+  "misc/englishAbstract.tex" 1637659446 131 4df2c9ddf222e25e04756023e5bc2a96 ""
   "nul" 0 0 d41d8cd98f00b204e9800998ecf8427e ""
   "pic//logo.pdf" 1637636744 379576 7e126e7b491bb646692399cea219f487 ""
   "thesis-uestc.cls" 1637636744 36080 ed450a2e37a6afc297950eb6e555b90d ""
   (generated)
-  "main.aux"
-  "main.log"
+  "main.out"
   "main.pdf"
   "main.toc"
   "accomplish.aux"
-  "main.out"
+  "main.log"
+  "main.aux"

@@ -1,0 +1,12 @@
+*.synctex.gz
+*.fdb_latexmk
+.DS_Store
+.texpadtmp
+
+*.synctex(busy)
+*.aux
+*.log
+*.fls
+*.out
+*.bbl
+*.blg
