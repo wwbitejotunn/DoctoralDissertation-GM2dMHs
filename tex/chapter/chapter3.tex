@@ -23,7 +23,6 @@
     其中，$E_{\rm{Cu+\CCluster{24}}}$为通过第一性原理计算获得的石墨烯$\CCluster{24}$团簇吸附铜衬底上的总能量，$E_{\rm{Cu}}$为单独铜衬底的能量，$E_{\rm{\CCluster{24}}}$为单独石墨烯$\CCluster{24}$团簇的能量。
     
     如图\ref{GO_calculateFlow}所示，对于不同衬底表面上石墨烯$\CCluster{24}$团簇优先生长方向的搜索以及不同生长方向的相对能量计算，我们使用全优化的方式枚举计算不同衬底表面石墨烯$\CCluster{24}$团簇的最优和次优生长方向。为了尽可能搜寻石墨烯$\CCluster{24}$团簇在不同衬底表面的能量最低构型，我们枚举了不同的生长位点，并在每个生长位点上以\SI{6}{\degree}或者\SI{3}{\degree}的间隔枚举不同的生长方向。 确定不同衬底表面石墨烯$\CCluster{24}$团簇的最优和次优生长角度后，我们使用线性插值的方式，计算最优和次优生长方向之间的石墨烯$\CCluster{24}$团簇内部的碳原子位置作为中间态。最后，通过固定碳原子XY轴，在Z轴方向优化的方式对这些固定团簇生长角度的中间态进行结构优化，获得石墨烯$\CCluster{24}$团簇在最稳和次稳生长方向之间各个生长角度的形成能$E_{\rm{f}}$。石墨烯$\CCluster{24}$团簇的生长方向以其相对于衬底的方向进行标识。考虑到本章的主要研究对象为晶面指数为$\rm{(11n)(n \geqslant 1)}$的铜衬底。$\rm{(11n)(n \geqslant 1)}$中的高指数铜衬底可以看看成由铜（100）或者铜（111）台面与<110>晶向的台阶组合而成。因此我们使用$\CCluster{24}$团簇的锯齿边（zigzag）与铜衬底表面的<110>晶向的相对夹角$\Theta$作为$\CCluster{24}$团簇的生长方向的指标（\ref{GO_relativeAngle}）。
-    %//TODO 计算流程示意图，夹角
     \begin{figure}
         \subfloat[]{
             \label{GO_calculateFlow}
@@ -42,27 +41,26 @@
 
         \begin{figure}[htbp]
             \subfloat[]{
-                \label{GO_001_15_structure_top}
-                \includegraphics[width=0.4\textwidth]{GO_C24_flat_001_15deg_structure_top.png}
-            }
-            \subfloat[]{
                 \label{GO_001_15_structure_side}
                 \includegraphics[width=0.4\textwidth]{GO_C24_flat_001_15deg_structure_side.png}
+            }
+            \subfloat[]{
+                \label{GO_001_15_structure_top}
+                \includegraphics[width=0.4\textwidth]{GO_C24_flat_001_15deg_structure_top.png}
             }
             \caption{铜（001）晶面石墨烯$\CCluster{24}$团簇的最优生长晶向（\SI{15}{\degree}）及原子构型。(a)侧视图；(b)俯视图。图中，碳原子为灰色，铜原子为红色，不同层的铜原子以不同亮度进行区分。
             }
             \label{GO_001_15_structure}
         \end{figure}
 
-        接着，我们进一步计算了$\CCluster{24}$团簇在铜（001）表面各个角度的相对形成能，结果如图\ref{GO_001_energy}所示。可以看到，$\CCluster{24}$团簇在平坦的铜（001）表面具有两个不重合的能量最小值，分别位于+15\si{\degree}和-15\si{\degree}。$\CCluster{24}$团簇在0\si{\degree}和30\si{\degree}的生长方向处于能量最高值。从能量最高的生长角度到能量最低的生长角度，$\CCluster{24}$团簇在中间态的相对能量逐渐下降。由于$\CCluster{24}$团簇在旋转至最低能态的过程中均为放热反应，因此绝大部分在成核阶段未处于最优生长方向的石墨烯晶畴会在热力学的作用下逐渐向$\pm 15$ \si{\degree} 的生长晶向靠拢。在铜（001）表面，$\pm 15$ \si{\degree} 的石墨烯$\CCluster{24}$团簇互为镜面对称，具有相同的形成能。因此在成核生长的过程中，约有一半的石墨烯畴会采取$-15$ \si{\degree}的晶向生长，而另一半则会生长为$+15$ \si{\degree}的石墨烯畴。从原子结构的角度来看，互为镜像的$\pm 15$ \si{\degree} 石墨烯畴在几何上并不重叠。在生长过程中的不同晶畴进行融合时仍会产生晶界。
+        接着，我们进一步计算了$\CCluster{24}$团簇在铜（001）表面各个角度的相对形成能，结果如图\ref{GO_001_energy}所示。可以看到，$\CCluster{24}$团簇在平坦的铜（001）表面具有两个不重合的能量最小值，分别位于+15\si{\degree}和-15\si{\degree}。$\CCluster{24}$团簇在0\si{\degree}和30\si{\degree}的生长方向处于能量最高值。从能量最高的生长角度到能量最低的生长角度，$\CCluster{24}$团簇在中间态的相对能量逐渐下降。由于$\CCluster{24}$团簇在旋转至最低能态的过程中均为放热反应，因此绝大部分在成核阶段未处于最优生长方向的石墨烯晶畴会在热力学的作用下逐渐向$\pm 15$ \si{\degree} 的生长晶向靠拢。在铜（001）表面，$\pm 15$ \si{\degree} 的石墨烯$\CCluster{24}$团簇互为镜面对称，具有相同的形成能。因此在成核生长的过程中，约有一半的石墨烯畴会采取$-15$ \si{\degree}的晶向生长，而另一半则会生长为$+15$ \si{\degree}的石墨烯畴。从原子结构的角度来看，互为镜像的$\pm 15$ \si{\degree} 石墨烯畴在几何上并不重叠，由此导致了许多实验中观察到的石墨烯晶畴的非定向生长，并且在生长过程中的不同晶畴进行融合时仍会产生晶界\citing{RN1062-2012}。
 
         \begin{figure}[htbp]
-            \includegraphics[width=0.8\textwidth]{GO_C24_flat_001_energy.png}
+            \includegraphics[width=0.8\textwidth]{pic/GO_C24_flat_001_energy.png}
             
             \caption{铜（001）晶面上不同生长角度的石墨烯$\CCluster{24}$团簇的相对形成能分布。各生长角度相对形成能的参考构型为生长角度0\si{\degree}的构型。}
             
             \label{GO_001_energy}
-            %//TODO 这个图需要origin重画
         \end{figure}
 
         而对于铜（111）面，$\CCluster{24}$团簇在其上生长的情况与在铜（001）面类似。我们同样计算了$\CCluster{24}$团簇在平坦的铜（111）表面的最优生长位点和最优生长方向。如图\ref{GO_111_structure}所示，不同于在铜（001）表面，$\CCluster{24}$团簇在平坦的铜（111）表面面上的最优生长位点为团簇中央空位垂直于铜（111）表面原子的顶端（\ref{GO_111_structure_top}）。经过优化后的$\CCluster{24}$团簇的最优生长角度为$\pm 18\si{\degree}$。$\CCluster{24}$团簇边缘的碳原子同样也和铜（111）衬底表面的铜原子形成了较强的键合，使$\CCluster{24}$团簇呈现处拱起的几何形貌。$\CCluster{24}$团簇在铜（111）表面和铜（001）表面优先生长位点和方向的不同可能是来源于不同晶面指数表面对称性的变化。对于单层的铜（001）表面，其空间对称群为$P4/mmm$，为四方对称。对于单层的铜（111）表面，其空间对称群为$P6/mmm$，为六方对称。
@@ -82,14 +80,13 @@
             
         \end{figure}
 
-        通过插值法，我们对平坦铜（111）表面的石墨烯$\CCluster{24}$团簇在最优和次优生长角度之间的中间态也进行了形成能计算（\ref{GO_111_energy}）。$\CCluster{24}$团簇在铜（111）上的次优生长方向为$\pm 30$\si{\degree}。由于衬底对称性的变化，在铜（111）表面，$0\si{\degree}$ 方向生长的$\CCluster{24}$团簇与$\pm 30\si{\degree}$方向生长的$\CCluster{24}$团簇并不等价。具体而言，遵循$0\si{\degree}$ 方向生长的$\CCluster{24}$团簇的锯齿（zigzag）边与铜（111）衬底的<110>方向平行，扶手椅（armchair）边与$<\bar{1}\bar{1}2>$方向平行。而遵循$\pm 30\si{\degree}$方向生长的$\CCluster{24}$团簇则相反，扶手椅（armchair）边与铜（111）衬底的<110>方向平行，锯齿（zigzag）边与$<\bar{1}\bar{1}2>$方向平行。铜$<\bar{1}\bar{1}2>$晶向的原子间距为$4.23 \si{\angstrom}$，高于铜<110>晶向中$2.56 \si{\angstrom}$的铜原子间距。从计算结果上看，$\pm 30\si{\degree}$方向生长的$\CCluster{24}$团簇的形成能比$0\si{\degree}$ 方向生长的$\CCluster{24}$团簇低大约$0.9\si{\electronvolt}$。与在平坦的铜（001）晶面上类似，$\CCluster{24}$团簇从任意生长角度到能量最低的$\pm 18 \si{\degree}$的中间态的能量逐渐下降。$\CCluster{24}$团簇在转向优势生长方向的过程均为放热反应，因此绝大部分在成核阶段未处于最优生长方向的石墨烯晶畴会在热力学的作用下逐渐向$\pm 18$ \si{\degree} 的生长晶向靠拢。从原子结构的角度来看，互为镜像的$\pm 18$ \si{\degree} 石墨烯畴在几何上并不重叠。在生长过程中的不同晶畴进行融合时仍会产生晶界。
+        通过插值法，我们对平坦铜（111）表面的石墨烯$\CCluster{24}$团簇在最优生长角度之间的中间态也进行了形成能计算（\ref{GO_111_energy}）。$\CCluster{24}$团簇在铜（111）上的次优生长方向为$\pm 30$\si{\degree}。由于衬底对称性的变化，在铜（111）表面，$0\si{\degree}$ 方向生长的$\CCluster{24}$团簇与$\pm 30\si{\degree}$方向生长的$\CCluster{24}$团簇并不等价。具体而言，遵循$0\si{\degree}$ 方向生长的$\CCluster{24}$团簇的锯齿（zigzag）边与铜（111）衬底的<110>方向平行，扶手椅（armchair）边与$<\bar{1}\bar{1}2>$方向平行。而遵循$\pm 30\si{\degree}$方向生长的$\CCluster{24}$团簇则相反，扶手椅（armchair）边与铜（111）衬底的<110>方向平行，锯齿（zigzag）边与$<\bar{1}\bar{1}2>$方向平行。铜$<\bar{1}\bar{1}2>$晶向的原子间距为$4.23 \si{\angstrom}$，高于铜<110>晶向中$2.56 \si{\angstrom}$的铜原子间距。从计算结果上看，$\pm 30\si{\degree}$方向生长的$\CCluster{24}$团簇的形成能比$0\si{\degree}$ 方向生长的$\CCluster{24}$团簇低大约$0.9\si{\electronvolt}$。与在平坦的铜（001）晶面上类似，$\CCluster{24}$团簇从任意生长角度到能量最低的$\pm 18 \si{\degree}$的中间态的能量逐渐下降。$\CCluster{24}$团簇在转向最优生长角度的过程均为放热反应，因此绝大部分在成核阶段未处于最优生长方向的石墨烯晶畴会在热力学的作用下逐渐向$\pm 18$ \si{\degree} 的生长晶向靠拢。从原子结构的角度来看，互为镜像的$\pm 18$ \si{\degree} 石墨烯畴在几何上并不重叠。在生长过程中的不同晶畴进行融合时仍会产生晶界。
 
         \begin{figure}[htbp]
             \includegraphics[width=0.8\textwidth]{pic/GO_C24_flat_111_energy.png}
             \caption{铜（111）晶面上不同生长角度的石墨烯$\CCluster{24}$团簇的相对形成能分布。各生长角度相对形成能的参考构型为生长角度$\pm 30$\si{\degree}的构型。
             }
             \label{GO_111_energy}
-            %//TODO 这个图需要origin重画
         \end{figure}
 
 
@@ -99,8 +96,63 @@
 
         上一小节的计算显示，对于石墨烯$\CCluster{24}$团簇，其边缘碳原子与衬底表面铜原子的相互作用产生了$\CCluster{24}$团簇的优先生长角度。进一步的计算表明，$\CCluster{24}$团簇边缘碳原子在铜衬底表面的台阶处有相比于平坦衬底更强烈的相互作用。具体而言，如果铜（001）衬底表面有一个晶向为<110>的台阶，$\CCluster{24}$团簇在台阶边缘的形成能为$E_{\rm f}^{\rm step}=-9.02 \si{\electronvolt}$，大大高于在平坦铜（001）衬底表面的形成能$E_{\rm f}^{\rm flat}=-6.24 \si{\electronvolt}$。因此，我们可以判断，石墨烯更倾向于在铜衬底的台阶处成核。
 
-        
+        对于以铜（001）为台面的$\rm{(11n)(n \geqslant 3)}$铜衬底。由于石墨烯团簇与铜衬底的相互作用主要集中在团簇边缘的未饱和碳原子。并且台阶作为台面的边缘会极大的影响石墨烯团簇与铜衬底的形成能。为了不失一般性，我们以$\CCluster{24}$团簇的直径作为参考，我们建立了三个代表性的铜衬底模型。
+        这三个模型分别对应于台面长度小于$\CCluster{24}$团簇直径的铜（115）晶面；台面长度大致等于$\CCluster{24}$团簇直径的铜（117）晶面；以及台面长度远大于小于$\CCluster{24}$团簇直径的$\rm (11X)(X \gg 7 )$晶面。
 
+        对于台面长度远大于小于$\CCluster{24}$团簇直径的$\rm (11X)(X \gg 7 )$晶面，计算结果显示当$\CCluster{24}$团簇在台阶处成核生长时$\CCluster{24}$团簇的最优成核位置位于台阶的下方（\ref{GO_11X_structure_side}和\ref{GO_11X_structure_top}），$\CCluster{24}$团簇的中央空洞位于铜（001）台面的六方密堆（hcp）位。此时一半的$\CCluster{24}$团簇边缘与铜<110>台阶成键，另一半与铜（001）台面成键。相对于在平坦的铜（001）表面，$\CCluster{24}$团簇在铜（11X）表面的两个不重叠的最优生长角度，由于台阶的作用产生了劈裂和偏移，出现了最优生长角度和次优生长角度。从\ref{GO_11X_structure_energy}中可以看到，$\CCluster{24}$团簇在铜（11X）表面的台阶处的最优生长角度为$0\si{\degree}$，次优生长角度为$\pm 30\si{\degree}$。最优和次优生长角度之间的能量差为$0.56 \si{\electronvolt}$。$\pm 30 \si{\degree}$和$0\si{\degree}$的生长角度之间，有约为$2.56\si{\electronvolt}$的旋转势垒。单一的最优生长角度使得$\CCluster{24}$团簇在铜（11X）衬底的台阶处展现出定向生长的趋势。较高的旋转势垒使得$\CCluster{24}$团簇在成核生长的过程中需要需要较高的温度才能从次优的$\pm 30 \si{\degree}$生长角度旋转至最优的$0 \si{\degree}$。同时，由于铜（11X）衬底的(001)台面具有高于$\CCluster{24}$团簇直径的宽度，因此石墨烯晶畴很可能在远离<001>台阶的位置成核生长。在远离<001>台阶的位置成核生长的石墨烯晶畴类似于在平坦铜（001）衬底的表面生长。此时生长的石墨烯晶畴则缺乏热力学上的定向趋势。因此在铜（11X）乃至于铜（001）表面很难实现石墨烯晶畴的定向生长。
+
+        \begin{figure}[htbp]
+            \subfloat[]{
+                \label{GO_11X_structure_side}
+                \includegraphics[width=0.4\textwidth]{pic/GO_11X_structure_side.png}
+            }
+            \subfloat[]{
+                \label{GO_11X_structure_top}
+                \includegraphics[width=0.4\textwidth]{pic/GO_11X_structure_top.png}
+            }
+            \quad
+            \subfloat[]{
+                \label{GO_11X_structure_energy}
+                \includegraphics[width=0.8\textwidth]{pic/GO_C24_11X_energy.png}
+            }
+            \caption{铜（11X）晶面上石墨烯$\CCluster{24}$团簇的最优生长晶向（\SI{18}  {\degree}）、原子构型以及各生长角度能量分布图。(a)最优生长晶向原子构型侧视图；(b)最优生长晶向原子构型俯视图；(c)各生长角度能量分布。图中，碳原子为灰色，铜原子为红色，不同层的铜原子以不同亮度进行区分。}
+            \label{GO_C24_11X}
+        \end{figure}
+
+        $\CCluster{24}$团簇在铜（117）以及（115）晶面的台阶处的生长情况与铜（11X）表面相似。在铜（117）晶面上，由于（001）台面的宽度与$\CCluster{24}$团簇的直径相近，$\CCluster{24}$团簇的一边与第一层台阶下边缘成键，另一层与第二层台阶的上边缘成键（\ref{GO_117_structure_side}和\ref{GO_117_structure_top}）。$\CCluster{24}$团簇在铜（117）表面的最优生长位置同样也为铜（001）台面的六方密堆（hcp）位。而对于铜（115）晶面台阶处的$\CCluster{24}$团簇生长，由于铜（115）晶面上的铜（001）台面宽度仅有2原子宽，短于$\CCluster{24}$团簇的直径，所以$\CCluster{24}$团簇无法与第一层台阶的下边缘成键（\ref{GO_115_structure_side}和\ref{GO_115_structure_top}）。导致在铜（115）晶面上，$\CCluster{24}$团簇的一边与第二层的台面成键，另一边与第三层台阶的上边缘成键。而与第二层台阶具有较强相互作用的则是位于$\CCluster{24}$团簇中部的边缘原子。
+
+        从能量的角度上看，$\CCluster{24}$团簇在铜（117）以及（115）晶面的上的最优生长角度均为$0 \si{\degree}$，次优生长角度位$\pm 30 \si{\degree}$，与铜（11X）晶面台阶处一致。在铜（117）晶面上，$\CCluster{24}$团簇在次优生长角度和最优生长角度之间的能量差为$0.43\si{\electronvolt}$。这个能量差低于$\CCluster{24}$团簇在铜（11X）晶面台阶边缘的$0.56\si{\electronvolt}$次优-最优角能量差，导致在铜（117）晶面上$\CCluster{24}$团簇从次优生长角转向最优生长角的比例不及生长在（11X）晶面台阶处的$\CCluster{24}$团簇，使得铜（117）晶面上生长的石墨烯的定向性下降。同时，$\CCluster{24}$团簇从次优的$\pm 30 \si{\degree}$生长角度转向最优的$0\si{degree}$需要克服的旋转势垒为$2.91 \si\electronvolt$，同样高于$\CCluster{24}$团簇在铜（11X）晶面台阶处的旋转势垒。较高的旋转势垒会导致$\CCluster{24}$团簇从次优生长角向最优生长角的转变难度上升，需要更多的能量或者更长的时间才能反应至最稳态。由于石墨烯晶畴的成核生长与石墨烯晶畴向最优生长角的转变是同时进行的，石墨烯晶畴的进一步生长会引入更多的边缘原子与衬底键合，可能会导致旋转势垒提高到无法依靠热能逾越的地步。因此较高的旋转势垒也可能会导致石墨烯晶畴的定向性下降。
+
+        \begin{figure}[htbp]
+            \subfloat[]{
+                \label{GO_117_structure_side}
+                \begin{overpic}[width=0.4\textwidth]{pic/GO_117_structure_side.png}
+                    \put(85,45){$(1 1 7)$}
+                \end{overpic}
+            }
+            \subfloat[]{
+                \label{GO_117_structure_top}
+                \includegraphics[width=0.4\textwidth]{pic/GO_117_structure_top.png}
+            }
+            \quad
+            \subfloat[]{
+                \label{GO_115_structure_side}
+                \begin{overpic}[width=0.4\textwidth]{pic/GO_115_structure_side.png}
+                    \put(85,40){$(1 1 5)$}
+                \end{overpic}
+            }
+            \subfloat[]{
+                \label{GO_115_structure_top}
+                \includegraphics[width=0.4\textwidth]{pic/GO_115_structure_top.png}
+            }
+            \quad
+            \subfloat[]{
+                \label{GO_C24_117_115_energy}
+                \includegraphics[width=0.8\textwidth]{pic/GO_C24_117_115_energy.png}
+            }
+            \caption{铜（117）与（115）晶面上石墨烯$\CCluster{24}$团簇的最优生长晶向、原子构型以及各生长角度能量分布图。(a)（117）晶面最优生长晶向原子构型侧视图；(b)（117）晶面最优生长晶向原子构型俯视图；(c)（115）晶面最优生长晶向原子构型侧视图；(d)（115）晶面最优生长晶向原子构型俯视图；(e)（117）与（115）晶面上$\CCluster{24}$团簇各生长角度能量分布。图中，碳原子为灰色，铜原子为红色，不同层的铜原子以不同亮度进行区分。}
+            \label{GO_C24_117_115}
+        \end{figure}
 \section{化学气氛对化学气相沉积法生长石墨烯的影响}
 \label{sec:石墨烯氧蚀刻穿透}
     \subsection{化学气相沉积法中石墨烯生长气氛模拟}
