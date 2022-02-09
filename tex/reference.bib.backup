@@ -1,3 +1,17 @@
+@article{RN1049-2012,
+   author = {Addou, Rafik and Dahal, Arjun and Sutter, Peter and Batzill, Matthias},
+   title = {Monolayer graphene growth on Ni(111) by low temperature chemical vapor deposition},
+   journal = {Applied Physics Letters},
+   volume = {100},
+   number = {2},
+   pages = {021601},
+   ISSN = {0003-6951},
+   DOI = {10.1063/1.3675481},
+   url = {https://doi.org/10.1063/1.3675481},
+   year = {2012},
+   type = {Journal Article}
+}
+
 @article{RN1062-2012,
    author = {Ago, Hiroki and Ogawa, Yui and Tsuji, Masaharu and Mizuno, Seigi and Hibino, Hiroki},
    title = {Catalytic Growth of Graphene: Toward Large-Area Single-Crystalline Graphene},
@@ -8,21 +22,6 @@
    DOI = {10.1021/jz3007029},
    url = {https://doi.org/10.1021/jz3007029},
    year = {2012},
-   type = {Journal Article}
-}
-
-@article{RN1068-2020,
-   author = {Andrei, E. Y. and MacDonald, A. H.},
-   title = {Graphene bilayers with a twist},
-   journal = {Nat Mater},
-   volume = {19},
-   number = {12},
-   pages = {1265-1275},
-   ISSN = {1476-1122 (Print)
-1476-1122 (Linking)},
-   DOI = {10.1038/s41563-020-00840-0},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/33208935},
-   year = {2020},
    type = {Journal Article}
 }
 
@@ -70,21 +69,6 @@ https://pubs.acs.org/doi/pdf/10.1021/nn3059136},
    type = {Journal Article}
 }
 
-@article{RN1083-2016,
-   author = {Braeuninger-Weimer, P. and Brennan, B. and Pollard, A. J. and Hofmann, S.},
-   title = {Understanding and Controlling Cu-Catalyzed Graphene Nucleation: The Role of Impurities, Roughness, and Oxygen Scavenging},
-   journal = {Chem Mater},
-   volume = {28},
-   number = {24},
-   pages = {8905-8915},
-   ISSN = {0897-4756 (Print)
-0897-4756 (Linking)},
-   DOI = {10.1021/acs.chemmater.6b03241},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/28133416},
-   year = {2016},
-   type = {Journal Article}
-}
-
 @article{RN386-2012,
    author = {Britnell, L. and Gorbachev, R. V. and Jalil, R. and Belle, B. D. and Schedin, F. and Mishchenko, A. and Georgiou, T. and Katsnelson, M. I. and Eaves, L. and Morozov, S. V. and Peres, N. M. R. and Leist, J. and Geim, A. K. and Novoselov, K. S. and Ponomarenko, L. A.},
    title = {Field-Effect Tunneling Transistor Based on Vertical Graphene Heterostructures},
@@ -109,7 +93,20 @@ https://pubs.acs.org/doi/pdf/10.1021/nn3059136},
    type = {Journal Article}
 }
 
-@article{RN372-2013,
+@article{RN1055-2013,
+   author = {Britnell, L. and Ribeiro, R. M. and Eckmann, A. and Jalil, R. and Belle, B. D. and Mishchenko, A. and Kim, Y. J. and Gorbachev, R. V. and Georgiou, T. and Morozov, S. V. and Grigorenko, A. N. and Geim, A. K. and Casiraghi, C. and Neto, A. H. Castro and Novoselov, K. S.},
+   title = {Strong Light-Matter Interactions in Heterostructures of Atomically Thin Films},
+   journal = {Science},
+   volume = {340},
+   number = {6138},
+   pages = {1311-1314},
+   DOI = {10.1126/science.1235547},
+   url = {https://doi.org/10.1126/science.1235547},
+   year = {2013},
+   type = {Journal Article}
+}
+
+@article{RN988-2013,
    author = {Butler, Sheneve Z. and Hollen, Shawna M. and Cao, Linyou and Cui, Yi and Gupta, Jay A. and Gutiérrez, Humberto R. and Heinz, Tony F. and Hong, Seung Sae and Huang, Jiaxing and Ismach, Ariel F. and Johnston-Halperin, Ezekiel and Kuno, Masaru and Plashnitsa, Vladimir V. and Robinson, Richard D. and Ruoff, Rodney S. and Salahuddin, Sayeef and Shan, Jie and Shi, Li and Spencer, Michael G. and Terrones, Mauricio and Windl, Wolfgang and Goldberger, Joshua E.},
    title = {Progress, Challenges, and Opportunities in Two-Dimensional Materials Beyond Graphene},
    journal = {ACS Nano},
@@ -118,7 +115,8 @@ https://pubs.acs.org/doi/pdf/10.1021/nn3059136},
    pages = {2898-2926},
    ISSN = {1936-0851},
    DOI = {10.1021/nn400280c},
-   url = {https://doi.org/10.1021/nn400280c},
+   url = {https://doi.org/10.1021/nn400280c
+https://pubs.acs.org/doi/10.1021/nn400280c},
    year = {2013},
    type = {Journal Article}
 }
@@ -153,40 +151,32 @@ https://aip.scitation.org/doi/10.1063/1.5025710},
    type = {Journal Article}
 }
 
-@article{RN1100-2021,
-   author = {Călugăru, Dumitru and Xie, Fang and Song, Zhi-Da and Lian, Biao and Regnault, Nicolas and Bernevig, B. Andrei},
-   title = {Twisted symmetric trilayer graphene: Single-particle and many-body Hamiltonians and hidden nonlocal symmetries of trilayer moire systems with and without displacement field},
-   journal = {Phys. Rev. B: Condens. Matter Mater. Phys.},
-   volume = {103},
-   number = {19},
-   pages = {195411},
-   DOI = {10.1103/PhysRevB.103.195411},
-   url = {https://link.aps.org/doi/10.1103/PhysRevB.103.195411},
-   year = {2021},
-   type = {Journal Article}
-}
-
-@article{RN420-2018,
+@article{RN954-2018,
    author = {Cao, Yuan and Fatemi, Valla and Demir, Ahmet and Fang, Shiang and Tomarken, Spencer L. and Luo, Jason Y. and Sanchez-Yamagishi, Javier D. and Watanabe, Kenji and Taniguchi, Takashi and Kaxiras, Efthimios and Ashoori, Ray C. and Jarillo-Herrero, Pablo},
    title = {Correlated insulator behaviour at half-filling in magic-angle graphene superlattices},
    journal = {Nature},
    volume = {556},
-   pages = {80},
+   number = {7699},
+   pages = {80-84},
+   ISSN = {1476-4687},
    DOI = {10.1038/nature26154},
-   url = {http://dx.doi.org/10.1038/nature26154},
+   url = {https://doi.org/10.1038/nature26154
+https://www.nature.com/articles/nature26154.pdf},
    year = {2018},
    type = {Journal Article}
 }
 
-@article{RN421-2018,
+@article{RN955-2018,
    author = {Cao, Yuan and Fatemi, Valla and Fang, Shiang and Watanabe, Kenji and Taniguchi, Takashi and Kaxiras, Efthimios and Jarillo-Herrero, Pablo},
    title = {Unconventional superconductivity in magic-angle graphene superlattices},
    journal = {Nature},
    volume = {556},
-   pages = {43},
-   DOI = {10.1038/nature26160
-https://www.nature.com/articles/nature26160#supplementary-information},
-   url = {http://dx.doi.org/10.1038/nature26160},
+   number = {7699},
+   pages = {43-50},
+   ISSN = {1476-4687},
+   DOI = {10.1038/nature26160},
+   url = {https://doi.org/10.1038/nature26160
+https://www.nature.com/articles/nature26160.pdf},
    year = {2018},
    type = {Journal Article}
 }
@@ -379,21 +369,6 @@ https://www.sciencedirect.com/science/article/abs/pii/S0925838819314264?via%3Dih
    type = {Journal Article}
 }
 
-@article{RN1079-2014,
-   author = {Fang, W. and Hsu, A. L. and Song, Y. and Birdwell, A. G. and Amani, M. and Dubey, M. and Dresselhaus, M. S. and Palacios, T. and Kong, J.},
-   title = {Asymmetric growth of bilayer graphene on copper enclosures using low-pressure chemical vapor deposition},
-   journal = {ACS Nano},
-   volume = {8},
-   number = {6},
-   pages = {6491-9},
-   ISSN = {1936-086X (Electronic)
-1936-0851 (Linking)},
-   DOI = {10.1021/nn5015177},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/24878354},
-   year = {2014},
-   type = {Journal Article}
-}
-
 @article{RN1019-2019,
    author = {Fei, Huilong and Dong, Juncai and Chen, Dongliang and Hu, Tiandou and Duan, Xidong and Shakir, Imran and Huang, Yu and Duan, Xiangfeng},
    title = {Single atom electrocatalysts supported on graphene or graphene-like carbons},
@@ -482,6 +457,20 @@ https://scholarship.rice.edu/bitstream/handle/1911/78911/nml501.pdf?sequence=5},
    type = {Journal Article}
 }
 
+@article{RN1060-2014,
+   author = {Gong, Yongji and Lin, Junhao and Wang, Xingli and Shi, Gang and Lei, Sidong and Lin, Zhong and Zou, Xiaolong and Ye, Gonglan and Vajtai, Robert and Yakobson, Boris I. and Terrones, Humberto and Terrones, Mauricio and Tay, Beng Kang and Lou, Jun and Pantelides, Sokrates T. and Liu, Zheng and Zhou, Wu and Ajayan, Pulickel M.},
+   title = {Vertical and in-plane heterostructures from WS2/MoS2 monolayers},
+   journal = {Nature Materials},
+   volume = {13},
+   number = {12},
+   pages = {1135-1142},
+   ISSN = {1476-4660},
+   DOI = {10.1038/nmat4091},
+   url = {https://doi.org/10.1038/nmat4091},
+   year = {2014},
+   type = {Journal Article}
+}
+
 @article{RN991-1984,
    author = {Greene, Ronald L. and Bajaj, Krishan K. and Phelps, Dwight E.},
    title = {Energy levels of Wannier excitons in $\mathrm{G}\mathrm{a}\mathrm{A}\mathrm{s}\ensuremath{-}{\mathrm{Ga}}_{1\ensuremath{-}x}{\mathrm{Al}}_{x}\mathrm{As}$ quantum-well structures},
@@ -521,21 +510,6 @@ https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.116801},
    url = {https://link.aps.org/doi/10.1103/PhysRevLett.103.046810
 https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.103.046810},
    year = {2009},
-   type = {Journal Article}
-}
-
-@article{RN1104-2013,
-   author = {Hao, Yufeng and Bharathi, M. S. and Wang, Lei and Liu, Yuanyue and Chen, Hua and Nie, Shu and Wang, Xiaohan and Chou, Harry and Tan, Cheng and Fallahazad, Babak and Ramanarayan, H. and Magnuson, Carl W. and Tutuc, Emanuel and Yakobson, Boris I. and McCarty, Kevin F. and Zhang, Yong-Wei and Kim, Philip and Hone, James and Colombo, Luigi and Ruoff, Rodney S.},
-   title = {The Role of Surface Oxygen in the Growth of Large Single-Crystal Graphene on Copper},
-   journal = {Science},
-   volume = {342},
-   number = {6159},
-   pages = {720-723},
-   ISSN = {0036-8075},
-   DOI = {10.1126/science.1243879},
-   url = {<Go to ISI>://WOS:000326647600038
-https://science.sciencemag.org/content/sci/342/6159/720.full.pdf},
-   year = {2013},
    type = {Journal Article}
 }
 
@@ -596,19 +570,6 @@ https://pubs.acs.org/doi/10.1021/nn201809k},
    type = {Journal Article}
 }
 
-@article{RN839-2020,
-   author = {Hou, Yuting and Wang, Bojun and Zhan, Longlong and Qing, Fangzhu and Wang, Xiaomu and Niu, Xiaobin and Li, Xuesong},
-   title = {Surface crystallographic structure insensitive growth of oriented graphene domains on Cu substrates},
-   journal = {Materials Today},
-   volume = {36},
-   pages = {10-17},
-   ISSN = {1369-7021},
-   DOI = {https://doi.org/10.1016/j.mattod.2019.12.001},
-   url = {https://www.sciencedirect.com/science/article/pii/S1369702119308740},
-   year = {2020},
-   type = {Journal Article}
-}
-
 @article{RN1042-2013,
    author = {Hwang, Jeonghyun and Kim, Moonkyung and Campbell, Dorr and Alsalman, Hussain A. and Kwak, Joon Young and Shivaraman, Shriram and Woll, Arthur R. and Singh, Arunima K. and Hennig, Richard G. and Gorantla, Sandeep and Rümmeli, Mark H. and Spencer, Michael G.},
    title = {van der Waals Epitaxial Growth of Graphene on Sapphire by Chemical Vapor Deposition without a Metal Catalyst},
@@ -652,18 +613,6 @@ https://www.sciencedirect.com/science/article/abs/pii/S2452262721000039?via%3Dih
    type = {Journal Article}
 }
 
-@article{RN747-2014,
-   author = {Lee, J. J. and Schmitt, F. T. and Moore, R. G. and Johnston, S. and Cui, Y. T. and Li, W. and Yi, M. and Liu, Z. K. and Hashimoto, M. and Zhang, Y.},
-   title = {Interfacial mode coupling as the origin of the enhancement of T c in FeSe films on SrTiO 3},
-   journal = {Nature},
-   volume = {515},
-   number = {7526},
-   pages = {245-248},
-   ISSN = {1476-4687},
-   year = {2014},
-   type = {Journal Article}
-}
-
 @article{RN994-2016,
    author = {Lee, Kyunghoon and Kulkarni, Girish and Zhong, Zhaohui},
    title = {Coulomb blockade in monolayer MoS2 single electron transistor},
@@ -691,21 +640,6 @@ https://pubs.rsc.org/en/content/articlelanding/2016/NR/C5NR08954A},
    url = {https://doi.org/10.1021/acs.chemmater.6b03727
 https://pubs.acs.org/doi/10.1021/acs.chemmater.6b03727},
    year = {2017},
-   type = {Journal Article}
-}
-
-@article{RN1102-2013,
-   author = {Li, Qiongyu and Chou, Harry and Zhong, Jin-Hui and Liu, Jun-Yang and Dolocan, Andrei and Zhang, Junyan and Zhou, Yinghui and Ruoff, Rodney S. and Chen, Shanshan and Cai, Weiwei},
-   title = {Growth of adlayer graphene on Cu studied by carbon isotope labeling},
-   journal = {Nano Lett.},
-   volume = {13},
-   number = {2},
-   pages = {486-490},
-   ISSN = {1530-6984},
-   DOI = {10.1021/nl303879k},
-   url = {<Go to ISI>://WOS:000315079500026
-https://pubs.acs.org/doi/pdf/10.1021/nl303879k},
-   year = {2013},
    type = {Journal Article}
 }
 
@@ -737,6 +671,20 @@ https://www.science.org/doi/10.1126/science.1171245},
    type = {Journal Article}
 }
 
+@article{RN1048-2012,
+   author = {Li, Zhancheng and Zhang, Wenhua and Fan, Xiaodong and Wu, Ping and Zeng, Changgan and Li, Zhenyu and Zhai, Xiaofang and Yang, Jinlong and Hou, Jianguo},
+   title = {Graphene Thickness Control via Gas-Phase Dynamics in Chemical Vapor Deposition},
+   journal = {The Journal of Physical Chemistry C},
+   volume = {116},
+   number = {19},
+   pages = {10557-10562},
+   ISSN = {1932-7447},
+   DOI = {10.1021/jp210814j},
+   url = {https://doi.org/10.1021/jp210814j},
+   year = {2012},
+   type = {Journal Article}
+}
+
 @article{RN1016-2020,
    author = {Liu, Dong and Li, Jin-Cheng and Ding, Shichao and Lyu, Zhaoyuan and Feng, Shuo and Tian, Hangyu and Huyan, Chenxi and Xu, Mingjie and Li, Tao and Du, Dan and Liu, Peng and Shao, Minhua and Lin, Yuehe},
    title = {2D Single-Atom Catalyst with Optimized Iron Sites Produced by Thermal Melting of Metal–Organic Frameworks for Oxygen Reduction Reaction},
@@ -748,20 +696,6 @@ https://www.science.org/doi/10.1126/science.1171245},
    DOI = {https://doi.org/10.1002/smtd.201900827},
    url = {https://doi.org/10.1002/smtd.201900827},
    year = {2020},
-   type = {Journal Article}
-}
-
-@article{RN1071-2021,
-   author = {Liu, Jianpeng and Dai, Xi},
-   title = {Orbital magnetic states in moiré graphene systems},
-   journal = {Nature Reviews Physics},
-   volume = {3},
-   number = {5},
-   pages = {367-382},
-   ISSN = {2522-5820},
-   DOI = {10.1038/s42254-021-00297-3},
-   url = {https://doi.org/10.1038/s42254-021-00297-3},
-   year = {2021},
    type = {Journal Article}
 }
 
@@ -794,14 +728,17 @@ https://pubs.acs.org/doi/10.1021/nl9040912},
    type = {Journal Article}
 }
 
-@article{RN508-2016,
+@article{RN1024-2016,
    author = {Liu, Yuan and Weiss, Nathan O. and Duan, Xidong and Cheng, Hung-Chieh and Huang, Yu and Duan, Xiangfeng},
    title = {Van der Waals heterostructures and devices},
    journal = {Nature Reviews Materials},
    volume = {1},
+   number = {9},
    pages = {16042},
+   ISSN = {2058-8437},
    DOI = {10.1038/natrevmats.2016.42},
-   url = {http://dx.doi.org/10.1038/natrevmats.2016.42},
+   url = {https://doi.org/10.1038/natrevmats.2016.42
+https://www.nature.com/articles/natrevmats201642},
    year = {2016},
    type = {Journal Article}
 }
@@ -903,21 +840,6 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5717150/pdf/41467_2017_Article_2047
    url = {https://doi.org/10.1038/nphys781
 https://www.nature.com/articles/nphys781},
    year = {2008},
-   type = {Journal Article}
-}
-
-@article{RN1065-2013,
-   author = {McCann, E. and Koshino, M.},
-   title = {The electronic properties of bilayer graphene},
-   journal = {Rep Prog Phys},
-   volume = {76},
-   number = {5},
-   pages = {056503},
-   ISSN = {1361-6633 (Electronic)
-0034-4885 (Linking)},
-   DOI = {10.1088/0034-4885/76/5/056503},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/23604050},
-   year = {2013},
    type = {Journal Article}
 }
 
@@ -1035,14 +957,13 @@ https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.107.076101},
    type = {Journal Article}
 }
 
-@article{RN957-2016,
+@article{RN357-2016,
    author = {Özçelik, V. Ongun and Azadani, Javad G. and Yang, Ce and Koester, Steven J. and Low, Tony},
    title = {Band alignment of two-dimensional semiconductors for designing heterostructures with momentum space matching},
    journal = {Physical Review B},
    volume = {94},
    number = {3},
    pages = {035125},
-   DOI = {10.1103/PhysRevB.94.035125},
    url = {https://link.aps.org/doi/10.1103/PhysRevB.94.035125},
    year = {2016},
    type = {Journal Article}
@@ -1204,6 +1125,21 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6746950/pdf/41598_2019_Article_4989
    type = {Journal Article}
 }
 
+@article{RN970-2015,
+   author = {Rivera, Pasqual and Schaibley, John R. and Jones, Aaron M. and Ross, Jason S. and Wu, Sanfeng and Aivazian, Grant and Klement, Philip and Seyler, Kyle and Clark, Genevieve and Ghimire, Nirmal J. and Yan, Jiaqiang and Mandrus, D. G. and Yao, Wang and Xu, Xiaodong},
+   title = {Observation of long-lived interlayer excitons in monolayer MoSe2–WSe2 heterostructures},
+   journal = {Nature Communications},
+   volume = {6},
+   number = {1},
+   pages = {6242},
+   ISSN = {2041-1723},
+   DOI = {10.1038/ncomms7242},
+   url = {https://doi.org/10.1038/ncomms7242
+https://www.nature.com/articles/ncomms7242.pdf},
+   year = {2015},
+   type = {Journal Article}
+}
+
 @article{RN982-2016,
    author = {Roy, Tania and Tosun, Mahmut and Hettick, Mark and Ahn, Geun Ho and Hu, Chenming and Javey, Ali},
    title = {2D-2D tunneling field-effect transistors using WSe2/SnSe2 heterostructures},
@@ -1231,19 +1167,6 @@ https://aip.scitation.org/doi/10.1063/1.4942647},
    url = {https://doi.org/10.1021/cg5001123
 https://pubs.acs.org/doi/pdf/10.1021/cg5001123},
    year = {2014},
-   type = {Journal Article}
-}
-
-@article{RN1081-2019,
-   author = {Shen, Changqing and Yan, Xingzhou and Qing, Fangzhu and Niu, Xiaobin and Stehle, Richard and Mao, Samuel S. and Zhang, Wanli and Li, Xuesong},
-   title = {Criteria for the growth of large-area adlayer-free monolayer graphene films by chemical vapor deposition},
-   journal = {J. Materiomics},
-   volume = {5},
-   number = {3},
-   pages = {463-470},
-   ISSN = {2352-8478},
-   url = {<Go to ISI>://WOS:000487537700017},
-   year = {2019},
    type = {Journal Article}
 }
 
@@ -1317,32 +1240,6 @@ https://pubs.acs.org/doi/10.1021/acs.nanolett.5b02719},
    url = {https://doi.org/10.1021/acsnano.1c09592
 https://pubs.acs.org/doi/10.1021/acsnano.1c09592},
    year = {2022},
-   type = {Journal Article}
-}
-
-@article{RN1067-2020,
-   author = {Sun, Zhuxing and Hu, Yun Hang},
-   title = {How Magical Is Magic-Angle Graphene?},
-   journal = {Matter},
-   volume = {2},
-   number = {5},
-   pages = {1106-1114},
-   ISSN = {25902385},
-   DOI = {10.1016/j.matt.2020.03.010},
-   url = {https://www.sciencedirect.com/science/article/pii/S2590238520301235},
-   year = {2020},
-   type = {Journal Article}
-}
-
-@article{RN746-2013,
-   author = {Tan, Shiyong and Zhang, Yan and Xia, Miao and Ye, Zirong and Chen, Fei and Xie, Xin and Peng, Rui and Xu, Difei and Fan, Qin and Xu, Haichao},
-   title = {Interface-induced superconductivity and strain-dependent spin density waves in FeSe/SrTiO 3 thin films},
-   journal = {Nature materials},
-   volume = {12},
-   number = {7},
-   pages = {634-640},
-   ISSN = {1476-4660},
-   year = {2013},
    type = {Journal Article}
 }
 
@@ -1653,21 +1550,6 @@ https://www.nature.com/articles/nmat4205.pdf},
    type = {Journal Article}
 }
 
-@article{RN248-2014,
-   author = {Wu, Ping and Zhai, Xiaofang and Li, Zhenyu and Yang, Jinlong},
-   title = {Bilayer Graphene Growth via a Penetration Mechanism},
-   journal = {The Journal of Physical Chemistry C},
-   volume = {118},
-   number = {12},
-   pages = {6201-6206},
-   ISSN = {1932-7447
-1932-7455},
-   DOI = {10.1021/jp4108156},
-   url = {http://dx.doi.org/10.1021/jp4108156},
-   year = {2014},
-   type = {Journal Article}
-}
-
 @article{RN694-2019,
    author = {Wu, Ruizhe and Ding, Yao and Yu, Ka Man and Zhou, Ke and Zhu, Zhouyang and Ou, Xuewu and Zhang, Qicheng and Zhuang, Minghao and Li, Wen-Di and Xu, Zhiping and Altman, Michael S. and Luo, Zhengtang},
    title = {Edge-Epitaxial Growth of Graphene on Cu with a Hydrogen-Free Approach},
@@ -1710,21 +1592,6 @@ https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.10.054064},
    type = {Journal Article}
 }
 
-@article{RN854-2020,
-   author = {Xie, M. and MacDonald, A. H.},
-   title = {Nature of the Correlated Insulator States in Twisted Bilayer Graphene},
-   journal = {Phys Rev Lett},
-   volume = {124},
-   number = {9},
-   pages = {097601},
-   ISSN = {1079-7114 (Electronic)
-0031-9007 (Linking)},
-   DOI = {10.1103/PhysRevLett.124.097601},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/32202880},
-   year = {2020},
-   type = {Journal Article}
-}
-
 @article{RN1051-2011,
    author = {Xing, Bin and Pang, Xian-Yong and Wang, Gui-Chang},
    title = {C–H bond activation of methane on clean and oxygen pre-covered metals: A systematic theoretical study},
@@ -1751,36 +1618,6 @@ https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.10.054064},
    url = {https://doi.org/10.1038/nature20601
 https://www.nature.com/articles/nature20601.pdf},
    year = {2017},
-   type = {Journal Article}
-}
-
-@article{RN1085-2016,
-   author = {Xu, X. and Zhang, Z. and Qiu, L. and Zhuang, J. and Zhang, L. and Wang, H. and Liao, C. and Song, H. and Qiao, R. and Gao, P. and Hu, Z. and Liao, L. and Liao, Z. and Yu, D. and Wang, E. and Ding, F. and Peng, H. and Liu, K.},
-   title = {Ultrafast growth of single-crystal graphene assisted by a continuous oxygen supply},
-   journal = {Nat Nanotechnol},
-   volume = {11},
-   number = {11},
-   pages = {930-935},
-   ISSN = {1748-3395 (Electronic)
-1748-3387 (Linking)},
-   DOI = {10.1038/nnano.2016.132},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/27501317},
-   year = {2016},
-   type = {Journal Article}
-}
-
-@article{RN1066-2015,
-   author = {Yan, Hugen},
-   title = {Bilayer graphene: physics and application outlook in photonics},
-   journal = {Nanophotonics},
-   volume = {4},
-   number = {1},
-   pages = {115-127},
-   ISSN = {2192-8614
-2192-8606},
-   DOI = {10.1515/nanoph-2014-0019},
-   url = {<Go to ISI>://WOS:000379152100002},
-   year = {2015},
    type = {Journal Article}
 }
 
@@ -1911,21 +1748,6 @@ https://www.nature.com/articles/nmat3518.pdf},
    type = {Journal Article}
 }
 
-@article{RN247-2014,
-   author = {Zhang, X. and Wang, L. and Xin, J. and Yakobson, B. I. and Ding, F.},
-   title = {Role of hydrogen in graphene chemical vapor deposition growth on a copper surface},
-   journal = {J Am Chem Soc},
-   volume = {136},
-   number = {8},
-   pages = {3040-7},
-   ISSN = {1520-5126 (Electronic)
-0002-7863 (Linking)},
-   DOI = {10.1021/ja405499x},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/24499486},
-   year = {2014},
-   type = {Journal Article}
-}
-
 @article{RN1014-2017,
    author = {Zhang, Zhuo-Zhi and Song, Xiang-Xiang and Luo, Gang and Deng, Guang-Wei and Mosallanejad, Vahid and Taniguchi, Takashi and Watanabe, Kenji and Li, Hai-Ou and Cao, Gang and Guo, Guang-Can and Nori, Franco and Guo, Guo-Ping},
    title = {Electrotunable artificial molecules based on van der Waals heterostructures},
@@ -1937,35 +1759,6 @@ https://www.nature.com/articles/nmat3518.pdf},
    url = {https://doi.org/10.1126/sciadv.1701699
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5650488/pdf/1701699.pdf},
    year = {2017},
-   type = {Journal Article}
-}
-
-@article{RN1119-2016,
-   author = {Zhao, Mei and Zhang, Wenting and Liu, Manman and Zou, Chao and Yang, Keqin and Yang, Yun and Dong, Youqing and Zhang, Lijie and Huang, Shaoming},
-   title = {Interlayer coupling in anisotropic/isotropic van der Waals heterostructures of ReS2 and MoS2 monolayers},
-   journal = {Nano Research},
-   volume = {9},
-   number = {12},
-   pages = {3772-3780},
-   ISSN = {1998-0000},
-   DOI = {10.1007/s12274-016-1247-y},
-   url = {https://doi.org/10.1007/s12274-016-1247-y},
-   year = {2016},
-   type = {Journal Article}
-}
-
-@article{RN748-2018,
-   author = {Zhao, W. and Li, M. and Chang, C. Z. and Jiang, J. and Wu, L. and Liu, C. and Moodera, J. S. and Zhu, Y. and Chan, M. H. W.},
-   title = {Direct imaging of electron transfer and its influence on superconducting pairing at FeSe/SrTiO3 interface},
-   journal = {Sci Adv},
-   volume = {4},
-   number = {3},
-   pages = {eaao2682},
-   ISSN = {2375-2548 (Electronic)
-2375-2548 (Linking)},
-   DOI = {10.1126/sciadv.aao2682},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/29556528},
-   year = {2018},
    type = {Journal Article}
 }
 
@@ -1981,21 +1774,6 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5650488/pdf/1701699.pdf},
    url = {https://doi.org/10.1021/nl403270k
 https://pubs.acs.org/doi/10.1021/nl403270k},
    year = {2013},
-   type = {Journal Article}
-}
-
-@article{RN1080-2015,
-   author = {Zhao, Z. and Shan, Z. and Zhang, C. and Li, Q. and Tian, B. and Huang, Z. and Lin, W. and Chen, X. and Ji, H. and Zhang, W. and Cai, W.},
-   title = {Study on the diffusion mechanism of graphene grown on copper pockets},
-   journal = {Small},
-   volume = {11},
-   number = {12},
-   pages = {1418-22},
-   ISSN = {1613-6829 (Electronic)
-1613-6810 (Linking)},
-   DOI = {10.1002/smll.201402483},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/25469458},
-   year = {2015},
    type = {Journal Article}
 }
 
@@ -2025,21 +1803,6 @@ https://pubs.acs.org/doi/pdf/10.1021/acs.nanolett.7b01547},
    url = {https://www.sciencedirect.com/science/article/pii/S1385894721027911
 https://www.sciencedirect.com/science/article/abs/pii/S1385894721027911?via%3Dihub},
    year = {2022},
-   type = {Journal Article}
-}
-
-@article{RN855-2018,
-   author = {Zibrov, A. A. and Rao, P. and Kometter, C. and Spanton, E. M. and Li, J. I. A. and Dean, C. R. and Taniguchi, T. and Watanabe, K. and Serbyn, M. and Young, A. F.},
-   title = {Emergent Dirac Gullies and Gully-Symmetry-Breaking Quantum Hall States in ABA Trilayer Graphene},
-   journal = {Phys Rev Lett},
-   volume = {121},
-   number = {16},
-   pages = {167601},
-   ISSN = {1079-7114 (Electronic)
-0031-9007 (Linking)},
-   DOI = {10.1103/PhysRevLett.121.167601},
-   url = {https://www.ncbi.nlm.nih.gov/pubmed/30387651},
-   year = {2018},
    type = {Journal Article}
 }
 
