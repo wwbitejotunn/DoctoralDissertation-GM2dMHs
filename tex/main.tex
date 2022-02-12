@@ -1,10 +1,14 @@
-
 \documentclass[doctor]{thesis-uestc}
-\usepackage{siunitx}
 \usepackage[percent]{overpic}
 \usepackage[section]{placeins}
+\usepackage{siunitx}
+\usepackage{xparse}
 
+%%%configuration for imported package
+%for siunitx
+\sisetup{inter-unit-product={}\cdot{},number-unit-product=\text{ },tight-spacing=true}
 \DeclareSIUnit\angstrom{\text{Å}}
+
 \title{二维材料及其异质结的生长理论研究}{Growth mechanism of two-dimensional materials and heterostructures}
 
 \author{汪博筠}{Wang Bojun}

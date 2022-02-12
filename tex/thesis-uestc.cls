@@ -42,6 +42,8 @@
 \RequirePackage{amsthm}
 \RequirePackage{lmodern}
 \RequirePackage[nopostdot]{glossaries}
+\RequirePackage[version=4]{mhchem}
+\RequirePackage{mathtools}
 \RequirePackage{mathspec}
 
 \RequirePackage{xeCJK}
