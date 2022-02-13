@@ -3,11 +3,19 @@
 \usepackage[section]{placeins}
 \usepackage{siunitx}
 \usepackage{xparse}
+\usepackage{xstring}
+
 
 %%%configuration for imported package
 %for siunitx
 \sisetup{inter-unit-product={}\cdot{},number-unit-product=\text{ },tight-spacing=true}
 \DeclareSIUnit\angstrom{\text{Å}}
+
+% cemb to remove space after ce
+\def\cemb#1{\ce{#1}\mbox{}}
+
+
+\newcommand{\MYCAPFLAG}{-4-}%
 
 \title{二维材料及其异质结的生长理论研究}{Growth mechanism of two-dimensional materials and heterostructures}
 
@@ -19,6 +27,7 @@
 
 \begin{document}
 
+\IfSubStr{\MYCAPFLAG}{A}{
 \makecover
 
 \input{misc/chineseAbstract}
@@ -34,5 +43,14 @@
 \input{chapter/chapter6}
 
 \thesisbibliography{reference}
+}{
+\IfSubStr{\MYCAPFLAG}{-1-}{\input{chapter/chapter1}}{}
+\IfSubStr{\MYCAPFLAG}{-2-}{\input{chapter/chapter2}}{}
+\IfSubStr{\MYCAPFLAG}{-3-}{\input{chapter/chapter3}}{}
+\IfSubStr{\MYCAPFLAG}{-4-}{\input{chapter/chapter4}}{}
+\IfSubStr{\MYCAPFLAG}{-5-}{\input{chapter/chapter5}}{}
+\IfSubStr{\MYCAPFLAG}{-6-}{\input{chapter/chapter6}}{}
+}
+
 
 \end{document}
