@@ -13,11 +13,15 @@
 
 % cemb to remove space after ce
 \def\cemb#1{\ce{#1}\mbox{}}
+\def\energyVar#1#2{\it E_{\rm #1}^{\rm #2} \it}
+\def\muVar#1#2{\it \mu_{\rm #1}^{\rm #2} \it}
 
+\newcommand{\MYCAPFLAG}{-4-}%
+% disable figure compile for speed up compile in drift
+% //TODO 
+\usepackage[allfiguresdraft]{draftfigure}
 
-\newcommand{\MYCAPFLAG}{-ALL-}%
-
-\title{二维材料及其异质结的生长理论研究}{Growth mechanism of two-dimensional materials and heterostructures}
+\title{二维材料及其异质结的生长理论研究}{Growth Mechanism of Two-dimensional Materials and Heterostructures}
 
 \author{汪博筠}{Wang Bojun}
 \advisor{牛晓滨\chinesespace 教授}{Dr. Niu Xiaobin}
@@ -26,30 +30,26 @@
 \studentnumber{201711030138}
 
 \begin{document}
-
+%\the\textwidth 
 \IfSubStr{\MYCAPFLAG}{A}{
-\makecover
-
-\input{misc/chineseAbstract}
-\input{misc/englishAbstract}
-
-\tableofcontents
-
-\input{chapter/chapter1}
-\input{chapter/chapter2}
-\input{chapter/chapter3}
-\input{chapter/chapter4}
-\input{chapter/chapter5}
-\input{chapter/chapter6}
-
-\thesisbibliography{reference}
+    \makecover
+    \input{misc/chineseAbstract}
+    \input{misc/englishAbstract}
+    \tableofcontents
+    \input{chapter/chapter1}
+    \input{chapter/chapter2}
+    \input{chapter/chapter3}
+    \input{chapter/chapter4}
+    \input{chapter/chapter5}
+    \input{chapter/chapter6}
+    \thesisbibliography{reference}
 }{
-\IfSubStr{\MYCAPFLAG}{-1-}{\input{chapter/chapter1}}{}
-\IfSubStr{\MYCAPFLAG}{-2-}{\input{chapter/chapter2}}{}
-\IfSubStr{\MYCAPFLAG}{-3-}{\input{chapter/chapter3}}{}
-\IfSubStr{\MYCAPFLAG}{-4-}{\input{chapter/chapter4}}{}
-\IfSubStr{\MYCAPFLAG}{-5-}{\input{chapter/chapter5}}{}
-\IfSubStr{\MYCAPFLAG}{-6-}{\input{chapter/chapter6}}{}
+    \IfSubStr{\MYCAPFLAG}{-1-}{\input{chapter/chapter1}}{}
+    \IfSubStr{\MYCAPFLAG}{-2-}{\input{chapter/chapter2}}{}
+    \IfSubStr{\MYCAPFLAG}{-3-}{\input{chapter/chapter3}}{}
+    \IfSubStr{\MYCAPFLAG}{-4-}{\input{chapter/chapter4}}{}
+    \IfSubStr{\MYCAPFLAG}{-5-}{\input{chapter/chapter5}}{}
+    \IfSubStr{\MYCAPFLAG}{-6-}{\input{chapter/chapter6}}{}
 }
 
 

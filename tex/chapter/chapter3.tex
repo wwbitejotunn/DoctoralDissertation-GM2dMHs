@@ -18,7 +18,7 @@
 %//TODO 引言 衬底影响+氧气的影响
 \section{计算细节}
 %//TODO vasp 引用等
-在本章中密度泛函理论主要使用 Vienna ab-initio Simulation Package (VASP) 软件包进行计算。由于石墨烯畴$\CCluster{24}$与铜衬底均为非磁性体系，出于计算资源的限制，经过测试后我们在 \ref{sec:石墨烯优先生长取向} 章中均采用自旋非极化的计算设置。在密度泛函理论计算中，我们使用广义梯度近似（GGA）下的 Perdew-Burke-Ernzerhof (PBE)泛函描述电子之间的交换关联作用。平面波的截断动能取为为$\SI{400}{\electronvolt}$。为了研究铜衬底表面石墨烯的生长情况，我们采用切片模型并在垂直表面方向放置至少$\SI{20}{\angstrom}$的真空层以防止周期性条件相邻切片的影响。在原子结构优化的计算中，力收敛条件设为$\SI{2e-2}{\electronvolt \per \angstrom}$，电子结构自洽场计算的收敛条件设为$\SI{1e-6}{\electronvolt}$。
+在本章中密度泛函理论主要使用Vienna ab-initio Simulation Package (VASP) 软件包进行计算。由于石墨烯畴$\CCluster{24}$与铜衬底均为非磁性体系，出于计算资源的限制，经过测试后我们在 \ref{sec:石墨烯优先生长取向} 章中均采用自旋非极化的计算设置。在密度泛函理论计算中，我们使用广义梯度近似（GGA）下的 Perdew-Burke-Ernzerhof (PBE)泛函描述电子之间的交换关联作用。平面波的截断动能取为为$\SI{400}{\electronvolt}$。为了研究铜衬底表面石墨烯的生长情况，我们采用切片模型并在垂直表面方向放置至少$\SI{20}{\angstrom}$的真空层以防止周期性条件相邻切片的影响。在原子结构优化的计算中，力收敛条件设为$\SI{2e-2}{\electronvolt \per \angstrom}$，电子结构自洽场计算的收敛条件设为$\SI{1e-6}{\electronvolt}$。
 
 在 \ref{sec:石墨烯优先生长取向} 章中，由于切片模型较大的模拟晶胞尺寸，我们在布里渊区中取 $\Gamma$ 点作为积分采样的K空间网格。
 
@@ -277,12 +277,12 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
 
 \section{氧气对化学气相沉积法中石墨烯多层生长的作用}
 \label{sec:石墨烯氧蚀刻穿透}
-\def\muO#1{\mu_{\rm O}^{\rm #1} \it}
-\def\halfEOm{ \frac{1}{2}E_{\rm \cemb{O2}} \it}
+\def\muO#1{\it \mu_{\rm O}^{\rm #1} \it}
+\def\halfEOm{\it \frac{1}{2}E_{\rm \cemb{O2}} \it}
 \def\EOa{\it E_{\rm O} \it }
 \def\Cdis{\rm{\left[C_{dis.}\right]} \it }
 \def\Oads{\rm{\left[O_{ads.}\right]} \it }
-\def\RateV#1#2{\nu_{\rm #1}^{\rm #2} \it }
+\def\RateV#1#2{\it \nu_{\rm #1}^{\rm #2} \it }
 \def\RateK#1#2{\it{k_{\rm #1}^{\rm #2}} \it }
 \def\ReactTime#1#2{\it{t_{\rm #1}^{\rm #2}} \it }
 
@@ -470,7 +470,7 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
 
 同时，有别于氧自由基（$\cemb{O}$）的直接吸附，氧气分子$\cemb{O2}$在石墨烯上的吸附的同时需要较高的能量进行进行裂解。我们通过在氧气分子吸附的过程中添加$\SI{2.39}{\electronvolt}$的势垒来对这个裂解过程进行描述\citing{RN838-2012}。为了将随机吸附模拟过程中的模拟时间时长与实际通入氩氧混合气的时长进行对应，我们根据气体的麦克斯韦-玻尔兹曼分布计算了氧自由基（$\cemb{O}$）和氧气分子$\cemb{O2}$的碰撞频率，气氛中氧自由基（$\cemb{O}$）和氧气分子$\cemb{O2}$的浓度也根据\ref{subsec:FLG_gasPhase}节中的模拟数据进行计算。
 
-在图\ref{fig:FLG_RSA_Oadsorb}中，我们计算了通入不同流量的氩氧混合气的情况下石墨烯上吸附的氧原子浓度$\Oads$随时间的变化情况。计算结果显示模拟得出的$\Oads$服从指数增长定律$\Oads\left(\it t\right)=\Oads\left(\it \infty \right)-\it De^{\it -\sigma t}$，和先前的研究一致\citing{RN837-1990,RN387-1991}。由于$\Oads$的指数形式，直接将$\Oads$带入计算$\overline{\RateV{e}{dis.}}$中的积分项为非初等函数。考虑到在实际的化学气相沉积生长过程中，氧原子在低浓度氧环境中需要花费数天甚至一个月的时间才能达到饱和吸附，远超我们所考虑的生长时间范畴。而高浓度氧环境中会导致石墨烯被完全蚀刻，也不在我们所关心的范围内。因此我们将研究范围集中在氧原子吸附浓度$\Oads$的线性吸附区，这时$\Oads$相对于时间的变化关系可以简化为$\Oads\left(\it t\right)\approx \it D \sigma t$。
+在图\ref{fig:FLG_RSA_Oadsorb}中，我们计算了通入不同流量的氩氧混合气的情况下石墨烯上吸附的氧原子浓度$\Oads$随时间的变化情况。计算结果显示模拟得出的$\Oads$服从指数增长定律$\Oads\left(\it t\right)=\Oads\left(\it \infty \right)-\it De^{\it -\sigma t}$，和先前的研究一致\citing{RN837-1990,RN836-1991}。由于$\Oads$的指数形式，直接将$\Oads$带入计算$\overline{\RateV{e}{dis.}}$中的积分项为非初等函数。考虑到在实际的化学气相沉积生长过程中，氧原子在低浓度氧环境中需要花费数天甚至一个月的时间才能达到饱和吸附，远超我们所考虑的生长时间范畴。而高浓度氧环境中会导致石墨烯被完全蚀刻，也不在我们所关心的范围内。因此我们将研究范围集中在氧原子吸附浓度$\Oads$的线性吸附区，这时$\Oads$相对于时间的变化关系可以简化为$\Oads\left(\it t\right)\approx \it D \sigma t$。
 
 \begin{figure}[htb]
     \includegraphics{pic/FLG_RSA_Oadsorb.png}
