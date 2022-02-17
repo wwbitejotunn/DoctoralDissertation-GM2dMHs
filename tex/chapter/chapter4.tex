@@ -49,10 +49,11 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 \end{figure}
 
 对于$\muVar{adatom}{}$为吸附原子的化学势，由于生长环境下\cemb{InSb}块体的化学平衡，我们有\chinesecolon
-\[
-    \muVar{In}{}+\muVar{Sb}{}=\energyVar{InSb}{tot}=\energyVar{In\left(Bulk\right)}{}+\energyVar{Sb\left(Bulk\right)}{}+\delta H_{f}\left(\cemb{InSb}\right)
-\]
-
+\begin{equation}
+    \label{eq:IS_bulkEqmb}
+        \muVar{In}{}+\muVar{Sb}{}=\energyVar{InSb}{tot}=\energyVar{In\left(Bulk\right)}{}+\energyVar{Sb\left(Bulk\right)}{}+\delta H_{f}\left(\cemb{InSb}\right)
+\end{equation}
+        
 其中$\energyVar{InSb}{tot}$、$\energyVar{In\left(Bulk\right)}{}$和$\energyVar{Sb\left(Bulk\right)}{}$为\cemb{InSb}块体，\cemb{In}块体和\cemb{Sb}块体的能量。因此，在生长气氛中\cemb{InSb}的化学平衡下，$\muVar{In}{}$的变化范围为$\muVar{In}{}\leqslant \energyVar{Sb\left(Bulk\right)}{}+\Delta H_{\rm f}\left(\cemb{InSb}\right) \leqslant \energyVar{In\left(Bulk\right)}{}$，代表\cemb{In}的化学势$\muVar{In}{}$由纯\cemb{Sb}的生长环境变化到纯\cemb{In}的生长环境。
  
 对于吸附在$\TfourSite$位点的\cemb{In}原子，计算所得的在纯\cemb{In}环境下的结合能为\SI{-0.48}{\electronvolt}，低于在纯\cemb{Sb}环境下同样吸附在$\TfourSite$位点的\cemb{Sb}原子的结合能（\SI{-0.19}{\electronvolt}）。更抵的结合能意味着相比于\cemb{Sb}原子，在能量最低的驱动下有更多的\cemb{In}原子从块体的状态分离并以吸附原子的状态沉积到\cemb{Bi(001)}的表面。对于\cemb{In}原子来说，其在最优吸附位点$\TfourSite$的结合能只比吸附次优吸附位点$\HthreeSite$的结合能低\SI{0.026}{\electronvolt}。而对于\cemb{Sb}原子，其在次优吸附点$\HthreeSite$和最优吸附点$\TfourSite$之间的结合能之差为\SI{0.17}{\electronvolt}。由于\cemb{Sb}原子在次优吸附位点$\HthreeSite$较差的吸附能力，\cemb{Sb}原子只能在接近纯\cemb{Sb}的生长环境中在\cemb{Bi(001)}表面的$\HthreeSite$位点吸附。
@@ -70,9 +71,10 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 \end{figure}
 
 为了能进一步探究\cemb{InSb(111)}在\cemb{Bi(001)}衬底上的层状生长机理以及极性的演化过程，我们计算了单层\cemb{InSb}在\cemb{Bi(001)}衬底上的形成能$\energyVar{f}{}$\chinesecolon
-\[
+\begin{equation}
+    \label{eq:IS_formationEnenrgy}
     \energyVar{f}{}=\frac{1}{\alpha}\left(\energyVar{\cemb{InSb}+sub}{}-\energyVar{sub}{}-N_{\rm In}\muVar{In}{}-N_{\rm Sb}\muVar{Sb}{}\right)
-    \]
+\end{equation}
     
 其中，$\alpha$为模拟体系的表面积；$\energyVar{\cemb{InSb}+sub}{}$和$\energyVar{sub}{}$分别为在衬底表面生长了一层\cemb{InSb}的能量以及单独衬底的能量；$N_{\rm In}$和$N_{\rm Sb}$分别为\cemb{InSb}单层中\cemb{In}和\cemb{Sb}原子的数量。
 
@@ -141,7 +143,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \label{fig:IS_structure_1Linsb_allPolarity}
 \end{figure}
 
-接着，我们将单层\cemb{InSb(111)}极性的考察范围扩大到非理想的情况。考虑到吸附的\cemb{In}原子和\cemb{Sb}原子均倾向于沉积在$\TfourSite$位点和$\HthreeSite$位点，使用包含四个\cemb{In}原子和四个\cemb{Sb}原子的$2 \times 2$切片模型，我们可以归纳出六种可能的单层\cemb{InSb}极性。在图\ref{fig:IS_structure_1Linsb_allPolarity}中，我们列出了本章中所考虑的所有单层\cemb{InSb}的极性情况。这里，我们使用\cemb{InSb}单层中处于$\TfourSite$的原子的数量来表示不同极性的\cemb{InSb(111)}单层，例如在$2 \times 2$切片模型中理想的\cemb{In}极性\cemb{InSb}中，四个$\TfourSite$都被\cemb{In}原子占据，因此可以表示为$\InSbMLpolar{4}{0}$。相对应的，\cemb{Sb}极性的\cemb{InSb}可以表示为$\InSbMLpolar{0}{4}$。对于$\InSbMLpolar{2}{2}$极性的\cemb{InSb}单层，有两个不等价的构型。其中一个构型内部\cemb{In}原子和\cemb{Sb}分别构成两个相互嵌套的方形的四个顶角，我们用$\InSbMLpolar{2}{2}$方形表示。另一个构型中\cemb{In}原子和\cemb{Sb}原子呈条状分布，我们用$\InSbMLpolar{2}{2}$条形表示。
+接着，我们将单层\cemb{InSb(111)}极性的考察范围扩大到非理想的情况。考虑到吸附的\cemb{In}原子和\cemb{Sb}原子均倾向于沉积在$\TfourSite$位点和$\HthreeSite$位点，使用包含四个\cemb{In}原子和四个\cemb{Sb}原子的$2 \times 2$切片模型，我们可以列举出六种可能的单层\cemb{InSb}极性。在图\ref{fig:IS_structure_1Linsb_allPolarity}中，我们列出了本章中所考虑的所有单层\cemb{InSb}的极性情况。这里，我们使用\cemb{InSb}单层中处于$\TfourSite$的原子的数量来表示不同极性的\cemb{InSb(111)}单层，例如在$2 \times 2$切片模型中理想的\cemb{In}极性\cemb{InSb}中，四个$\TfourSite$都被\cemb{In}原子占据，因此可以表示为$\InSbMLpolar{4}{0}$。相对应的，\cemb{Sb}极性的\cemb{InSb}可以表示为$\InSbMLpolar{0}{4}$。对于$\InSbMLpolar{2}{2}$极性的\cemb{InSb}单层，有两个不等价的构型。其中一个构型内部\cemb{In}原子和\cemb{Sb}分别构成两个相互嵌套的方形的四个顶角，我们用$\InSbMLpolar{2}{2}$方形表示。另一个构型中\cemb{In}原子和\cemb{Sb}原子呈条状分布，我们用$\InSbMLpolar{2}{2}$条形表示。
 
 
 如图\ref{fig:IS_DFT_1LInSb_all}所示，我们计算了所有极性的$2 \times 2 \cemb{InSb}$在\cemb{Bi(001)}衬底表面的形成能。在$2 \times 2$模型中，\cemb{In}极性（$\InSbMLpolar{4}{0}$）的形成能为\SI{-18.52}{\mievpas}，低于$2 \times 2$模型中\cemb{Sb}极性（$\InSbMLpolar{0}{4}$）的形成能（\SI{-14.64}{\mievpas}）。$2 \times 2 \cemb{InSb}$理想极性（\cemb{Sb}极性和\cemb{In}极性）的计算结果与上一节中$1 \times 1$模型一致。$2 \times 2$模型中更低的形成能可能是由于表面原子在$2 \times 2$模型中有更多的空间可以进行更完全的几何优化。
@@ -175,7 +177,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
         \label{fig:IS_structure_1Linsb_md30ps}
         \includegraphics{pic/IS_structure_1Linsb_md30ps.png}
     }
-    \caption{\cemb{Bi(001)}衬底上2-In/2-Sb条形极性\cemb{InSb}的分子动力学模拟结果。}
+    \caption{\cemb{Bi(001)}衬底上2-In/2-Sb条形极性\cemb{InSb}的分子动力学模拟结果。原子结构图中，\cemb{Bi}原子使用蓝色表示，\cemb{In}原址使用褐色表示，\cemb{Sb}原子使用紫色表示。}
     \label{fig:IS_structure_1Linsb_md}
 \end{figure}
 
@@ -188,13 +190,17 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 
 \begin{figure}[htb]
     \includegraphics{pic/IS_DFT_1InSb_flipBarrier.png}
-    \caption{\cemb{Bi(001)}衬底上单层\cemb{InSb}的极性转换势垒。}
+    \caption{\cemb{Bi(001)}衬底上单层\cemb{InSb}的极性转换势垒。原子结构图中，\cemb{Bi}原子使用蓝色表示，\cemb{In}原址使用褐色表示，\cemb{Sb}原子使用紫色表示。}
     \label{fig:IS_DFT_1LInSb_InPtoSbPNeb}
 \end{figure}
 
 \section{双层锑化铟的生长机理}
-\subsection{双层锑化铟的生长过程}
+在上一节中，我们通过理论计算表明了单层的\cemb{InS(111)}以$\InSbMLpolar{2}{2}$极性为主，多种极性热平衡混合的构型存在于\cemb{Bi(001)}衬底的表面。我们将第二层\cemb{InSb(001)}放置在单层\cemb{InSb}上方，研究双层\cemb{InSb(111)}在\cemb{Bi(001)}衬底上的生长机理和极性演化情况。
 
+\subsection{双层锑化铟的生长过程}
+对于双层\cemb{InSb}在\cemb{Bi(001)}衬底上的生长，我们首先探究第二层\cemb{InSb(111)}对于\cemb{InSb}极性的影响。对于第二层\cemb{InSb(111)}，我们选用对应的表面重构构型进行代表。根据先前的研究\citing{RN915-1998, RN896-1998}，在\cemb{InSb(111)}的表面由于极性的不同会形成两种不同的表面重构，一种是对应于\cemb{Sb}极性的\cemb{Sb}三聚体（\cemb{Sb} trimer）表面重构，另一种是对应于\cemb{In}极性的\cemb{In}空位（\cemb{In} vacancy）表面重构。
+
+如图\ref{fig:IS_structure_2Linsb}所示，我们考虑不同表面重构的\cemb{InSb}第二层和不同极性的\cemb{InSb}第一层的所有组合进行形成能计算。以\cemb{In}极性的\cemb{InSb}第一层为代表，我们在图\ref{fig:IS_structure_2Linsb_SbT40}和图\ref{fig:IS_structure_2Linsb_InV40}中绘制了优化后的双层\cemb{InSb}的原子结构。可以看到对于\cemb{Sb}三聚体的第二层能够与\cemb{In}极性的第一层的上表面\cemb{In}原子产生相互作用，略微提高于其相接触的\cemb{In}原子的相对高度。对于\cemb{In} 空位的第二层，其在\cemb{In}极性的第一层\cemb{InSb}上方呈现出平面化的形貌。\cemb{In}空位重构中四个\cemb{Sb}原子与第一层上表面的\cemb{In}原子产生作用。
 
 \begin{figure}[htb]
     \subfloat[]{
@@ -212,9 +218,15 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
             \includegraphics[width=0.8\textwidth]{pic/IS_structure_2Linsb_InV-40_3Dview.png}
         }
     \end{minipage}
-    \caption{双层\cemb{InSb}极性极性组合图及原子结构示意图。(a)双层\cemb{InSb}极性极性组合示意图；(b)双层\cemb{InSb}原子结构，\cemb{Sb}三聚体第二层覆盖\cemb{In}极性第一层；(b)双层\cemb{InSb}原子结构，\cemb{In}空位第二层覆盖\cemb{In}极性第一层。}
+    \caption{双层\cemb{InSb}极性极性组合图及原子结构示意图。(a)双层\cemb{InSb}极性极性组合示意图；(b)双层\cemb{InSb}原子结构，\cemb{Sb}三聚体第二层覆盖\cemb{In}极性第一层；(b)双层\cemb{InSb}原子结构，\cemb{In}空位第二层覆盖\cemb{In}极性第一层。原子结构图中，\cemb{Bi}原子使用蓝色表示，\cemb{In}原址使用褐色表示，\cemb{Sb}原子使用紫色表示。}
     \label{fig:IS_structure_2Linsb}
 \end{figure}
+
+在图\ref{fig:IS_DFT_2LInSb_formationEnergy}中，我们绘制了\cemb{Bi(001)}衬底上具有不同极性第一层\cemb{InSb}的双层\cemb{InSb}的形成能分布。先前的研究表明，不同的前驱体比例会对生长形貌产生极大的影响\citing{RN935-2002, RN398-2002}。因此同\cemb{In}和\cemb{Sb}原子的吸附机制研究一致，我们引入\cemb{In}原子的化学势$\muVar{In}{}$代表生长环境中$\cemb{In}:\cemb{Sb}$比的变化。为了绘图清晰，我们在图\ref{fig:IS_DFT_2LInSb_formationEnergy}只绘制了不同构型在纯\cemb{Sb}环境和纯\cemb{In}环境两个极限下的形成能取值。由于在\cemb{Sb}三聚体重构和\cemb{In}空位重构中，均为\cemb{Sb}原子的数量占有，因此根据式\ref{eq:IS_formationEnenrgy}和式\ref{eq:IS_bulkEqmb}，以\cemb{Sb}三聚体重构和\cemb{In}空位重构为第二层的双层\cemb{InSb}的形成能均会随着\cemb{In}原子化学式$\muVar{In}{}$的上升（接近纯\cemb{In}环境）而上升。
+
+当第二层为\cemb{Sb}三聚体重构时，第一层为理想极化结构（\cemb{Sb}极性和\cemb{In}极性）的双层\cemb{InSb}相比于第一层为混合极化结构的双层\cemb{InSb}拥有更低的形成能。理想极化的第一层\cemb{InSb}在形成能分布中作为两个极小值点，吸引其他拥有混合极性第一层的双层\cemb{InSb}向理想极化转变。使得原本在非静态单层中以混合极性为主的平衡态分化成为\cemb{Sb}极性和\cemb{In}极性共存的多晶态。同时，当生长环境中的接近纯\cemb{In}极限时，第一层为混合极性的双层\cemb{InSb}的形成能大于零而第一层为理想极性的双层\cemb{InSb}的形成能保持在小于零的状态。在这种情况下，由于较高的\cemb{In}原子活性，可能会导致第一层为混合极性的双层\cemb{InSb}分解，进一步加速了双层\cemb{InSb}向理想极性的第一层构型转化。
+
+当第二层为\cemb{In}空位重构时，\cemb{In}空位层和作为第一层的\cemb{Sb}极性\cemb{InSb}之间的作用没有\cemb{Sb}三聚体作为第二层时的那么强烈。\cemb{In}空位重构的第二层无法\cemb{Sb}极性的第一层的形成能降低到混合极性之下。导致了第二层为\cemb{In}空位重构时，在双层\cemb{InSb}中只有第一层为\cemb{In}极性时为最小能量态。在\cemb{In}空位重构下，\cemb{Sb}极性的第一层只需要跨越\SI{0.63}{\mievpas}的能量台阶（\InSbMLpolar{1}{3}）即可一步步翻转至\cemb{In}极性的第一层，其中的过程均为放热反应。在这种情况下，我们认为当第二层为\cemb{In}空位重构时，极性为混合极性或者\cemb{Sb}极性的第一层会逐渐极化至\cemb{In}极性。
 
 \begin{figure}[htb]
     \subfloat[]{
@@ -228,6 +240,11 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \caption{\cemb{Bi(001)}衬底上双层\cemb{InSb}的形成能分布。(a)以Sb三聚体为第二层的双层\cemb{InSb}的形成能分布；(b)以In空位层为第二层的双层\cemb{InSb}的形成能分布。}
     \label{fig:IS_DFT_2LInSb_formationEnergy}
 \end{figure}
+
+在图\ref{fig:IS_DFT_2LInSb_formationEnergy}中，形成能的计算显示在生长了第二层\cemb{InSb}后，重构的第二层\cemb{InSb}会使得第一层已生长的非晶态\cemb{InSb}趋向于转变为多晶的形态（第二层为\cemb{Sb}三聚体重构）或者\cemb{In}极性的形态（第二层为\cemb{In}空位重构）。
+
+为了探究在双层\cemb{InSb}中第一层\cemb{InSb}由非晶态向单一\cemb{In}极性转变的动力学过程，我们以\cemb{In}空位作为第二层，$\InSbMLpolar{2}{2}$条形构型作为第一层组成的双层\cemb{InSb}作为研究对象，在\cemb{Bi}衬底上进行分子动力学模拟。如图\ref{fig:IS_structure_2Linsb_md50ps}所示，在经过了\SI{50}{\pico\second}的分子动力学模拟后，可以看到第一层的$\InSbMLpolar{2}{2}$构型已经完全被破坏。有一个原属于第一层的\cemb{Sb}原子越过一二层\cemb{InSb}的界面，被挤入了第二层。同时，第一层的\cemb{InSb}由于缺少了一个\cemb{Sb}原子，原本晶格中的褶皱变得扁平。随着分子动力学模拟的继续，第一个\cemb{In}极性的次表面出现在模拟开始约\SI{60}{\pico\second}的时候（图\ref{fig:IS_structure_2Linsb_md60ps}）。这个次表面是一个位于顶点的\cemb{In}原子和三个位于底部的\cemb{Sb}原子组成的四面体结构，并且在我们的模拟过程中一直维持到了\SI{100}{\pico\second}（图\ref{fig:IS_structure_2Linsb_md100ps}）。由于计算能力和模拟时长的限制，我们未能在模拟的时限内发现\cemb{In}空位重构层下第一层\cemb{InSb}完全转变为\cemb{In}极化构型。为了进一步
+
 
 \begin{figure}
     \subfloat[]{
@@ -246,7 +263,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
         \includegraphics{pic/IS_structure_2Linsb_md100psopt.png}
         \label{fig:IS_structure_2Linsb_md100psopt}
     }
-    \caption{\cemb{Bi(001)}衬底上双层\cemb{InSb}极性演化的分子动力学模拟结果。(a)分子动力学模拟50ps后的原子结构图；(b)分b动力学模拟60ps后的原子结构图；(c)分子动力学模拟100ps后的原子结构图；(d)100ps对应中间态的原子结构图。}
+    \caption{\cemb{Bi(001)}衬底上双层\cemb{InSb}极性演化的分子动力学模拟结果。(a)分子动力学模拟50ps后的原子结构图；(b)分b动力学模拟60ps后的原子结构图；(c)分子动力学模拟100ps后的原子结构图；(d)100ps对应中间态的原子结构图。原子结构图中，\cemb{Bi}原子使用蓝色表示，\cemb{In}原址使用褐色表示，\cemb{Sb}原子使用紫色表示。}
     \label{fig:IS_structure_2Linsb_md}
 \end{figure}
 
