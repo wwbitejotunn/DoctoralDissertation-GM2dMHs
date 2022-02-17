@@ -20,6 +20,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 \def\TfourSite{\rm T_{4} \it}
 \def\HthreeSite{\rm H_{3} \it}
 \def\mievpas{\milli\electronvolt\per\angstrom\squared}
+\def\InSbMLpolar#1#2{\rm #1-In/#2-Sb}
 
 对于\cemb{InSb(111)}极性面在\cemb{Bi(001)}衬底表面的生长机理，我们首先对衬底表面锑、铟原子的吸附进行研究。在衬底表面，吸附原子的结合能$\energyVar{b}{}$为\chinesecolon
 \[
@@ -54,9 +55,9 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 
 其中$\energyVar{InSb}{tot}$、$\energyVar{In\left(Bulk\right)}{}$和$\energyVar{Sb\left(Bulk\right)}{}$为\cemb{InSb}块体，\cemb{In}块体和\cemb{Sb}块体的能量。因此，在生长气氛中\cemb{InSb}的化学平衡下，$\muVar{In}{}$的变化范围为$\muVar{In}{}\leqslant \energyVar{Sb\left(Bulk\right)}{}+\Delta H_{\rm f}\left(\cemb{InSb}\right) \leqslant \energyVar{In\left(Bulk\right)}{}$，代表\cemb{In}的化学势$\muVar{In}{}$由纯\cemb{Sb}的生长环境变化到纯\cemb{In}的生长环境。
  
-对于吸附在$\TfourSite$位点的\cemb{In}原子，计算所得的在纯\cemb{In}环境下的结合能为\SI{-0.48}{\electronvolt}，高于在纯\cemb{Sb}环境下同样吸附在$\TfourSite$位点的\cemb{Sb}原子的结合能（\SI{-0.19}{\electronvolt}）。更高的结合能意味着相比于\cemb{Sb}原子，在能量最低的驱动下有更多的\cemb{In}原子从块体的状态分离并以吸附原子的状态沉积到\cemb{Bi(001)}的表面。对于\cemb{In}原子来说，其在最优吸附位点$\TfourSite$的结合能只比吸附次优吸附位点$\HthreeSite$的结合能高\SI{0.026}{\electronvolt}。而对于\cemb{Sb}原子，其在次优吸附点$\HthreeSite$和最优吸附点$\TfourSite$之间的结合能之差为\SI{0.17}{\electronvolt}。由于\cemb{Sb}原子在次优吸附位点$\HthreeSite$较差的吸附能力，\cemb{Sb}原子只能在接近纯\cemb{Sb}的生长环境中在\cemb{Bi(001)}表面的$\HthreeSite$位点吸附。
+对于吸附在$\TfourSite$位点的\cemb{In}原子，计算所得的在纯\cemb{In}环境下的结合能为\SI{-0.48}{\electronvolt}，低于在纯\cemb{Sb}环境下同样吸附在$\TfourSite$位点的\cemb{Sb}原子的结合能（\SI{-0.19}{\electronvolt}）。更抵的结合能意味着相比于\cemb{Sb}原子，在能量最低的驱动下有更多的\cemb{In}原子从块体的状态分离并以吸附原子的状态沉积到\cemb{Bi(001)}的表面。对于\cemb{In}原子来说，其在最优吸附位点$\TfourSite$的结合能只比吸附次优吸附位点$\HthreeSite$的结合能低\SI{0.026}{\electronvolt}。而对于\cemb{Sb}原子，其在次优吸附点$\HthreeSite$和最优吸附点$\TfourSite$之间的结合能之差为\SI{0.17}{\electronvolt}。由于\cemb{Sb}原子在次优吸附位点$\HthreeSite$较差的吸附能力，\cemb{Sb}原子只能在接近纯\cemb{Sb}的生长环境中在\cemb{Bi(001)}表面的$\HthreeSite$位点吸附。
 
-进一步考虑生长环境中的化学计量比的变化对于原子吸附的影响。在图\ref{fig:IS_DFT_adatomBind}中可以看到，只有很小的$\muVar{In}{}$区间允许\cemb{In}和\cemb{Sb}同时在\cemb{Bi(001)}衬底表面吸附（$\energyVar{f}{} \leqslant 0$）。在这个区间内\cemb{In}原子可以在$\TfourSite$和$\HthreeSite$位点吸附，而\cemb{Sb}原子只能在$\HthreeSite$位点吸附。对于\cemb{In}原子，由于较高的吸附能，相比于\cemb{Sb}原子其能够在较宽的$\muVar{In}{}$区间内在\cemb{Sb}衬底表面吸附。当环境中的\cemb{In}原子化学势稍微向纯\cemb{In}环境倾斜时（$\muVar{In}{}\geqslant \SI{-2.9}{\electronvolt}$），仅有\cemb{In}能够在\cemb{Bi}的表面吸附，而\cemb{Sb}原子则由于大于零的结合能倾向于从\cemb{Bi}的表面脱附。
+进一步考虑生长环境中的化学计量比的变化对于原子吸附的影响。在图\ref{fig:IS_DFT_adatomBind}中可以看到，只有很小的$\muVar{In}{}$区间允许\cemb{In}和\cemb{Sb}同时在\cemb{Bi(001)}衬底表面吸附（$\energyVar{f}{} \leqslant 0$）。在这个区间内\cemb{In}原子可以在$\TfourSite$和$\HthreeSite$位点吸附，而\cemb{Sb}原子只能在$\HthreeSite$位点吸附。对于\cemb{In}原子，由于较低的吸附能，相比于\cemb{Sb}原子其能够在较宽的$\muVar{In}{}$区间内在\cemb{Sb}衬底表面吸附。当环境中的\cemb{In}原子化学势稍微向纯\cemb{In}环境倾斜时（$\muVar{In}{}\geqslant \SI{-2.9}{\electronvolt}$），仅有\cemb{In}能够在\cemb{Bi}的表面吸附，而\cemb{Sb}原子则由于大于零的结合能倾向于从\cemb{Bi}的表面脱附。
 
 由于\cemb{In}原子和\cemb{Sb}原子在\cemb{Bi(001)}表面不同的吸附行为，在相同的化学气氛下，\cemb{In}和\cemb{Sb}很难同时在\cemb{Bi}衬底的表面独立吸附。出于更高的吸附能力，\cemb{In}在\cemb{InSb}的初期成核生长过程中处于更加主导的地位。在\cemb{In}原子能够沉积的区域，气氛中的\cemb{Sb}原子需要与已吸附的\cemb{In}原子成键、成核，才能够在\cemb{Bi}衬底的表面形成\cemb{InSb}。
 
@@ -64,7 +65,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 
 \begin{figure}[htb]
     \includegraphics{pic/IS_DFT_adatomDiff.png}
-    \caption{\cemb{Bi(001)}衬底表面\cemb{In}和\cemb{Sb}吸附原子的迁移势垒}
+    \caption{\cemb{Bi(001)}衬底表面\cemb{In}和\cemb{Sb}吸附原子的迁移势垒。原子结构图中，\cemb{Bi}原子使用蓝色表示，吸附原子（\cemb{In}、\cemb{Sb}）用绿色表示。}
     \label{fig:IS_DFT_adatomDiff}
 \end{figure}
 
@@ -92,6 +93,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 \end{table}
 
 \subsection{单层锑化铟的极性演化}
+
 \begin{figure}[htb]
     \subfloat[]{
         \label{fig:IS_structure_1Linsb_04}
@@ -135,15 +137,25 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
             \includegraphics[width=0.28\textwidth]{pic/IS_structure_1Linsb_40top.png}
         \end{tabular}
     }
-    \caption{\cemb{Bi(001)}衬底上不同极性单层\cemb{InSb}的原子结构。}
+    \caption{\cemb{Bi(001)}衬底上不同极性单层\cemb{InSb}的原子结构。原子结构图中，\cemb{Bi}原子使用蓝色表示，\cemb{In}原址使用褐色表示，\cemb{Sb}原子使用紫色表示。}
     \label{fig:IS_structure_1Linsb_allPolarity}
 \end{figure}
+
+接着，我们将单层\cemb{InSb(111)}极性的考察范围扩大到非理想的情况。考虑到吸附的\cemb{In}原子和\cemb{Sb}原子均倾向于沉积在$\TfourSite$位点和$\HthreeSite$位点，使用包含四个\cemb{In}原子和四个\cemb{Sb}原子的$2 \times 2$切片模型，我们可以归纳出六种可能的单层\cemb{InSb}极性。在图\ref{fig:IS_structure_1Linsb_allPolarity}中，我们列出了本章中所考虑的所有单层\cemb{InSb}的极性情况。这里，我们使用\cemb{InSb}单层中处于$\TfourSite$的原子的数量来表示不同极性的\cemb{InSb(111)}单层，例如在$2 \times 2$切片模型中理想的\cemb{In}极性\cemb{InSb}中，四个$\TfourSite$都被\cemb{In}原子占据，因此可以表示为$\InSbMLpolar{4}{0}$。相对应的，\cemb{Sb}极性的\cemb{InSb}可以表示为$\InSbMLpolar{0}{4}$。对于$\InSbMLpolar{2}{2}$极性的\cemb{InSb}单层，有两个不等价的构型。其中一个构型内部\cemb{In}原子和\cemb{Sb}分别构成两个相互嵌套的方形的四个顶角，我们用$\InSbMLpolar{2}{2}$方形表示。另一个构型中\cemb{In}原子和\cemb{Sb}原子呈条状分布，我们用$\InSbMLpolar{2}{2}$条形表示。
+
+
+如图\ref{fig:IS_DFT_1LInSb_all}所示，我们计算了所有极性的$2 \times 2 \cemb{InSb}$在\cemb{Bi(001)}衬底表面的形成能。在$2 \times 2$模型中，\cemb{In}极性（$\InSbMLpolar{4}{0}$）的形成能为\SI{-18.52}{\mievpas}，低于$2 \times 2$模型中\cemb{Sb}极性（$\InSbMLpolar{0}{4}$）的形成能（\SI{-14.64}{\mievpas}）。$2 \times 2 \cemb{InSb}$理想极性（\cemb{Sb}极性和\cemb{In}极性）的计算结果与上一节中$1 \times 1$模型一致。$2 \times 2$模型中更低的形成能可能是由于表面原子在$2 \times 2$模型中有更多的空间可以进行更完全的几何优化。
+
 
 \begin{figure}[htb]
     \includegraphics{pic/IS_DFT_1LInSb_all.png}
     \caption{\cemb{Bi(001)}衬底上不同极性单层\cemb{InSb}的形成能。}
     \label{fig:IS_DFT_1LInSb_all}
 \end{figure}
+
+在我们的进一步计算中，我们发现混合极性的单层\cemb{InSb(111)}构型（\InSbMLpolar{1}{3}、\InSbMLpolar{2}{2}以及\InSbMLpolar{3}{1}）在形成能上更具有优势。从图\ref{fig:IS_DFT_1LInSb_all}上可以看出，混合极性中能量最低的\InSbMLpolar{1}{3}构型的形成能也略低于理想极性中更为稳定的\cemb{In}极性（\InSbMLpolar{4}{0}）。因此，由于混合极性具有更高的能量稳定性，在生长的过程中\cemb{InSb}单层会倾向于由理想极性的结构（\cemb{Sb}极性和\cemb{In}极性）转变为混合极性。在4种混合极性中$\InSbMLpolar{2}{2}$结构的单层\cemb{InSb}的形成能最低。其中，$\InSbMLpolar{2}{2}$ 条形构型的形成能略低与$\InSbMLpolar{2}{2}$方形构型的形成能。这两形成能相近的$\InSbMLpolar{2}{2}$构型形成的能量最低态使得混合极性的\cemb{InSb}单层倾向于较为均匀的分布于这两个$\InSbMLpolar{2}{2}$构型之中，形成类似于非晶态的\cemb{InSb}单层。
+
+利用分子动力学模拟方法，我们测试了$\InSbMLpolar{2}{2}$构型的热稳定性。如图\ref{fig:IS_structure_1Linsb_md}所示，我们选用形成能更低的$\InSbMLpolar{2}{2}$ 条形构型作为考察对象（图\ref{fig:IS_structure_1Linsb_md0ps}），模拟温度设为生长\cemb{InSb}常见的\SI{400}{\kelvin}。可能看到，在经过\SI{30}{\pico\second}的分子动力学模拟后。\cemb{InSb}单层的晶格结构被略微破坏，其中\cemb{In}的条状构型已经被热动能破坏，形成类似于菱形的结构，而\cemb{Sb}的条状构型保持较为完好。综合以上的计算结果，我们认为\cemb{InSb(111)}单层在\cemb{Sb(001)}衬底上由于热涨落的作用很可能无法保持在唯一的构型下，而是处于不同混合极性的热平衡态。在热平衡中，不同极性的\cemb{InSb}在热动能的驱动下相互转化，形成非晶态的单层\cemb{InSb}形貌。
 
 \begin{figure}[htb]
     \subfloat[]{
@@ -167,13 +179,23 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \label{fig:IS_structure_1Linsb_md}
 \end{figure}
 
+单层\cemb{InSb(111)}不同极性之间的转换能力我们通过将单层\cemb{InSb(111)}由一个极性的构型转变为另一个极性的构型所需的势垒进行判定。取\cemb{Sb}极性和\cemb{In}极性的的\cemb{InSb}单层之间的转换作为代表。这两个极性之间的转变涉及\cemb{InSb}单层内部所有的\cemb{In}原子和\cemb{Sb}原子，因此我们将其作为\cemb{InSb}极性转换势垒的上界。过渡态的计算结果如图\ref{fig:IS_DFT_1LInSb_InPtoSbPNeb}所示，从能量更高的\cemb{Sb}极性结构转变到\cemb{In}极性，单层\cemb{InSb}需要跨越约\SI{0.60}{\electronvolt}的势垒。根据统计力学原理\citing{RN945-1935}，单层\cemb{InSb}从\cemb{Sb}极性转变到\cemb{In}极性的频率$r$为\chinesecolon
+\[
+    r=e^{\frac{-\energyVar{a}{}}{\kbconst T}}e^{\frac{\Delta S}{\kbconst}} \frac{\kbconst T}{h}
+\]
+
+其中，$\energyVar{a}{}$为反应的激活能，$\kbconst$为玻尔兹曼常数，$T$为温度，$h$为普朗克常数，$\Delta S$为反应过程中初态和过渡态之间的熵变，我们使用密度泛函理论计算结合原子震动能谱分析进行计算。在\SI{400}{\kelvin}的温度下，单层\cemb{InSb}从\cemb{Sb}极性转变到\cemb{In}极性的频率$r$约为\SI{3e5}{\per\second}，证明了在\cemb{Bi(001)}衬底表面，\cemb{InSb}单层具有较高的极性转变能力。
+
 \begin{figure}[htb]
     \includegraphics{pic/IS_DFT_1InSb_flipBarrier.png}
-    \caption{\cemb{Bi(001)}衬底上单层\cemb{InSb}的极性反转势垒。}
+    \caption{\cemb{Bi(001)}衬底上单层\cemb{InSb}的极性转换势垒。}
+    \label{fig:IS_DFT_1LInSb_InPtoSbPNeb}
 \end{figure}
 
 \section{双层锑化铟的生长机理}
 \subsection{双层锑化铟的生长过程}
+
+
 \begin{figure}[htb]
     \subfloat[]{
         \label{fig:IS_2LInSb_config}
@@ -313,7 +335,6 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 \begin{figure}
     \includegraphics{pic/IS_DFT_2LInSb_partPhase.png}
 \end{figure}
-
 \subsection{双层锑化铟的极性演化机理}
 
 \begin{figure}
