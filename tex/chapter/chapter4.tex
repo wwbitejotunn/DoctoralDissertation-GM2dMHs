@@ -270,8 +270,6 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 
 由于计算能力和模拟时长的限制，我们未能在模拟的时限内发现\cemb{In}空位重构层下第一层\cemb{InSb}完全转变为\cemb{In}极化构型。我们对进行了分子动力学模拟\SI{100}{\pico\second}后的双层\cemb{InSb}模型进行了结构优化，以去除分子动力学模拟中的热扰动热扰动，获得在热动能的驱动下，双层\cemb{InSb}极性演化的中间态。如图\ref{fig:IS_structure_2Linsb_md100psopt}所示，在经过结构优化后，双层\cemb{InSb}极性演化的中间态具有两个\cemb{In}次表面四面体，显示出半\cemb{In}极化的结构。同时，形成能的计算显示这个双层\cemb{InSb}极性演化的中间态的形成能介于\cemb{In}极性的第一层和$\InSbMLpolar{2}{2}$的第一层之间。进一步印证了在热动能的驱使下，双层\cemb{InSb}会逐渐从原本以混合极性为主的非晶态慢慢极化至\cemb{In}极性。
 
-为了揭示双层\cemb{InSb}的极化过程，我们首先对第二层\cemb{InSb}的生长过程进行探究。与在\cemb{Bi(001)}表面生长单层\cemb{InSb}类似，我们计算了\cemb{In}和\cemb{Sb}原子在单层\cemb{InSb}表面的吸附过程。考虑单层\cemb{InSb}以混合极性为主的非静态构型以及不同极性的形成能高低（图\ref{fig:IS_DFT_1LInSb_all}），我们选用$\InSbMLpolar{2}{2}$条形结构的单层\cemb{InSb}作为吸附表面。如图\ref{fig:IS_2Linsb_adatom}所示，我们同样考虑单层\cemb{InSb}表面$\TfourSite$位点和$\HthreeSite$位点对于\cemb{In}和\cemb{Sb}原子的吸附能力。与在\cemb{Bi}表面吸附不同，单层\cemb{InSb}对于\cemb{In}原子的吸附能力弱于\cemb{Sb}原子。在各自的浓度比例极限中，\cemb{Sb}原子吸附在\cemb{InSb}表面具有比\cemb{In}原子更高的结合能。同时，\cemb{Sb}原子与单层\cemb{InSb}更强的相互作用使得\cemb{Sb}原子吸附的为放热反应的$\muVar{In}{}$范围宽于\cemb{In}原子。对于\cemb{Sb}原子而言，其可以在生长环境中\cemb{In}原子浓度略高的情况下在单层\cemb{InSb}的表面吸附（$\muVar{In}{}\leqslant \SI{-2.70}{\electronvolt}$）。而\cemb{In}原子只能在$\muVar{In}{} \geqslant \SI{-2.68}{\electronvolt}$的生长环境下才倾向于在单层的\cemb{InSb}表面吸附。在$\InSbMLpolar{2}{2}$条形结构的\cemb{InSb}的表面，没有能够同时吸附\cemb{In}原子和\cemb{Sb}原子的$\muVar{In}{}$窗口。因此，在第二层\cemb{InSb}成核生长的早期，由于生长环境中原子比例和化学活性的不同，在\cemb{In}和\cemb{Sb}之间只有一种原子能够直接在单层\cemb{InSb}表面吸附。我们可以通过调节生长环境中的浓度比例调控在单层\cemb{InSb}的优先吸附原子类型。
-
 \begin{figure}[!htb]
     \subfloat[]{
         \includegraphics{pic/IS_DFT_2InSb_adatoms.png}
@@ -292,9 +290,8 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \label{fig:IS_2Linsb_adatom}
 \end{figure}
 
-随着生长的进行，原本难以在单层\cemb{InSb}表面吸附的原子可能和已吸附的原子成键，形成团簇。团簇的生长形态和化学组成同样可能受到生长环境中$\muVar{In}{}$变化的影响。考虑第二层为到\cemb{Sb}三聚体重构时，于双层\cemb{InSb}的形成能谱（图\ref{fig:IS_DFT_2LInSb_SbTonAll}）可以认为第一层混合极性的\cemb{InSb}的晶体化转变开始于作为第二层的\cemb{Sb}团簇重构层将第一层引导至理想极性的构型（\cemb{In}极性或者\cemb{Sb}极性）。同时，我们注意到从原子结构的角度看，\cemb{In}空位重构的原子结构可以由\cemb{Sb}三聚体重构表面继续吸附三个\cemb{In}原子和一个\cemb{Sb}原子形成。因此，在生长的过程中，\cemb{In}重构表面的第二层可能是从团簇阶段的\cemb{Sb}三聚体重构表面演化而来，并在\cemb{Sb}三聚体重构的第二层基础上进一步将第一层多晶态的\cemb{InSb}完全极化至\cemb{In}极性。
 
-在生长过程的团簇阶段，我们需要验证\cemb{Sb}三聚体是否是生长过程中最为可能的团簇形态。因此，我们进一步考察了团簇生长阶段不同形貌的三聚体在\cemb{InSb}自极化过程中的形貌以及作为第二层的\cemb{InSb}团簇在不同$\muVar{In}{}$环境下的演化规律。通过先前的计算，我们已经得知作为第二层的\cemb{Sb}三聚体重构可以将原本极性混乱的第一层\cemb{InSb}引导至\cemb{In}极性或者\cemb{Sb}极性。而\cemb{In}极性的第一层构型是以\cemb{Sb}三聚体重构为第二层的双层石墨烯的的全局能量最低态。因此，我们将第一层构型的关注点限定在\cemb{In}极性，考察不同元素比例的\cemb{In_xSb_{3-x}}三聚体的生长机理。我们将\cemb{In}极性\cemb{InSb}上生长的\cemb{In_xSb_{3-x}}三聚体分为两类（图\ref{fig:IS_structure_InxSb3-x}），A类的构型和先前所计算的\cemb{Sb}三聚体类似，三聚体内部的原子处于$\TfourSite$位三角形的顶点位。B类构型由A类构型在平面内旋转\SI{60}{\degree}得到，其三聚体内部的原子处于$\TfourSite$位三角形的边位。
+为了揭示双层\cemb{InSb}的极化过程，我们首先对第二层\cemb{InSb}的生长过程进行探究。与在\cemb{Bi(001)}表面生长单层\cemb{InSb}类似，我们计算了\cemb{In}和\cemb{Sb}原子在单层\cemb{InSb}表面的吸附过程。考虑单层\cemb{InSb}以混合极性为主的非静态构型以及不同极性的形成能高低（图\ref{fig:IS_DFT_1LInSb_all}），我们选用$\InSbMLpolar{2}{2}$条形结构的单层\cemb{InSb}作为吸附表面。如图\ref{fig:IS_2Linsb_adatom}所示，我们同样考虑单层\cemb{InSb}表面$\TfourSite$位点和$\HthreeSite$位点对于\cemb{In}和\cemb{Sb}原子的吸附能力。与在\cemb{Bi}表面吸附不同，单层\cemb{InSb}对于\cemb{In}原子的吸附能力弱于\cemb{Sb}原子。在各自的浓度比例极限中，\cemb{Sb}原子吸附在\cemb{InSb}表面具有比\cemb{In}原子更高的结合能。同时，\cemb{Sb}原子与单层\cemb{InSb}更强的相互作用使得\cemb{Sb}原子吸附的为放热反应的$\muVar{In}{}$范围宽于\cemb{In}原子。对于\cemb{Sb}原子而言，其可以在生长环境中\cemb{In}原子浓度略高的情况下在单层\cemb{InSb}的表面吸附（$\muVar{In}{}\leqslant \SI{-2.70}{\electronvolt}$）。而\cemb{In}原子只能在$\muVar{In}{} \geqslant \SI{-2.68}{\electronvolt}$的生长环境下才倾向于在单层的\cemb{InSb}表面吸附。在$\InSbMLpolar{2}{2}$条形结构的\cemb{InSb}的表面，没有能够同时吸附\cemb{In}原子和\cemb{Sb}原子的$\muVar{In}{}$窗口。因此，在第二层\cemb{InSb}成核生长的早期，由于生长环境中原子比例和化学活性的不同，在\cemb{In}和\cemb{Sb}之间只有一种原子能够直接在单层\cemb{InSb}表面吸附。我们可以通过调节生长环境中的浓度比例调控在单层\cemb{InSb}的优先吸附原子类型。
 
 \begin{figure}[!htb]
     \subfloat[]{
@@ -305,15 +302,16 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     }
     \caption{单层\cemb{InSb}表面生长团簇（\cemb{In_xSb_{3-x}}）的构型。(a)A类\cemb{In_xSb_{3-x}}团簇的原子构型；(b)B类\cemb{In_xSb_{3-x}}团簇的原子构型}
     \label{fig:IS_structure_InxSb3-x}
-\end{figure}
+\end{figure} 
 
-在图\ref{fig:IS_DFT_2InSb_InxSbxT_All}中，我们计算了在\cemb{In}极性的\cemb{InSb}表面生长不同化学计量比的\cemb{In_xSb_{3-x}}团簇的形成能情况。整体来看，随着\cemb{Sb}原子化学计量比的上升，\cemb{In_xSb_{3-x}}团簇的形成能逐渐下降。在所有考虑的团簇中， A类\cemb{In0Sb3}团簇（\cemb{Sb}三聚体重构）的形成能在在大部分的$\muVar{In}{}$条件下取到最低值。这与\cemb{Sb}三聚体重构作为生长实验中自然形成的\cemb{Sb}极性的表面重构现象一致\citing{RN896-1998}。而包含\cemb{In}元素的团簇仅在生长环境中\cemb{In}原子浓度较高，$\muVar{In}{}$的取值接近纯\cemb{In}极限时才有能量上的优势。
+随着生长的进行，原本难以在单层\cemb{InSb}表面吸附的原子可能和已吸附的原子成键，形成团簇。团簇的生长形态和化学组成同样可能受到生长环境中$\muVar{In}{}$变化的影响。考虑第二层为到\cemb{Sb}三聚体重构时，于双层\cemb{InSb}的形成能谱（图\ref{fig:IS_DFT_2LInSb_SbTonAll}）可以认为第一层混合极性的\cemb{InSb}的晶体化转变开始于作为第二层的\cemb{Sb}团簇重构层将第一层引导至理想极性的构型（\cemb{In}极性或者\cemb{Sb}极性）。同时，我们注意到从原子结构的角度看，\cemb{In}空位重构的原子结构可以由\cemb{Sb}三聚体重构表面继续吸附三个\cemb{In}原子和一个\cemb{Sb}原子形成。因此，在生长的过程中，\cemb{In}重构表面的第二层可能是从团簇阶段的\cemb{Sb}三聚体重构表面演化而来，并在\cemb{Sb}三聚体重构的第二层基础上进一步将第一层多晶态的\cemb{InSb}完全极化至\cemb{In}极性。
 
+在生长过程的团簇阶段，我们需要验证\cemb{Sb}三聚体是否是生长过程中最为可能的团簇形态。因此，我们进一步考察了团簇生长阶段不同形貌的三聚体在\cemb{InSb}自极化过程中的形貌以及作为第二层的\cemb{InSb}团簇在不同$\muVar{In}{}$环境下的演化规律。通过先前的计算，我们已经得知作为第二层的\cemb{Sb}三聚体重构可以将原本极性混乱的第一层\cemb{InSb}引导至\cemb{In}极性或者\cemb{Sb}极性。而\cemb{In}极性的第一层构型是以\cemb{Sb}三聚体重构为第二层的双层石墨烯的的全局能量最低态。因此，我们将第一层构型的关注点限定在\cemb{In}极性，考察不同元素比例的\cemb{In_xSb_{3-x}}三聚体的生长机理。我们将\cemb{In}极性\cemb{InSb}上生长的\cemb{In_xSb_{3-x}}三聚体分为两类（图\ref{fig:IS_structure_InxSb3-x}），A类的构型和先前所计算的\cemb{Sb}三聚体类似，三聚体内部的原子处于$\TfourSite$位三角形的顶点位。B类构型由A类构型在平面内旋转\SI{60}{\degree}得到，其三聚体内部的原子处于$\TfourSite$位三角形的边位。
 
 \begin{figure}[!htb]
     \subfloat[]{
         \includegraphics[width=0.9\textwidth]{pic/IS_DFT_2InSb_InxSbxT_All.png}
-    }\\[-0.5ex]
+    }\\[-1ex]
     \subfloat[]{
         \includegraphics{pic/IS_structure_In1Sb2_A.png}
     }
@@ -324,16 +322,18 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \label{fig:IS_DFT_2InSb_InxSbxT_All}
 \end{figure}
 
-从原子结构的角度看，\cemb{Sb}原子在\cemb{InSb}表面形成的重构倾向于保持A类团簇的构型，而\cemb{In}原子组成的重构则倾向于形成B类团簇的结构。在\cemb{InSb}混合团簇的原子结构中，\cemb{In}的加入更倾向于单独吸附在$\TfourSite$位点，破坏了\cemb{Sb}三聚体在\cemb{InSb}表面的等边三角形构型。对于只含有\cemb{In}原子的\cemb{In3Sb0}团簇，结构优化的结果显示第二层的\cemb{In}原子之间仅存在非常弱的相互作用。这个较弱的相互作用只将原本各自独立吸附在$\TfourSite$位和$\HthreeSite$位的\cemb{In}原子向团簇的中心偏移了很小的位移。综合以上的计算结果，我们可以认为在生长第二层\cemb{InSb}以及双层\cemb{InSb}的自极化过程中，团簇阶段主要以\cemb{Sb}三聚体的形式存在。而在团簇阶段中\cemb{InSb}第一层表面的\cemb{In}原子则主要以较为分散的吸附原子的形式存在。
+在图\ref{fig:IS_DFT_2InSb_InxSbxT_All}中，我们计算了在\cemb{In}极性的\cemb{InSb}表面生长不同化学计量比的\cemb{In_xSb_{3-x}}团簇的形成能情况。整体来看，随着\cemb{Sb}原子化学计量比的上升，\cemb{In_xSb_{3-x}}团簇的形成能逐渐下降。在所有考虑的团簇中， A类\cemb{In0Sb3}团簇（\cemb{Sb}三聚体重构）的形成能在在大部分的$\muVar{In}{}$条件下取到最低值。这与\cemb{Sb}三聚体重构作为生长实验中自然形成的\cemb{Sb}极性的表面重构现象一致\citing{RN896-1998}。而包含\cemb{In}元素的团簇仅在生长环境中\cemb{In}原子浓度较高，$\muVar{In}{}$的取值接近纯\cemb{In}极限时才有能量上的优势。
 
-此外，我们发现在B形状\cemb{In2Sb1}第二层下方的\cemb{In}极性\cemb{InSb}在在原子优化后变为了\cemb{In}空位层。多余的\cemb{In}原子被挤入第二层的团簇之中，形成了
-包含三个\cemb{In}原子的\cemb{In}三聚体。我们同时检查了\cemb{In}空位的重构构型在单层\cemb{InSb}中的形成能情况。如图\ref{fig:IS_DFT_1InSb_FlipVsInV}所示，只有在接近纯\cemb{Sb}环境的情况下，在\cemb{Bi(001)}表面\cemb{In}空位的形成能略低于\cemb{In}极性单层和\InSbMLpolar{1}{3}混合极性单层的形成能。随着生长环境中\cemb{In}原子浓度的上升，\cemb{In}原子的活性上升，环境中的\cemb{In}原子会倾向于填补\cemb{InSb}中的\cemb{In}空位，导致\cemb{In}空位的形成能也上升并且会超过\cemb{Sb}极性的单层\cemb{InSb}的形成能。
+从原子结构的角度看，\cemb{Sb}原子在\cemb{InSb}表面形成的重构倾向于保持A类团簇的构型，而\cemb{In}原子组成的重构则倾向于形成B类团簇的结构。在\cemb{InSb}混合团簇的原子结构中，\cemb{In}的加入更倾向于单独吸附在$\TfourSite$位点，破坏了\cemb{Sb}三聚体在\cemb{InSb}表面的等边三角形构型。对于只含有\cemb{In}原子的\cemb{In3Sb0}团簇，结构优化的结果显示第二层的\cemb{In}原子之间仅存在非常弱的相互作用。这个较弱的相互作用只将原本各自独立吸附在$\TfourSite$位和$\HthreeSite$位的\cemb{In}原子向团簇的中心偏移了很小的位移。综合以上的计算结果，我们可以认为在生长第二层\cemb{InSb}以及双层\cemb{InSb}的自极化过程中，团簇阶段主要以\cemb{Sb}三聚体的形式存在。而在团簇阶段中\cemb{InSb}第一层表面的\cemb{In}原子则主要以较为分散的吸附原子的形式存在。
 
 \begin{figure}[!htb]
     \includegraphics{pic/IS_DFT_1InSb_FlipVsInV.png}
     \caption{\cemb{Bi(001)}表面不同极性单层\cemb{InSb}和\cemb{In}空位重构层的形成能对比。}
     \label{fig:IS_DFT_1InSb_FlipVsInV}
 \end{figure}
+
+此外，我们发现在B形状\cemb{In2Sb1}第二层下方的\cemb{In}极性\cemb{InSb}在在原子优化后变为了\cemb{In}空位层。多余的\cemb{In}原子被挤入第二层的团簇之中，形成了
+包含三个\cemb{In}原子的\cemb{In}三聚体。我们同时检查了\cemb{In}空位的重构构型在单层\cemb{InSb}中的形成能情况。如图\ref{fig:IS_DFT_1InSb_FlipVsInV}所示，只有在接近纯\cemb{Sb}环境的情况下，在\cemb{Bi(001)}表面\cemb{In}空位的形成能略低于\cemb{In}极性单层和\InSbMLpolar{1}{3}混合极性单层的形成能。随着生长环境中\cemb{In}原子浓度的上升，\cemb{In}原子的活性上升，环境中的\cemb{In}原子会倾向于填补\cemb{InSb}中的\cemb{In}空位，导致\cemb{In}空位的形成能也上升并且会超过\cemb{Sb}极性的单层\cemb{InSb}的形成能。
 
 在\cemb{Sb}三聚体的和$\muVar{In}{}$的作用下，双层\cemb{InSb}中第一层的原子结构可以在\cemb{In}极性和\cemb{In}空位重构之间来回变换。在这个过程中需要将\cemb{In}极性\cemb{InSb}第一层中的一个\cemb{In}原子挤出原本的晶格位置。如图\ref{fig:IS_DFT_2InSb_InPtoInV}所示，当\cemb{In}极性\cemb{InSb}第一层中的一个\cemb{In}原子被挤出后，会停留在\cemb{InSb}的表面原本的$\TfourSite$形成独立的吸附原子。\cemb{InSb}单层在缺失了一个\cemb{In}原子之后形成了类似于\cemb{In}空位重构的平面形式。挤出的\cemb{In}原子会于第一层\cemb{InSb}中的\cemb{Sb}原子成键，将其略微拉出\cemb{In}空位重构所形成的平面。根据我们的计算，将\cemb{In}极性的\cemb{InSb}中的一个\cemb{In}原子挤出为吸附原子的反应为吸热反应，需要吸收约\SI{5}{\mievpas}的能量。
 
@@ -395,14 +395,16 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 
 我们使用$C^{N_{\rm InV}\rm InV}_{N_{\rm SbT}\rm SbT}$来表示部分二层生长的双层\cemb{InSb}的原子构型。其中$C$是已生长的第二层\cemb{InSb}的总覆盖度，$N_{\rm InV}$和$N_{\rm SbT}$代表\cemb{In}空位重构和\cemb{Sb}三聚体重构在模拟晶胞中占据的区块的数量。
 
-在图\ref{fig:IS_DFT_2LInSb_partEnergy}中，我们绘制了在纯\cemb{Sb}和纯\cemb{In}极限的生长环境下双层\cemb{InSb}随着沉积时间增长的形成能分布和极性演化过程。在纯\cemb{Sb}环境中，\cemb{Sb}三聚体表面重构拥有非常高的形成能能量优势。随着沉积原子数的上升，越来越多的\cemb{Sb}三聚体表面重构在单层\cemb{InSb}的表面生长，并且将各自下方区域的第一层\cemb{InSb}局部得转变为\cemb{In}极性或者\cemb{Sb}极性的结构。第一层\cemb{InSb}的首次极化开始于$\CNinNsb{3}{4}{0}{3}$。在$\CNinNsb{3}{4}{0}{3}$构型的双层\cemb{InSb}中，最后一块未生长第二层\cemb{InSb}的区块在边界能的作用下自发转变成与周围相同极化的晶态结构，使得整个双层\cemb{InSb}在覆盖度为$\frac{1}{3}$的\cemb{Sb}三聚体第二层的作用下被极化为以\cemb{In}极性和\cemb{Sb}极性为主的多晶构型。在纯\cemb{Sb}极限环境中高活性的\cemb{Sb}原子不仅促进了\cemb{Sb}三聚体重构第二层的生长，而且还阻止了以\cemb{In}空位重构为构型的第二层的形成。
-%//TODO continue here
+在图\ref{fig:IS_DFT_2LInSb_partEnergy}中，我们绘制了在纯\cemb{Sb}和纯\cemb{In}极限的生长环境下双层\cemb{InSb}随着沉积时间增长的形成能分布和极性演化过程。在纯\cemb{Sb}环境中，\cemb{Sb}三聚体表面重构拥有非常高的形成能能量优势。随着沉积原子数的上升，越来越多的\cemb{Sb}三聚体表面重构在单层\cemb{InSb}的表面生长，并且将各自下方区域的第一层\cemb{InSb}局部得转变为\cemb{In}极性或者\cemb{Sb}极性的结构。第一层\cemb{InSb}的首次极化开始于$\CNinNsb{3}{4}{0}{3}$。在$\CNinNsb{3}{4}{0}{3}$构型的双层\cemb{InSb}中，最后一块未生长第二层\cemb{InSb}的区块在边界能的作用下自发转变成与周围相同极化的晶态结构，使得整个双层\cemb{InSb}在覆盖度为$\frac{3}{4}$的\cemb{Sb}三聚体第二层的作用下被极化为以\cemb{In}极性和\cemb{Sb}极性为主的多晶构型。在纯\cemb{Sb}极限环境中高活性的\cemb{Sb}原子不仅促进了\cemb{Sb}三聚体重构第二层的生长，而且还阻止了以\cemb{In}空位重构为构型的第二层的形成。根据我们的形成能计算，包含6个吸附原子的$\CNinNsb{1}{2}{0}{2}$构型的形成能低于包含7个吸附原子的$\CNinNsb{1}{4}{1}{0}$。因此在生长了覆盖率为$\frac{1}{2}$的\cemb{Sb}三聚体重构第二层后，生长气氛中的\cemb{In}原子和\cemb{Sb}原子并不会在已经形成的\cemb{Sb}三聚体团簇的基础上继续生长出\cemb{In}空位重构，而是直接在未生长第二层的表面生长\cemb{Sb}三聚体重构第二层，从而形成能量更低的$\CNinNsb{3}{4}{0}{3}$构型的双层\cemb{InSb}。同时，包含9个吸附原子的$\CNinNsb{3}{4}{0}{3}$构型的形成能也低于包含10个吸附原子的$\CNinNsb{1}{2}{1}{1}$构型。因此在生长了覆盖率$\frac{1}{3}$的\cemb{Sb}三聚体重构的第二层后，\cemb{In}空位第二层同样无法在三聚体重构的基础上生成。知道生长了满覆盖的\cemb{Sb}三聚体重构后，包含12个吸附原子的$\CNinNsb{1}{1}{0}{4}$的形成能低于包含13个吸附原子的$\CNinNsb{3}{4}{1}{2}$、包含14个吸附原子的$\CNinNsb{1}{2}{2}{0}$、包含16个吸附原子的$\CNinNsb{1}{1}{1}{3}$、包含17个吸附原子的$\CNinNsb{3}{4}{2}{1}$。在跳过了这四个构型后，在纯\cemb{Sb}极限环境下的$\CNinNsb{1}{1}{0}{4}$构型倾向于直接生成更加稳定的$\CNinNsb{1}{1}{2}{2}$，包含20个吸附原子。$\CNinNsb{1}{1}{2}{2}$构型的形成同时在\cemb{In}空位重构的作用下，第一层\cemb{InSb}的被极化为\cemb{In}极性，完成双层\cemb{InSb}的极化过程。继续吸附生长环境中更多的原子可以形成满覆盖的\cemb{In}空位重构第二层，进一步降低\cemb{In}极性第二层的形成能，提升极化水平。
 
 \begin{figure}
     \includegraphics{pic/IS_DFT_2LInSb_partEnergy.png}
     \caption{不同生长环境下双层\cemb{InSb}随着沉积时间增长的形成能分布和极性演化过程。}
     \label{fig:IS_DFT_2LInSb_partEnergy}
 \end{figure}
+
+
+在纯\cemb{In}环境中，环境中的\cemb{Sb}原子很难在单层的\cemb{InSb}表面沉积，同时较高的$\muVar{In}{}$取值也导致形成\cemb{Sb}三聚体重构第二层的形成能较大。在这种情况下，随着生长过程而吸附在单层\cemb{InSb}表面的原子更倾向于直接形成\cemb{In}空位的第二层（$\CNinNsb{1}{4}{1}{0}$），同时也将对应区块下的第一次层\cemb{InSb}局域地极化成\cemb{In}极性地构型。在聚集了14个吸附原子后，\cemb{InSb}单层的表面形成了覆盖率为$\frac{1}{2}$的\cemb{In}空位重构第二层。在这个过程中，双层\cemb{InSb}的极化过程直接跳过了多晶的步骤，$\CNinNsb{1}{2}{2}{0}$结构的第二层将未覆盖第二层的区域一并转变为了\cemb{In}极性的构型。在这种情况下，未覆盖第二层的单层\cemb{InSb}，由于不同极性之间过高的晶界能，被迫与另邻位的被第二层所极化区域保持同样的极性构造，以保持形成能的最小化。虽然早早得完成了全区域第一层向\cemb{In}极性结构的转变，但在$\CNinNsb{1}{2}{2}{0}$结构的第二层下，全\cemb{In}极性的第一层的形成能仅比包含非晶态的第一层的形成能高\SI{0.07}{\mievpas}。如此小的差距并不能保证双层\cemb{InSb}能够在热动能的影响下继续保持\cemb{In}极性的状态。进一步的计算表明，$\CNinNsb{1}{2}{2}{0}$继续吸附气氛中的三个\cemb{Sb}原子后，会在第二层中形成$\CNinNsb{3}{4}{2}{1}$结构。这个结构的产生不仅破坏了的原本规整的第二层\cemb{InSb}的晶格，而且还会在双层\cemb{InSb}的极化过程中成为一个陷阱步骤。使得原本在$\CNinNsb{1}{2}{2}{0}$结构的第二层下完成极化的\cemb{In}极性双层\cemb{InSb}转变为非晶态的构型。要越过这个$\CNinNsb{3}{4}{2}{1}$导致的陷阱步骤，需要进一步在单层\cemb{InSb}的表面上沉积原子，使得第二层的覆盖率达到1，形成$\CNinNsb{1}{1}{2}{2}$结构。在$\CNinNsb{1}{1}{2}{2}$结构的第二层下，第一层\cemb{InSb}的结构到\cemb{In}极性的状态，但$\CNinNsb{1}{1}{2}{2}$结构下\cemb{In}极性的双层\cemb{InSb}的形成能只比陷阱步$\CNinNsb{3}{4}{2}{1}$结构下非晶态的双层\cemb{InSb}的形成能低\SI{0.27}{\mievpas}。因此只靠形成$\CNinNsb{1}{1}{2}{2}$结构的第二层并不能保证双层\cemb{InSb}的再次完全极化。为了进一步巩固极化的成果，需要吸附生长环境中更多的原子，计算显示\cemb{In}空位重构在第二层的覆盖率越大，\cemb{In}极性的双层\cemb{InSb}的形成能相对于非晶态陷阱步的优势就越大。在$\CNinNsb{1}{1}{4}{0}$结构的第二层下，\cemb{In}极性的双层\cemb{InSb}的形成能比陷阱步$\CNinNsb{3}{4}{2}{1}$结构下非晶态的形成能低大约\SI{10.61}{\mievpas}。
 
 \begin{figure}
     \subfloat[]{
@@ -418,6 +420,9 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
         \includegraphics{pic/IS_structure_partical_3-4_0-3.png}
     }
 \end{figure}
+
+对于极化陷阱步$\CNinNsb{3}{4}{2}{1}$结构的形成，我们在这里从原子结构的角度进行简单分析。
+%//TODO continue here
 
 \begin{figure}
     \includegraphics{pic/IS_DFT_2LInSb_partPhase.png}
