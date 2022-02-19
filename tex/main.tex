@@ -15,12 +15,28 @@
 \def\cemb#1{\,\ce{#1}}
 \def\energyVar#1#2{\it E_{\rm #1}^{\rm #2} \it}
 \def\muVar#1#2{\it \mu_{\rm #1}^{\rm #2} \it}
+\def\tmuVar#1#2{\it \widetilde{\mu}_{\rm #1}^{\rm #2} \it}
 \def\kbconst{\it k_{\rm B} \it}
 
 \newcommand{\MYCAPFLAG}{-4-}%
+\newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
+
+\IfSubStr{\MYDRIFTFLAG}{Y}{
 % disable figure compile for speed up compile in drift
 % //TODO 
-\usepackage[allfiguresdraft]{draftfigure}
+\usepackage[%
+filename,%
+allfiguresdraft,%
+]{draftfigure}
+}{
+
+}
+% disable figure compile for speed up compile in drift
+% //TODO 
+%\usepackage[%
+%filename,%
+%allfiguresdraft,%
+%]{draftfigure}
 
 \title{二维材料及其异质结的生长理论研究}{Growth Mechanism of Two-dimensional Materials and Heterostructures}
 
