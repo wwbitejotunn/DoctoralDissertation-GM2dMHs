@@ -23,7 +23,6 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 \def\InSbMLpolar#1#2{\rm #1-In/#2-Sb}
 \def\NumOfAdatom{\it N_{\rm adatoms} \it}
 \def\CNinNsb#1#2#3#4{\rm #1/#2{}_{#3InV}^{#4SbT} \it}
-\def\sigmaVar#1#2{\it \sigma_{\rm #1}^{\rm #2} \it}
 
 对于\cemb{InSb(111)}极性面在\cemb{Bi(001)}衬底表面的生长机理，我们首先对衬底表面锑、铟原子的吸附进行研究。在衬底表面，吸附原子的结合能$\energyVar{b}{}$为\chinesecolon
 \[
@@ -199,6 +198,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 在上一节中，我们通过理论计算表明了单层的\cemb{InS(111)}以$\InSbMLpolar{2}{2}$极性为主，多种极性热平衡混合的构型存在于\cemb{Bi(001)}衬底的表面。我们将第二层\cemb{InSb(001)}放置在单层\cemb{InSb}上方，研究双层\cemb{InSb(111)}在\cemb{Bi(001)}衬底上的生长机理和极性演化情况。
 
 \subsection{双层锑化铟的生长过程}
+\label{cap:IS_2L_growthProcess}
 对于双层\cemb{InSb}在\cemb{Bi(001)}衬底上的生长，我们首先探究第二层\cemb{InSb(111)}对于\cemb{InSb}极性的影响。对于第二层\cemb{InSb(111)}，我们选用对应的表面重构构型进行代表。根据先前的研究\citing{RN915-1998, RN896-1998}，在\cemb{InSb(111)}的表面由于极性的不同会形成两种不同的表面重构，一种是对应于\cemb{Sb}极性的\cemb{Sb}三聚体（\cemb{Sb} trimer）表面重构，另一种是对应于\cemb{In}极性的\cemb{In}空位（\cemb{In} vacancy）表面重构。
 
 如图\ref{fig:IS_structure_2Linsb}所示，我们考虑不同表面重构的\cemb{InSb}第二层和不同极性的\cemb{InSb}第一层的所有组合进行形成能计算。以\cemb{In}极性的\cemb{InSb}第一层为代表，我们在图\ref{fig:IS_structure_2Linsb_SbT40}和图\ref{fig:IS_structure_2Linsb_InV40}中绘制了优化后的双层\cemb{InSb}的原子结构。可以看到对于\cemb{Sb}三聚体的第二层能够与\cemb{In}极性的第一层的上表面\cemb{In}原子产生相互作用，略微提高于其相接触的\cemb{In}原子的相对高度。对于\cemb{In} 空位的第二层，其在\cemb{In}极性的第一层\cemb{InSb}上方呈现出平面化的形貌。\cemb{In}空位重构中四个\cemb{Sb}原子与第一层上表面的\cemb{In}原子产生作用。
@@ -497,6 +497,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
         \includegraphics{pic/IS_structure_slab_pseH_InP.png}
     }\\[-0.5ex]
     \subfloat[]{
+        \label{fig:IS_structure_slab_pseH_SbT}
         \includegraphics{pic/IS_structure_slab_pseH_SbT.png}
     }
     \caption{赝氢饱和的\cemb{InSb}切片模型。(a)\cemb{In}极性上表面切片模型；(b)\cemb{Sb}三聚体重构上表面切片模型。}
@@ -543,7 +544,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 此外，式\ref{eq:IS_cluster_totEnergy}中$\tenergyVar{InSb}{tot}$作为四面体团簇求解而出的\cemb{InSb}块体的等效总能量可以与实际的\cemb{InSb}块体的能量$\energyVar{InSb}{}$进行自收敛验证。在我们的计算中通过四面体法求得的$\tenergyVar{InSb}{tot}$与\cemb{InSb}块体中$\energyVar{InSb}{}$的值相差不到\SI{1.5}{\milli\electronvolt}。因此，我们认为$\tmuVar{H\left(Sb\right)}{face}$是$\tmuVar{H\left(Sb\right)}{}$的较好近似。
 
 \subsubsection{表面能驱动的双层锑化铟的极性演化机理}
-使用赝氢饱和法和四面体法计算获得的\cemb{H_{In}}原子和\cemb{H_{Sb}}原子的赝化学势，我们首先计算了理想\cemb{In}极性和\cemb{Sb}极性的\cemb{InSb(111)}表面的形成能（图\ref{fig:IS_DFT_surfaceE_InPSbP}）。对于理想的\cemb{In}极性表面和\cemb{Sb}极性表面，我们将形成能$\energyVar{In}{ideal}$分解为$\energyVar{In}{ideal}=\sigma _{polar}+\energyVar{surface-bulk}{}$。其中$\sigma _{polar}$为与真空层接触的第一层\cemb{InSb}的表面能，$\energyVar{surface-buk}{}$为表面\cemb{InSb}层与块体中次表面层的界面能。我们在这里忽略块体内部比次表面层更深层之间的界面能。
+使用赝氢饱和法和四面体法计算获得的\cemb{H_{In}}原子和\cemb{H_{Sb}}原子的赝化学势，我们首先计算了理想\cemb{In}极性和\cemb{Sb}极性的\cemb{InSb(111)}表面的形成能（图\ref{fig:IS_DFT_surfaceE_InPSbP}）。对于理想的\cemb{In}极性表面和\cemb{Sb}极性表面，我们将形成能$\energyVar{f}{ideal}$分解为$\energyVar{f}{ideal}=\sigmaVar{polar}{}+\energyVar{surface-bulk}{}$。其中$\sigmaVar{polar}{}$为与真空层接触的第一层\cemb{InSb}的表面能，$\energyVar{surface-buk}{}$为表面\cemb{InSb}层与块体中次表面层的界面能。我们在这里忽略块体内部比次表面层更深层之间的界面能。
 
 对于理想的\cemb{InSb}极性表面，表面形成能的计算发现\cemb{Sb}极性的表面构型在更大的$\muVar{In}{}$范围内相比\cemb{In}极性的表面构型具有形成能上的优势（$\energyVar{f}{Sb\ polarity} \leqslant \energyVar{f}{In\ polarity}\enspace \rm{for} \enspace \muVar{In}{} \leqslant \SI{-2.63}{\electronvolt}$）。\cemb{In}极性的表面只在接近纯\cemb{In}的极限环境中才相比于\cemb{Sb}极性的表面拥有更低的形成能。而且，即使在纯\cemb{In}的极限环境，\cemb{In}极性表面相比于\cemb{Sb}极限表面的形成能优势只有\SI{13}{\mievpas}。这个值远小于在纯\cemb{Sb}的极限环境，\cemb{Sb}极性表面相比于\cemb{In}极限表面的形成能优势。
 %//TODO值
@@ -554,58 +555,48 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \label{fig:IS_DFT_surfaceE_InPSbP}
 \end{figure}
 
-在表\ref{tab:IS_ICOHP}中，我们列举了
-\def\aColWidth{0.12\textwidth}
-\def\bColWidth{0.2\textwidth}
-\def\cColWidth{0.22\textwidth}
-\def\dColWidth{0.12\textwidth}
-\def\eColWidth{0.2\textwidth}
-\begin{table}[htb]
-    \label{tab:IS_ICOHP}
-    \caption{-COHP值}
-    \begin{tabular}{
-        m{\aColWidth}
-        m{\bColWidth}
-        m{\cColWidth}
-        >{\centering}p{\dColWidth}
-        >{\centering\arraybackslash}p{\eColWidth}
-        }
-        \toprule
-        结构模型&表面层构型&原子对&平均键长（\si{\angstrom}）&平均-COHP值（\si{\electronvolt\per\pair}）\\   
-        \midrule
-        \multirow{2}{\aColWidth}{底部赝氢钝化切片模型\cemb{InSb}}&\cemb{Sb}极性&\cemb{In}(表面层)-\cemb{Sb}(块体)&2.91 &3.08\\
-        \cmidrule(l){2-5}
-        &\cemb{In}极性&\cemb{Sb}(表面层)-\cemb{In}(块体)&2.91 &3.17\\
-        \midrule
-        \multirow{7}{0.15\textwidth}{\cemb{Bi}衬底上单层\cemb{InSb}}&\multirow{2}{\bColWidth}{\cemb{Sb}极性}&\cemb{In}($\HthreeSite$)-\cemb{Bi}&3.57&0.81\\
-        \cmidrule(l){3-5}
-        &&\cemb{In}($\HthreeSite$)-\cemb{Sb}($\HthreeSite$)&2.82&3.68\\
-        \cmidrule(l){2-5}
-        &\multirow{2}{\bColWidth}{\cemb{In}极性}&\cemb{SB}($\HthreeSite$)-\cemb{Sb}($\TfourSite$)&3.52&0.52\\
-        \cmidrule(l){3-5}
-        &&\cemb{In}($\TfourSite$)-\cemb{Sb}($\HthreeSite$)&2.82&3.60\\
-        \cmidrule(l){2-5}
-        &\multirow{3}{\bColWidth}{$\InSbMLpolar{2}{2}$条形}&\cemb{In}($\TfourSite$)-Bi&3.52&0.71\\
-        \cmidrule(l){3-5}
-        &&\cemb{In}($\HthreeSite$)-Bi&3.33&1.29\\
-        \cmidrule(l){3-5}
-        &&\cemb{Sb}($\HthreeSite$)-Bi&3.41&0.72\\
-        \midrule
-        \multirow{8}{\aColWidth}{\cemb{Bi}衬底上双层\cemb{InSb}}&\cemb{In}空位重构二层-\cemb{In}极性首层&\cemb{Sb}($\HthreeSite$)-Bi&3.42&0.85\\
-        \cmidrule(l){2-5}
-        &\cemb{Sb}三聚体重构二层-\cemb{In}极性首层&\cemb{Sb}($\HthreeSite$)-Bi&3.47&0.81\\
-        \cmidrule(l){2-5}
+在表\ref{tab:IS_ICOHP_pH}中，我们列举了不同极性的底部赝氢钝化模型中表面层和块体层之间对应原子对的-ICOHP值。利用表面层和块体层界面原子之间的-ICOHP值来对界面原子之间化学键的强弱进行判断，从而对理想极性表面的表面形成能$\energyVar{f}{ideal}$中界面作用$\energyVar{surface-bulk}{}$的贡献进行判定。通过对比-ICHOP的值，我们发现在\cemb{In}极性的界面\cemb{In}-\cemb{Sb}键的强度（\SI{1.59}{\electronvolt\per\pair}）略微大于在\cemb{Sb}极性表面中的界面\cemb{In}-\cemb{Sb}键的强度（\SI{1.54}{\electronvolt\per\pair}）。因此，我们推断在底部赝氢钝化模型中有$\energyVar{surface-bulk}{Sb\ polarity}\geqslant\energyVar{surface-bulk}{In\ polarity}$。综合对比\cemb{Sb}极性和\cemb{In}极性表面的表面形成能的大小关系$\energyVar{f}{Sb\ polarity} \leqslant \energyVar{f}{In\ polarity}\enspace \rm{for} \enspace \muVar{In}{} \leqslant \SI{-2.63}{\electronvolt}$，我们可以判定在大部分的$\muVar{In}{}$取值范围内，都有$\sigmaVar{Sb\ polarity}{} \leqslant \sigmaVar{In\ polarity}{}$。不同极性表面表面能$\sigma$的高低决定了该极性表面形成能$\energyVar{f}{polarity}$的大小。
 
-        \bottomrule
-    \end{tabular}
-\end{table}
+\input{misc/chap4-table_IS_ICOHP_pH.tex}
 
+对于在\cemb{Bi}衬底上生长的单层\cemb{InSb}，我们同样可以将单层\cemb{InSb}的形成能$\energyVar{f}{ML\ \cemb{InSb}}$分为$\energyVar{f}{ML\ \cemb{InSb}}=\sigmaVar{polar}{ML\ \cemb{InSb}}+\energyVar{\cemb{InSb}-\cemb{Bi}}{}$。其中$\sigmaVar{polar}{ML\ \cemb{InSb}}$为\cemb{Bi}衬底上单层\cemb{InSb}面对于真空层的表面能，我们使用赝氢钝化切片模型中同样剥离了次表面作用的$\sigmaVar{polar}{}$来当作参考。在\cemb{Bi}衬底上生长的单层\cemb{InSb}的体系中，\cemb{In}极性的形成能低于\cemb{Sb}极性的形成能，也就是$\energyVar{f}{SbP-ML\ \cemb{InSb}} \geqslant \energyVar{f}{InP-ML\ \cemb{InSb}}$。\cemb{In}极性的形成能优势在全$\muVar{In}{}$范围内保持一致。对比表面能计算中在大部分的$\muVar{In}{}$取值范围内，都有$\sigmaVar{Sb\ polarity}{} \leqslant \sigmaVar{In\ polarity}{}$。我们可以推断出在\cemb{Bi}衬底上生长的单层\cemb{InSb}体系中，界面能$\energyVar{InSb-Bi}{}$对单层\cemb{InSb}极性的影响要大于表面能$\sigmaVar{polar}{ML\ \cemb{InSb}}$的作用。
+
+在图\ref{fig:IS_DFT_PDOS}中，我们给出了在单层\cemb{InSb}和\cemb{Bi}衬底界面处原子的投影态密度谱（projected density of state, PDOS）以及-COHP谱。可以看到，相对于\cemb{Sb}极性单层\cemb{InSb}中的界面\cemb{In}原子，\cemb{In}极性单层\cemb{InSb}中的界面\cemb{Sb}原子在\cemb{Sb-p}轨道和\cemb{Bi}衬底中的\cemb{Bi-p}轨道在\SI{-2.5}{\electronvolt}的能量位置具有更强的杂化作用。图\ref{fig:IS_DFT_PDOS}中的-COHP谱线也显示，在\cemb{In}极性单层\cemb{InSb}中界面\cemb{In}原子和衬底\cemb{Bi}原子在能量为\SI{-8.7}{\electronvolt}的位置存在一个反键态的峰。这个\cemb{In}-\cemb{Bi}键之间的反键态峰在\cemb{In}极性单层\cemb{InSb}界面中的\cemb{Sb}-\cemb{Bi}键之间并不存在。投影态密度和COHP的计算进一步印证了对于\cemb{Bi}衬底，\cemb{Sb}-\cemb{Bi}界面相比于\cemb{In}-\cemb{Bi}界面有着更好的能量稳定性。而与衬底表面更强的界面作用是导致\cemb{In}极性的单层\cemb{InSb}比\cemb{Sb}极性的单层\cemb{InSb}更稳定的原因。
 
 \begin{figure}[htb]
-    \includegraphics{pic/IS_DFT_PDOS-COHP.png}
+    \includegraphics{pic/IS_DFT_PDOS-COHP.png}、
+    \caption{单层\cemb{InSb}和\cemb{Bi}衬底界面处原子的投影态密度谱（projected density of state, PDOS）以及-COHP谱。 }
+    \label{fig:IS_DFT_PDOS}
 \end{figure}
+
+接着，我们考察在\cemb{Bi}衬底表面生长的单层\cemb{InSb}的最稳定的$\InSbMLpolar{2}{2}$条形构型的形成机理。对于$\InSbMLpolar{2}{2}$条形构型的单层\cemb{InSb}而言，相比于理想极性的\cemb{InSb}构型，不仅双原子层下方的$\HthreeSite$位原子与\cemb{Bi}衬底具有较强的相互作用，位于$\TfourSite$的两个\cemb{In}原子也被\cemb{Bi}衬底吸引至\cemb{InSb}双原子层的底部。-ICOHP的计算显示（表\ref{tab:IS_ICOHP_InSbBi}）位于$\TfourSite$位点的\cemb{In}原子与衬底\cemb{Bi}原子作用的键能（\SI{0.72}{\electronvolt\per\pair}）弱于在$\HthreeSite$位点的\cemb{In}原子（\SI{1.29}{\electronvolt\per\pair}），与\cemb{Sb}极性的单层\cemb{InSb}原子的界面\cemb{In}原子接近（\SI{0.81}{\electronvolt\per\pair}）。从表面结构来看，在$\InSbMLpolar{2}{2}$条形结构中、上表面仅有的\cemb{Sb}原子之间间距为\SI{4.61}{\angstrom}，远高于\cemb{Sb}三聚体团簇内\cemb{Sb}原子之间的间距\SI{2.87}{\angstrom}。上表面矗立的\cemb{Sb}原子理应具有较高的表面能，并且使得$\InSbMLpolar{2}{2}$条形结构的\cemb{InSb}在形成能上处于劣势地位。在纯\cemb{InSb}的表面重构未发现$\InSbMLpolar{2}{2}$条形结构也间接说明了其在表面能上的劣势。但$\InSbMLpolar{2}{2}$条形结构对于\cemb{InSb}原本结构的破坏使得\cemb{Bi}衬底能够有机会对单层\cemb{InSb}中的更多的原子产生相互作用（如$\TfourSite$位点的\cemb{In}原子）。如此一来，极高的界面稳定性使得$\InSbMLpolar{2}{2}$条形结构成为了众多单层\cemb{InSb}混合极性中最具有能量优势的结构。
+\input{misc/chap4-table_IS_ICOHP_InSbBi.tex}
+
+对于在\cemb{Bi}衬底上生长的双层\cemb{InSb}，我们采用与单层\cemb{InSb}类似的做法，将形成能$\energyVar{f}{BL\ InSb}$分解为表面能$\sigmaVar{InV/ SbT}{}$和界面能$\energyVar{\cemb{InSb}-\cemb{Bi}}{}$两部分。在双层\cemb{InSb}的形成能中，表面层包含全部的两层\cemb{InSb}。同样，使用赝氢钝化的切片模型，我们可以获得不同重构表面的\cemb{InSb}的表面形成能。
+
+如图\ref{fig:IS_structure_slab_pseH_SbT}所示，底面钝化的表面重构\cemb{InSb}切片模型可以看出是双层\cemb{InSb}覆盖在不同极性的\cemb{InSb}衬底表面。在本章的计算中，对于\cemb{In}空位重构，我们使用\cemb{In}极性的底面钝化衬底。由于在第\ref{cap:IS_2L_growthProcess}章中，{Sb}三聚体重构二层在\cemb{In}极性第一层表面生长的形成能略低于在\cemb{Sb}极性的第一层表面生长。在本章的计算中，对于\cemb{Sb}三聚体重构，我们同时考虑\cemb{In}极性和\cemb{Sb}极性的钝化衬底。如图\ref{fig:IS_DFT_surfaceE_InVSbT}所示，\cemb{Sb}三聚体重构在\cemb{Sb}极性\cemb{InSb}块体上的形成能（SbT on SbP）低于低于在\cemb{In}极性\cemb{InSb}块体上的形成能（SbT on InP）。且在\cemb{In}极性的块体上，\cemb{Sb}三聚体重构的形成能高于\cemb{In}空位重构的形成能。这与先前实验报道中在\cemb{In}极性的\cemb{InSb}表面出现\cemb{In}空位表面重构，在\cemb{Sb}极性的表面出现\cemb{Sb}三聚体重构的现象一致\citing{RN896-1998}。同时，\cemb{Sb}三聚体重构层在底面钝化\cemb{InSb}模型中和\cemb{Bi}衬底上对于下方\cemb{InSb}层极性偏好的差距进一步从能量的角度证明\cemb{Sb}-\cemb{Bi}界面具有比\cemb{In}-\cemb{Bi}界面更高的能量稳定性。
 
 \begin{figure}[htb]
     \includegraphics{pic/IS_DFT_surfaceE_InVSbT.png}
+    \caption{具有\cemb{Sb}三聚体重构和\cemb{In}空位重构的\cemb{InSb}的表面形成能。}
+    \label{fig:IS_DFT_surfaceE_InVSbT}
 \end{figure}
+
+最后，我们关注在双层\cemb{InSb}中，第一层\cemb{InSb}在具有表面重构结构的第二层的影响下从$\InSbMLpolar{2}{2}$条形构型极化至\cemb{In}极性构型的能量驱动来源。如图\ref{fig:IS_structure_2Linsb_22strip}所示，在具有表面重构结构的第二层\cemb{InSb}形成后，$\InSbMLpolar{2}{2}$第一层中原本和\cemb{Bi}衬底形成强烈相互作用而钻入第一层\cemb{InSb}下表面的$\TfourSite$位\cemb{In}原子在第二层的作用下重新回到第一层\cemb{InSb}的上表面。-ICOHP的结果显示，重构的第二层和$\TfourSite$位\cemb{In}原子具有较强的相互作用。当第二层为\cemb{Sb}三聚体重构时，第二层的\cemb{Sb}原子和第一层的$\TfourSite$位\cemb{In}原子之间的-ICHOP值为\SI{3.21}{\electronvolt\per\pair}。而当第二层为\cemb{In}空位重构时，这个值为\SI{2.72}{\electronvolt\per\pair}。虽然不及在\cemb{Bi}衬底上生长的单层\cemb{InSb}之中的\cemb{In}-\cemb{Sb}键（约\SI{3.60}{\electronvolt\per\pair}），但当第二层为\cemb{Sb}三聚体重构时，\cemb{Sb}原子和第一层的$\TfourSite$位\cemb{In}原子的成键强于第一层层内的\cemb{Sb}原子和$\TfourSite$位\cemb{In}原子的成键（\SI{3.11}{\electronvolt\per\pair}）。
+
+\begin{figure}[htb]
+    \subfloat[]{
+        \includegraphics{pic/IS_structure_2Linsb_SbT-22strip-side.png}
+    }
+    \subfloat[]{
+        \includegraphics{pic/IS_structure_2Linsb_InV-22strip-side.png}
+    }
+    \caption{第一层\cemb{InSb}结构为$\InSbMLpolar{2}{2}$条形时具有不同表面重构第二层的双层\cemb{InSb}的原子结构图。(a)\cemb{Sb}三聚体重构第二层；(b)\cemb{In}空位重构第二层。}
+    \label{fig:IS_structure_2Linsb_22strip}
+\end{figure}
+
+$\TfourSite$位\cemb{In}原子的归位使得$\InSbMLpolar{2}{2}$条形构型的第一层\cemb{InSb}无法同单层\cemb{InSb}时一样与\cemb{Bi}衬底产生同样强烈的相互作用。在生长了\cemb{Sb}三聚体重构第二层\cemb{InSb}后，$\InSbMLpolar{2}{2}$条形构型的第一层中\cemb{Sb}原子与衬底\cemb{Bi}之间的成键强弱（\SI{0.75}{\electronvolt\per\pair}）稍弱于\cemb{In}极性第一层中\cemb{Sb}原子与衬底\cemb{Bi}之间的成键（\SI{0.81}{\electronvolt\per\pair}）。相比于\cemb{Sb}三聚体第二层，结构为\cemb{In}空位重构的第二层会稍微增强第一层中\cemb{Sb}原子与衬底\cemb{Bi}原子的成键。对于$\InSbMLpolar{2}{2}$条形构型的第一层，在生长了\cemb{In}空位重构的第二层的第二层后，第一层内\cemb{Sb}原子和衬底\cemb{Bi}之间的成键大小为\SI{0.83}{\electronvolt\per\pair}，稍弱于\cemb{In}极性第一层中\cemb{Sb}原子与衬底\cemb{Bi}之间的成键（\SI{0.85}{\electronvolt\per\pair}）。
+
+考虑到表面重构后，重构的\cemb{InSb}表面相比于未重构的\cemb{InSb}具有较大程度的下降。综合以上计算我们可以认为，当生长了第二层具有重构表面的\cemb{InSb}后，第一层\cemb{InSb}的极化现象主要来源于第二层重构表面大幅下降的表面能。表面能的大幅下降克服了非晶态\cemb{InSb}第一层与\cemb{Bi}衬底之间强烈的界面作用，第二层\cemb{InSb}通过界面作用的方式使得非晶态\cemb{InSb}第一层不得不向\cemb{In}极性的构型进行转变，用减小双层\cemb{InSb}内部界面能的方式弥补与\cemb{Bi}衬底之间界面吸附的减弱。
+
 \section{总结}

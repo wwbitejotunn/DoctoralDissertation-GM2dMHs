@@ -1,0 +1,24 @@
+\begin{table}[tb]
+    \def\aColWidth{0.11\textwidth}
+    \def\bColWidth{0.22\textwidth}
+    \def\cColWidth{0.22\textwidth}
+    \def\dColWidth{0.10\textwidth}
+    \def\eColWidth{0.16\textwidth}
+    \caption{-COHP值}
+    \label{tab:IS_ICOHP_pH}
+    \begin{tabular}{
+        m{\aColWidth}
+        m{\bColWidth}
+        m{\cColWidth}
+        >{\centering}p{\dColWidth}
+        >{\centering\arraybackslash}p{\eColWidth}
+        }
+        \toprule
+        结构模型&\shortstack[l]{表面层构型}&原子对&平均键长（\si{\angstrom}）&平均-COHP值（\si{\electronvolt\per\pair}）\\   
+        \midrule
+        \multirow{2}{\aColWidth}{底部赝氢钝化\cemb{InSb}切片模型}&\cemb{Sb}极性&\cemb{In}(表面层)-\cemb{Sb}(块体)&2.91 &3.08\\
+        \cmidrule(l){2-5}
+        &\cemb{In}极性&\cemb{Sb}(表面层)-\cemb{In}(块体)&2.91 &3.17\\
+        \bottomrule
+    \end{tabular}
+\end{table}
