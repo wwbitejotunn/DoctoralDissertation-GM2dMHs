@@ -56,7 +56,6 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \label{eq:IS_bulkEqmb}
     \muVar{In}{}+\muVar{Sb}{}=\energyVar{InSb}{tot}=\energyVar{In\left(Bulk\right)}{}+\energyVar{Sb\left(Bulk\right)}{}+\Delta H_{f}\left(\cemb{InSb}\right)
 \end{equation}
-
 其中$\energyVar{InSb}{tot}$、$\energyVar{In\left(Bulk\right)}{}$和$\energyVar{Sb\left(Bulk\right)}{}$为\cemb{InSb}块体，\cemb{In}块体和\cemb{Sb}块体的能量。因此，在生长气氛中\cemb{InSb}的化学平衡下，$\muVar{In}{}$的变化范围为$\muVar{In}{}\leqslant \energyVar{Sb\left(Bulk\right)}{}+\Delta H_{\rm f}\left(\cemb{InSb}\right) \leqslant \energyVar{In\left(Bulk\right)}{}$，代表\cemb{In}的化学势$\muVar{In}{}$由纯\cemb{Sb}的生长环境变化到纯\cemb{In}的生长环境。
 
 对于吸附在$\TfourSite$位点的\cemb{In}原子，计算所得的在纯\cemb{In}环境下的结合能为\SI{-0.48}{\electronvolt}，低于在纯\cemb{Sb}环境下同样吸附在$\TfourSite$位点的\cemb{Sb}原子的结合能（\SI{-0.19}{\electronvolt}）。更抵的结合能意味着相比于\cemb{Sb}原子，在能量最低的驱动下有更多的\cemb{In}原子从块体的状态分离并以吸附原子的状态沉积到\cemb{Bi(001)}的表面。对于\cemb{In}原子来说，其在最优吸附位点$\TfourSite$的结合能只比吸附次优吸附位点$\HthreeSite$的结合能低\SI{0.026}{\electronvolt}。而对于\cemb{Sb}原子，其在次优吸附点$\HthreeSite$和最优吸附点$\TfourSite$之间的结合能之差为\SI{0.17}{\electronvolt}。由于\cemb{Sb}原子在次优吸附位点$\HthreeSite$较差的吸附能力，\cemb{Sb}原子只能在接近纯\cemb{Sb}的生长环境中在\cemb{Bi(001)}表面的$\HthreeSite$位点吸附。
@@ -78,7 +77,6 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \label{eq:IS_formationEnenrgy}
     \energyVar{f}{}=\frac{1}{\alpha}\left(\energyVar{\cemb{InSb}+sub}{}-\energyVar{sub}{}-N_{\rm In}\muVar{In}{}-N_{\rm Sb}\muVar{Sb}{}\right)
 \end{equation}
-
 其中，$\alpha$为模拟体系的表面积；$\energyVar{\cemb{InSb}+sub}{}$和$\energyVar{sub}{}$分别为在衬底表面生长了一层\cemb{InSb}的能量以及单独衬底的能量；$N_{\rm In}$和$N_{\rm Sb}$分别为\cemb{InSb}单层中\cemb{In}和\cemb{Sb}原子的数量。
 
 我们首先考虑理想的\cemb{InSb}单层在\cemb{Bi(001)}衬底上的生长情况。在我们的计算中，无论是\cemb{In}极性的\cemb{InSb(111)}单层还是\cemb{Sb}极性，他们都倾向于在\cemb{Bi(001)}衬底表面形成面心立方的堆叠形式（fcc, ABC堆叠）。同时，这也与我们在单\cemb{In/Sb}原子的吸附计算结果一致，即\cemb{In}和\cemb{Sb}作为吸附原子更倾向于吸附在\cemb{Bi(001)}表面的$\TfourSite$位和$\HthreeSite$位。具体而言，\cemb{In}极性的\cemb{InSb(111)}单层在\cemb{Bi(001)}衬底的表面形成能为\SI{-13.74}{\mievpas}，高于\cemb{Sb}极性\cemb{InSb(111)}单层的\SI{-9.40}{\mievpas}。因此，对于理想的\cemb{InSb}单层，在\cemb{Bi(001)}衬底上应生长为\cemb{In}极性。在表格\ref{tab:IS_idealInSb_formationEnergy}中，我们总结了不同极性的\cemb{InSb}单层在\cemb{Bi(001)}衬底上的形成能及原子分布。
@@ -488,15 +486,12 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 \subsubsection{赝氢饱和法和四面体法计算不同\cemb{InSb}表面的表面形成能}
 利用赝氢饱和法和四面体法，我们计算了理想极性\cemb{InSb}表面的表面能（\cemb{In}极性和\cemb{InSb}）以及$2 \times 2$重构\cemb{InSb}表面的表面能。作为代表，我们在图\ref{fig:IS_structure_slab_pseH}中展示了赝氢饱和的\cemb{In}极性表面和\cemb{Sb}三聚体重构表面切片模型。在赝氢饱和的极性面切片模型中，切片模型底部的原子根据原子种类的不同被具有分数电荷数的赝氢饱和，切片模型的顶部为相应极性的原子表面。因此，切片模型顶部表面的表面能$\sigma$可以表示为（以\cemb{In}极性表面为例）\chinesecolon
 \begin{equation}
+    \label{eq:IS_PH_surfaceEnergy_Slab}
     \sigmaVar{\left(111\right)-In}{}
-    =\frac{1}{\alpha _{\rm 111}}\left(\energyVar{slab}{}-N_{\rm In}\muVar{In}{}-N_{\rm Sb}\muVar{Sb}{}-N_{\rm H\left(Sb\right)} \tmuVar{H\left(Sb\right)}{} \right)\widetilde{\mu}_{\rm H \left(Sb\right)}
+    =\frac{1}{\alpha _{\rm 111}}\left(\energyVar{slab}{}-N_{\rm In}\muVar{In}{}-N_{\rm Sb}\muVar{Sb}{}-N_{\rm H\left(Sb\right)} \tmuVar{H\left(Sb\right)}{} \right)
 \end{equation}
+其中，$\alpha _{\rm 111}$为计算模型的表面积，$\energyVar{slab}{}$为切片模型的总能量，$N$为对应原子的数量，$\muVar{}{}$为对应\cemb{In}原子和\cemb{Sb}原子的化学势，二者的取值服从\cemb{InSb}块体的化学平衡（式\ref{eq:IS_bulkEqmb}）。$\tmuVar{H\left(Sb\right)}{}=\muVar{H\left(Sb\right)}{}+\frac{\alpha _{rm 111}\sigma_{\rm \left(111\right)-Sb}^{\rm H}}{N_{\rm H\left(Sb\right)}}$为赝氢\cemb{H(Sb)}的赝化学势，其中包含了赝氢原子的化学势以及赝氢原子和对应钝化原子之间的结合能。因此，在式\ref{eq:IS_PH_surfaceEnergy_Slab}中，只要我们能够获得切片模型底部赝氢的$\tmuVar{H\left(Sb\right)}{}$的值，我们就可以直接计算出在切片模型中对应极性表面的表面能大小。
 
-其中，$\alpha _{\rm 111}$为计算模型的表面积，$\energyVar{slab}{}$为切片模型的总能量，$N$为对应原子的数量，$\muVar{}{}$为对应原子的化学式。%//TODO continue here
-
-在赝氢饱和法中，具有 %//TODO
-
-在四面体法中，%//TODO
 \begin{figure}[htb]
     \subfloat[]{
         \includegraphics{pic/IS_structure_slab_pseH_InP.png}
@@ -504,9 +499,23 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \subfloat[]{
         \includegraphics{pic/IS_structure_slab_pseH_SbT.png}
     }
-    \caption{}
+    \caption{赝氢饱和的\cemb{InSb}切片模型。(a)\cemb{In}极性上表面切片模型；(b)\cemb{Sb}三聚体重构上表面切片模型。}
     \label{fig:IS_structure_slab_pseH}
 \end{figure}
+
+
+切片模型底部赝氢的$\tmuVar{H\left(Sb\right)}{}$的求解需要，使用四面体法。在\cemb{InSb}四面体团簇中，以\cemb{Sb}极性的四面体团簇为例，团簇的每个面均为\cemb{Sb}极性。使用赝氢对四面体团簇进行表面钝化后，由于需要满足电子计数规则（ECR）\citing{RN944-2005, RN942-1989, RN943-1990}，在四面体顶角、棱边和片面处的\cemb{Sb}原子需要分别与3个、2个和1个赝氢结合（图\ref{fig:IS_structure_cluster}）。不同大小的\cemb{InSb}四面体我们使用棱边处的极性原子数$n$进行标识。对于大小为$n$的\cemb{Sb}极性的\cemb{InSb}四面体，我们可以写出其总能的表达式为\chinesecolon
+\begin{equation}
+    \label{eq:IS_cluster_totEnergy}
+    \begin{split}
+        \energyVar{c}{}\left(n\right)=&\muVar{In}{} \cdot \frac{n\cdot \left(n+1\right) \cdot \left(n+2\right)}{6} +\left(\tenergyVar{InSb}{tot}-\muVar{In}{}\right)\cdot \frac{\left(n-1\right)\cdot n \cdot \left(n+1\right)}{6}\\
+        &+\tmuVar{H\left(Sb\right)}{corner}\cdot 12 + \tmuVar{H\left(Sb\right)}{edge}\cdot 12 \cdot \left(n-2\right) + \tmuVar{H\left(Sb\right)}{face}\cdot 2 \cdot (n-2) \cdot (n-3)
+    \end{split}
+\end{equation}
+其中，$\tmuVar{H\left(Sb\right)}{corner}$、$\tmuVar{H\left(Sb\right)}{edge}$、$\tmuVar{H\left(Sb\right)}{face}$为钝化处于四面体顶点、棱边和片面处的\cemb{Sb}原子的赝氢原子的赝化学势；$\tenergyVar{InSb}{tot}$为\cemb{InSb}四面体团簇中\cemb{InSb}块体的等效能量。我们将片面处的\cemb{Sb}原子的赝氢原子的赝化学势$\tmuVar{H\left(Sb\right)}{face}$作为片面模型中钝化底部原子赝氢的$\tmuVar{H\left(Sb\right)}{}$近似。式\ref{eq:IS_cluster_totEnergy}中四个独立的变量$\tmuVar{H\left(Sb\right)}{corner}$、$\tmuVar{H\left(Sb\right)}{edge}$、$\tmuVar{H\left(Sb\right)}{face}$和$\energyVar{InSb}{tot}$
+可以通过变换\cemb{InSb}的尺寸来来构造四个独立的方程组成线性方程组进行求解。
+
+在四面体法中，针对不同极性的\cemb{InSb}表面，我们分别构造了四个大小不一的四面体团簇。为了尽量减小计算的误差，我们选用两大两小的四面体进行计算。如图\ref{fig:IS_structure_cluster}所示，用于计算的四种四面体团簇的尺寸分别为2、3、7、8。
 
 \begin{figure}[htb]
     \subfloat[]{
@@ -521,13 +530,76 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
     \subfloat[]{
         \includegraphics[width=0.45\textwidth]{pic/IS_structure_cluster_8.png}
     }
+    \caption{四面体法计算$\tmuVar{}{}$所使用的4个不同大小的\cemb{Sb}极性\cemb{InSb}四面体团簇。(a)大小为2的四面体团簇；(b)大小为3的四面体团簇；(c)大小为7的四面体团簇；(d)大小为8的四面体团簇。}
+    \label{fig:IS_structure_cluster}
 \end{figure}
 
+为了进一步验证在西面体方法中计算所得的片面处的\cemb{Sb}原子的赝氢原子的赝化学势$\tmuVar{H\left(Sb\right)}{face}$是否能够较好的对切片模型中钝化底部原子赝氢的$\tmuVar{H\left(Sb\right)}{}$进行近似，我们构造了一个上下表面均被赝氢钝化的\cemb{InSb}切片模型。在这样的切片模型中，上下表面赝氢的的赝化学势之和可以写成如下的形式\chinesecolon
+\[
+    \tmuVar{H\left(Sb\right)}{}+\tmuVar{H\left(In\right)}{}=\frac{1}{N_{\rm H \left(In/ Sb\right)}} \left(\energyVar{slab}{}-N_{\rm In}\muVar{In}{}-N_{\rm Sb}\muVar{Sb}{}\right)
+    \]
+在我们的计算中，有双层钝化的\cemb{InSb}切片模型中得到的$\tmuVar{H\left(Sb\right)}{}+\tmuVar{H\left(In\right)}{}$为\SI{5.56}{\electronvolt}，与从四面体法中获得的$\tmuVar{H\left(Sb\right)}{face}+\tmuVar{H\left(In\right)}{face}$之差不到\SI{10}{\milli\electronvolt}。
+
+此外，式\ref{eq:IS_cluster_totEnergy}中$\tenergyVar{InSb}{tot}$作为四面体团簇求解而出的\cemb{InSb}块体的等效总能量可以与实际的\cemb{InSb}块体的能量$\energyVar{InSb}{}$进行自收敛验证。在我们的计算中通过四面体法求得的$\tenergyVar{InSb}{tot}$与\cemb{InSb}块体中$\energyVar{InSb}{}$的值相差不到\SI{1.5}{\milli\electronvolt}。因此，我们认为$\tmuVar{H\left(Sb\right)}{face}$是$\tmuVar{H\left(Sb\right)}{}$的较好近似。
+
 \subsubsection{表面能驱动的双层锑化铟的极性演化机理}
+使用赝氢饱和法和四面体法计算获得的\cemb{H_{In}}原子和\cemb{H_{Sb}}原子的赝化学势，我们首先计算了理想\cemb{In}极性和\cemb{Sb}极性的\cemb{InSb(111)}表面的形成能（图\ref{fig:IS_DFT_surfaceE_InPSbP}）。对于理想的\cemb{In}极性表面和\cemb{Sb}极性表面，我们将形成能$\energyVar{In}{ideal}$分解为$\energyVar{In}{ideal}=\sigma _{polar}+\energyVar{surface-bulk}{}$。其中$\sigma _{polar}$为与真空层接触的第一层\cemb{InSb}的表面能，$\energyVar{surface-buk}{}$为表面\cemb{InSb}层与块体中次表面层的界面能。我们在这里忽略块体内部比次表面层更深层之间的界面能。
+
+对于理想的\cemb{InSb}极性表面，表面形成能的计算发现\cemb{Sb}极性的表面构型在更大的$\muVar{In}{}$范围内相比\cemb{In}极性的表面构型具有形成能上的优势（$\energyVar{f}{Sb\ polarity} \leqslant \energyVar{f}{In\ polarity}\enspace \rm{for} \enspace \muVar{In}{} \leqslant \SI{-2.63}{\electronvolt}$）。\cemb{In}极性的表面只在接近纯\cemb{In}的极限环境中才相比于\cemb{Sb}极性的表面拥有更低的形成能。而且，即使在纯\cemb{In}的极限环境，\cemb{In}极性表面相比于\cemb{Sb}极限表面的形成能优势只有\SI{13}{\mievpas}。这个值远小于在纯\cemb{Sb}的极限环境，\cemb{Sb}极性表面相比于\cemb{In}极限表面的形成能优势。
+%//TODO值
 
 \begin{figure}[htb]
     \includegraphics{pic/IS_DFT_surfaceE_InPSbP.png}
+    \caption{\cemb{Sb}极性和\cemb{In}极性\cemb{InSb}的表面形成能。}
+    \label{fig:IS_DFT_surfaceE_InPSbP}
 \end{figure}
+
+在表\ref{tab:IS_ICOHP}中，我们列举了
+\def\aColWidth{0.12\textwidth}
+\def\bColWidth{0.2\textwidth}
+\def\cColWidth{0.22\textwidth}
+\def\dColWidth{0.12\textwidth}
+\def\eColWidth{0.2\textwidth}
+\begin{table}[htb]
+    \label{tab:IS_ICOHP}
+    \caption{-COHP值}
+    \begin{tabular}{
+        m{\aColWidth}
+        m{\bColWidth}
+        m{\cColWidth}
+        >{\centering}p{\dColWidth}
+        >{\centering\arraybackslash}p{\eColWidth}
+        }
+        \toprule
+        结构模型&表面层构型&原子对&平均键长（\si{\angstrom}）&平均-COHP值（\si{\electronvolt\per\pair}）\\   
+        \midrule
+        \multirow{2}{\aColWidth}{底部赝氢钝化切片模型\cemb{InSb}}&\cemb{Sb}极性&\cemb{In}(表面层)-\cemb{Sb}(块体)&2.91 &3.08\\
+        \cmidrule(l){2-5}
+        &\cemb{In}极性&\cemb{Sb}(表面层)-\cemb{In}(块体)&2.91 &3.17\\
+        \midrule
+        \multirow{7}{0.15\textwidth}{\cemb{Bi}衬底上单层\cemb{InSb}}&\multirow{2}{\bColWidth}{\cemb{Sb}极性}&\cemb{In}($\HthreeSite$)-\cemb{Bi}&3.57&0.81\\
+        \cmidrule(l){3-5}
+        &&\cemb{In}($\HthreeSite$)-\cemb{Sb}($\HthreeSite$)&2.82&3.68\\
+        \cmidrule(l){2-5}
+        &\multirow{2}{\bColWidth}{\cemb{In}极性}&\cemb{SB}($\HthreeSite$)-\cemb{Sb}($\TfourSite$)&3.52&0.52\\
+        \cmidrule(l){3-5}
+        &&\cemb{In}($\TfourSite$)-\cemb{Sb}($\HthreeSite$)&2.82&3.60\\
+        \cmidrule(l){2-5}
+        &\multirow{3}{\bColWidth}{$\InSbMLpolar{2}{2}$条形}&\cemb{In}($\TfourSite$)-Bi&3.52&0.71\\
+        \cmidrule(l){3-5}
+        &&\cemb{In}($\HthreeSite$)-Bi&3.33&1.29\\
+        \cmidrule(l){3-5}
+        &&\cemb{Sb}($\HthreeSite$)-Bi&3.41&0.72\\
+        \midrule
+        \multirow{8}{\aColWidth}{\cemb{Bi}衬底上双层\cemb{InSb}}&\cemb{In}空位重构二层-\cemb{In}极性首层&\cemb{Sb}($\HthreeSite$)-Bi&3.42&0.85\\
+        \cmidrule(l){2-5}
+        &\cemb{Sb}三聚体重构二层-\cemb{In}极性首层&\cemb{Sb}($\HthreeSite$)-Bi&3.47&0.81\\
+        \cmidrule(l){2-5}
+
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 
 \begin{figure}[htb]
     \includegraphics{pic/IS_DFT_PDOS-COHP.png}

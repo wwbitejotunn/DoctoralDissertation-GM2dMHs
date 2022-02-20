@@ -10,10 +10,12 @@
 %for siunitx
 \sisetup{inter-unit-product={}\cdot{},number-unit-product=\text{ },tight-spacing=true}
 \DeclareSIUnit\angstrom{\text{Å}}
+\DeclareSIUnit\pair{\text{pair}}
 
 % cemb to remove space after ce
 \def\cemb#1{\,\ce{#1}}
 \def\energyVar#1#2{\it E_{\rm #1}^{\rm #2} \it}
+\def\tenergyVar#1#2{\it \widetilde{E}_{\rm #1}^{\rm #2} \it}
 \def\muVar#1#2{\it \mu_{\rm #1}^{\rm #2} \it}
 \def\tmuVar#1#2{\it \widetilde{\mu}_{\rm #1}^{\rm #2} \it}
 \def\kbconst{\it k_{\rm B} \it}
