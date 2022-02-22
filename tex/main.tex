@@ -23,7 +23,7 @@
 \def\csigmaVar#1#2{\it \widehat{\sigma}_{\rm #1}^{\rm #2} \it}
 \def\kbconst{\it k_{\rm B} \it}
 
-\newcommand{\MYCAPFLAG}{-1-}%
+\newcommand{\MYCAPFLAG}{-5-}%
 \newcommand{\MYDRIFTFLAG}{-N-}% Y or N
 
 \IfSubStr{\MYDRIFTFLAG}{Y}{
@@ -53,7 +53,7 @@ allfiguresdraft,%
 
 \begin{document}
 %\the\textwidth 
-\IfSubStr{\MYCAPFLAG}{A}{
+\IfSubStr{\MYCAPFLAG}{-A-}{
     \makecover
     \input{misc/chineseAbstract}
     \input{misc/englishAbstract}
@@ -64,7 +64,11 @@ allfiguresdraft,%
     \input{chapter/chapter4}
     \input{chapter/chapter5}
     \input{chapter/chapter6}
+
+    \input{misc/acknowledgement}
+
     \thesisbibliography{reference}
+    \thesisaccomplish{publications}
 }{
     \IfSubStr{\MYCAPFLAG}{-1-}{\input{chapter/chapter1}}{}
     \IfSubStr{\MYCAPFLAG}{-2-}{\input{chapter/chapter2}}{}
@@ -72,6 +76,7 @@ allfiguresdraft,%
     \IfSubStr{\MYCAPFLAG}{-4-}{\input{chapter/chapter4}}{}
     \IfSubStr{\MYCAPFLAG}{-5-}{\input{chapter/chapter5}}{}
     \IfSubStr{\MYCAPFLAG}{-6-}{\input{chapter/chapter6}}{}
+    \IfSubStr{\MYCAPFLAG}{-ack-}{\input{misc/acknowledgement}}{}
 }
 
 
