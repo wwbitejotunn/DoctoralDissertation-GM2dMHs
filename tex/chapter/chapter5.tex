@@ -23,8 +23,7 @@
             \centering
             \includegraphics{pic/CG_diagram_routine.png}
             \label{fig:CG_diagram_routine}
-        }
-        \newline
+        }\\[-0.5ex]
         \subfloat[]{
             \includegraphics{pic/CG_diagram_growthSketch.png}
             \label{fig:CG_diagram_growthSketch}
@@ -34,7 +33,7 @@
     \end{figure}
 
     \subsection{近邻蒸发气态\cemb{Cu}催化剂的扩散}
-    
+    \label{CG:FEM_CuVapor}
     事实上，在\cemb{h-BN}上方的\cemb{Cu}蒸发源对于石墨烯在\cemb{h-BN}表面的直接石墨烯生长可能纯在两种作用\chinesecolon 一种是如上文所说的，\cemb{Cu}蒸发源的表面蒸发出浓度较高的\cemb{Cu}蒸气，这些\cemb{Cu}蒸气在扩散至\cemb{h-BN}表面仍然能够保持较高的浓度和分压。随后在\cemb{Cu}蒸气的催化作用下，生长气氛中的\cemb{CH4}逐渐脱氢裂解为活性碳原子\cemb{C}，在\cemb{h-BN}表面成核生长成为石墨烯。另一种方式是\cemb{CH4}直接在\cemb{Cu}的表面脱氢裂解，产生的活性碳原子（\cemb{C}）和活性碳氢化合物（\cemb{CH}）等基团在热动能的作用下脱离\cemb{Cu}铜蒸发源的表面，扩散至下方\cemb{h-BN}的表面进行成核、生长石墨烯。
 
     为了判定并且验证在\cemb{h-BN}表面生长石墨烯的生长机制，我们首先使用自由分子流模拟\cemb{Cu}蒸发源产生的\cemb{Cu}蒸气在扩散至\cemb{h-BN}表面后的浓度。图\ref{fig:CG_diagram_FEM_structure}为我们所构建的在自由分子流模型下\cemb{Cu}蒸气产生和扩散的模拟结构图。我们考虑圆盘形的\cemb{Cu}衬底和\cemb{Cu}蒸发源，半径为\SI{500}{\micro\meter}。\cemb{Cu}蒸发源悬挂在\cemb{Cu}衬底和\cemb{h-BN}的上方，间隔一定距离。\cemb{Cu}蒸发源的温度设置为\SI{1200}{\kelvin}，此时蒸发出的\cemb{Cu}蒸气的饱和蒸汽压约为\SI{1.25E-13}{\pascal}。对于蒸发出的\cemb{Cu}蒸气，我们只关注从蒸发源下表面蒸发出的\cemb{Cu}原子流，并且遵循朗缪尔蒸发公式（Langmuir’s Equation of evaporation）。
@@ -77,6 +76,29 @@
     \end{figure}
 
     \subsection{气态\cemb{Cu}催化剂对甲烷裂解反应的催化性能}
+    在\ref{CG:FEM_CuVapor}章中，我们证明了当\cemb{Cu}蒸发源和\cemb{Cu/h-BN}衬底的距离足够近时，能够有足够的\cemb{Cu}蒸气扩散至\cemb{h-BN}的表面进行\cemb{CH4}裂解的催化作用。
+
+    \begin{figure}
+        \includegraphics{pic/CG_DFT_CuCHx.png}
+        \chapter{}
+        \label{}
+    \end{figure}
+
+    \begin{figure}
+        \subfloat[]{
+            \includegraphics[width=0.45\textwidth]{pic/CG_DFT_Cu3-CH4-CH3.png}
+        }
+        \subfloat[]{
+            \includegraphics[width=0.45\textwidth]{pic/CG_DFT_Cu3-CH3-CH2.png}
+        }\\[-0.5ex]
+        \subfloat[]{
+            \includegraphics[width=0.45\textwidth]{pic/CG_DFT_Cu3-CH2-CH.png}
+        }
+        \subfloat[]{
+            \includegraphics[width=0.45\textwidth]{pic/CG_DFT_Cu3-CH-C.png}
+        }
+    \end{figure}
+
     \subsection{\cemb{h-BN}表面石墨烯的生长演化机理}
 \section{石墨烯/二硒化钒横向异质结的生长机理}
 \section{总结}
