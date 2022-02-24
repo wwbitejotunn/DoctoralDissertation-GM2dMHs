@@ -17,6 +17,8 @@
 
 \section{石墨烯/\cemb{h-BN}纵向二维异质结的生长机理}
     \label{cap:CG}
+    图\ref{fig:CG_diagram_routine}和图\ref{fig:CG_diagram_growthSketch}为我们设计的利用\cemb{Cu}蒸气近邻催化效应在\cemb{h-BN}表面直接堆叠生长石墨烯的装置示意图和生长机理示意图。首先，我们可以在下方的\cemb{Cu}衬底表面利用常规的低压化学气相沉积法大面积的生长\cemb{h-BN}。这里我们使用液态环硼氮烷（borazine）作为生长前驱体。下方的加热器为\cemb{h-BN}大面积生长时提供合适的生长温度。当\cemb{h-BN}覆盖满下方\cemb{Cu}衬底的表面时，我们在上上方的加热器处引入第二片\cemb{Cu}源用于蒸发产生\cemb{Cu}蒸气。蒸发开始了额一段时间之后，\cemb{Cu}蒸气在扩散作用下充满\cemb{h-BN}上方的空间，此时引入甲烷\cemb{CH4}作为石墨烯生长的前驱体，通过调整\cemb{h-BN}和上方铜蒸发源之间的距离至合适的位置，我们就可以在下方\cemb{Cu}表面的已生长\cemb{h-BN}的表面直接堆叠生长石墨烯。需要注意的是，由于作为前驱体的甲烷\cemb{CH4}直接通入衬底和蒸发源之间的间隙，因此会在上方\cemb{Cu}蒸发源的表面形成石墨烯，当石墨烯覆盖满上方的\cemb{Cu}蒸发源的表面后，\cemb{Cu}蒸发源将会失去产生原有的\cemb{Cu}蒸气的能力，无法继续为\cemb{h-BN}表面甲烷的裂解提供气态催化剂。这时需要通过机械装置（图\ref{fig:CG_diagram_routine}）替换掉已经蒸发能力衰减的\cemb{Cu}蒸发源，利用新换上的表面无石墨烯的\cemb{Cu}蒸发源继续提供\cemb{Cu}蒸气在\cemb{h-BN}表面生长石墨烯。
+
     \begin{figure}[htb]
         \subfloat[]{
             \centering
@@ -34,14 +36,36 @@
 
     \subsection{近邻蒸发气态\cemb{Cu}催化剂的扩散}
     
+    事实上，在\cemb{h-BN}上方的\cemb{Cu}蒸发源对于石墨烯在\cemb{h-BN}表面的直接石墨烯生长可能纯在两种作用\chinesecolon 一种是如上文所说的，\cemb{Cu}蒸发源的表面蒸发出浓度较高的\cemb{Cu}蒸气，这些\cemb{Cu}蒸气在扩散至\cemb{h-BN}表面仍然能够保持较高的浓度和分压。随后在\cemb{Cu}蒸气的催化作用下，生长气氛中的\cemb{CH4}逐渐脱氢裂解为活性碳原子\cemb{C}，在\cemb{h-BN}表面成核生长成为石墨烯。另一种方式是\cemb{CH4}直接在\cemb{Cu}的表面脱氢裂解，产生的活性碳原子（\cemb{C}）和活性碳氢化合物（\cemb{CH}）等基团在热动能的作用下脱离\cemb{Cu}铜蒸发源的表面，扩散至下方\cemb{h-BN}的表面进行成核、生长石墨烯。
+
+    为了判定并且验证在\cemb{h-BN}表面生长石墨烯的生长机制，我们首先使用自由分子流模拟\cemb{Cu}蒸发源产生的\cemb{Cu}蒸气在扩散至\cemb{h-BN}表面后的浓度。图\ref{fig:CG_diagram_FEM_structure}为我们所构建的在自由分子流模型下\cemb{Cu}蒸气产生和扩散的模拟结构图。我们考虑圆盘形的\cemb{Cu}衬底和\cemb{Cu}蒸发源，半径为\SI{500}{\micro\meter}。\cemb{Cu}蒸发源悬挂在\cemb{Cu}衬底和\cemb{h-BN}的上方，间隔一定距离。\cemb{Cu}蒸发源的温度设置为\SI{1200}{\kelvin}，此时蒸发出的\cemb{Cu}蒸气的饱和蒸汽压约为\SI{1.25E-13}{\pascal}。对于蒸发出的\cemb{Cu}蒸气，我们只关注从蒸发源下表面蒸发出的\cemb{Cu}原子流，并且遵循朗缪尔蒸发公式（Langmuir’s Equation of evaporation）。
+    
     \begin{figure}[htb]
         \includegraphics{pic/CG_diagram_FEM_structure.png}
         \caption{化学气相沉积腔体内\cemb{Cu}蒸气扩散模拟示意图。}
         \label{fig:CG_diagram_FEM_structure}
     \end{figure}
 
+    使用自由分子流模拟，我们首先研究上方的\cemb{Cu}蒸发源未被石墨烯覆盖的情况。在图\ref{fig:CG_FEM_fullCu}中我们绘制了蒸发源和\cemb{Cu/h-BN}表面的距离在$\SI{4}{\micro\meter} \sim \SI{100}{\micro\meter}$的时候和，蒸发至下方\cemb{Cu/h-BN}表面的\cemb{Cu}蒸气的气压分布情况。可以看到对于\cemb{Cu/h-BN}表面，即使上方\cemb{Cu}蒸发源的距离从\SI{4}{\micro\meter}扩大至\SI{100}{\micro\meter}其的中心处的\cemb{Cu}蒸气的气压略微下降，接近于蒸发温度下的\cemb{Cu}原子的饱和蒸汽压\SI{1.25}{\pascal}。当\cemb{Cu}蒸发源和\cemb{Cu/h-BN}之间的距离很近时，\cemb{Cu/h-BN}表面\cemb{Cu}蒸气的气压随着半径的衰减很小，只在接近边缘的位置由于\cemb{Cu}蒸气的向外扩散，导致\cemb{Cu/h-BN}表面边缘处（半径$\geqslant \SI{400}{\micro\meter}$）出现了\cemb{Cu}蒸气气压的明显下降。当\cemb{Cu}蒸发源和\cemb{Cu/h-BN}的距离扩大时，在\cemb{Cu/h-BN}表面\cemb{Cu}蒸气气压随着半径的衰减作用变强。当二者的距离提高到\SI{100}{\micro\meter}时，在\cemb{Cu/h-BN}表面半径为\SI{300}{\micro\meter}位置就已经可以观察到较为明显的\cemb{Cu}蒸气气压下降。当\cemb{Cu}蒸发源未被石墨烯覆盖的时候，在\cemb{Cu/h-BN}表面最外缘处（\SI{500}{\micro\meter}）的\cemb{Cu}蒸气气压随与\cemb{Cu}蒸发源之间距离的上升而下降的驱使不明显。当距离为\SI{4}{\micro\meter}时，\cemb{Cu/h-BN}表面最外缘处的\cemb{Cu}蒸气气压为\SI{8e-4}{\pascal}。而当距离扩展到\SI{100}{\micro\meter}时，在\cemb{Cu/h-BN}表面最外缘处仍可以保持大约\SI{6e-4}{\pascal}的\cemb{Cu}蒸气。
+
     \begin{figure}[htb]
-        
+        \includegraphics{pic/CG_FEM_fullCu.png}
+        \caption{不同间距下\cemb{Cu/h-BN}表面\cemb{Cu}蒸气的气压分布情况。}
+        \label{fig:CG_FEM_fullCu}
+    \end{figure}
+
+    当在\cemb{Cu/h-BN}的表面生长了一段时间的石墨烯后，由于\cemb{CH4}在\cemb{Cu}蒸发源的表面同样会裂解沉积生长石墨烯，\cemb{Cu}蒸发源会有部分表面覆盖上新生长的石墨烯而从而失去蒸发\cemb{Cu}蒸气的能力。考虑到石墨烯生长前驱体\cemb{CH4}通常来自\cemb{Cu}蒸发源外部的气流，因此我们简单的将\cemb{Cu}蒸发源表面随着生长过程进行而生长的石墨烯限制在\cemb{Cu}蒸发源圆盘的外缘。在图\ref{fig:CG_FEM_halfCu}中，我们模拟了在被石墨烯覆盖了外半圈\cemb{Cu}蒸发源的情况下，扩散至\cemb{Cu/h-BN}表面\cemb{Cu}蒸气的气压分布情况。可以看到相比于完整的\cemb{Cu}蒸发源，被石墨烯覆盖的\cemb{Cu}蒸发源只能在
+    %//TODO
+
+    \begin{figure}[htb]
+        \includegraphics{pic/CG_FEM_halfCu.png}
+        \caption{不同间距下\cemb{Cu}蒸发源的外半圈被石墨烯覆盖后蒸发、扩散至\cemb{Cu/h-BN}表面的\cemb{Cu}蒸气的气压分布情况。}
+        \label{fig:CG_FEM_halfCu}
+    \end{figure}
+    \begin{figure}[htb]
+        \includegraphics{pic/CG_FEM_fullCuCenterVariousDistance.png}
+        \caption{}
+        \label{}
     \end{figure}
 
     \subsection{气态\cemb{Cu}催化剂对甲烷裂解反应的催化性能}
