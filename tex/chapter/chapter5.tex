@@ -11,7 +11,10 @@
 
 在本章中密度泛函理论主要使用Vienna ab-initio Simulation Package (VASP) 软件包进行计算。在密度泛函理论计算中，我们使用广义梯度近似（GGA）下的 Perdew-Burke-Ernzerhof (PBE)泛函描述电子之间的交换关联作用。平面波的截断动能取为为$\SI{500}{\electronvolt}$。为了研究\cemb{Cu}/\cemb{h-BN}衬底表面石墨烯的生长情况，我们采用切片模型并在垂直表面方向放置至少$\SI{20}{\angstrom}$的真空层以防止周期性条件相邻切片的影响。切片模型中，作为石墨烯生长衬底的\cemb{Cu}/\cemb{h-BN}包含四原子层的\cemb{Cu(111)}以及单原子层的\cemb{h-BN}。在\cemb{Cu}的表面，经过我们的计算，\cemb{h-BN}的最优堆叠方式为\cemb{N}原子位于\cemb{Cu}衬底的顶位，\cemb{B}原子位于\cemb{Cu}衬底的面心立方位(fcc site)。
 在原子结构优化的计算中，力收敛条件设为$\SI{2e-2}{\electronvolt \per \angstrom}$，电子结构自洽场计算的收敛条件设为$\SI{1e-6}{\electronvolt}$。
+
 对于碳团簇（\cemb{C_x}）、石墨烯、\cemb{h-BN}、\cemb{Cu}衬底之间之间的范德瓦尔斯作用使用Grimme的DFT-D3方法进行描述，并带有Becke-Johnson阻尼作用 \citing{RN937-2010, RN938-2011}。
+对于石墨烯、\cemb{VSe2}之间的范德瓦尔斯作用，我们使用Grimme的DFT-D2方法进行描述。
+
 对于过渡态的计算，我们采用CI-NEB（Climbing Image Nudged Elastic Band）方法对始末反应状态之间的能量鞍点进行搜寻，以确定反应势垒的大小\citing{RN790-2000}。对于过渡态计算，力收敛条件设为$\SI{3e-2}{\electronvolt \per \angstrom}$。
 
 \section{石墨烯/\cemb{h-BN}纵向二维异质结的生长机理}
