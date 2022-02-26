@@ -131,10 +131,20 @@
     
     \subsection{\cemb{h-BN}表面石墨烯的生长演化机理}
     
+    当前驱体\cemb{CH4}在\cemb{Cu}蒸气的作用下在\cemb{Cu/h-BN}的表面脱氢、裂解成活性\cemb{C}、\cemb{CH}等物质。这些具有活性的含碳化合物在\cemb{Cu/h-BN}的表面进一步沉积、成核、生长成为石墨烯。为了进一步探究在\cemb{Cu/h-BN}表面的生长机理，我们使用第一性原理的方法计算了\cemb{C}团簇在\cemb{Cu/h-BN}表面的成核生长过程。
+    
+    在计算过程中，我们使用石墨烯的平均\cemb{C}原子形成能
+    $$\energyVar{f}{}=\left(\energyVar{total}{}-\energyVar{Cu/h-BN}{}-N\times \energyVar{C}{}\right)\slash N$$
+    来表征不同\cemb{C}团簇的能级水平。其中，$\energyVar{total}{}$为在\cemb{Cu/h-BN}表面生长\cemb{C}团簇后整个体系的总能量；$\energyVar{Cu/h-BN}{}$为单独\cemb{Cu/h-BN}衬底的能量；$N$为形成\cemb{C}团簇的\cemb{C}原子的个数；$\energyVar{C}{}$为碳原子的能量。
+
+    同时，先前的研究表明，石墨烯在\cemb{Cu}衬底表面生长的早期阶段中\cemb{C}团簇中的\cemb{C}原子更容易形成sp的杂化形式，而不是形成在石墨烯中常见的$\rm sp^2$杂化\citing{RN822-2011}。因此，除了石墨烯的六边形团簇外、我们在石墨烯生长阶段的早期还同时考虑了由sp杂化碳原子组成的线形和环形\cemb{C}团簇。
+
+    在图\ref{fig:CG_DFT_C_cluster_onBN}中，我们给出了包含$1 \sim 24$个\cemb{C}原子的六边形、线形、环形的\cemb{C}团簇在\cemb{Cu/h-BN}表面生长的形成能。我们可以看到，对于单个\cemb{C}原子在\cemb{Cu/h-BN}表面吸附，形成能为\SI{-4.02}{\electronvolt\per\atom}
+
     \begin{figure}[htb]
         \includegraphics{pic/CG_DFT_C_cluster_onBN.png}
         \caption{}
-        \label{}
+        \label{fig:CG_DFT_C_cluster_onBN}
     \end{figure}
 
     \begin{figure}[htb]
