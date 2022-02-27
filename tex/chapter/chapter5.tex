@@ -44,7 +44,7 @@
         \label{fig:CG_diagram_CVD}
     \end{figure}
 
-    \subsection{近邻蒸发气态\cemb{Cu}催化剂的扩散}
+    \subsection{气态\cemb{Cu}催化剂的扩散}
     \label{CG:FEM_CuVapor}
     事实上，在\cemb{h-BN}上方的\cemb{Cu}蒸发源对于石墨烯在\cemb{h-BN}表面的直接石墨烯生长可能纯在两种作用\chinesecolon 一种是如上文所说的，\cemb{Cu}蒸发源的表面蒸发出浓度较高的\cemb{Cu}蒸气，这些\cemb{Cu}蒸气在扩散至\cemb{h-BN}表面仍然能够保持较高的浓度和分压。随后在\cemb{Cu}蒸气的催化作用下，生长气氛中的\cemb{CH4}逐渐脱氢裂解为活性碳原子\cemb{C}，在\cemb{h-BN}表面成核生长成为石墨烯。另一种方式是\cemb{CH4}直接在\cemb{Cu}的表面脱氢裂解，产生的活性碳原子（\cemb{C}）和活性碳氢化合物（\cemb{CH}）等基团在热动能的作用下脱离\cemb{Cu}铜蒸发源的表面，扩散至下方\cemb{h-BN}的表面进行成核、生长石墨烯。
 
@@ -112,7 +112,7 @@
 
     可以看到，在没有\cemb{Cu}等催化剂的介入下\cemb{CH4}脱氢每步大约需要$\SI{3.69}{\electronvolt}\sim  \SI{4.9}{\electronvolt}$的激活能。如此高的反应激活需求使得反应气氛中的\cemb{CH4}难以直接裂解为\cemb{C}、\cemb{CH}等活性基团以供石墨烯的生长。当\cemb{Cu}团簇被引入作为催化剂后，密度泛函理论计算得到的\cemb{CH4}脱氢反应的激活能相比于无催化剂的情况产生了大幅度的下降。四步脱氢反应的激活能由无催化剂的最高约\SI{4.9}{\electronvolt}下降至\cemb{Cu}团簇作为催化剂的最高约\SI{2.7}{\electronvolt}。同时我们还可以发现，随着\cemb{Cu}团簇内包含的\cemb{Cu}原子的数目上升，\cemb{CH4}脱氢裂解反应的激活能和反应能由逐渐下降的趋势。
 
-    通过和无催化剂辅助情况下\cemb{CH4}脱氢裂解的激活能和反应能进行比较，我们可以认为\cemb{Cu}团簇能够使\cemb{CH4}的脱氢裂解反应能量需求大幅下降。在表\ref{tab:CH4_cata}中，我们将\cemb{CH4}在\cemb{Cu}团簇表面和在平坦的\cemb{Cu(111)}衬底表面催化裂解过程的反应激活能（$\energyVar{a}{}$）和反应能$\Delta \energyVar{}{}$进行对比，探究\cemb{Cu}团簇的催化能力是否能够支撑石墨烯的生长。
+    通过和无催化剂辅助情况下\cemb{CH4}脱氢裂解的激活能和反应能进行比较，我们可以认为\cemb{Cu}团簇能够使\cemb{CH4}的脱氢裂解反应能量需求大幅下降。在表\ref{tab:CH4_cata}中，我们将\cemb{CH4}在\cemb{Cu}团簇表面和在平坦的\cemb{Cu(111)}衬底表面催化裂解过程的反应激活能（$\energyVar{a}{}$）和反应能$\rm{\Delta} \it \energyVar{}{}$进行对比，探究\cemb{Cu}团簇的催化能力是否能够支撑石墨烯的生长。
 
     \input{misc/chap5-tables_CH4_cata.tex}
 
@@ -151,8 +151,6 @@
 
     同时，先前的研究表明，石墨烯在\cemb{Cu}衬底表面生长的早期阶段中\cemb{C}团簇中的\cemb{C}原子更容易形成sp的杂化形式，而不是形成在石墨烯中常见的$\rm sp^2$杂化\citing{RN822-2011}。因此，除了石墨烯的六边形团簇外、我们在石墨烯生长阶段的早期还同时考虑了由sp杂化\cemb{C}原子组成的线形和环形\cemb{C}团簇。
 
-    在图\ref{fig:CG_DFT_C_cluster_onBN}中，我们给出了包含$1 \sim 24$个\cemb{C}原子的六边形、线形、环形的\cemb{C}团簇在\cemb{Cu/h-BN}表面生长的形成能。我们可以看到，对于单个\cemb{C}原子在\cemb{Cu/h-BN}表面吸附，形成能为\SI{-4.02}{\electronvolt\per\atom}。单个的\cemb{C}原子吸附在\cemb{h-BN}表面的\cemb{N}原子上方，并且与下方的\cemb{N}原子以及斜侧方的三个\cemb{B}原子均有成键。\cemb{C}原子在\cemb{Cu/h-BN}表面的吸附破坏了\cemb{h-BN}单层的平面结构，使得吸附位点的\cemb{N}原子向\cemb{Cu}衬底沉降，与表面的\cemb{Cu}原子产生键合。
-    在\cemb{Cu/h-BN}表面吸附的单个\cemb{C}原子在与生长环境或者\cemb{Cu/h-BN}表面的另一个\cemb{C}原子结合后，可以形成\cemb{C2}团簇，形成能下降至\SI{-5.63}{\electronvolt\per\atom}。双原子的\cemb{C2}团簇之间较强的\cemb{C-C}键使得原本吸附在\cemb{N}原子上方的\cemb{C}吸附原子移动到\cemb{B}原子的上方，在\cemb{h-BN}表面锯齿晶向（zigzag）相邻的两个\cemb{B}原子上方形成\cemb{C2}团簇。\cemb{C2}团簇的形成将下方的\cemb{B}原子略微拉扯出\cemb{h-BN}平面。
 
     \begin{figure}[htb]
         \includegraphics{pic/CG_DFT_C_cluster_onBN.png}
@@ -160,7 +158,10 @@
         \label{fig:CG_DFT_C_cluster_onBN}
     \end{figure}
 
-    第三个\cemb{C}原子加入\cemb{C}团簇后，\cemb{C3}团簇在\cemb{h-BN}表面呈现出直立的三角形形貌（\ref{fig:CG_structure_3C}）。在直立的三角形结构下，\cemb{C3}团簇的\cemb{C}原子平均形成能下降至\SI{-5.96}{\electronvolt\per\atom}。此时，\cemb{C3}三角形团簇的下方两个顶点\cemb{C}原子与\cemb{h-BN}表面的相邻的两个\cemb{B}原子成键。三角形的边长略小于相邻两个\cemb{B}原子之间的距离。包含四个\cemb{C}原子的\cemb{C4}团簇恢复了平面的结构（\ref{fig:CG_structure_4C}），在\cemb{h-BN}表面形成菱形的形貌。这种菱形结构的\cemb{C4}团簇的平均\cemb{C}原子结合能为\SI{-5.97}{\electronvolt\per\atom}，仅比\cemb{C3}三角形团簇下降了\SI{0.01}{\electronvolt\per\atom}。相比之下，由四个\cemb{C}原子组成的\cemb{C4}线形团簇具有非常大的形成能下降（\ref{fig:CG_structure_4CL}）。\cemb{C4}线形团簇类似于\cemb{2}团簇，线形的两端与\cemb{h-BN}表面的\cemb{B}原子成键，中央的\cemb{C}原子上翘，形成类似于弓形的结构。在我们的形成能计算中，\cemb{C4}线形团簇在\cemb{h-BN}的表面以与锯齿边的平行的方向形成，平均碳原子形成能为\SI{-6.52}{\electronvolt\per\atom}，远低于形成平面菱形结构的\cemb{C4}团簇。从\cemb{C4}团簇开始，线形的\cemb{C}团簇在\cemb{h-BN}的表面相比于六边形、环形等二维结构的\cemb{C}团簇具有相当的形成能优势。在平面菱形的\cemb{C4}团簇上进一步添加一个\cemb{C}原子形成具有平面构型的\cemb{C5}团簇\ref{fig:CG_structure_5C}，其平均碳原子结合能仅下降至\SI{-6.02}{\electronvolt\per\atom}。此时的\cemb{C5}团簇的一个顶角从\cemb{h-BN}的表面脱离并向上翘起，以释放团簇内\cemb{C}原子之间的应力，维持sp2杂化的\cemb{C}原子之间的平面结构。
+    在图\ref{fig:CG_DFT_C_cluster_onBN}中，我们给出了包含$1 \sim 24$个\cemb{C}原子的六边形、线形、环形的\cemb{C}团簇在\cemb{Cu/h-BN}表面生长的形成能。我们可以看到，对于单个\cemb{C}原子在\cemb{Cu/h-BN}表面吸附，形成能为\SI{-4.02}{\electronvolt\per\atom}。单个的\cemb{C}原子吸附在\cemb{h-BN}表面的\cemb{N}原子上方，并且与下方的\cemb{N}原子以及斜侧方的三个\cemb{B}原子均有成键。\cemb{C}原子在\cemb{Cu/h-BN}表面的吸附破坏了\cemb{h-BN}单层的平面结构，使得吸附位点的\cemb{N}原子向\cemb{Cu}衬底沉降，与表面的\cemb{Cu}原子产生键合。
+
+    在\cemb{Cu/h-BN}表面吸附的单个\cemb{C}原子在与生长环境或者\cemb{Cu/h-BN}表面的另一个\cemb{C}原子结合后，可以形成\cemb{C2}团簇，形成能下降至\SI{-5.63}{\electronvolt\per\atom}。双原子的\cemb{C2}团簇之间较强的\cemb{C-C}键使得原本吸附在\cemb{N}原子上方的\cemb{C}吸附原子移动到\cemb{B}原子的上方，在\cemb{h-BN}表面锯齿晶向（zigzag）相邻的两个\cemb{B}原子上方形成\cemb{C2}团簇。\cemb{C2}团簇的形成将下方的\cemb{B}原子略微拉扯出\cemb{h-BN}平面。
+
 
     \begin{figure}[htb]
         \subfloat[]{
@@ -183,6 +184,8 @@
         \label{fig:CG_structure_3-5C}
     \end{figure}
 
+    第三个\cemb{C}原子加入\cemb{C}团簇后，\cemb{C3}团簇在\cemb{h-BN}表面呈现出直立的三角形形貌（\ref{fig:CG_structure_3C}）。在直立的三角形结构下，\cemb{C3}团簇的\cemb{C}原子平均形成能下降至\SI{-5.96}{\electronvolt\per\atom}。此时，\cemb{C3}三角形团簇的下方两个顶点\cemb{C}原子与\cemb{h-BN}表面的相邻的两个\cemb{B}原子成键。三角形的边长略小于相邻两个\cemb{B}原子之间的距离。包含四个\cemb{C}原子的\cemb{C4}团簇恢复了平面的结构（\ref{fig:CG_structure_4C}），在\cemb{h-BN}表面形成菱形的形貌。这种菱形结构的\cemb{C4}团簇的平均\cemb{C}原子结合能为\SI{-5.97}{\electronvolt\per\atom}，仅比\cemb{C3}三角形团簇下降了\SI{0.01}{\electronvolt\per\atom}。相比之下，由四个\cemb{C}原子组成的\cemb{C4}线形团簇具有非常大的形成能下降（\ref{fig:CG_structure_4CL}）。\cemb{C4}线形团簇类似于\cemb{2}团簇，线形的两端与\cemb{h-BN}表面的\cemb{B}原子成键，中央的\cemb{C}原子上翘，形成类似于弓形的结构。在我们的形成能计算中，\cemb{C4}线形团簇在\cemb{h-BN}的表面以与锯齿边的平行的方向形成，平均碳原子形成能为\SI{-6.52}{\electronvolt\per\atom}，远低于形成平面菱形结构的\cemb{C4}团簇。从\cemb{C4}团簇开始，线形的\cemb{C}团簇在\cemb{h-BN}的表面相比于六边形、环形等二维结构的\cemb{C}团簇具有相当的形成能优势。在平面菱形的\cemb{C4}团簇上进一步添加一个\cemb{C}原子形成具有平面构型的\cemb{C5}团簇\ref{fig:CG_structure_5C}，其平均碳原子结合能仅下降至\SI{-6.02}{\electronvolt\per\atom}。此时的\cemb{C5}团簇的一个顶角从\cemb{h-BN}的表面脱离并向上翘起，以释放团簇内\cemb{C}原子之间的应力，维持sp2杂化的\cemb{C}原子之间的平面结构。
+
     当\cemb{C}团簇中的\cemb{C}原子数量上升到6个，即可形成具有类石墨烯结构的\cemb{C6}六边形团簇。在\cemb{Cu/h-BN}表面上，\cemb{C6}六边形团簇的两个相对的\cemb{C}原子与\cemb{h-BN}扶手椅边（armchair）方向的两个\cemb{B}原子成键，其余的四个\cemb{C}原子上翘。\cemb{C6}六边形团簇的六元环整体形成舟形的原子结构（图\ref{fig:CG_structure_6CH}）。此时的\cemb{C}原子平均形成能为\SI{-6.17}{\electronvolt\per\atom}，相比于平面形的\cemb{C4}、\cemb{C5}团簇有较大的形成能下降。但包含六个sp杂化\cemb{C}原子的\cemb{C6}线形团簇的平均形成能为\SI{-6.77}{\electronvolt\per\atom}，相比于\cemb{C6}六边形团簇具有更好的能量优势。\cemb{C6}线形团簇同样处于\cemb{h-BN}锯齿边的\cemb{B}原子的上方，整个\cemb{C6}线形团簇在\cemb{h-BN}的表面横跨4个\cemb{B}原子，两端的\cemb{C}原子与\cemb{B}原子成键，整体呈现出弓形的原子结构（图\ref{fig:CG_structure_6CL}）。
 
     \begin{figure}[htb]
@@ -202,15 +205,13 @@
             \includegraphics{pic/CG_structure_10CR.png}
             \label{fig:CG_structure_10CR}
         }
-        \caption{}
-        \label{}
+        \caption{\cemb{Cu/h-BN}表面\cemb{C}团簇的原子结构图。(a)\cemb{C6}六边形团簇；(b)\cemb{6}线形团簇；(c)\cemb{C10}六边形团簇；(d)\cemb{C10}环形团簇。原子结构图中，铜原子为橙色；氮原子为蓝色；硼原子为绿色；碳原子为灰色。}
+        \label{fig:CG_CG_structure_6-10C}
     \end{figure}
 
     当\cemb{C}团簇中的\cemb{C}原子数量上升到10个，平面结构的\cemb{C}团簇从\cemb{C6}六边形团簇进一步分裂出环形的原子构型。\cemb{C10}环形团簇的\cemb{C}原子平均形成能为\SI{-6.74}{\electronvolt\per\atom}，略低于\cemb{C10}六边形团簇的\SI{-6.61}{\electronvolt\per\atom}。从原子结构上看（图图\ref{fig:CG_structure_10CH}和图\ref{fig:CG_structure_10CR}），\cemb{C10}六边形团簇在\cemb{h-BN}表面形成了两个六元环结构。同\cemb{C6}六边形团簇一致，\cemb{C10}六边形团簇锯齿边的四个\cemb{C}原子与\cemb{h-BN}衬底的\cemb{B}原子成键。
     而\cemb{C10}环形团簇用两个弓形的线形团簇组成，整体在\cemb{Cu/h-BN}表面呈舟形。\cemb{C10}环形团簇仅有两端的\cemb{C}原子与\cemb{h-BN}表面的\cemb{B}原子产生相互作用。对比\cemb{C10}六边形团簇的原子结构，\cemb{C10}环形团簇将中间sp2杂化的\cemb{C}原子的连接断开，形成类似于线形的sp杂化\cemb{C}原子，从而降低了形成能。
     
-    而对于线形的\cemb{C}团簇，由于其一维的原子结构，我们认为生长气氛中的\cemb{C}原子直接吸附至\cemb{C}线形团簇的表面参与生长的概率远低于平面结构的\cemb{C}六边形团簇和\cemb{C}环形团簇。因此\cemb{C}线形团簇的生长来源主要为在\cemb{h-BN}表面扩散的游离的\cemb{C}原子。在图\ref{pic:CG_DFT_CdiffonHBNCu}中，我们计算了游离的\cemb{C}原子在\cemb{h-BN}表面的扩散势垒。可以看到，由于\cemb{C}原子和\cemb{h-BN}表面非常强烈的相互作用，\cemb{C}原子在\cemb{h-BN}表面由\cemb{N}原子上方的吸附位点经过\cemb{B}原子到达相邻的等价吸附位点需要越过的势垒高度为\SI{2.39}{\electronvolt}。作为对比，我们计算了在覆盖在\cemb{Cu/h-BN}表面的石墨烯上游离的\cemb{C}原子的扩散势垒（图\ref{pic:CG_DFT_CdiffonGhBNCu}），用以模拟沉积的\cemb{C}原子在\cemb{C}六边形团簇上的扩散情况。在\cemb{h-BN}上石墨烯表面的\cemb{C}原子的扩散势垒为\SI{0.85}{\electronvolt}，远低于\cemb{C}原子在\cemb{h-BN}表面的扩散势垒。
-
     \begin{figure}[htb]
         \subfloat[]{
             \includegraphics{pic/CG_DFT_CdiffonHBNCu.png}
@@ -228,13 +229,13 @@
             \includegraphics{pic/CG_structure_16C2L.png}
             \label{fig:CG_structure_16C2L}
         }
-        \caption{}
+        \caption{游离\cemb{C}原子的扩散势垒以及\cemb{Cu/h-BN}表面\cemb{C}团簇的原子结构图。(a)\cemb{C}原子在\cemb{Cu/h-BN}表面的扩散势垒；(b)\cemb{C}原子在石墨烯/\cemb{h-BN}异质结表面的扩散势垒；(c)\cemb{C12}双线形团簇；(d)\cemb{C16}双线形团簇。原子结构图中，铜原子为橙色；氮原子为蓝色；硼原子为绿色；碳原子为灰色。}
         \label{}
     \end{figure}
 
+    而对于线形的\cemb{C}团簇，由于其一维的原子结构，我们认为生长气氛中的\cemb{C}原子直接吸附至\cemb{C}线形团簇的表面参与生长的概率远低于平面结构的\cemb{C}六边形团簇和\cemb{C}环形团簇。因此\cemb{C}线形团簇的生长来源主要为在\cemb{h-BN}表面扩散的游离的\cemb{C}原子。在图\ref{pic:CG_DFT_CdiffonHBNCu}中，我们计算了游离的\cemb{C}原子在\cemb{h-BN}表面的扩散势垒。可以看到，由于\cemb{C}原子和\cemb{h-BN}表面非常强烈的相互作用，\cemb{C}原子在\cemb{h-BN}表面由\cemb{N}原子上方的吸附位点经过\cemb{B}原子到达相邻的等价吸附位点需要越过的势垒高度为\SI{2.39}{\electronvolt}。作为对比，我们计算了在覆盖在\cemb{Cu/h-BN}表面的石墨烯上游离的\cemb{C}原子的扩散势垒（图\ref{pic:CG_DFT_CdiffonGhBNCu}），用以模拟沉积的\cemb{C}原子在\cemb{C}六边形团簇上的扩散情况。在\cemb{h-BN}上石墨烯表面的\cemb{C}原子的扩散势垒为\SI{0.85}{\electronvolt}，远低于\cemb{C}原子在\cemb{h-BN}表面的扩散势垒。
+
     因此我们认为对于\cemb{C}线形团簇而言，由于受到\cemb{C}原子高迁移势垒的限制，单个\cemb{C}线形团簇难以在实际的成核生长过程中生长到非常长的情况，而是近邻的\cemb{C}原子相结合，形成多条短的\cemb{C}线形团簇（图\ref{fig:CG_structure_12C2L}和图\ref{fig:CG_structure_16C2L}）。当\cemb{C}线形团簇由于\cemb{C}原子高迁移势垒而受困于以多条短线组成的\cemb{C}团簇暂稳态后，\cemb{C}线形团簇的平均\cemb{C}原子形成能开始缓慢上升。以6个\cemb{C}原子线形团簇为基元的\cemb{C12}$\left(2 \times 6\right)$线形团簇和\cemb{C18}$\left(3 \times 6\right)$线形团簇的平均\cemb{C}原子形成能为\SI{-6.63}{\electronvolt\per\atom}和\SI{-6.59}{\electronvolt\per\atom}。以8个\cemb{C}原子线形团簇为基元的双线（\cemb{C16}$\left(2 \times 8\right)$，图\ref{fig:CG_structure_16C2L}）、三线形团簇（\cemb{C24}$\left(3 \times 8\right)$）的形成能也略高于\cemb{C8}线形团簇的能量。
-    
-    当\cemb{C}团簇中的\cemb{C}原子数量上升到14个，14个\cemb{C}原子能够在\cemb{h-BN}的表面形成三个六元环（\cemb{C14}六边形团簇，图\ref{fig:CG_structure_14CH}）。\cemb{C14}六边形团簇的平均\cemb{C}原子形成能（\SI{-6.74}{\electronvolt\per\atom}）略高于将六元环内部相邻的sp2杂化\cemb{C}原子的连接打开，形成\cemb{C14}环形团簇的形成能（\SI{-6.85}{\electronvolt\per\atom}）。在\cemb{C14}环形团簇中，有3个\cemb{C}原子与\cemb{h-BN}表面的\cemb{B}原子成键，恰好对应于\cemb{h-BN}上次近邻\cemb{B}原子所组成的矩形的三个顶角原子。
 
     \begin{figure}[htb]
         \subfloat[]{
@@ -252,14 +253,14 @@
         \subfloat[]{
             \includegraphics{pic/CG_structure_19CR.png}
         }
-        \caption{}
-        \label{}
+        \caption{\cemb{Cu/h-BN}表面\cemb{C}团簇的原子结构图。(a)\cemb{C4}六边形团簇；(b)\cemb{14}环形团簇；(c)\cemb{C19}六边形团簇；(d)\cemb{C19}环形团簇。原子结构图中，铜原子为橙色；氮原子为蓝色；硼原子为绿色；碳原子为灰色。}
+        \label{fig:CG_CG_structure_14-19C}
     \end{figure}
+    
+    当\cemb{C}团簇中的\cemb{C}原子数量上升到14个，14个\cemb{C}原子能够在\cemb{h-BN}的表面形成三个六元环（\cemb{C14}六边形团簇，图\ref{fig:CG_structure_14CH}）。\cemb{C14}六边形团簇的平均\cemb{C}原子形成能（\SI{-6.74}{\electronvolt\per\atom}）略高于将六元环内部相邻的sp2杂化\cemb{C}原子的连接打开，形成\cemb{C14}环形团簇的形成能（\SI{-6.85}{\electronvolt\per\atom}）。在\cemb{C14}环形团簇中，有3个\cemb{C}原子与\cemb{h-BN}表面的\cemb{B}原子成键，恰好对应于\cemb{h-BN}上次近邻\cemb{B}原子所组成的矩形的三个顶角原子。
 
     \cemb{C}六边形团簇形成能高于环形团簇的情况在团簇内\cemb{C}原子数量到达19个时发生了逆转。\cemb{C19}六边形团簇的平均\cemb{C}原子结合能（\SI{-6.98}{\electronvolt\per\atom}）低于\cemb{19}环形团簇的结合能（\SI{-6.94}{\electronvolt\per\atom}）。在\cemb{C19}六边形团簇中，19个\cemb{C}原子形成了5个六元环。\cemb{h-BN}衬底表面的\cemb{B}原子只能束缚住其中4个六元环，有1个六元环由于六边形团簇平面内应力释放的原因脱离了\cemb{B}原子的吸引，减小了\cemb{C19}六边形团簇整体的弯曲程度。同样，对于\cemb{C19}环形团簇，在优化后的结构中，有一半以上的\cemb{C}原子脱离了\cemb{h-BN}的束缚，在真空中尽可能的延展以接近理想的sp杂化\cemb{C}的直线构型。
 
-    随着更多的\cemb{C}原子附着在\cemb{C}团簇上，\cemb{C}团簇生长为包含5个\cemb{C}六元环的\cemb{C22}六边形团簇（\ref{fig:CG_structure_22CH}）和包含6个\cemb{C}六元环的\cemb{C24}六边形团簇（\ref{fig:CG_structure_22CH}）。这些在六边形团簇中，与\cemb{h-BN}表面具有明显相互作用的均为锯齿边缘的\cemb{C}原子，而扶手椅边缘的\cemb{C}原子则向上翘起对六边形团簇内sp2杂化\cemb{C}原子的平面内应力进行释放。
-    
     \begin{figure}[htb]
         \subfloat[]{
             \includegraphics{pic/CG_structure_22CH.png}
@@ -269,46 +270,95 @@
             \includegraphics{pic/CG_structure_24CH.png}
             \label{fig:CG_structure_24CH}
         }
-        \caption{}
-        \label{}
+        \caption{\cemb{Cu/h-BN}表面\cemb{C}团簇的原子结构图。(a)\cemb{C22}六边形团簇；(b)\cemb{24}六边形团簇。原子结构图中，铜原子为橙色；氮原子为蓝色；硼原子为绿色；碳原子为灰色。}
+        \label{fig:CG_CG_structure_22-24C}
     \end{figure}
 
+    随着更多的\cemb{C}原子附着在\cemb{C}团簇上，\cemb{C}团簇生长为包含5个\cemb{C}六元环的\cemb{C22}六边形团簇（\ref{fig:CG_structure_22CH}）和包含6个\cemb{C}六元环的\cemb{C24}六边形团簇（\ref{fig:CG_structure_22CH}）。这些在六边形团簇中，与\cemb{h-BN}表面具有明显相互作用的均为锯齿边缘的\cemb{C}原子，而扶手椅边缘的\cemb{C}原子则向上翘起对六边形团簇内sp2杂化\cemb{C}原子的平面内应力进行释放。
+    
     同时，我们可以发现，在\cemb{h-BN}表面与\cemb{C}团簇边缘原子产生相互作用的基本为\cemb{B}原子。在石墨烯生长的初期阶段，\cemb{C}原子组成的团簇首先倾向于形成以sp杂化\cemb{C}为主要组成的线形的团簇。但由于沉积的\cemb{C}原子在\cemb{h-BN}表面迁移困难，当形成\cemb{C}团簇的原子数上升到十几个\cemb{C}原子时，\cemb{C}团簇倾向于呈现出环形的相貌。由于sp2杂化\cemb{C}在原子数较少的\cemb{C}团簇内形成能的相对弱势，只有当\cemb{C}团簇内的\cemb{C}原子大于19个时，\cemb{C}团簇才会倾向于将结构演化为以\cemb{C}六元环为基本单元的\cemb{C}六边形团簇，从而实现同样以\cemb{C}六元环为基本单元的石墨烯在\cemb{Cu/h-BN}表面的生长。
 
-\section{石墨烯/二硒化钒横向异质结的生长机理}
+\section{石墨烯/\cemb{VSe2}横向异质结的生长机理}
+    \subsection{石墨烯表面\cemb{V}原子、\cemb{Se}原子的吸附机理}
     \label{cap:VS}
-    \begin{figure}
+    对于石墨烯/\cemb{VSe2}的生长，我们首先利用密度泛函理论计算了\cemb{V}原子和\cemb{Se}原子在石墨烯表面的吸附情况。如图\ref{fig:VS_VandSeOnG}所示，\cemb{V}原子在石墨烯表面的最佳吸附位点为\cemb{C}六元环的中央空位。吸附后，\cemb{V}原子略微偏离六元环的中央空位位点，此时\cemb{V-C}键的键长约为\SIrange[range-phrase=$\sim$]{2.27}{2.40}{\angstrom}。而对于\cemb{Se}原子，其在石墨烯表面的最佳吸附位点为\cemb{C}六元环边缘的桥位。此时，\cemb{Se}原子与相邻的两个\cemb{C}原子成键，键长为\SI{2.14}{\angstrom}。
+
+    \begin{figure}[htb]
         \subfloat[]{
             \includegraphics{pic/VS_structure_VOnG.png}
         }
         \subfloat[]{
             \includegraphics{pic/VS_structure_SeOnG.png}
         }
-        \caption{}
-        \label{}
-    \end{figure}
-    \begin{figure}
-        \includegraphics{pic/VS_DFT_adatoms.png}
-        \caption{}
-        \label{}
+        \caption{\cemb{V}原子和\cemb{Se}原子在石墨烯表面的最优吸附位点。(a)\cemb{V}原子在石墨烯表面吸附；(b)\cemb{Se}原子在石墨烯表面吸附。在原子结构图中，钒原子为蓝色；碳原子为灰色；硒原子为橙色。}
+        \label{fig:VS_VandSeOnG}
     \end{figure}
 
+    在石墨烯的表面，吸附原子的结合能$\energyVar{b}{}$可以用来表征不同原子吸附能力的强弱\chinesecolon
+    \[
+        \energyVar{b}{}=\left(\energyVar{sub+adatom}{}-\energyVar{sub}{}-N\muVar{adatom}{}\right)/ N
+    \]
+    其中，$\energyVar{sub+adatom}{}$和$\energyVar{sub}{}$为吸附有原子的衬底和未吸附原子的衬底的能量。$\muVar{adatom}{}$为吸附原子的化学势。$N$为吸附原子的总数。
+
+    对于$\muVar{adatom}{}$为吸附原子的化学势，我们首先考虑于生长环境下\cemb{VSe2}块体的化学平衡，我们有\chinesecolon
+    \begin{equation}
+        \label{eq:VS_bulkEqmb}
+        \muVar{V}{}+2\muVar{Se}{}=\energyVar{\ce{VSe2}}{tot}=\energyVar{V\left(Bulk\right)}{}+2\energyVar{Se\left(Bulk\right)}{}+\rm{\Delta} \it H_{\rm f}\left(\ce{VSe2}\right)
+    \end{equation}
+
+    其中，$\energyVar{\ce{VSe2}}{tot}$、$\energyVar{V\left(Bulk\right)}{}$和$\energyVar{Se\left(Bulk\right)}{}$为\cemb{VSe2}块体，\cemb{V}块体和\cemb{Se}块体的能量。因此，在\cemb{VSe2}块体的化学平衡的限制下，$\muVar{V}{}$的变化范围为$\energyVar{V\left(Bulk\right)}{}+\rm{\Delta} \it H_{\rm f}\left(\ce{VSe2}\right) \leqslant \muVar{V}{}  \leqslant \energyVar{V\left(Bulk\right)}{}$，代表\cemb{V}的化学势$\muVar{V}{}$由纯\cemb{Se}的生长环境变化到纯\cemb{V}的生长环境。
+
+    在图\ref{fig:VS_DFT_adatoms}中，我们计算了\cemb{V}原子和\cemb{Se}原子在石墨烯对应的最优吸附位点的吸附能随化学势$\muVar{V}{}$的变化情况。可以看到，对于\cemb{V}原子和\cemb{Se}原子，在\cemb{VSe2}块体平衡的限制下均无法在石墨烯表面自发吸附。对于\cemb{V}原子，在纯\cemb{V}的极限环境下，从生长气氛中裂解，吸附到石墨烯表面所需要吸收的能量为\SI{4.48}{\electronvolt}。而在纯\cemb{Se}的极限环境下，\cemb{V}原子从裂解到吸附在石墨烯表面需要吸收的能量为\SI{6.38}{\electronvolt}。\cemb{Se}原子在\cemb{VSe2}块体平衡的限制下的吸附能力强于\cemb{V}原子。在纯\cemb{V}的极限环境下，\cemb{Se}原子从生长气环境中裂解，吸附在石墨烯的表面只需要消耗\SI{2.32}{\electronvolt}的能量。而在纯\cemb{V}的极限环境下，生长气氛中的\cemb{Se}原子吸附在石墨烯的表面所吸收的能量只上升至\SI{3.27}{\electronvolt}，低于此环境下\cemb{V}原子在石墨烯表面的结合能。
+
+    而要使\cemb{V}原子和\cemb{Se}原子能够自发的在石墨烯的表面吸附，为\cemb{VSe2}的生长提供物质来源，需要进一步提高生长环境中气态分子的能量，使得前驱体\cemb{VSe2}在气相的状态下分解为包含\cemb{Se}原子和\cemb{V}原子的自由基，突破\cemb{VSe2}块体的化学平衡的限制。为了考虑更高活性的\cemb{V}原子和\cemb{Se}原子在石墨烯表面的吸附情况，我们将$\muVar{V}{}$的取值范围扩展到气态\cemb{Se}原子和气态\cemb{V}原子环境中的能级水平。可以看到对于气态的\cemb{V}原子，其在石墨烯表面吸附的结合能为\SI{-1.30}{\electronvolt}，略高于气态的\cemb{Se}原子在石墨烯表面吸附的结合能（\SI{-0.59}{\electronvolt}）。在气态的状态下，\cemb{V}原子和\cemb{Se}原子均可在石墨烯的表面自发吸附。因此如果需要在石墨烯的表面生长\cemb{VSe2}，生长环境需要提供足够高的温度使得气相中的\cemb{VSe2}得以裂解为活性的气态\cemb{V}自由基和气态\cemb{Se}自由基。
+
     \begin{figure}
+        \includegraphics{pic/VS_DFT_adatoms.png}
+        \caption{石墨烯表面\cemb{V}原子和\cemb{Se}原子的吸附能随化学势$\muVar{V}{}$的变化情况}
+        \label{fig:VS_DFT_adatoms}
+    \end{figure}
+
+\subsection{石墨烯/\cemb{VSe2}的横向二维异质结的生长机理}
+    在石墨烯台阶的边缘直接生长\cemb{VSe2}可形成石墨烯/\cemb{VSe2}横向异质结。在石墨烯/\cemb{VSe2}横向异质结中，石墨烯边缘的\cemb{C}原子和\cemb{VSe2}边缘的\cemb{V}原子或者\cemb{Se}原子成键。在本章中，我们关注具有与自然形成的块体\cemb{VSe2}具有相似原子层结构的1T相单层\cemb{VSe2}在石墨烯台阶不同边缘（扶手椅边缘和锯齿边缘）的生长。与石墨烯类似，\cemb{VSe2}也有扶手椅和锯齿两种不同的边缘。对于扶手椅边缘的\cemb{VSe2}，其边缘由空悬的\cemb{V}原子和\cemb{Se}原子共同组成。对于锯齿边缘的\cemb{VSe2}，我们在本章中先关注具有\cemb{Se}空悬原子的边缘构型。由于相似的边缘晶格构型，我们将石墨烯和\cemb{VSe2}之间的边界线匹配限制在同种边缘之间。也就是石墨烯扶手椅边缘匹配\cemb{VSe2}扶手椅边缘，而石墨烯锯齿边缘匹配\cemb{VSe2}锯齿边缘。
+
+    \begin{figure}[htb]
         \subfloat[]{
             \includegraphics{pic/VS_structure_armchair_VSe2-2SG.png}
+            \label{fig:VS_structure_armchair_VSe2-2SG}
         }
         \subfloat[]{
             \includegraphics{pic/VS_structure_zigzag_VSe2-2SG.png}
+            \label{fig:VS_structure_zigzag_VSe2-2SG}
         }
-        \caption{}
-        \label{}
+        \caption{石墨烯/\cemb{VSe2}三种横向二维异质结的原子结构图。(a)扶手椅边界线；(b)锯齿边界线}
+        \label{fig:VS_structure_ac_zz}
     \end{figure}
 
-    \begin{figure}
+    由此，我们可以构建如图\ref{fig:VS_structure_ac_zz}三种不同的双层石墨烯/\cemb{VSe2}横向异质结的边界线匹配构型。对于扶手椅边界线，\cemb{VSe2}边缘的\cemb{V}原子与\cemb{Se}原子都与石墨烯边缘的\cemb{C}原子产生了一定的相互作用，双层石墨烯的高度正好对应于\cemb{VSe2}上下两个\cemb{Se}原子端面的高度。与\cemb{VSe}的扶手椅边缘成键后，原本位AB堆叠的双层石墨烯上下两层的堆叠方式产生了一定的偏移，
+
+    而对于双层石墨烯与\cemb{VSe2}锯齿边缘之间的匹配，我们探究了两周不同的形式（图\ref{fig:VS_structure_zigzag_VSe2-2SG}）。在A型锯齿边界中，\cemb{VSe2}与真空相接触的\cemb{Se}锯齿边缘相比于与底层石墨烯衬底接触的\cemb{Se}锯齿边缘更加侵入双层石墨烯台阶的内部。而在B型锯齿边界中，石墨烯/\cemb{VSe2}异质结在最底层的石墨烯表面进行了翻转，底层石墨烯衬底接触的\cemb{Se}锯齿边缘形成了嵌入双层石墨烯内部的边界线结构。
+
+    为了探究石墨烯/\cemb{VSe2}横向异质结之间边界线的最优匹配模式，我们计算了各构型的界线的平均形成能密度$\varepsilon  $\chinesecolon
+    \[
+        \varepsilon = \frac{1}{l} \left( \energyVar{G/\ce{VSe2}}{} -\energyVar{G}{} -\energyVar{\ce{VSe2}}{} \right)
+    \]
+
+    其中，$\energyVar{G/\ce{VSe2}}{}$、$\energyVar{G}{}$和$\energyVar{\ce{VSe2}}{}$为石墨烯/\cemb{VSe2}横向异质结、组成横向异质结的单独状态下的石墨烯和单独状态下的\cemb{VSe2}的计算总能量。$l$为石墨烯/\cemb{VSe2}横向异质结的边界线的长度。
+    
+    \begin{figure}[htb]
         \includegraphics{pic/VS_DFT_VSe2-G_stepAndEdge.png}
+        \caption{不同构型的石墨烯/\cemb{VSe2}横向异质结的平均边界结合能密度。}
+        \label{fig:VS_DFT_VSe2-G_stepAndEdge}
     \end{figure}
 
-    \begin{figure}
+    在图\ref{fig:VS_DFT_VSe2-G_stepAndEdge}中，我们计算了单层、双层石墨烯和\cemb{VSe2}组成的横向异质结的平均边界结合能密度。
+    对于单层石墨烯台阶与\cemb{VSe2}组成的横向异质结，边界结合最弱的形态为扶手椅匹配，此时的平均结合能密度为\SI{-0.66}{\electronvolt\per\angstrom}。形成A型锯齿匹配的单层石墨烯/\cemb{VSe2}横向异质结的结合边界稍稍强与扶手椅匹配，平均结合能密度达到了\SI{-0.78}{\electronvolt\per\angstrom}。而形成B型锯齿匹配的单层石墨烯/\cemb{VSe2}横向异质结在三种边界匹配中具有最高的结合强度，达到了\SI{-0.78}{\electronvolt\per\angstrom}。
+
+    对于在双层的石墨烯台阶的边缘形成的\cemb{VSe2}横向二维异质结，石墨烯/\cemb{VSe2}边界线处的平均结合能均高于在单层的石墨烯台阶的结合能。
+
+    石墨烯/\cemb{VSe2}中A、B型锯齿匹配的边界结合强度的差异主要来自最下层石墨烯衬底对于边界处\cemb{C}原子和\cemb{Se}原子之间相互作用的耦合。如图\ref{fig:VS_structure_zigzag_VSe2-2SG}所示，在石墨烯与\cemb{VSe2}相接触的位置，B型锯齿边界处最下方的石墨烯衬底呈现出略微下凹的结构，而A型锯齿边界处的衬底则为褶皱起伏状。
+
+    \begin{figure}[htb]
         \subfloat[]{
             \includegraphics{pic/VS_structure_VNeb1SG.png}
         }\\

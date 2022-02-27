@@ -5,6 +5,9 @@
 \usepackage{xparse}
 \usepackage{xstring}
 
+%comile flag here, check before publish
+\newcommand{\MYCAPFLAG}{-3-4-5-}% -A- or -1- or -1-4-5-
+\newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
 
 %%%configuration for imported package
 %for siunitx
@@ -24,9 +27,6 @@
 \def\csigmaVar#1#2{\it \widehat{\sigma}_{\rm #1}^{\rm #2} \it}
 \def\kbconst{\it k_{\rm B} \it}
 
-%comile flag here, check before publish
-\newcommand{\MYCAPFLAG}{-5-}%
-\newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
 
 \IfSubStr{\MYDRIFTFLAG}{Y}{
 % disable figure compile for speed up compile in drift
