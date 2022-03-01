@@ -6,7 +6,7 @@
 \usepackage{xstring}
 
 %comile flag here, check before publish
-\newcommand{\MYCAPFLAG}{-A-}% -A- or -1- or -1-4-5-
+\newcommand{\MYCAPFLAG}{-1-}% -A- or -1- or -1-4-5-
 \newcommand{\MYDRIFTFLAG}{-N-}% Y or N
 
 %%%configuration for imported package
@@ -72,6 +72,8 @@ allfiguresdraft,%
     \thesisbibliography{reference}
     \thesisaccomplish{publications}
 }{
+    \input{misc/chineseAbstract}
+    \input{misc/englishAbstract}
     \IfSubStr{\MYCAPFLAG}{-1-}{\input{chapter/chapter1}}{}
     \IfSubStr{\MYCAPFLAG}{-2-}{\input{chapter/chapter2}}{}
     \IfSubStr{\MYCAPFLAG}{-3-}{\input{chapter/chapter3}}{}
@@ -79,6 +81,7 @@ allfiguresdraft,%
     \IfSubStr{\MYCAPFLAG}{-5-}{\input{chapter/chapter5}}{}
     \IfSubStr{\MYCAPFLAG}{-6-}{\input{chapter/chapter6}}{}
     \IfSubStr{\MYCAPFLAG}{-ack-}{\input{misc/acknowledgement}}{}
+    \thesisbibliography{reference}
 }
 
 
