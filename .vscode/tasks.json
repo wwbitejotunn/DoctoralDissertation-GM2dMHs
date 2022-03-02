@@ -21,6 +21,10 @@
         },
         {
             "label": "buid all",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
             "dependsOn":["buid release tex", "buid anonymous release tex"]
         }
     ]
