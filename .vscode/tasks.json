@@ -9,7 +9,19 @@
             "options": {
                 "cwd": "${workspaceFolder}\\tex"
             },
-            "command": "latexmk -xelatex -outdir=release --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\release_main.tex" 
+            "command": "latexmk -xelatex -outdir=build\\release --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\release_main.tex" 
+        },
+        {
+            "label": "buid anonymous release tex",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}\\tex"
+            },
+            "command": "latexmk -xelatex -outdir=build\\anonymousRelease --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\anonymousRelease_main.tex" 
+        },
+        {
+            "label": "buid all",
+            "dependsOn":["buid release tex", "buid anonymous release tex"]
         }
     ]
 }

@@ -11,4 +11,4 @@
 *.blg
 main.pdf
 main.toc
-/tex/release/
+/tex/build/

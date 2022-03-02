@@ -13,6 +13,9 @@
 \ifdef{\MYDRIFTFLAG}{}{
     \newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
 }
+\ifdef{\MYANONYMOUS}{}{
+    \newcommand{\MYANONYMOUS}{-N-}
+}
 
 %%%configuration for imported package
 %for siunitx
@@ -50,11 +53,17 @@ allfiguresdraft,%
 
 \title{二维材料及其异质结的生长理论研究}{Growth Mechanism of Two-dimensional Materials and Heterostructures}
 
-\author{汪博筠}{Wang Bojun}
-\advisor{牛晓滨\chinesespace 教授}{Dr. Niu Xiaobin}
+\IfSubStr{\MYANONYMOUS}{Y}{
+    \author{XXX}{X XX}
+    \advisor{XXX\chinesespace 教授}{Dr. X XX}
+    \studentnumber{XXXXXXXXXXXX}
+}{
+    \author{汪博筠}{Wang Bojun}
+    \advisor{牛晓滨\chinesespace 教授}{Dr. Niu Xiaobin}
+    \studentnumber{201711030138}
+}
 \school{材料与能源学院}{School of Materials and Energy}
 \major{材料科学与工程}{Science and Engineer of Materials}
-\studentnumber{201711030138}
 
 \begin{document}
 %\the\textwidth 
@@ -69,11 +78,13 @@ allfiguresdraft,%
     \input{chapter/chapter4}
     \input{chapter/chapter5}
     \input{chapter/chapter6}
-
     \input{misc/acknowledgement}
-
     \thesisbibliography{reference}
-    \thesisaccomplish{publications}
+    \IfSubStr{\MYANONYMOUS}{Y}{
+        \thesisaccomplish{anonymousPublications}
+    }{
+        \thesisaccomplish{publications}
+    }
 }{
     \input{misc/chineseAbstract}
     \input{misc/englishAbstract}
