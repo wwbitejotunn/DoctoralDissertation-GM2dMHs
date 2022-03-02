@@ -1,13 +1,18 @@
 \documentclass[doctor]{thesis-uestc}
 \usepackage[percent]{overpic}
-\usepackage[section]{placeins}
+\usepackage[section]{placeins} 
 \usepackage{siunitx}
 \usepackage{xparse}
 \usepackage{xstring}
 
 %comile flag here, check before publish
-\newcommand{\MYCAPFLAG}{-A-}% -A- or -1- or -1-4-5-
-\newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
+
+\ifdef{\MYCAPFLAG}{}{
+    \newcommand{\MYCAPFLAG}{-1-}% -A- or -1- or -1-4-5-
+}
+\ifdef{\MYDRIFTFLAG}{}{
+    \newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
+}
 
 %%%configuration for imported package
 %for siunitx
@@ -30,7 +35,6 @@
 
 \IfSubStr{\MYDRIFTFLAG}{Y}{
 % disable figure compile for speed up compile in drift
-% //TODO 
 \usepackage[%
 filename,%
 allfiguresdraft,%
@@ -39,7 +43,6 @@ allfiguresdraft,%
 
 }
 % disable figure compile for speed up compile in drift
-% //TODO 
 %\usepackage[%
 %filename,%
 %allfiguresdraft,%

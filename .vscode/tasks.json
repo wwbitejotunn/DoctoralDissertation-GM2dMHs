@@ -1,0 +1,15 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "buid release tex",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}\\tex"
+            },
+            "command": "latexmk -xelatex -outdir=release --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\release_main.tex" 
+        }
+    ]
+}
