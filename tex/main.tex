@@ -92,9 +92,12 @@ allfiguresdraft,%
         \input{chapter/chapter1}
         \thesisbibliography{reference}
         }{}
-    \IfSubStr{\MYCAPFLAG}{-2-}{\input{chapter/chapter2}}{}
-    \IfSubStr{\MYCAPFLAG}{-3-}{\input{
-        chapter/chapter3}
+    \IfSubStr{\MYCAPFLAG}{-2-}{
+        \input{chapter/chapter2}
+        \thesisbibliography{reference}
+        }{}
+    \IfSubStr{\MYCAPFLAG}{-3-}{
+        \input{chapter/chapter3}
         \thesisbibliography{reference}
         }{}
     \IfSubStr{\MYCAPFLAG}{-4-}{
