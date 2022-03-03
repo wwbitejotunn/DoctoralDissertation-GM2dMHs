@@ -14,4 +14,40 @@ chemkin
     \subsection{恒流}
     %//TODO
     \subsection{分子流}
-    %//TODO
+    当克鲁森数（${\rm Kn}$）大于1时，根据我们先前的定义，流体处于自由分子流的领域，此时在体系内运功的气态分子之间的相互碰撞可以被忽略。我们可以将关注的重点放在气态分子在模拟系统中的运动轨迹以及分子于边界壁之间的作用关系。对于自由分子流的模拟，通常有两种方法。一种是使用蒙特卡罗法对对大量模拟体系中运动的气态分子进行随机化的轨迹模拟\citing{occupied}。另一种方法是使用角参数法计算分子流到达边界壁表面、在边界壁上运动、从边界壁表面发射的直线运动轨迹。在本论文中，由于我们只关注气态分子在边界壁表面的统计分布情况，因此我们选用计算量更小的角参数法。
+
+    假设边界壁对气体分子不存在长时间的吸附作用，气体分子在碰撞到边界壁后直接被发射、扩散至气体环境中。在这种情况下，我们可以计算边界壁表面发射的密度分布函数$\rho\left(\theta, c\right)$。其中$\theta$为气体分子的发射角度，$c$为气体分子的发射速度。此时，气体分子反射的角度分布满足克鲁森余弦公式\chinesecolon
+    \begin{equation}
+        f\left(\theta\right)d\theta =\frac{1}{2}cos\theta d\theta 
+    \end{equation}    
+    考虑二维的情况，反射角度$\theta$的取值范围为$\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$
+
+    在二维的情况下，我们可以将反射分子的速度$c$分解为$c_x$和$c_y$，分别对应于反射分子平行于边界壁表面和垂直于边界壁表面的速度分量。
+
+    对于平行于边界壁表面的速度分量，由于对称性的关系，我们认为气态分子在边界壁反射的$c_x$服从高斯分布\chinesecolon
+    \[
+        \rho_x\left(c_x\right)=\sqrt{\frac{m}{2\pi\kbconst T}}e^{-\frac{mc_x^2}{2\kbconst T}}
+    \]
+
+    然而，在边界壁的表面，垂直方向的反射运动并不满足对称性关系，因此垂直于边界壁表面的速度分量$c_y$并不满足高斯分布。接下来我们对垂直于边界壁方向的分子速度分量分布进行推导。
+
+    假设密度分布函数$\rho\left(\theta, c\right)$中随机变量反射角度$\theta$和反射速度$c$相互独立，我们可以将$\rho\left(\theta, c\right)$写成一下形式\chinesecolon
+    \[
+        \rho\left(sin\theta,c\right)=\rho_c\left(c\right)\rho_\theta\left(sin\theta\right)
+    \]
+    为方便后续计算，我们将密度分布函数$\rho\left(\theta, c\right)$中反射角度$\theta$写成正弦的形式，既$\rho(sin\theta,c)$。
+    
+    对于密度分布函数$\rho\left(sin\theta,c\right)$，其应该满足归一化条件\chinesecolon
+    \[
+        \int_{-1}^{1} \int_{0}^{\infty}  \rho_c\left(c\right) \rho_\theta\left(sin\theta\right)\,dc  \,d\left(sin\theta\right) 
+    \]
+
+    应用二维直角坐标系和极坐标系之间的雅可比变换
+    \[
+        |\frac{}{}|=\frac{c}{cos\theta}
+    \]
+
+    我们可以把密度分布函数$\rho\left(\theta, c\right)$写成包含以$c_x$和$c_y$的形式
+    \[
+        \rho\left(\theta, c\right)=\frac{c}{cos\theta}\rho\left(c_x,c_y\right)
+    \]
