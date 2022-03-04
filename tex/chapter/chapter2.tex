@@ -6,17 +6,23 @@
 第一性原理计算方法利用量子力学的基本原理，在无实验参数介入的情况下对量子系统进行模拟，如今以在
 %//TODO
 
-对于一个包含电子和原子核的物理系统，在不考虑相对论效应的情况下，我们可以根据量子力学理论，将整个系统的含时薛定谔方程$\hat{H}\Psi =E\Psi$写成如下形式\chinesecolon
-
+对于一个包含电子和原子核的物理系统，在不考虑相对论效应的情况下，我们可以根据量子力学理论，将整个系统的定态薛定谔方程$\hat{H}\Psi =E\Psi$可以具体写成以下的形式\chinesecolon
 \begin{equation}
+    \label{eq:DFT_ti-schEqu_tot}
     \begin{split}
         \biggl[-\sum_{i} \frac{\hbar}{2m_e}\nabla_i^2-\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2-\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_u}{\left\lvert {\bm r}_i - {\bm R}_u \right\rvert } \biggr. \\[+1ex]
-        \biggl.+\frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert} + \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \biggr]&\Psi_{\rm tot}=E_{\rm tot}\Psi_{\rm tot}
+        \biggl.+\frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert} + \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \biggr]&\Psi_{\rm e+n}=E_{\rm e+n}\Psi_{\rm e+n}
     \end{split}
 \end{equation}
-其中，$m_e$和$M_u$为系统内电子和原子核的质量；$e$和$Z_u$为电子和原子核的电荷量；${\bm r}_i$和${\bm R}_u$为电子和原子和在物理系统中欧给的空间坐标向量；$\hbar$和$\epsilon_0$为约化普朗克常数和真空电容率常数。
+其中，$m_e$和$M_u$为系统内电子和原子核的质量；$e$和$Z_u$为电子和原子核的电荷量；${\bm r}_i$和${\bm R}_u$为电子和原子和在物理系统中的空间坐标向量；$\hbar$和$\epsilon_0$为约化普朗克常数和真空电容率常数。
 
-考虑到在通常的量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上，因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时我们可以运用波恩-奥本海默近似，将电子
+考虑到在通常的量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上，因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时我们可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\ref{eq:DFT_ti-schEqu_tot}可以进行进一步的简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\ref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
+\begin{equation}
+    \label{eq:DFT_schEqu_e}
+    \left[-\sum_{i}\frac{\hbar}{2m_e}\nabla_i^2 \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \right]\Psi_{\rm e}=E_{\rm e}\Psi_{\rm e}
+\end{equation}
+此时的$E_e$为电子总能量。
+
 
 \subsection{密度泛函理论}
 \subsection{广义梯度近似交换关联泛函}
