@@ -8,7 +8,7 @@
 %comile flag here, check before publish
 
 \ifdef{\MYCAPFLAG}{}{
-    \newcommand{\MYCAPFLAG}{-2-}% -A- or -1- or -1-4-5-
+    \newcommand{\MYCAPFLAG}{-A-}% -A- or -1- or -1-4-5-
 }
 \ifdef{\MYDRIFTFLAG}{}{
     \newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
@@ -25,7 +25,7 @@
 \DeclareSIUnit\atom{\text{atom}}
 
 % cemb to remove space after ce
-\def\cemb#1{\;\ce{#1}\mbox{\;}}
+\def\cemb#1{\texorpdfstring{\;\ce{#1}\mbox{\;}}{#1}}
 \def\energyVar#1#2{\it E_{\rm #1}^{\rm #2} \it}
 \def\tenergyVar#1#2{\it \widetilde{E}_{\rm #1}^{\rm #2} \it}
 \def\muVar#1#2{\it \mu_{\rm #1}^{\rm #2} \it}
@@ -39,7 +39,6 @@
 \IfSubStr{\MYDRIFTFLAG}{Y}{
 % disable figure compile for speed up compile in drift
 \usepackage[%
-filename,%
 allfiguresdraft,%
 ]{draftfigure}
 }{
