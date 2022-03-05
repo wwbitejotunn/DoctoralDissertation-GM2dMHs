@@ -37,18 +37,13 @@
 
 
 \IfSubStr{\MYDRIFTFLAG}{Y}{
-% disable figure compile for speed up compile in drift
+% disable figure compile for speed up compile in drift mode
 \usepackage[%
 allfiguresdraft,%
 ]{draftfigure}
 }{
 
 }
-% disable figure compile for speed up compile in drift
-%\usepackage[%
-%filename,%
-%allfiguresdraft,%
-%]{draftfigure}
 
 \title{二维材料及其异质结的生长理论研究}{Growth Mechanism of Two-dimensional Materials and Heterostructures}
 
@@ -89,23 +84,18 @@ allfiguresdraft,%
     \input{misc/englishAbstract}
     \IfSubStr{\MYCAPFLAG}{-1-}{
         \input{chapter/chapter1}
-        \thesisbibliography{reference}
         }{}
     \IfSubStr{\MYCAPFLAG}{-2-}{
         \input{chapter/chapter2}
-        \thesisbibliography{reference}
         }{}
     \IfSubStr{\MYCAPFLAG}{-3-}{
         \input{chapter/chapter3}
-        \thesisbibliography{reference}
         }{}
     \IfSubStr{\MYCAPFLAG}{-4-}{
         \input{chapter/chapter4}
-        \thesisbibliography{reference}
         }{}
     \IfSubStr{\MYCAPFLAG}{-5-}{
         \input{chapter/chapter5}
-        \thesisbibliography{reference}
         }{}
     \IfSubStr{\MYCAPFLAG}{-6-}{
         \input{chapter/chapter6}
@@ -113,6 +103,9 @@ allfiguresdraft,%
     \IfSubStr{\MYCAPFLAG}{-ack-}{
         \input{misc/acknowledgement}
         }{}
+    \IfSubStr{\MYCAPFLAG}{-6-}{}{\IfSubStr{\MYCAPFLAG}{-ack-}{}{
+        \thesisbibliography{reference}
+    }}
 }
 
 

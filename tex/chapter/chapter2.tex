@@ -16,23 +16,127 @@
 \end{equation}
 其中，$m_e$和$M_u$为系统内电子和原子核的质量；$e$和$Z_u$为电子和原子核的电荷量；${\bm r}_i$和${\bm R}_u$为电子和原子和在物理系统中的空间坐标向量；$\hbar$和$\epsilon_0$为约化普朗克常数和真空电容率常数。
 
-考虑到在通常的量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上，因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时我们可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\ref{eq:DFT_ti-schEqu_tot}可以进行进一步的简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\ref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
+考虑到在通常的量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上，因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时我们可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\ref{eq:DFT_ti-schEqu_tot}可以进行进一步的简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\ref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
 \begin{equation}
     \label{eq:DFT_schEqu_e}
-    \left[-\sum_{i}\frac{\hbar}{2m_e}\nabla_i^2 \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \right]\Psi_{\rm e}=E_{\rm e}\Psi_{\rm e}
+    \left[-\sum_{i}\frac{\hbar}{2m_e}\nabla_i^2 -\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert} + \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \right]\Psi_{\rm e}=E_{\rm e}\Psi_{\rm e}
 \end{equation}
-此时的$E_e$为电子总能量。
+此时的$E_{\rm e}$为电子总能量。
 
-通过求解式\ref{eq:DFT_schEqu_e}，我们可以获得电子波函数$\Psi_{\rm e}$和基态电子总能量$E_e$。完成对包含电子和原子核的物理系统的求解。
+通过求解式\ref{eq:DFT_schEqu_e}，我们可以获得电子波函数$\Psi_{\rm e}$和基态电子总能量$E_{\rm e}$。完成对包含电子和原子核的物理系统的求解。
 
 \subsection{密度泛函理论}
-通常来说，当考虑的物理系统中包含大量电子时，式\ref{eq:DFT_schEqu_e}中关于电子-电子相互作用项的求解将变得极为复杂。对于单电子体系，其波函数的希尔伯特空间为$L^2\left(R^3\right)\bigotimes \mathbb{C}^2$。而具有$N$个电子的物理系统，其电子的波函数$\Psi_{\rm e}\in L^2\left(R^{3N}\right)\bigotimes \mathbb{C}^{2^N}$。由此导致计算$N$电子体系的计算资源需求按$3N$的指数倍增长，使得式\ref{eq:DFT_schEqu_e}几乎无法在现有的计算条件下运用至待研究的物理体系中。为此，研究者发展出了许多近似方法来降低式\ref{eq:DFT_schEqu_e}的计算复杂度，例如Hatree-Fork方法将电子-电子相互作用简化为电子与其他电子形成的平均场之间的作用，大大减少了计算量。而随后发展出的密度泛函理论方法进一步推进了第一性原理计算在计算固体领域的实用化进程。
+通常来说，当考虑的物理系统中包含大量电子时，式\ref{eq:DFT_schEqu_e}中关于电子-电子相互作用项的求解将变得极为复杂。对于单电子体系，其波函数的希尔伯特空间为$L^2\left(R^3\right)\bigotimes \mathbb{C}^2$。而具有$N$个电子的物理系统，其电子的波函数$\Psi_{\rm e}\in L^2\left(R^{3N}\right)\bigotimes \mathbb{C}^{2^N}$。由此导致计算$N$电子体系的计算资源需求按$3N$的指数倍增长，使得式\ref{eq:DFT_schEqu_e}几乎无法在现有的计算条件下运用至待研究的物理体系中。为此，研究者发展出了许多近似方法来降低式\ref{eq:DFT_schEqu_e}的计算复杂度，例如Hatree-Fork方法将电子-电子相互作用简化为电子与其他电子形成的平均场之间的作用，大大减少了计算量\citing{RN1460-2015}。而随后发展出的密度泛函理论方法进一步推进了第一性原理计算在计算固体领域的实用化进程。
 
+密度泛函理论计算方法的理论基础由Hohenberg和Kohn于1964年提出并证明\citing{RN1459-1964}\chinesecolon 体系的基态能量$\energyVar{e0}{}$是体系中电子密度的唯一泛函，也就是
+\[
+    \energyVar{e0}{}=\energyVar{e0}{}\left[\rho\right]
+\]
+但这个电子密度的唯一泛函$\energyVar{e0}{}\left[\rho\right]$的具体形式仍未可知。
 
-\subsection{广义梯度近似交换关联泛函}
-\subsection{投影缀加波函数方法赝势}
-%//TODO
+在1965年，Kohn和Sham假设存在一个虚拟的无相互作用的多电子系统作为辅助。这个无相互作用的多电子系统的电子密度分布和所考察的原体系的电子密度分布相同\citing{RN1461-1965}。由此，我们可以将基态能量$\energyVar{e0}{}$表示为这个辅助系统的电子密度的泛函。也就是$\energyVar{e0}{}=\energyVar{e0}{}\left[\rho'\right]$。其中$\rho'=\sum_i\left\lvert \psi' _i\left(r\right)\right\rvert^2$为引入的无相互作用的多电子系统的电子密度，$\psi'_i$为单电子的态密度。
 
+此时的电子基态总能可以写为\chinesecolon
+\begin{equation}
+    \label{eq:DFT_Ee0_ks}
+    \begin{split}
+        \energyVar{e0}{}&=\energyVar{k}{}+\energyVar{u}{}+\energyVar{H}{}+\energyVar{xc}{}\\[+1ex]
+        &=\overbrace{\rule[0ex]{0ex}{3.2ex}-\frac{1}{2}\sum_i\int\psi'^*_i\left({\bm r}\right)\nabla^2\psi'_i\left({\bm r}\right)d{\bm r}}^{\energyVar{k}{}} + \overbrace{\rule[0ex]{0ex}{3.2ex}\int\rho'\left({\bm r}\right)V_{\rm u}d{\bm r}}^{\energyVar{u}{}}\\[+1ex]
+        &+\overbrace{\int\int \frac{\rho'\left({\bm r}_1\right)\rho’\left({\bm r}_2\right)}{\left\lvert{\bm r}_1 - {\bm r}_2\right\rvert}d{\bm r}_1d{\bm r}_2}^{\energyVar{H}{}}+\energyVar{ex}{}\left(\rho'\right)
+    \end{split}
+\end{equation}
+其中，$\energyVar{k}{}$为电子动能，$\energyVar{u}{}$为体系内原子核对电子的相互作用势能；$\energyVar{H}{}$为电子与电子之间不考虑多体作用时的库伦作用能，又称为Hatree势能；$\energyVar{xc}{}$为包含体系内所有电子多体作用的交换关联能。
+
+倘若我们能够精确的知道交换关联项$\energyVar{xc}{}$的具体形式并且进行精确求解，我们就能够将体系的原哈密顿量对应成基态能量的泛函。在这个过程中我们仅仅使用了绝热近似将电子和原子核的波函数进行分离。然而，由于交换关联项$\energyVar{xc}{}$包含了体系内所有电子多体作用，因此其本质上求解复杂的度与求解原多体问题一致。因此，我们需要在交换关联能中针对不同的体系引入相应的近似，在足够精确的情况下快速地对体系进行求解。
+
+将式\ref{eq:DFT_Ee0_ks}进行变分，我们就可以将电子基态能量改写为关于辅助单电子波函数的泛函的形式\chinesecolon
+\begin{equation}
+    \label{eq:DFT_KSequ}
+    \left[-\frac{1}{2}\nabla^2+V_{\rm u}({\bm r})+V_{\rm H}\left({\bm r}\right)+V_{\rm xc}\left({\bm r}\right)\right]\psi'_i\left({\bm r}\right)=\varepsilon'_i\psi'_i\left({\bm r}\right) 
+\end{equation}
+其中，$V_{\rm u}({\bm r})$对于原子核对于电子的作用势场，对应于式\ref{eq:DFT_schEqu_e}中的$-\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert}$；$V_{\rm H}\left({\bm r}\right)$对应于不考虑相互作用时，电子-电子之间的库伦作用。而交换关联势$V_{\rm xc}\left({\bm r}\right)$的定义为\chinesecolon
+\[
+    V_{\rm xc}\left({\bm r}\right)\psi'_i\left({\bm r}\right)=\frac{\delta \energyVar{xc}{}\left[\psi'^*\left({\bm r}\right),\psi'\left({\bm r}\right)\right]}{\delta \psi_i^*\left({\bm r}\right)}
+\]
+
+式\ref{eq:DFT_KSequ}被称为Kohn-Sham方程，具有与单电子薛定谔方程具有相似的形式，并且可以通过自洽的方式进行求解。
+
+\subsection{交换关联泛函}
+
+对于式\ref{eq:DFT_Ee0_ks}中，交换关联能项$\energyVar{xc}{}$的近似，最简单的形式式使用局域密度近似法（local density approximation, LDA）\citing{RN1462-1981,RN1463-1980}。在此方法中，近似的交换关联能$\energyVar{xc}{LDA}$只和空间点的电荷密度有关\chinesecolon
+\begin{equation}
+    \label{eq:DFT_LDA}
+    \energyVar{xc}{LDA}\left[\rho\right]=\int \rho({\bm r}) \epsilon_{\rm xc}^{\rm unif} \left(\rho\left({\bm r}\right)\right) d{\bm r}
+\end{equation}
+其中，$\epsilon_{\rm xc}^{\rm unif}\left(\rho\left({\bm r}\right)\right)$为每个电子在无限均匀且密度为$\rho$的电子其中的交换关联能。局域密度近似法较为适合电子密度变化缓慢的体系，如今固体材料计算领域更为常用的基于广域梯度近似法的PBE泛函在局域密度近似法的基础上进一步考虑了空间点电荷的变化梯度\chinesecolon
+\begin{equation}
+    \energyVar{xc}{GGA}\left[\rho\right]=\int\epsilon_{\rm xc}^{GGA}\left(\rho\left({\bm r}\right),\nabla\rho\left({\bm r}\right)\right)d{\bm r}
+\end{equation}
+
+通常，交换关联能$\energyVar{xc}{}$可以分解为交换作用和关联作用的独立贡献\chinesecolon $\energyVar{xc}{}=\energyVar{x}{}+\energyVar{c}{}$。对于广域梯度近似法的关联作用，PBE泛函使用如下的形式进行构造\chinesecolon
+\begin{equation}
+    \energyVar{C}{GGA}\left[\rho\right]=\int \rho\left[\epsilon_{\rm c}^{\rm unif}\left(r_{\rm s},\zeta\right)+H\left(r_{\rm s},\zeta,t\right)\right] d{\bm r}
+\end{equation}
+其中，$\epsilon_{\rm C}^{\rm unif}\left(r_{\rm s},\zeta\right)$为局域电子密度对于关联能的贡献。$r_s$为局域塞茨半径（Seitz redius）；$\zeta$为自旋极化量；$t$为无量纲密度梯度参数。PBE泛函数使用以下三个渐进行为对泛函内电子密度的梯度贡献项$H\left(r_{\rm s},\zeta,t\right)$进行构造。
+
+\begin{enumerate}
+    \item 当电子密度变化非常缓慢时（$t\rightarrow 0$）,$H$服从二阶梯度展开公式\chinesecolon
+    \[
+        \lim_{t\rightarrow0}H=\frac{e^2}{a_{0}}\beta\phi^3t^2
+        \]
+    其中，$\phi$为自旋因子，$\phi\left(\zeta\right)=\frac{1}{2}\left[\left(1+\zeta\right)^{2/ 3}+\left(1-\zeta\right)^{2/ 3}\right]$；$a_{0}$、$\beta$为常数。
+    \item 当电子密度变化非常剧烈时（$t\rightarrow \infty$）
+    \[
+        \lim_{t\rightarrow\infty}H=-\epsilon_{\rm c}^{\rm unif}
+    \]
+    确保此时的关联能为0，以符合现实物理体系中电子密度分布的远端交换作用占主导的情况。
+    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在关联作用中以常数放缩形式表现出来。要满足这个条件，$H$必须要在此变化极限条件下对$\epsilon_{\rm c}^{\rm unif}$项中的对数函数进行的约化。此时，一个$H$需要满足的渐进行为为
+    \[
+        H\rightarrow\left(\frac{e^2}{a_0}\right)\gamma\phi^3\ln t^2
+    \]
+    其中，$\gamma$为$\zeta$的函数，在这里近似的取为常数$\gamma=\frac{1-\ln2}{\pi^2}$
+\end{enumerate}
+
+    结合以上条件，我们可以构造出$H$有如下的形式\chinesecolon
+    \begin{equation}
+        H=\left(\frac{e^2}{a_0}\right)\gamma\phi^3\times \ln\left[1+\frac{\beta}{\gamma}t^2\left(\frac{1+At^2}{1+At^2+A^2t^4}\right)\right]
+    \end{equation}
+    其中$A$为\chinesecolon
+    \[
+        A=\frac{\beta}{\gamma}\left[\exp\left(\frac{-\epsilon_{\rm c}^{\rm unif}}{\gamma\phi^3e^2/ a_0}\right)-1\right]^{-1}
+    \]
+
+而对于交换作用$\energyVar{x}{GGA}$，PBE泛函认为其需要满足以下四个渐进行为\chinesecolon
+\begin{enumerate}
+    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在交换作用中以$\lambda$的线性放缩形式表现出来。此时，我们有\chinesecolon
+    \[
+        \energyVar{x}{GGA}=\int\rho\left({\bm r}\right)\epsilon_x^{\rm unif}\left(\rho\right)F_{\rm x}\left(s\right)
+    \]
+    其中，$\epsilon_x^{\rm unif}=-\frac{3e^2k_{\rm F}}{4\pi}$，$k_{\rm F}$为费米波数。同时，由于需要满足均匀电子气极限条件，我们可以得到$F_{x}\left(0\right)=1$
+    \item 交换能需要满足自旋缩放关系\chinesecolon
+    \[
+        \energyVar{x}{GGA}\left(\rho_{\rm up},\rho_{\rm down}\right)=\frac{\energyVar{x}{GGA}\left(2\rho_{\rm up}\right)+\energyVar{x}{GGA}\left(2\rho_{\rm donw}\right)}{2}
+    \]
+    \item 在自旋非极化的均匀电子气中，LDA形式的交换关联能非常好的描述该电子体系的物理状态。因此，我们希望PBE的交换关联能$\energyVar{xc}{GGA}$在这种情况下有与LDA交换关联能$\energyVar{xc}{LDA}$相同的线性相应，此时我们需要\chinesecolon
+    \[
+        F_{\rm x}\left(s\right)\rightarrow 1+\mu s^2
+    \]
+    其中，$\mu$为等效梯度参数。
+    \item 交换能需要满足利勃-牛津不等式\chinesecolon
+    \[
+        \energyVar{x}{GGA}\left(\rho\right)\geqslant\energyVar{xc}{GGA}\left(\rho\right)\geqslant -1.679e^2\int \rho\left({\bm r}\right)^{\frac{4}{3}} d{\bm r}
+    \]
+\end{enumerate}
+
+根据以上条件，可以构造出$F_{\rm x}\left(s\right)$有如下的形式\chinesecolon
+\begin{equation}
+    F_{\rm x}\left(s\right)=1+\kappa -\frac{\kappa }{1+\frac{\mu s^2}{\kappa}}
+\end{equation}
+其中$\kappa$为常数，取0.804。
+
+至此，我们分别构造了PBE泛函中交换关联能的交换作用贡献$\energyVar{x}{GGA}$和关联作用贡献$\energyVar{c}{GGA}$。使用PBE泛函作为交换关联能的近似，我们能够在大幅减少式\ref{eq:DFT_KSequ}的自洽计算的复杂度，并且保持相当高水平的精确度。
+%\subsection{投影缀加波函数方法赝势}
+%//TODO option PAW
 \section{气相反应动力学模拟}
 %//TODO
 chemkin
@@ -48,7 +152,7 @@ chemkin
     \end{equation}
     $\kbconst$为玻尔兹曼常数，$m$是气体分子的质量，$T$是气体的温度，$P$为气体的气压。
 
-    根据不同流体动力学系统中克鲁森数不同的取值，我们将气流分为三个区域。当流体体系中的克鲁森数非常小的时候（${\rm Kn}\ll 1$），我们可以将运动的气体分子看成连续介质。这时，气体满足连续性假设，可以利用流体力学中的纳维-斯托克斯方程（Navier-Stokes equations）\citing{RN1448-2013}进行分析。当体系中的克鲁森数非常大的时候（${\rm Kn}\gg 1$），由于相对较大的分子平均自由程，我们可以忽略气体分子之间的相互碰撞作用，使得每个气体分子的运动可以看出独立的过程。在这个区域的流体体系成为自由分子流。当克鲁森数约等于1的时候（${\rm Kn}\simeq 1$），我们既不能将此区域下的流体体系看成连续介质，使用N-S方程进行计算。由于和体系特征长度相近的平均自由程，我们同样无法忽略气体之间的相互碰撞，独立的考虑每个分子的运动情况。在这个区域的流体体系被称为过渡流，通常使用玻尔兹曼方程进行模拟计算\citing{RN1450-2003}。
+    根据不同流体动力学系统中克鲁森数不同的取值，我们将气流分为三个区域。当流体体系中的克鲁森数非常小的时候（${\rm Kn}\ll 1$），我们可以将运动的气体分子看成连续介质。这时，气体满足连续性假设，可以利用流体力学中的纳维-斯托克斯方程（Navier-Stokes equations）\citing{RN1448-2013}进行分析。当体系中的克鲁森数非常大的时候（${\rm Kn}\gg 1$），由于相对较大的分子平均自由程，我们可以忽略气体分子之间的相互碰撞作用，使得每个气体分子的运动可以看出独立的过程。在这个区域的流体体系成为自由分子流。当克鲁森数约等于1的时候（${\rm Kn}\simeq 1$），我们既不能将此区域下的流体体系看成连续介质，使用N-S方程进行计算。由于和体系特征长度相近的平均自由程，我们同样无法忽略气体之间的相互碰撞，独立的考虑每个分子的运动情况。在这个区域的流体体系被称为过渡流，通常使用玻尔兹曼方程进行模拟计算\citing{RN1458-2002}。
 
     当克鲁森数（${\rm Kn}$）大于1时，根据我们先前的定义，流体处于自由分子流的区域，此时在体系内运功的气态分子之间的相互碰撞可以被忽略。我们可以将关注的重点放在气态分子在模拟系统中的运动轨迹以及分子于边界壁之间的作用关系。对于自由分子流的模拟，通常有两种方法。一种是使用蒙特卡罗法对对大量模拟体系中运动的气态分子进行随机化的轨迹模拟。另一种方法是使用角参数法计算。在本论文中，由于我们只关注气态分子在边界壁表面的统计分布情况，因此我们选用计算量更小的角参数法。
 
@@ -89,7 +193,7 @@ chemkin
 
     类似于$\rho\left(\sin\theta,v\right)$，极坐标下的速度分量$v_x$和$v_y$为独立的随机变量$\rho\left(v_x,v_y\right)=\rho_x\left(v_x\right)\rho_y\left(v_y\right)$
 
-    将密度分布函数$\rho\left(\sin\theta,v\right)$求全角度积分，我们可以的得到速度模量的密度分布函数
+    将密度分布函数$\rho\left(\sin\theta,v\right)$求全角度积分，我们可以得到速度模量的密度分布函数
     \begin{equation}
         \label{eq:FM_vDensity}
         \begin{split}
