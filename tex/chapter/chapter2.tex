@@ -218,10 +218,27 @@
 \end{align}
 
 除了纳维-斯托克斯公式外，由于气相反应发生在流体中，因此流体内有不止一种化学物质，这些化学物质同样要满足各自的质量守恒方程以及化学反应过程中的能量守恒方程\chinesecolon
-%//TODO
-%P 142 of Chemically%20Reacting%20Flow%20Theory%20and%20Practice%20by ...
-% and
-%p 338 OF Chemically%20Reacting%20Flow%20Theory%20and%20Practice%20by ...
+\begin{align}
+    \label{eq:CFD_specis_origin}
+    \mbox{化学物质质量守恒\chinesecolon}& \left(\frac{dm_k}{dt}\right)_{\rm system}=\left[\rho\frac{DY_k}{Dt}\right]\delta V=-\int_S{\bf j}_k\cdot{\bf n}dA+\int_Vw_kW_kdV\\[1ex]
+    \label{eq:CFD_energy_origin}
+    \mbox{能量守恒\chinesecolon}& \rho\frac{Dh}{Dt}=\frac{Dp}{Dt}+\nabla\cdot\left(\lambda\nabla T\right)-\sum_k^K \nabla\cdot h_k\;{\bf j}_k+\Phi 
+\end{align}
+
+在质量守恒中，物质$k$的质量变化量等于反应生成的物质$k$的质量$\int_Vw_kW_kdV$减去由于扩散作用流出的物质$k$的质量$\int_S{\bf j}_k\cdot{\bf n}dA$。$Y_k$、${\bf j}_k$、$W_k$为第$k$个化学物质的质量百分数、为扩散质量流为摩尔质量。
+
+在能量守恒中，能量的变化等于做功的能量$\frac{Dp}{Dt}$加上热交换的能量$\nabla\cdot\left(\lambda\nabla T\right)-\sum_k^K \nabla\cdot h_k{\bf j}_k$以及耗散能$\Phi $。其中，$\lambda$为流体的平均热导率；$h_k$为物质$k$的焓。
+
+将方程\ref{eq:CFD_specis_origin}和\ref{eq:CFD_specis_origin}转化为圆柱坐标并进行相应的简化，我们可以得到圆柱形管道中均匀稳流的化学物质质量守恒方程和能量守恒方程\chinesecolon
+\begin{align}
+    \mbox{化学物质质量守恒\chinesecolon}&\rho u\frac{\partial Y_k}{\partial z} + \rho v \frac{\partial Y_k}{\partial r}=\left(\frac{\partial j_{kz}}{\partial z}+\frac{1}{r}\frac{\partial r j_{k,r}}{\partial r}\right)+w_kW_k\\[1ex]
+    \mbox{能量守恒\chinesecolon}&\begin{aligned}[t]\rho c_p u\frac{\partial T}{\partial Z}+\rho c_p v \frac{\partial T}{\partial R}=&u\frac{\partial p}{\partial z}+\frac{\partial}{\partial z}\left(\lambda \frac{\partial T}{\partial z}\right)+\frac{1}{r}\frac{\partial}{\partial r}\left(r\lambda\frac{\partial T}{\partial r}\right)\\[1ex]
+        &-\sum_k^K c_{pk}\left(j_{kz}\frac{\partial T}{\partial z}+j_{kr}\frac{\partial T}{\partial r}\right)-\sum_k^Kh_kw_kW_k
+    \end{aligned}
+\end{align}
+
+通过以上守恒方程，我们可以对圆柱形管道中的均匀稳流进行模拟。
+
 \section{自由分子流模拟}
     在流体动力学中，克鲁森数（Knudsen number）通常用来区分连续流体和稀薄流体以及所适用的流体力学控制方程。克鲁森数$\rm Kn$的定义为\chinesecolon
     \begin{equation}
