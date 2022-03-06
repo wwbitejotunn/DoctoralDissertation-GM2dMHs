@@ -3,10 +3,7 @@
 % 第二章 理论计算方法简介
 \chapter{计算原理与方法}
 \section{第一性原理计算方法}
-第一性原理计算方法利用量子力学的基本原理，在无实验参数介入的情况下对量子系统进行模拟，如今以在
-%//TODO
-
-对于一个包含电子和原子核的物理系统，在不考虑相对论效应的情况下，我们可以根据量子力学理论，将整个系统的定态薛定谔方程$\hat{H}\Psi =E\Psi$可以具体写成以下的形式\chinesecolon
+第一性原理计算方法利用量子力学的基本原理，在无实验参数介入的情况下对量子系统进行模拟。对于一个包含电子和原子核的物理系统，在不考虑相对论效应的情况下，我们可以根据量子力学理论，将整个系统的定态薛定谔方程$\hat{H}\Psi =E\Psi$可以具体写成以下的形式\chinesecolon
 \begin{equation}
     \label{eq:DFT_ti-schEqu_tot}
     \begin{split}
@@ -136,11 +133,28 @@
 
 至此，我们分别构造了PBE泛函中交换关联能的交换作用贡献$\energyVar{x}{GGA}$和关联作用贡献$\energyVar{c}{GGA}$。使用PBE泛函作为交换关联能的近似，我们能够在大幅减少式\ref{eq:DFT_KSequ}的自洽计算的复杂度，并且保持相当高水平的精确度。
 %\subsection{投影缀加波函数方法赝势}
-%//TODO option PAW
+%//TODO optional PAW
 \section{气相反应动力学模拟}
-%//TODO
-chemkin
-层流
+通过求解气相中各种化合物之间复杂的化学动力学方程组，我们可以对气体的热力学状态，化学组成组成成分等参量进行模拟。
+
+对于由$I$个基元反应并涉及$K$个分子的化学环境，我们通常可以写出如下的反应通式
+\begin{equation}
+    \sum_{k=1}^Kv'_{ki}\chi_k\Leftrightarrow \sum_{k=1}^K v''_{ki}\chi_k\enspace\left(i=1,\cdots,I\right)
+\end{equation}
+其中，$v'_ki$为第$k$个化学分子在第$i$个基元反应中的正向化学反应计量数，$v''_ki$为相应的逆向化学反应计量数。$\chi_k$为第$k$个化学分子的化学式。
+
+基于上述基元反应组，我们可以将第$k$个化学分子的产率$w_k$表示为\chinesecolon
+\begin{equation}
+    w_k=\sum_{i=1}^Iv_{ki}q_i
+\end{equation}
+其中，净化学反应计量数$v_{ki}$为正负反应计量数之差$v_{ki}=v'_ki-v''_ki$；$q_i$为第$i$个化学反应的反应进度。对于一个化学反应，其反应进度可以用正负反应率之差进行表示\chinesecolon
+\begin{equation}
+    \label{eq:CHEM_rateOfProgress}
+    q_i=k'_i\prod_{k=1}^{K}\left[X_k\right]^{v'_{ki}}-k''_i\prod_{k=1}^{K}\left[X_k\right]^{v''_{ki}}
+\end{equation}
+
+在式\ref{eq:CHEM_rateOfProgress}中，$\left[X_k\right]$为第$k$个化合物的浓度。$k'_i$和$k'’_i$为第$i$个反应的正负反应速率常数。
+
 \section{自由分子流模拟}
     在流体动力学中，克鲁森数（Knudsen number）通常用来区分连续流体和稀薄流体以及所适用的流体力学控制方程。克鲁森数$\rm Kn$的定义为\chinesecolon
     \begin{equation}
