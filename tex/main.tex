@@ -8,7 +8,7 @@
 %comile flag here, check before publish
 
 \ifdef{\MYCAPFLAG}{}{
-    \newcommand{\MYCAPFLAG}{-A-}% -A- or -1- or -1-4-5-
+    \newcommand{\MYCAPFLAG}{-6-}% -A- or -1- or -1-4-5-
 }
 \ifdef{\MYDRIFTFLAG}{}{
     \newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
@@ -24,8 +24,11 @@
 \DeclareSIUnit\pair{\text{pair}}
 \DeclareSIUnit\atom{\text{atom}}
 
-% cemb to remove space after ce
+% cemb to formate the chemical equation in chinese
 \def\cemb#1{\texorpdfstring{\;\ce{#1}\mbox{\;}}{#1}}
+% cembNHS for hybrid heterostructure label like 石墨烯/h-BN
+\def\cembNHS#1{\texorpdfstring{\,\ce{#1}\mbox{\,}}{#1}}
+
 \def\energyVar#1#2{\it E_{\rm #1}^{\rm #2} \it}
 \def\tenergyVar#1#2{\it \widetilde{E}_{\rm #1}^{\rm #2} \it}
 \def\muVar#1#2{\it \mu_{\rm #1}^{\rm #2} \it}
@@ -107,6 +110,4 @@ allfiguresdraft,%
         \thesisbibliography{reference}
     }}
 }
-
-
 \end{document}

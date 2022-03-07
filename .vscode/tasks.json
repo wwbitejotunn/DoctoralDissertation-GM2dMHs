@@ -20,6 +20,14 @@
             "command": "latexmk -xelatex -outdir=build\\anonymousRelease --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\anonymousRelease_main.tex" 
         },
         {
+            "label": "buid duplicateCheck release tex",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}\\tex"
+            },
+            "command": "latexmk -xelatex -outdir=build\\duplicateCheck --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\duplicateCheck_main.tex" 
+        },
+        {
             "label": "buid all",
             "group": {
                 "kind": "build",
