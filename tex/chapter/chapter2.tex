@@ -22,7 +22,7 @@
 
 通过求解式\ref{eq:DFT_schEqu_e}，我们可以获得电子波函数$\Psi_{\rm e}$和基态电子总能量$E_{\rm e}$。完成对包含电子和原子核的物理系统的求解。
 
-\subsection{密度泛函理论} %//TODO reference DFT
+\subsection{密度泛函理论} 
 通常来说，当考虑的物理系统中包含大量电子时，式\ref{eq:DFT_schEqu_e}中关于电子-电子相互作用项的求解将变得极为复杂。对于单电子体系，其波函数的希尔伯特空间为$L^2\left(R^3\right)\bigotimes \mathbb{C}^2$。而具有$N$个电子的物理系统，其电子的波函数$\Psi_{\rm e}\in L^2\left(R^{3N}\right)\bigotimes \mathbb{C}^{2^N}$。由此导致计算$N$电子体系的计算资源需求按$3N$的指数倍增长，使得式\ref{eq:DFT_schEqu_e}几乎无法在现有的计算条件下运用至待研究的物理体系中。为此，研究者发展出了许多近似方法来降低式\ref{eq:DFT_schEqu_e}的计算复杂度，例如Hatree-Fork方法将电子-电子相互作用简化为电子与其他电子形成的平均场之间的作用，大大减少了计算量\citing{RN1460-2015}。而随后发展出的密度泛函理论方法进一步推进了第一性原理计算在计算固体领域的实用化进程。
 
 密度泛函理论计算方法的理论基础由Hohenberg和Kohn于1964年提出并证明\citing{RN1459-1964}\chinesecolon 体系的基态能量$\energyVar{e0}{}$是体系中电子密度的唯一泛函，也就是
@@ -65,7 +65,7 @@
     \label{eq:DFT_LDA}
     \energyVar{xc}{LDA}\left[\rho\right]=\int \rho({\bm r}) \epsilon_{\rm xc}^{\rm unif} \left(\rho\left({\bm r}\right)\right) d{\bm r}
 \end{equation}
-其中，$\epsilon_{\rm xc}^{\rm unif}\left(\rho\left({\bm r}\right)\right)$为每个电子在无限均匀且密度为$\rho$的电子其中的交换关联能。局域密度近似法较为适合电子密度变化缓慢的体系，如今固体材料计算领域更为常用的基于广域梯度近似法的PBE泛函在局域密度近似法的基础上进一步考虑了空间点电荷的变化梯度\chinesecolon
+其中，$\epsilon_{\rm xc}^{\rm unif}\left(\rho\left({\bm r}\right)\right)$为每个电子在无限均匀且密度为$\rho$的电子其中的交换关联能。局域密度近似法较为适合电子密度变化缓慢的体系，如今固体材料计算领域更为常用的基于广域梯度近似法的PBE泛函在局域密度近似法的基础上进一步考虑了空间点电荷的变化梯度\citing{RN683-1996}\chinesecolon
 \begin{equation}
     \energyVar{xc}{GGA}\left[\rho\right]=\int\epsilon_{\rm xc}^{GGA}\left(\rho\left({\bm r}\right),\nabla\rho\left({\bm r}\right)\right)d{\bm r}
 \end{equation}
@@ -76,8 +76,8 @@
 \end{equation}
 其中，$\epsilon_{\rm C}^{\rm unif}\left(r_{\rm s},\zeta\right)$为局域电子密度对于关联能的贡献。$r_s$为局域塞茨半径（Seitz redius）；$\zeta$为自旋极化量；$t$为无量纲密度梯度参数。PBE泛函数使用以下三个渐进行为对泛函内电子密度的梯度贡献项$H\left(r_{\rm s},\zeta,t\right)$进行构造。
 
-\begin{enumerate}[label=（\arabic*）,wide]
-    \item 当电子密度变化非常缓慢时（$t\rightarrow 0$）,$H$趋近与自己的二阶梯度展开\chinesecolon
+\begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
+    \item 当电子密度变化非常缓慢时（$t\rightarrow 0$）,$H$趋近与自己的二阶梯度展开\citing{RN1467-1991}\chinesecolon
     \[
         \lim_{t\rightarrow0}H=\frac{e^2}{a_{0}}\beta\phi^3t^2
         \]
@@ -87,7 +87,7 @@
         \lim_{t\rightarrow\infty}H=-\epsilon_{\rm c}^{\rm unif}
     \]
     确保此时的关联能为0，以符合现实物理体系中电子密度分布的远端交换作用占主导的情况。
-    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在关联作用中以常数放缩形式表现出来。要满足这个条件，$H$必须要在此变化极限条件下对$\epsilon_{\rm c}^{\rm unif}$项中的对数函数进行的约化。此时，一个$H$需要满足的渐进行为为
+    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在关联作用中以常数放缩形式表现出来\citing{RN1468-1989}。要满足这个条件，$H$必须要在此变化极限条件下对$\epsilon_{\rm c}^{\rm unif}$项中的对数函数进行的约化。此时，一个$H$需要满足的渐进行为为
     \[
         H\rightarrow\left(\frac{e^2}{a_0}\right)\gamma\phi^3\ln t^2
     \]
@@ -104,13 +104,13 @@
     \]
 
 而对于交换作用$\energyVar{x}{GGA}$，PBE泛函认为其需要满足以下四个渐进行为\chinesecolon
-\begin{enumerate}[label=（\arabic*）,wide]
-    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在交换作用中以$\lambda$的线性放缩形式表现出来。此时，我们有\chinesecolon
+\begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
+    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在交换作用中以$\lambda$的线性放缩形式表现出来\citing{RN1469-1985}。此时，我们有\chinesecolon
     \[
         \energyVar{x}{GGA}=\int\rho\left({\bm r}\right)\epsilon_x^{\rm unif}\left(\rho\right)F_{\rm x}\left(s\right)
     \]
     其中，$\epsilon_x^{\rm unif}=-\frac{3e^2k_{\rm F}}{4\pi}$，$k_{\rm F}$为费米波数。同时，由于需要满足均匀电子气极限条件，我们可以得到$F_{x}\left(0\right)=1$
-    \item 交换能需要满足自旋缩放关系\chinesecolon
+    \item 交换能需要满足自旋缩放关系\citing{RN1470-1979}\chinesecolon
     \[
         \energyVar{x}{GGA}\left(\rho_{\rm up},\rho_{\rm down}\right)=\frac{\energyVar{x}{GGA}\left(2\rho_{\rm up}\right)+\energyVar{x}{GGA}\left(2\rho_{\rm donw}\right)}{2}
     \]
@@ -141,13 +141,13 @@
 \begin{equation}
     \sum_{k=1}^Kv'_{ki}\chi_k\Leftrightarrow \sum_{k=1}^K v''_{ki}\chi_k\enspace\left(i=1,\cdots,I\right)
 \end{equation}
-其中，$v'_ki$为第$k$个化学分子在第$i$个基元反应中的正向化学反应计量数，$v''_ki$为相应的逆向化学反应计量数。$\chi_k$为第$k$个化学分子的化学式。
+其中，$v'_{ki}$为第$k$个化学分子在第$i$个基元反应中的正向化学反应计量数，$v''_{ki}$为相应的逆向化学反应计量数。$\chi_k$为第$k$个化学分子的化学式。
 
 基于上述基元反应组，我们可以将第$k$个化学分子的产率$w_k$表示为\chinesecolon
 \begin{equation}
     w_k=\sum_{i=1}^Iv_{ki}q_i
 \end{equation}
-其中，净化学反应计量数$v_{ki}$为正负反应计量数之差$v_{ki}=v'_ki-v''_ki$；$q_i$为第$i$个化学反应的反应进度。对于一个化学反应，其反应进度可以用正负反应速率之差进行表示\chinesecolon
+其中，净化学反应计量数$v_{ki}$为正负反应计量数之差$v_{ki}=v'_{ki}-v''_{ki}$；$q_i$为第$i$个化学反应的反应进度。对于一个化学反应，其反应进度可以用正负反应速率之差进行表示\chinesecolon
 \begin{equation}
     \label{eq:CHEM_rateOfProgress}
     q_i=k'_i\prod_{k=1}^{K}\left[X_k\right]^{v'_{ki}}-k''_i\prod_{k=1}^{K}\left[X_k\right]^{v''_{ki}}
@@ -184,7 +184,7 @@
 通常，在化学气相沉积等方法中，用于参与反应的前驱体通过气流的方式源源不断得向衬底表面进行输送。在这个过程中，前驱体在气流中完成化学反应，并与气流一起形成了衬底表面薄膜生长的化学环境。因此，我们需要对反应炉中的气流进行流体动力学模拟，以反应气流状态对于生长化学气氛的影响。
 
 对于管式反应炉中气流，我们可以将其简化为圆柱形管道中稳流的流体动力学问题，并使用二维轴对称连续纳维-斯托克斯方程进行进行描述。纳维-斯托克斯方程基于流体的守恒关系，给出了流体的连续运动方程，其通常的形式为\chinesecolon
-\begin{enumerate}[label=（\arabic*）,wide]
+\begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
     \item 质量守恒
     \[
         \begin{split}
