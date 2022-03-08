@@ -1,1 +1,2 @@
 {"rule":"WHITESPACE_RULE","sentence":"^\\Qreference   -1-   -2-   -3-   -4-   -5-   -6-\\E$"}
+{"rule":"EN_COMPOUNDS","sentence":"^\\QDifferent from the flat Cu substrate, the graphene grow beside the steps on Cu substrate tends to spontaneously evolve to the most preferred growth orientation, which make the multi-point orientated growth of graphene on the polycrystalline Cu substrate possible.\\E$"}

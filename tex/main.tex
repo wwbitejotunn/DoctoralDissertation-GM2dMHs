@@ -8,7 +8,7 @@
 %comile flag here, check before publish
 
 \ifdef{\MYCAPFLAG}{}{
-    \newcommand{\MYCAPFLAG}{-A-}% -A- or -1- or -1-4-5-
+    \newcommand{\MYCAPFLAG}{-1-6-}% -A- or -1- or -1-4-5-
 }
 \ifdef{\MYDRIFTFLAG}{}{
     \newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
@@ -85,26 +85,26 @@ allfiguresdraft,%
 }{
     \input{misc/chineseAbstract}
     \input{misc/englishAbstract}
-    \def\MYREFFLAG{N}
+    \newcommand{\MYREFFLAG}{N}
     \IfSubStr{\MYCAPFLAG}{-1-}{
         \input{chapter/chapter1}
-        \def\MYREFFLAG{Y}
+        \renewcommand{\MYREFFLAG}{Y}
         }{}
     \IfSubStr{\MYCAPFLAG}{-2-}{
         \input{chapter/chapter2}
-        \def\MYREFFLAG{Y}
+        \renewcommand{\MYREFFLAG}{Y}
         }{}
     \IfSubStr{\MYCAPFLAG}{-3-}{
         \input{chapter/chapter3}
-        \def\MYREFFLAG{Y}
+        \renewcommand{\MYREFFLAG}{Y}
         }{}
     \IfSubStr{\MYCAPFLAG}{-4-}{
         \input{chapter/chapter4}
-        \def\MYREFFLAG{Y}
+        \renewcommand{\MYREFFLAG}{Y}
         }{}
     \IfSubStr{\MYCAPFLAG}{-5-}{
         \input{chapter/chapter5}
-        \def\MYREFFLAG{Y}
+        \renewcommand{\MYREFFLAG}{Y}
         }{}
     \IfSubStr{\MYCAPFLAG}{-6-}{
         \input{chapter/chapter6}
@@ -112,8 +112,8 @@ allfiguresdraft,%
     \IfSubStr{\MYCAPFLAG}{-ack-}{
         \input{misc/acknowledgement}
         }{}
-    \IfSubStr{\MYREFFLAG}{-Y-}{}{
-        \thesisbibliography[large]{reference}
+    \IfSubStr{\MYREFFLAG}{Y}{
+        \thesisbibliography[large]{reference}}{
     }
 }
 \end{document}

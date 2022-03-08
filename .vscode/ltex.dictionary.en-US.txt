@@ -4,3 +4,5 @@ Cu
 In
 Sb
 COHP
+heterostructures
+polycrystalline
