@@ -8,7 +8,7 @@
 %comile flag here, check before publish
 
 \ifdef{\MYCAPFLAG}{}{
-    \newcommand{\MYCAPFLAG}{-A-}% -A- or -1- or -1-4-5-
+    \newcommand{\MYCAPFLAG}{-1-}% -A- or -1- or -1-4-5-
 }
 \ifdef{\MYDRIFTFLAG}{}{
     \newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
@@ -63,6 +63,7 @@ allfiguresdraft,%
 \major{材料科学与工程}{Materials Science and Engineering}
 
 \begin{document}
+
 %\the\textwidth 
 \IfSubStr{\MYCAPFLAG}{-A-}{
     \makecover

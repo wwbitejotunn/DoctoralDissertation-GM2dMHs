@@ -9,6 +9,8 @@
 *.out
 *.bbl
 *.blg
+*.bcf
+main.run.xml
 main.pdf
 main.toc
 /tex/build/

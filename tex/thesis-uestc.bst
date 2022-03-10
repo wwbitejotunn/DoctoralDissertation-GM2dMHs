@@ -169,7 +169,8 @@ FUNCTION {format.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{f.~}{vv~}{ll}{, jj}"
+      %"{f.~}{vv~}{ll}{, jj}"
+      "{vv{ }~}{ll}{ jj}{ f{ }}"
       format.name$
       bibinfo bibinfo.check
       't :=
@@ -219,7 +220,8 @@ FUNCTION {format.chinese.names}
   numnames 'namesleft :=
     { namesleft #0 > }
     { s nameptr
-      "{f.~}{vv~}{ll}{, jj}"
+      %"{f.~}{vv~}{ll}{, jj}"
+      "{vv{ }~}{ll}{ jj}{ f{ }}"
       format.name$
       % bibinfo bibinfo.check
       't :=
@@ -400,7 +402,7 @@ FUNCTION {book}
     {
         add.comma
         format.pages write$
-    } if$
+    } if$ add.period
     newline$
 }
 
@@ -428,7 +430,7 @@ FUNCTION {conference}
         format.address write$ add.comma
     } if$
     format.year write$ add.comma
-    format.pages write$
+    format.pages write$ add.period
     newline$
 }
 
@@ -464,7 +466,7 @@ FUNCTION {article}
         ")" * write$
       } if$
       pages missing$ 'skip$ { ": " format.pages * write$ } if$
-    } if$
+    } if$ add.period
     newline$
 }
 
@@ -480,7 +482,7 @@ FUNCTION {thesis}
     } if$
     format.institution write$ add.comma
     format.year write$ add.comma
-    format.pages write$
+    format.pages write$ add.period
     newline$
 }
 
@@ -507,7 +509,7 @@ FUNCTION {newspaper}
     } if$
     add.comma
 
-    format.date write$
+    format.date write$ add.period
     newline$
 }
 
@@ -522,7 +524,7 @@ FUNCTION {techreport}
         format.address write$ ": " write$
     } if$
     format.institution write$ add.comma
-    format.date write$
+    format.date write$ add.period
     newline$
 }
 
@@ -534,7 +536,7 @@ FUNCTION {patent}
     format.country write$ add.comma
     format.type write$ add.comma
     format.id write$ add.comma
-    format.date write$
+    format.date write$ add.period
     newline$
 }
 
@@ -546,7 +548,7 @@ FUNCTION {standard}
     format.title "[S]" * write$ add.period
     format.address write$ ": " write$
     format.publisher write$ add.comma
-    format.date write$
+    format.date write$ add.period
     newline$
 }
 
@@ -557,7 +559,7 @@ FUNCTION {digital}
     format.title write$
     "[" format.type * "]" * write$ add.period
     format.date write$ add.comma
-    format.url write$
+    format.url write$ add.period
     newline$
 }
 
@@ -567,14 +569,14 @@ FUNCTION {misc}
     format.authors write$ add.period
     format.title write$
     "[J]. CoRR abs/" eprint * write$ add.comma
-    format.year write$
+    format.year write$ add.period
     newline$
 }
 
 FUNCTION {onlynote}
 {
     bibitem.begin
-    note write$
+    note write$ add.period
     newline$
 }
 
