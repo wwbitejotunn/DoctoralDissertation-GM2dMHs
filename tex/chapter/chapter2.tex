@@ -13,7 +13,7 @@
 \end{equation}
 其中，$m_e$和$M_u$为系统内电子和原子核的质量；$e$和$Z_u$为电子和原子核的电荷量；${\bm r}_i$和${\bm R}_u$为电子和原子和在物理系统中的空间坐标向量；$\hbar$和$\epsilon_0$为约化普朗克常数和真空电容率常数。
 
-考虑到在通常的量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上，因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时我们可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\ref{eq:DFT_ti-schEqu_tot}可以进行进一步的简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\ref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
+考虑到在通常的量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上，因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时我们可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\ref{eq:DFT_ti-schEqu_tot}可以进行进一步地简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\ref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
 \begin{equation}
     \label{eq:DFT_schEqu_e}
     \left[-\sum_{i}\frac{\hbar}{2m_e}\nabla_i^2 -\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert} + \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \right]\Psi_{\rm e}=E_{\rm e}\Psi_{\rm e}
@@ -44,7 +44,7 @@
 \end{equation}
 其中，$\energyVar{k}{}$为电子动能，$\energyVar{u}{}$为体系内原子核对电子的相互作用势能；$\energyVar{H}{}$为电子与电子之间不考虑多体作用时的库伦作用能，又称为Hatree势能；$\energyVar{xc}{}$为包含体系内所有电子多体作用的交换关联能。
 
-倘若我们能够精确的知道交换关联项$\energyVar{xc}{}$的具体形式并且进行精确求解，我们就能够将体系的原哈密顿量对应成基态能量的泛函。在这个过程中我们仅仅使用了绝热近似将电子和原子核的波函数进行分离。然而，由于交换关联项$\energyVar{xc}{}$包含了体系内所有电子多体作用，因此其本质上求解复杂的度与求解原多体问题一致。因此，我们需要在交换关联能中针对不同的体系引入相应的近似，在足够精确的情况下快速地对体系进行求解。
+倘若我们能够精确地知道交换关联项$\energyVar{xc}{}$的具体形式并且进行精确求解，我们就能够将体系的原哈密顿量对应成基态能量的泛函。在这个过程中我们仅仅使用了绝热近似将电子和原子核的波函数进行分离。然而，由于交换关联项$\energyVar{xc}{}$包含了体系内所有电子多体作用，因此其本质上求解复杂的度与求解原多体问题一致。因此，我们需要在交换关联能中针对不同的体系引入相应的近似，在足够精确的情况下快速地对体系进行求解。
 
 将式\ref{eq:DFT_Ee0_ks}进行变分，我们就可以将电子基态能量改写为关于辅助单电子波函数的泛函的形式\chinesecolon
 \begin{equation}
@@ -60,7 +60,7 @@
 
 \subsection{交换关联泛函}
 
-对于式\ref{eq:DFT_Ee0_ks}中，交换关联能项$\energyVar{xc}{}$的近似，最简单的形式是使用局域密度近似法（local density approximation, LDA）\citing{RN1462-1981,RN1463-1980}。在此方法中，近似的交换关联能$\energyVar{xc}{LDA}$只和空间点的电荷密度有关\chinesecolon
+对于式\ref{eq:DFT_Ee0_ks}中，交换关联能项$\energyVar{xc}{}$的近似，最简单的形式是使用局域密度近似法（local density approximation, LDA）\citing{RN1462-1981,RN1463-1980}。在此方法中，近似地交换关联能$\energyVar{xc}{LDA}$只和空间点的电荷密度有关\chinesecolon
 \begin{equation}
     \label{eq:DFT_LDA}
     \energyVar{xc}{LDA}\left[\rho\right]=\int \rho({\bm r}) \epsilon_{\rm xc}^{\rm unif} \left(\rho\left({\bm r}\right)\right) d{\bm r}
@@ -87,11 +87,11 @@
         \lim_{t\rightarrow\infty}H=-\epsilon_{\rm c}^{\rm unif}
     \]
     确保此时的关联能为0，以符合现实物理体系中电子密度分布的远端交换作用占主导的情况。
-    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在关联作用中以常数放缩形式表现出来\citing{RN1468-1989}。要满足这个条件，$H$必须要在此变化极限条件下对$\epsilon_{\rm c}^{\rm unif}$项中的对数函数进行的约化。此时，一个$H$需要满足的渐进行为为
+    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在关联作用中以常数放缩形式表现出来\citing{RN1468-1989}。要满足这个条件，$H$必须在此变化极限条件下对$\epsilon_{\rm c}^{\rm unif}$项中的对数函数进行的约化。此时，一个$H$需要满足的渐进行为为
     \[
         H\rightarrow\left(\frac{e^2}{a_0}\right)\gamma\phi^3\ln t^2
     \]
-    其中，$\gamma$为$\zeta$的函数，在这里近似的取为常数$\gamma=\frac{1-\ln2}{\pi^2}$
+    其中，$\gamma$为$\zeta$的函数，在这里近似地取为常数$\gamma=\frac{1-\ln2}{\pi^2}$
 \end{enumerate}
 
     结合以上条件，我们可以构造出$H$有如下的形式\chinesecolon
@@ -114,7 +114,7 @@
     \[
         \energyVar{x}{GGA}\left(\rho_{\rm up},\rho_{\rm down}\right)=\frac{\energyVar{x}{GGA}\left(2\rho_{\rm up}\right)+\energyVar{x}{GGA}\left(2\rho_{\rm donw}\right)}{2}
     \]
-    \item 在自旋非极化的均匀电子气中，LDA形式的交换关联能非常好的描述该电子体系的物理状态。因此，我们希望PBE的交换关联能$\energyVar{xc}{GGA}$在这种情况下有与LDA交换关联能$\energyVar{xc}{LDA}$相同的线性相应，此时我们需要\chinesecolon
+    \item 在自旋非极化的均匀电子气中，LDA形式的交换关联能非常好地描述该电子体系的物理状态。因此，我们希望PBE的交换关联能$\energyVar{xc}{GGA}$在这种情况下有与LDA交换关联能$\energyVar{xc}{LDA}$相同的线性相应，此时我们需要\chinesecolon
     \[
         F_{\rm x}\left(s\right)\rightarrow 1+\mu s^2
     \]
