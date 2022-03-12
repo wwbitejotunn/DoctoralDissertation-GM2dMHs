@@ -9,7 +9,7 @@
             "options": {
                 "cwd": "${workspaceFolder}\\tex"
             },
-            "command": "latexmk -xelatex -outdir=build\\release --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\release_main.tex" 
+            "command": "latexmk -outdir=build\\release -c | latexmk -xelatex -outdir=build\\release --shell-escape  -synctex=-1 -g ${workspaceFolder}\\tex\\release_main.tex" 
         },
         {
             "label": "buid anonymous release tex",
@@ -17,7 +17,7 @@
             "options": {
                 "cwd": "${workspaceFolder}\\tex"
             },
-            "command": "latexmk -xelatex -outdir=build\\anonymousRelease --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\anonymousRelease_main.tex" 
+            "command": "latexmk -outdir=build\\anonymousRelease -c | latexmk -xelatex -outdir=build\\anonymousRelease --shell-escape  -synctex=-1 -g ${workspaceFolder}\\tex\\anonymousRelease_main.tex" 
         },
         {
             "label": "buid duplicateCheck release tex",
@@ -25,12 +25,13 @@
             "options": {
                 "cwd": "${workspaceFolder}\\tex"
             },
-            "command": "latexmk -xelatex -outdir=build\\duplicateCheck --shell-escape  -synctex=1 -recorder ${workspaceFolder}\\tex\\duplicateCheck_main.tex" 
+            "command": "latexmk -outdir=build\\duplicateCheck -c | latexmk -xelatex -outdir=build\\duplicateCheck --shell-escape  -synctex=-1 -g ${workspaceFolder}\\tex\\duplicateCheck_main.tex" 
         },
         {
             "label": "buid all",
             "group": {
                 "kind": "build",
+                //"dependsOrder": "sequence",
                 "isDefault": true
             },
             "dependsOn":["buid release tex", "buid anonymous release tex"]
