@@ -264,6 +264,7 @@
     \pdfbookmark{Chinese Abstract}{chineseabstract}
   }
   \setcounter{pseudopage}{1}
+  \setcounter{page}{1}
   \chapter*{\heiti 摘\chinesespace 要}
   \fancyhf{}
   \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 摘要}
@@ -271,9 +272,9 @@
 }{
   \checkoddpage
   \ifoddpage
-      \blankpage
-    \else
-      \newpage
+    \blankpage
+  \else
+    \newpage  
     \fi
 }
 
