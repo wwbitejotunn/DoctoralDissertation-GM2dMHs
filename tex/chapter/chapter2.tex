@@ -3,7 +3,7 @@
 % 第二章 理论计算方法简介
 \chapter{计算原理与方法}
 \section{第一性原理计算方法}
-第一性原理计算方法利用量子力学的基本原理，在无实验参数介入的情况下对量子系统进行模拟。对于一个包含电子和原子核的物理系统，在不考虑相对论效应的情况下，我们可以根据量子力学理论，将整个系统的定态薛定谔方程$\hat{H}\Psi =E\Psi$可以具体写成以下的形式\chinesecolon
+第一性原理计算方法利用量子力学的基本原理，在无实验参数介入的情况下对量子系统进行模拟。对于一个包含电子和原子核的物理系统，在不考虑相对论效应的情况下，可以根据量子力学理论，将整个系统的定态薛定谔方程$\hat{H}\Psi =E\Psi$可以具体写成以下的形式\chinesecolon
 \begin{equation}
     \label{eq:DFT_ti-schEqu_tot}
     \begin{split}
@@ -13,14 +13,14 @@
 \end{equation}
 其中，$m_e$和$M_u$为系统内电子和原子核的质量；$e$和$Z_u$为电子和原子核的电荷量；${\bm r}_i$和${\bm R}_u$为电子和原子和在物理系统中的空间坐标向量；$\hbar$和$\epsilon_0$为约化普朗克常数和真空电容率常数。
 
-考虑到在通常的量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上，因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时我们可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\ref{eq:DFT_ti-schEqu_tot}可以进行进一步地简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\ref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
+考虑到在通常的量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上，因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\ref{eq:DFT_ti-schEqu_tot}可以进行进一步地简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\ref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
 \begin{equation}
     \label{eq:DFT_schEqu_e}
     \left[-\sum_{i}\frac{\hbar}{2m_e}\nabla_i^2 -\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert} + \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \right]\Psi_{\rm e}=E_{\rm e}\Psi_{\rm e}
 \end{equation}
 此时的$E_{\rm e}$为电子总能量。
 
-通过求解式\ref{eq:DFT_schEqu_e}，我们可以获得电子波函数$\Psi_{\rm e}$和基态电子总能量$E_{\rm e}$。完成对包含电子和原子核的物理系统的求解。
+通过求解式\ref{eq:DFT_schEqu_e}，可以获得电子波函数$\Psi_{\rm e}$和基态电子总能量$E_{\rm e}$。完成对包含电子和原子核的物理系统的求解。
 
 \subsection{密度泛函理论} 
 通常来说，当考虑的物理系统中包含大量电子时，式\ref{eq:DFT_schEqu_e}中关于电子-电子相互作用项的求解将变得极为复杂。对于单电子体系，其波函数的希尔伯特空间为$L^2\left(R^3\right)\bigotimes \mathbb{C}^2$。而具有$N$个电子的物理系统，其电子的波函数$\Psi_{\rm e}\in L^2\left(R^{3N}\right)\bigotimes \mathbb{C}^{2^N}$。由此导致计算$N$电子体系的计算资源需求按$3N$的指数倍增长，使得式\ref{eq:DFT_schEqu_e}几乎无法在现有的计算条件下运用至待研究的物理体系中。为此，研究者发展出了许多近似方法来降低式\ref{eq:DFT_schEqu_e}的计算复杂度，例如Hatree-Fork方法将电子-电子相互作用简化为电子与其他电子形成的平均场之间的作用，大大减少了计算量\citing{RN1460-2015}。而随后发展出的密度泛函理论方法进一步推进了第一性原理计算在计算固体领域的实用化进程。
@@ -31,7 +31,7 @@
 \]
 但这个电子密度的唯一泛函$\energyVar{e0}{}\left[\rho\right]$的具体形式仍未可知。
 
-在1965年，Kohn和Sham假设存在一个虚拟的无相互作用的多电子系统作为辅助。这个无相互作用的多电子系统的电子密度分布和所考察的原体系的电子密度分布相同\citing{RN1461-1965}。由此，我们可以将基态能量$\energyVar{e0}{}$表示为这个辅助系统的电子密度的泛函。也就是$\energyVar{e0}{}=\energyVar{e0}{}\left[\rho'\right]$。其中$\rho'=\sum_i\left\lvert \psi' _i\left(r\right)\right\rvert^2$为引入的无相互作用的多电子系统的电子密度，$\psi'_i$为单电子的态密度。
+在1965年，Kohn和Sham假设存在一个虚拟的无相互作用的多电子系统作为辅助。这个无相互作用的多电子系统的电子密度分布和所考察的原体系的电子密度分布相同\citing{RN1461-1965}。由此，可以将基态能量$\energyVar{e0}{}$表示为这个辅助系统的电子密度的泛函。也就是$\energyVar{e0}{}=\energyVar{e0}{}\left[\rho'\right]$。其中$\rho'=\sum_i\left\lvert \psi' _i\left(r\right)\right\rvert^2$为引入的无相互作用的多电子系统的电子密度，$\psi'_i$为单电子的态密度。
 
 此时的电子基态总能可以写为\chinesecolon
 \begin{equation}
@@ -44,9 +44,9 @@
 \end{equation}
 其中，$\energyVar{k}{}$为电子动能，$\energyVar{u}{}$为体系内原子核对电子的相互作用势能；$\energyVar{H}{}$为电子与电子之间不考虑多体作用时的库伦作用能，又称为Hatree势能；$\energyVar{xc}{}$为包含体系内所有电子多体作用的交换关联能。
 
-倘若我们能够精确地知道交换关联项$\energyVar{xc}{}$的具体形式并且进行精确求解，我们就能够将体系的原哈密顿量对应成基态能量的泛函。在这个过程中我们仅仅使用了绝热近似将电子和原子核的波函数进行分离。然而，由于交换关联项$\energyVar{xc}{}$包含了体系内所有电子多体作用，因此其本质上求解复杂的度与求解原多体问题一致。因此，我们需要在交换关联能中针对不同的体系引入相应的近似，在足够精确的情况下快速地对体系进行求解。
+倘若能够精确地知道交换关联项$\energyVar{xc}{}$的具体形式并且进行精确求解，就能够将体系的原哈密顿量对应成基态能量的泛函。在这个过程中仅仅使用了绝热近似将电子和原子核的波函数进行分离。然而，由于交换关联项$\energyVar{xc}{}$包含了体系内所有电子多体作用，因此其本质上求解复杂的度与求解原多体问题一致。因此，需要在交换关联能中针对不同的体系引入相应的近似，在足够精确的情况下快速地对体系进行求解。
 
-将式\ref{eq:DFT_Ee0_ks}进行变分，我们就可以将电子基态能量改写为关于辅助单电子波函数的泛函的形式\chinesecolon
+将式\ref{eq:DFT_Ee0_ks}进行变分，就可以将电子基态能量改写为关于辅助单电子波函数的泛函的形式\chinesecolon
 \begin{equation}
     \label{eq:DFT_KSequ}
     \left[-\frac{1}{2}\nabla^2+V_{\rm u}({\bm r})+V_{\rm H}\left({\bm r}\right)+V_{\rm xc}\left({\bm r}\right)\right]\psi'_i\left({\bm r}\right)=\varepsilon'_i\psi'_i\left({\bm r}\right) 
@@ -94,7 +94,7 @@
     其中，$\gamma$为$\zeta$的函数，在这里近似地取为常数$\gamma=\frac{1-\ln2}{\pi^2}$
 \end{enumerate}
 
-    结合以上条件，我们可以构造出$H$有如下的形式\chinesecolon
+    结合以上条件，可以构造出$H$有如下的形式\chinesecolon
     \begin{equation}
         H=\left(\frac{e^2}{a_0}\right)\gamma\phi^3\times \ln\left[1+\frac{\beta}{\gamma}t^2\left(\frac{1+At^2}{1+At^2+A^2t^4}\right)\right]
     \end{equation}
@@ -105,16 +105,16 @@
 
 而对于交换作用$\energyVar{x}{GGA}$，PBE泛函认为其需要满足以下四个渐进行为\chinesecolon
 \begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
-    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在交换作用中以$\lambda$的线性放缩形式表现出来\citing{RN1469-1985}。此时，我们有\chinesecolon
+    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在交换作用中以$\lambda$的线性放缩形式表现出来\citing{RN1469-1985}。此时，有\chinesecolon
     \[
         \energyVar{x}{GGA}=\int\rho\left({\bm r}\right)\epsilon_x^{\rm unif}\left(\rho\right)F_{\rm x}\left(s\right)
     \]
-    其中，$\epsilon_x^{\rm unif}=-\frac{3e^2k_{\rm F}}{4\pi}$，$k_{\rm F}$为费米波数。同时，由于需要满足均匀电子气极限条件，我们可以得到$F_{x}\left(0\right)=1$
+    其中，$\epsilon_x^{\rm unif}=-\frac{3e^2k_{\rm F}}{4\pi}$，$k_{\rm F}$为费米波数。同时，由于需要满足均匀电子气极限条件，可以得到$F_{x}\left(0\right)=1$
     \item 交换能需要满足自旋缩放关系\citing{RN1470-1979}\chinesecolon
     \[
         \energyVar{x}{GGA}\left(\rho_{\rm up},\rho_{\rm down}\right)=\frac{\energyVar{x}{GGA}\left(2\rho_{\rm up}\right)+\energyVar{x}{GGA}\left(2\rho_{\rm donw}\right)}{2}
     \]
-    \item 在自旋非极化的均匀电子气中，LDA形式的交换关联能非常好地描述该电子体系的物理状态。因此，我们希望PBE的交换关联能$\energyVar{xc}{GGA}$在这种情况下有与LDA交换关联能$\energyVar{xc}{LDA}$相同的线性相应，此时我们需要\chinesecolon
+    \item 在自旋非极化的均匀电子气中，LDA形式的交换关联能非常好地描述该电子体系的物理状态。因此，PBE的交换关联能$\energyVar{xc}{GGA}$在这种情况下有与LDA交换关联能$\energyVar{xc}{LDA}$相同的线性相应，此时需要\chinesecolon
     \[
         F_{\rm x}\left(s\right)\rightarrow 1+\mu s^2
     \]
@@ -131,19 +131,19 @@
 \end{equation}
 其中$\kappa$为常数，取0.804。
 
-至此，我们分别构造了PBE泛函中交换关联能的交换作用贡献$\energyVar{x}{GGA}$和关联作用贡献$\energyVar{c}{GGA}$。使用PBE泛函作为交换关联能的近似，我们能够在大幅减少式\ref{eq:DFT_KSequ}的自洽计算的复杂度，并且保持相当高水平的精确度。
+至此，本文分别构造了PBE泛函中交换关联能的交换作用贡献$\energyVar{x}{GGA}$和关联作用贡献$\energyVar{c}{GGA}$。使用PBE泛函作为交换关联能的近似，能够在大幅减少式\ref{eq:DFT_KSequ}的自洽计算的复杂度，并且保持相当高水平的精确度。
 %\subsection{投影缀加波函数方法赝势}
 %//TODO optional PAW
 \section{气相反应动力学模拟}
-通过求解气相中各种化合物之间复杂的化学动力学方程组，我们可以对气体的热力学状态，化学组成组成成分等参量进行模拟。
+通过求解气相中各种化合物之间复杂的化学动力学方程组，可以对气体的热力学状态，化学组成组成成分等参量进行模拟。
 
-对于由$I$个基元反应并涉及$K$个分子的化学环境，我们通常可以写出如下的反应通式
+对于由$I$个基元反应并涉及$K$个分子的化学环境，通常可以写出如下的反应通式
 \begin{equation}
     \sum_{k=1}^Kv'_{ki}\chi_k\Leftrightarrow \sum_{k=1}^K v''_{ki}\chi_k\enspace\left(i=1,\cdots,I\right)
 \end{equation}
 其中，$v'_{ki}$为第$k$个化学分子在第$i$个基元反应中的正向化学反应计量数，$v''_{ki}$为相应的逆向化学反应计量数。$\chi_k$为第$k$个化学分子的化学式。
 
-基于上述基元反应组，我们可以将第$k$个化学分子的产率$w_k$表示为\chinesecolon
+基于上述基元反应组，可以将第$k$个化学分子的产率$w_k$表示为\chinesecolon
 \begin{equation}
     w_k=\sum_{i=1}^Iv_{ki}q_i
 \end{equation}
@@ -178,12 +178,12 @@
     \end{split}
 \]
 
-至此，我们就可以通过气相反应中的基元化学反应方程式和化学物质的热力学参数对整个气相反应动力学进行描述。
+至此，就可以通过气相反应中的基元化学反应方程式和化学物质的热力学参数对整个气相反应动力学进行描述。
 
 \subsection{管道流的流体力学模拟}
-通常，在化学气相沉积等方法中，用于参与反应的前驱体通过气流的方式源源不断得向衬底表面进行输送。在这个过程中，前驱体在气流中完成化学反应，并与气流一起形成了衬底表面薄膜生长的化学环境。因此，我们需要对反应炉中的气流进行流体动力学模拟，以反应气流状态对于生长化学气氛的影响。
+通常，在化学气相沉积等方法中，用于参与反应的前驱体通过气流的方式源源不断得向衬底表面进行输送。在这个过程中，前驱体在气流中完成化学反应，并与气流一起形成了衬底表面薄膜生长的化学环境。因此，需要对反应炉中的气流进行流体动力学模拟，以反应气流状态对于生长化学气氛的影响。
 
-对于管式反应炉中气流，我们可以将其简化为圆柱形管道中稳流的流体动力学问题，并使用二维轴对称连续纳维-斯托克斯方程进行进行描述。纳维-斯托克斯方程基于流体的守恒关系，给出了流体的连续运动方程，其通常的形式为\chinesecolon
+对于管式反应炉中气流，可以将其简化为圆柱形管道中稳流的流体动力学问题，并使用二维轴对称连续纳维-斯托克斯方程进行进行描述。纳维-斯托克斯方程基于流体的守恒关系，给出了流体的连续运动方程，其通常的形式为\chinesecolon
 \begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
     \item 质量守恒
     \[
@@ -206,7 +206,7 @@
 \end{align}
 其中，$u$，$v$，$w$分别为$z$，$r$，$\theta$轴的速度分量，$p$为压强。
 
-对于圆柱形管道中均匀稳流，我们可以忽略其绕对称轴旋转（$\theta$轴）的运动。因此在没有收体积外力的情况下，圆柱形管道中均匀稳流的纳维-斯托克斯公式可以进一步简化为\chinesecolon
+对于圆柱形管道中均匀稳流，可以忽略其绕对称轴旋转（$\theta$轴）的运动。因此在没有收体积外力的情况下，圆柱形管道中均匀稳流的纳维-斯托克斯公式可以进一步简化为\chinesecolon
 \begin{align}
     \mbox{质量守恒\chinesecolon} & \frac{\partial \rho u}{\rho z}+\frac{1}{r}\frac{\partial r \rho v}{\partial r}=0\\[1ex]
     \mbox{轴向动量守恒\chinesecolon} & \begin{aligned}[t] \rho u \frac{\partial u}{\partial z} + \rho v \frac{\partial u}{\partial r} = & - \frac{\partial P}{\partial z}  + \frac{\partial}{z}\left(\frac{4}{3}\mu\frac{\partial u}{\partial z}-\frac{2}{3}\mu\frac{1}{r}\frac{\partial rv}{\partial r}\right)\\[1ex]
@@ -229,7 +229,7 @@
 
 在能量守恒中，能量的变化等于做功的能量$\frac{Dp}{Dt}$加上热交换的能量$\nabla\cdot\left(\lambda\nabla T\right)-\sum_k^K \nabla\cdot h_k{\bf j}_k$以及耗散能$\Phi $。其中，$\lambda$为流体的平均热导率；$h_k$为物质$k$的焓。
 
-将方程\ref{eq:CFD_specis_origin}和\ref{eq:CFD_specis_origin}转化为圆柱坐标并进行相应的简化，我们可以得到圆柱形管道中均匀稳流的分子质量守恒方程和能量守恒方程\chinesecolon
+将方程\ref{eq:CFD_specis_origin}和\ref{eq:CFD_specis_origin}转化为圆柱坐标并进行相应的简化，可以得到圆柱形管道中均匀稳流的分子质量守恒方程和能量守恒方程\chinesecolon
 \begin{align}
     \mbox{分子质量守恒\chinesecolon}&\rho u\frac{\partial Y_k}{\partial z} + \rho v \frac{\partial Y_k}{\partial r}=\left(\frac{\partial j_{kz}}{\partial z}+\frac{1}{r}\frac{\partial r j_{k,r}}{\partial r}\right)+w_kW_k\\[1ex]
     \mbox{能量守恒\chinesecolon}&\begin{aligned}[t]\rho c_p u\frac{\partial T}{\partial Z}+\rho c_p v \frac{\partial T}{\partial R}=&u\frac{\partial P}{\partial z}+\frac{\partial}{\partial z}\left(\lambda \frac{\partial T}{\partial z}\right)+\frac{1}{r}\frac{\partial}{\partial r}\left(r\lambda\frac{\partial T}{\partial r}\right)\\[1ex]
@@ -237,7 +237,7 @@
     \end{aligned}
 \end{align}
 
-至此，我们推导出了圆柱形管道中的均匀稳流的控制方程，包括质量守恒方程、动能守恒方程、分子质量守恒方程以及能量守恒方程。通过以上守恒方程，我们可以对圆柱形管道中的均匀稳流进行模拟。
+至此，推导出了圆柱形管道中的均匀稳流的控制方程，包括质量守恒方程、动能守恒方程、分子质量守恒方程以及能量守恒方程。通过以上守恒方程，可以对圆柱形管道中的均匀稳流进行模拟。
 
 \section{自由分子流模拟}
     在流体动力学中，克鲁森数（Knudsen number）通常用来区分连续流体和稀薄流体以及所适用的流体力学控制方程。克鲁森数$\rm Kn$的定义为\chinesecolon
@@ -250,48 +250,48 @@
     \end{equation}
     $\kbconst$为玻尔兹曼常数，$m$是气体分子的质量，$T$是气体的温度，$P$为气体的气压。
 
-    根据不同流体动力学系统中克鲁森数不同的取值，我们将气流分为三个区域。当流体体系中的克鲁森数非常小的时候（${\rm Kn}\ll 1$），我们可以将运动的气体分子看成连续介质。这时，气体满足连续性假设，可以利用流体力学中的纳维-斯托克斯方程（Navier-Stokes equations）\citing{RN1448-2013}进行分析。当体系中的克鲁森数非常大的时候（${\rm Kn}\gg 1$），由于相对较大的分子平均自由程，我们可以忽略气体分子之间的相互碰撞作用，使得每个气体分子的运动可以看出独立的过程。在这个区域的流体体系成为自由分子流。当克鲁森数约等于1的时候（${\rm Kn}\simeq 1$），我们既不能将此区域下的流体体系看成连续介质，使用N-S方程进行计算。由于和体系特征长度相近的平均自由程，我们同样无法忽略气体之间的相互碰撞，独立的考虑每个分子的运动情况。在这个区域的流体体系被称为过渡流，通常使用玻尔兹曼方程进行模拟计算\citing{RN1458-2002}。
+    根据不同流体动力学系统中克鲁森数不同的取值，将气流分为三个区域。当流体体系中的克鲁森数非常小的时候（${\rm Kn}\ll 1$），可以将运动的气体分子看成连续介质。这时，气体满足连续性假设，可以利用流体力学中的纳维-斯托克斯方程（Navier-Stokes equations）\citing{RN1448-2013}进行分析。当体系中的克鲁森数非常大的时候（${\rm Kn}\gg 1$），由于相对较大的分子平均自由程，可以忽略气体分子之间的相互碰撞作用，使得每个气体分子的运动可以看出独立的过程。在这个区域的流体体系成为自由分子流。当克鲁森数约等于1的时候（${\rm Kn}\simeq 1$），既不能将此区域下的流体体系看成连续介质，使用N-S方程进行计算。由于和体系特征长度相近的平均自由程，同样无法忽略气体之间的相互碰撞，独立的考虑每个分子的运动情况。在这个区域的流体体系被称为过渡流，通常使用玻尔兹曼方程进行模拟计算\citing{RN1458-2002}。
 
-    当克鲁森数（${\rm Kn}$）大于1时，根据我们先前的定义，流体处于自由分子流的区域，此时在体系内运功的气态分子之间的相互碰撞可以被忽略。我们可以将关注的重点放在气态分子在模拟系统中的运动轨迹以及分子于边界壁之间的作用关系。对于自由分子流的模拟，通常有两种方法。一种是使用蒙特卡罗法对对大量模拟体系中运动的气态分子进行随机化的轨迹模拟。另一种方法是使用角参数法计算。在本论文中，由于我们只关注气态分子在边界壁表面的统计分布情况，因此我们选用计算量更小的角参数法。
+    当克鲁森数（${\rm Kn}$）大于1时，根据先前的定义，流体处于自由分子流的区域，此时在体系内运功的气态分子之间的相互碰撞可以被忽略。可以将关注的重点放在气态分子在模拟系统中的运动轨迹以及分子于边界壁之间的作用关系。对于自由分子流的模拟，通常有两种方法。一种是使用蒙特卡罗法对对大量模拟体系中运动的气态分子进行随机化的轨迹模拟。另一种方法是使用角参数法计算。在本论文中，由于只关注气态分子在边界壁表面的统计分布情况，因此选用计算量更小的角参数法。
 
-    在角参数法计算中，我们需要统计任一边界壁表面基元上从其他所有可能的表面基元直线入射的气体分子的流量。因此，我们需要计算在有边界壁的情况下，气态分子与边界壁相互作用下的速度分布函数。
+    在角参数法计算中，需要统计任一边界壁表面基元上从其他所有可能的表面基元直线入射的气体分子的流量。因此，需要计算在有边界壁的情况下，气态分子与边界壁相互作用下的速度分布函数。
     
     \subsection{自由分子流的速度分布函数}
 
-    假设边界壁对气体分子不存在长时间的吸附作用，气体分子在碰撞到边界壁后直接出射、扩散至气体环境中。在这种情况下，我们可以计算边界壁表面出射的密度分布函数$\rho\left(\theta, v\right)$。其中$\theta$为气体分子的出射角度，$v$为气体分子的出射速度。此时，气体分子反射的角度分布满足余弦公式\chinesecolon
+    假设边界壁对气体分子不存在长时间的吸附作用，气体分子在碰撞到边界壁后直接出射、扩散至气体环境中。在这种情况下，可以计算边界壁表面出射的密度分布函数$\rho\left(\theta, v\right)$。其中$\theta$为气体分子的出射角度，$v$为气体分子的出射速度。此时，气体分子反射的角度分布满足余弦公式\chinesecolon
     \begin{equation}
         f\left(\theta\right)d\theta =\frac{1}{2}\cos\theta d\theta 
     \end{equation}    
     考虑二维的情况，反射角度$\theta$的取值范围为$\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$
 
-    假设密度分布函数$\rho\left(\theta, v\right)$中随机变量反射角度$\theta$和反射速度$v$相互独立，我们可以将$\rho\left(\theta, v\right)$写成一下形式\chinesecolon
+    假设密度分布函数$\rho\left(\theta, v\right)$中随机变量反射角度$\theta$和反射速度$v$相互独立，可以将$\rho\left(\theta, v\right)$写成一下形式\chinesecolon
     \[
         \rho\left(\sin\theta,v\right)=\rho_v\left(v\right)\rho_\theta\left(\sin\theta\right)
     \]
-    为方便后续计算，这里我们将密度分布函数$\rho\left(\theta, v\right)$中反射角度$\theta$写成正弦的形式，既$\rho(\sin\theta,v)$。
+    为方便后续计算，这里将密度分布函数$\rho\left(\theta, v\right)$中反射角度$\theta$写成正弦的形式，既$\rho(\sin\theta,v)$。
 
-    在二维的情况下，我们可以将反射分子的速度$v$分解为$v_x$和$v_y$，分别对应于反射分子平行于边界壁表面和垂直于边界壁表面的速度分量。$v_x$和$v_y$满足$v_x=v\sin\theta$和$v_y=v\cos\theta$。
+    在二维的情况下，可以将反射分子的速度$v$分解为$v_x$和$v_y$，分别对应于反射分子平行于边界壁表面和垂直于边界壁表面的速度分量。$v_x$和$v_y$满足$v_x=v\sin\theta$和$v_y=v\cos\theta$。
 
-    对于平行于边界壁表面的速度分量，由于对称性的关系，我们认为气态分子在边界壁反射的$v_x$分量服从玻尔兹曼分布\chinesecolon
+    对于平行于边界壁表面的速度分量，由于对称性的关系，认为气态分子在边界壁反射的$v_x$分量服从玻尔兹曼分布\chinesecolon
     \begin{equation}
         \label{eq:FM_vxDensity}
         \rho_x\left(v_x\right)=\sqrt{\frac{m}{2\pi\kbconst T}}\exp\left({-\frac{mv_x^2}{2\kbconst T}}\right)
     \end{equation}
 
-    然而，在边界壁的表面，垂直方向的反射运动并不满足对称性要求，因此垂直于边界壁表面的速度分量$v_y$并不满足玻尔兹曼分布。接下来我们对垂直于边界壁方向的分子速度分量分布进行推导。
+    然而，在边界壁的表面，垂直方向的反射运动并不满足对称性要求，因此垂直于边界壁表面的速度分量$v_y$并不满足玻尔兹曼分布。接下来对垂直于边界壁方向的分子速度分量分布进行推导。
     
     应用二维直角坐标系和极坐标系之间变换的雅可比行列式\chinesecolon
     \begin{equation}
         \left\lvert \frac{\partial \left(v_x,v_y\right)}{\partial \left(v,\sin\theta\right)}\right\rvert=\frac{v}{\cos\theta}
     \end{equation}
-    我们可以写出分子速度的密度分布函数$\rho\left(\sin\theta,v\right)$的极坐标形式和直角坐标形式的关系如下\chinesecolon
+    可以写出分子速度的密度分布函数$\rho\left(\sin\theta,v\right)$的极坐标形式和直角坐标形式的关系如下\chinesecolon
     \[
         \rho\left(\sin\theta, v\right)=\frac{v}{\cos\theta}\rho\left(v_x,v_y\right)
     \]
 
     类似于$\rho\left(\sin\theta,v\right)$，极坐标下的速度分量$v_x$和$v_y$为独立的随机变量$\rho\left(v_x,v_y\right)=\rho_x\left(v_x\right)\rho_y\left(v_y\right)$
 
-    将密度分布函数$\rho\left(\sin\theta,v\right)$求全角度积分，我们可以得到速度模量的密度分布函数
+    将密度分布函数$\rho\left(\sin\theta,v\right)$求全角度积分，可以得到速度模量的密度分布函数
     \begin{equation}
         \label{eq:FM_vDensity}
         \begin{split}
@@ -306,7 +306,7 @@
         \int_{0}^{\infty} \rho_v\left(v\right) \,dv = 1
     \end{equation}
     
-    将式\ref{eq:FM_vDensity}和式\ref{eq:FM_vxDensity}带入归一化条件（式\ref{eq:FM_normalze_vDensity}），我们可以得到关于垂直边界壁方向速度密度分布函数的方程\chinesecolon
+    将式\ref{eq:FM_vDensity}和式\ref{eq:FM_vxDensity}带入归一化条件（式\ref{eq:FM_normalze_vDensity}），可以得到关于垂直边界壁方向速度密度分布函数的方程\chinesecolon
     \begin{equation}
         \label{eq:FM_vyDensity}
         \begin{split}
@@ -315,9 +315,9 @@
         \end{split}
     \end{equation}
 
-    结合式\ref{eq:FM_vxDensity}和式\ref{eq:FM_vyDensity}，我们可以得到气态分子在边界壁反射的具体速度密度分布函数$\rho_v\left(v\right)$\chinesecolon
+    结合式\ref{eq:FM_vxDensity}和式\ref{eq:FM_vyDensity}，可以得到气态分子在边界壁反射的具体速度密度分布函数$\rho_v\left(v\right)$\chinesecolon
     \begin{equation}
         \rho_v\left(v\right)=\sqrt{\frac{2}{\pi}} \left(\frac{m}{\kbconst T}\right)^{3/ 2}v^2\exp{\left(-\frac{mv^2}{2\kbconst T}\right)}
     \end{equation}
 
-    至此，我们就可以通过计算每一个界壁表面基元上入射的气体分子的总流量，从而对体系内的自由分子流进行模拟。
+    至此，就可以通过计算每一个界壁表面基元上入射的气体分子的总流量，从而对体系内的自由分子流进行模拟。
