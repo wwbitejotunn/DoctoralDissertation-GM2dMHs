@@ -8,7 +8,7 @@
 %comile flag here, check before publish
 
 \ifdef{\MYCAPFLAG}{}{
-    \newcommand{\MYCAPFLAG}{-A-}% -A- or -1- or -1-4-5-
+    \newcommand{\MYCAPFLAG}{-1-2-}% -A- or -1- or -1-4-5-
 }
 \ifdef{\MYDRIFTFLAG}{}{
     \newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
@@ -61,7 +61,9 @@ allfiguresdraft,%
 }
 \school{材料与能源学院}{School of Materials and Energy}
 \major{材料科学与工程}{Materials Science and Engineering}
-
+\classficationnumber{O481.1}
+\confidentiallevel{公开}
+\udfnumber{538.9}
 \begin{document}
 %\the\textwidth 
 \IfSubStr{\MYCAPFLAG}{-A-}{
@@ -85,6 +87,9 @@ allfiguresdraft,%
         \thesisaccomplish{publications}
     }
 }{
+    \makecover
+    \originalitydeclaration % ! 独创性声明，最终需要替换为签字扫描版
+    %\signatureofdeclaration{signature.pdf} 包含签字的扫描版独创性声明
     \input{misc/chineseAbstract}
     \input{misc/englishAbstract}
     \newcommand{\MYREFFLAG}{N}

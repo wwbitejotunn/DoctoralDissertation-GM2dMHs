@@ -357,6 +357,21 @@
 
 \newcommand{\thestudentnumber}{\chinesespace}
 
+\newcommand{\theclassficationnumber}{\chinesespace}
+\newcommand{\theconfidentiallevel}{\chinesespace}
+\newcommand{\theudfnumber}{\chinesespace}
+
+\newcommand{\classficationnumber}[1]{
+  \renewcommand{\theclassficationnumber}{#1}
+}
+
+\newcommand{\confidentiallevel}[1]{
+  \renewcommand{\theconfidentiallevel}{#1}
+}
+\newcommand{\udfnumber}[1]{
+  \renewcommand{\theudfnumber}{#1}
+}
+
 \renewcommand{\title}[2]{
   \renewcommand{\zh@thetitle}{#1}
   \renewcommand{\en@thetitle}{#2}
@@ -667,10 +682,21 @@
 \newcommand{\thetitlepage}{
   \newpage
   \thispagestyle{empty}
-
-\noindent 分类号 \rule[-3pt]{2.5in}{0.5pt} 密级 \rule[-3pt]{2.5in}{0.5pt} \\[12bp]
-UDC\textsuperscript{ 注1} \rule[-3pt]{2.5in}{0.5pt} \\[12bp]
-
+%original
+%\noindent 分类号 \rule[-3pt]{2.5in}{0.5pt} 密级 \rule[-3pt]{2.5in}{0.5pt} \\[12bp]
+%UDC\textsuperscript{ 注1} \rule[-3pt]{2.5in}{0.5pt} \\[12bp]
+%end original
+\noindent\begin{tabular}{
+  b{1.5cm}
+  >{\centering}b{6cm}
+  >{\centering}b{1.5cm}
+  >{\centering\arraybackslash}b{6cm}
+  }
+\fontsize{12pt}{12pt}\selectfont{分类号}\rule[0mm]{0pt}{8mm}&\fontsize{12pt}{12pt}\selectfont{\theclassficationnumber}&\fontsize{12pt}{12pt}\selectfont{密级}&\fontsize{12pt}{12pt}\selectfont{\theconfidentiallevel}\\
+\cline{2-2}\cline{4-4}
+\fontsize{12pt}{12pt}\selectfont{UDC\textsuperscript{ 注1}}\rule[0mm]{0pt}{8mm}&\fontsize{12pt}{12pt}\selectfont{\theudfnumber}&&\\
+\cline{2-2}\\[12bp]
+\end{tabular}
 \begin{center}
   \fontsize{36pt}{36pt}\selectfont{
     学\chinesespace 位\chinesespace 论\chinesespace 文
