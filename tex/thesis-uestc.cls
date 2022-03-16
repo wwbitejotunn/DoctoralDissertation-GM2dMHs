@@ -686,7 +686,8 @@
 %\noindent 分类号 \rule[-3pt]{2.5in}{0.5pt} 密级 \rule[-3pt]{2.5in}{0.5pt} \\[12bp]
 %UDC\textsuperscript{ 注1} \rule[-3pt]{2.5in}{0.5pt} \\[12bp]
 %end original
-\noindent\begin{tabular}{
+\noindent\setlength\tabcolsep{0pt}{
+  \begin{tabular}{
   b{1.5cm}
   >{\centering}b{6cm}
   >{\centering}b{1.5cm}
@@ -697,6 +698,7 @@
 \fontsize{12pt}{12pt}\selectfont{UDC\textsuperscript{ 注1}}\rule[0mm]{0pt}{8mm}&\fontsize{12pt}{12pt}\selectfont{\theudfnumber}&&\\
 \cline{2-2}\\[12bp]
 \end{tabular}
+}
 \begin{center}
   \fontsize{36pt}{36pt}\selectfont{
     学\chinesespace 位\chinesespace 论\chinesespace 文
