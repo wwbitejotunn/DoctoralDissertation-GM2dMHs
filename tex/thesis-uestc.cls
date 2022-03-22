@@ -267,7 +267,7 @@
   \setcounter{page}{1}
   \chapter*{\heiti 摘\chinesespace 要}
   \fancyhf{}
-  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 摘要}
+  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 摘\hspace{6pt}要}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
 }{
   \checkoddpage
@@ -493,7 +493,7 @@
 \ProcessOptions\relax
 
 \ifchinesebook{
-  \renewcommand{\contentsname}{目\hspace{6pt}录}
+  \renewcommand{\contentsname}{目\chinesespace 录}
   \renewcommand{\bibname}{参考文献}
   \renewcommand{\figurename}{图}
   \renewcommand{\tablename}{表}
@@ -877,7 +877,7 @@ School: & \en@theschool \\
     \fi
   \fancyhf{}
   \ifchinesebook{
-    \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 目录}
+    \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 目\hspace{6pt}录}
     \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
     \pdfbookmark{目录}{toc}
   }{
@@ -897,6 +897,8 @@ School: & \en@theschool \\
   \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
   \setcounter{section}{0}
   \ifchinesebook{
+    \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont\display@chineseheader}
+    \fancyhead[CO]{\fontsize{10.5pt}{12.6pt}\selectfont 致\hspace{6pt}谢}
     \chapter*{致\hspace{12pt}谢}
     \addcontentsline{toc}{chapter}{致\hspace{12pt}谢}
     \markboth{致谢}{致谢}
@@ -938,7 +940,7 @@ School: & \en@theschool \\
 
 \newcommand{\thesischapterexordium}{
   \ifchinesebook{
-    \chapter{绪\hspace{6pt}论}
+    \chapter{绪\hspace{12pt}论}
   }{
     \chapter{Introduction}
   }
@@ -1087,6 +1089,8 @@ School: & \en@theschool \\
 
 \newcommand{\bstlabelmark}{lo}
 \newcommand{\thesisloadbibliography}[2][]{
+  \hyphenpenalty=5000
+  \tolerance=1000
   \ifthenelse{
     \equal{#1}{large}
   }{
@@ -1124,12 +1128,14 @@ School: & \en@theschool \\
 }
 
 \newcommand{\thesisloadaccomplish}[1]{
+  \hyphenpenalty=5000
+  \tolerance=1000
   \nociteaccomplish{*}
   \renewcommand{\bibname}{\thesisaccomplishtitle}
   \renewcommand{\bstlabelmark}{lo}
   \thispagestyle{fancy}
   \begin{spacing}{1.667}
-  \bibliographystyleaccomplish{thesis-uestc}
+  \bibliographystyleaccomplish{thesis-uestc-pub}
   \bibliographyaccomplish{#1}
   \end{spacing}
   \renewcommand{\bibname}{\thesisbibname}

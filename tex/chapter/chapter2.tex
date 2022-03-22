@@ -13,17 +13,17 @@
 \end{equation}
 其中，$m_e$和$M_u$为系统内电子和原子核的质量；$e$和$Z_u$为电子和原子核的电荷量；${\bm r}_i$和${\bm R}_u$为电子和原子和在物理系统中的空间坐标向量；$\hbar$和$\epsilon_0$为约化普朗克常数和真空电容率常数。
 
-考虑到在量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上。因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\ref{eq:DFT_ti-schEqu_tot}可以进行进一步地简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\ref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
+考虑到在量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上。因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\eqref{eq:DFT_ti-schEqu_tot}可以进行进一步地简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\eqref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
 \begin{equation}
     \label{eq:DFT_schEqu_e}
     \left[-\sum_{i}\frac{\hbar}{2m_e}\nabla_i^2 -\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert} + \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \right]\Psi_{\rm e}=E_{\rm e}\Psi_{\rm e}
 \end{equation}
 此时的$E_{\rm e}$为电子总能量。
 
-通过求解式\ref{eq:DFT_schEqu_e}，可以获得电子波函数$\Psi_{\rm e}$和基态电子总能量$E_{\rm e}$。完成对包含电子和原子核的物理系统的求解。
+通过求解式\eqref{eq:DFT_schEqu_e}，可以获得电子波函数$\Psi_{\rm e}$和基态电子总能量$E_{\rm e}$。完成对包含电子和原子核的物理系统的求解。
 
 \subsection{密度泛函理论} 
-通常来说，当考虑的物理系统中包含大量电子时，式\ref{eq:DFT_schEqu_e}中关于电子-电子相互作用项的求解将变得极为复杂。对于单电子体系，其波函数的希尔伯特空间为$L^2\left(R^3\right)\bigotimes \mathbb{C}^2$。而具有$N$个电子的物理系统，其电子的波函数$\Psi_{\rm e}\in L^2\left(R^{3N}\right)\bigotimes \mathbb{C}^{2^N}$。由此导致计算$N$电子体系的计算资源需求按$3N$的指数倍增长，使得式\ref{eq:DFT_schEqu_e}几乎无法在现有的计算条件下运用至待研究的物理体系中。为此，研究者发展出了许多近似方法来降低式\ref{eq:DFT_schEqu_e}的计算复杂度，例如Hatree-Fork方法将电子-电子相互作用简化为电子与其他电子形成的平均场之间的作用，大大减少了计算量\citing{RN1460-2015}。而随后发展出的密度泛函理论方法进一步推进了第一性原理计算在计算固体领域的实用化进程。
+通常来说，当考虑的物理系统中包含大量电子时，式\eqref{eq:DFT_schEqu_e}中关于电子-电子相互作用项的求解将变得极为复杂。对于单电子体系，其波函数的希尔伯特空间为$L^2\left(R^3\right)\bigotimes \mathbb{C}^2$。而具有$N$个电子的物理系统，其电子的波函数$\Psi_{\rm e}\in L^2\left(R^{3N}\right)\bigotimes \mathbb{C}^{2^N}$。由此导致计算$N$电子体系的计算资源需求按$3N$的指数倍增长，使得式\eqref{eq:DFT_schEqu_e}几乎无法在现有的计算条件下运用至待研究的物理体系中。为此，研究者发展出了许多近似方法来降低式\eqref{eq:DFT_schEqu_e}的计算复杂度，例如Hatree-Fork方法将电子-电子相互作用简化为电子与其他电子形成的平均场之间的作用，大大减少了计算量\citing{RN1460-2015}。而随后发展出的密度泛函理论方法进一步推进了第一性原理计算在计算固体领域的实用化进程。
 
 密度泛函理论计算方法的理论基础由Hohenberg和Kohn于1964年提出并证明\citing{RN1459-1964}\chinesecolon 体系的基态能量$\energyVar{e0}{}$是体系中电子密度的唯一泛函，也就是
 \[
@@ -46,21 +46,21 @@
 
 倘若能够精确地知道交换关联项$\energyVar{xc}{}$的具体形式并且进行精确求解，就能够将体系的原哈密顿量对应成基态能量的泛函。在这个过程中仅仅使用了绝热近似将电子和原子核的波函数进行分离。然而，由于交换关联项$\energyVar{xc}{}$包含了体系内所有电子多体作用，因此其本质上求解复杂的度与求解原多体问题一致。因此，需要在交换关联能中针对不同的体系引入相应的近似，在足够精确的情况下快速地对体系进行求解。
 
-将式\ref{eq:DFT_Ee0_ks}进行变分，就可以将电子基态能量改写为关于辅助单电子波函数的泛函的形式\chinesecolon
+将式\eqref{eq:DFT_Ee0_ks}进行变分，就可以将电子基态能量改写为关于辅助单电子波函数的泛函的形式\chinesecolon
 \begin{equation}
     \label{eq:DFT_KSequ}
     \left[-\frac{1}{2}\nabla^2+V_{\rm u}({\bm r})+V_{\rm H}\left({\bm r}\right)+V_{\rm xc}\left({\bm r}\right)\right]\psi'_i\left({\bm r}\right)=\varepsilon'_i\psi'_i\left({\bm r}\right) 
 \end{equation}
-其中，$V_{\rm u}({\bm r})$对于原子核对于电子的作用势场，对应于式\ref{eq:DFT_schEqu_e}中的$-\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert}$；$V_{\rm H}\left({\bm r}\right)$对应于不考虑相互作用时，电子-电子之间的库伦作用。而交换关联势$V_{\rm xc}\left({\bm r}\right)$的定义为\chinesecolon
+其中，$V_{\rm u}({\bm r})$对于原子核对于电子的作用势场，对应于式\eqref{eq:DFT_schEqu_e}中的$-\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert}$；$V_{\rm H}\left({\bm r}\right)$对应于不考虑相互作用时，电子-电子之间的库伦作用。而交换关联势$V_{\rm xc}\left({\bm r}\right)$的定义为\chinesecolon
 \[
     V_{\rm xc}\left({\bm r}\right)\psi'_i\left({\bm r}\right)=\frac{\delta \energyVar{xc}{}\left[\psi'^*\left({\bm r}\right),\psi'\left({\bm r}\right)\right]}{\delta \psi_i^*\left({\bm r}\right)}
 \]
 
-式\ref{eq:DFT_KSequ}被称为Kohn-Sham方程，具有与单电子薛定谔方程具有相似的形式，并且可以通过自洽的方式进行求解。
+式\eqref{eq:DFT_KSequ}被称为Kohn-Sham方程，具有与单电子薛定谔方程具有相似的形式，并且可以通过自洽的方式进行求解。
 
 \subsection{交换关联泛函}
 
-对于式\ref{eq:DFT_Ee0_ks}中，交换关联能项$\energyVar{xc}{}$的近似，最简单的形式是使用局域密度近似法（local density approximation, LDA）\citing{RN1462-1981,RN1463-1980}。在此方法中，近似地交换关联能$\energyVar{xc}{LDA}$只和空间点的电荷密度有关\chinesecolon
+对于式\eqref{eq:DFT_Ee0_ks}中，交换关联能项$\energyVar{xc}{}$的近似，最简单的形式是使用局域密度近似法（local density approximation, LDA）\citing{RN1462-1981,RN1463-1980}。在此方法中，近似地交换关联能$\energyVar{xc}{LDA}$只和空间点的电荷密度有关\chinesecolon
 \begin{equation}
     \label{eq:DFT_LDA}
     \energyVar{xc}{LDA}\left[\rho\right]=\int \rho({\bm r}) \epsilon_{\rm xc}^{\rm unif} \left(\rho\left({\bm r}\right)\right) d{\bm r}
@@ -131,7 +131,7 @@
 \end{equation}
 其中$\kappa$为常数，取0.804。
 
-至此，本文分别构造了PBE泛函中交换关联能的交换作用贡献$\energyVar{x}{GGA}$和关联作用贡献$\energyVar{c}{GGA}$。使用PBE泛函作为交换关联能的近似，能够在大幅减少式\ref{eq:DFT_KSequ}的自洽计算的复杂度，并且保持相当高水平的精确度。
+至此，本文分别构造了PBE泛函中交换关联能的交换作用贡献$\energyVar{x}{GGA}$和关联作用贡献$\energyVar{c}{GGA}$。使用PBE泛函作为交换关联能的近似，能够在大幅减少式\eqref{eq:DFT_KSequ}的自洽计算的复杂度，并且保持相当高水平的精确度。
 %\subsection{投影缀加波函数方法赝势}
 %//TODO optional PAW
 \section{气相反应动力学模拟}
@@ -153,7 +153,7 @@
     q_i=k'_i\prod_{k=1}^{K}\left[X_k\right]^{v'_{ki}}-k''_i\prod_{k=1}^{K}\left[X_k\right]^{v''_{ki}}
 \end{equation}
 
-在式\ref{eq:CHEM_rateOfProgress}中，$\left[X_k\right]$为第$k$个化合物的浓度。$k'_i$和$k'’_i$为第$i$个反应的正负反应速率常数。化学反应的速率和分子的浓度有关。通常来说，参与反应的分子的浓度越高，分子与分子之间碰撞、发生反应的概率越大，从而导致反应速率的增加。同时，化学方程式中化学物质的计量数会指数式地影响反应分子浓度变换导致的反应速率的变化。
+在式\eqref{eq:CHEM_rateOfProgress}中，$\left[X_k\right]$为第$k$个化合物的浓度。$k'_i$和$k'’_i$为第$i$个反应的正负反应速率常数。化学反应的速率和分子的浓度有关。通常来说，参与反应的分子的浓度越高，分子与分子之间碰撞、发生反应的概率越大，从而导致反应速率的增加。同时，化学方程式中化学物质的计量数会指数式地影响反应分子浓度变换导致的反应速率的变化。
 
 而对于化学反应的反应速率常数$k'_i$和$k''_i$，其体现了温度对于化学反应速率的影响。在温度较高的情况下，分子的运动更加剧烈，同样会导致分子与分子之间碰撞的概率越大，导致反应速率的增加。同时，温度的上升会提升分子的平均动能，使得有更多的反应物分子具有足够的能量翻越化学反应所需要克服的活化能$\energyVar{a}{}$。温度对于反应速率常数的影响通常使用阿伦尼乌斯公式（Arrhenius equation）进行描述。对于正向反应的反应速率，阿伦尼乌斯公式的具体形式为\chinesecolon
 \begin{equation}
@@ -306,7 +306,7 @@
         \int_{0}^{\infty} \rho_v\left(v\right) \,dv = 1
     \end{equation}
     
-    将式\ref{eq:FM_vDensity}和式\ref{eq:FM_vxDensity}带入归一化条件（式\ref{eq:FM_normalze_vDensity}），可以得到关于垂直边界壁方向速度密度分布函数的方程\chinesecolon
+    将式\eqref{eq:FM_vDensity}和式\eqref{eq:FM_vxDensity}带入归一化条件（式\eqref{eq:FM_normalze_vDensity}），可以得到关于垂直边界壁方向速度密度分布函数的方程\chinesecolon
     \begin{equation}
         \label{eq:FM_vyDensity}
         \begin{split}
@@ -315,7 +315,7 @@
         \end{split}
     \end{equation}
 
-    结合式\ref{eq:FM_vxDensity}和式\ref{eq:FM_vyDensity}，可以得到气态分子在边界壁反射的具体速度密度分布函数$\rho_v\left(v\right)$\chinesecolon
+    结合式\eqref{eq:FM_vxDensity}和式\eqref{eq:FM_vyDensity}，可以得到气态分子在边界壁反射的具体速度密度分布函数$\rho_v\left(v\right)$\chinesecolon
     \begin{equation}
         \rho_v\left(v\right)=\sqrt{\frac{2}{\pi}} \left(\frac{m}{\kbconst T}\right)^{3/ 2}v^2\exp{\left(-\frac{mv^2}{2\kbconst T}\right)}
     \end{equation}

@@ -8,7 +8,7 @@
 %comile flag here, check before publish
 
 \ifdef{\MYCAPFLAG}{}{
-    \newcommand{\MYCAPFLAG}{-1-2-}% -A- or -1- or -1-4-5-
+    \newcommand{\MYCAPFLAG}{-A-}% -A- or -1- or -1-4-5-
 }
 \ifdef{\MYDRIFTFLAG}{}{
     \newcommand{\MYDRIFTFLAG}{-Y-}% Y or N
@@ -19,10 +19,11 @@
 
 %%%configuration for imported package
 %for siunitx
-\sisetup{inter-unit-product={}\cdot{},number-unit-product=\text{ },tight-spacing=true}
+\sisetup{number-unit-product=\text{ },tight-spacing=true}
 \DeclareSIUnit\angstrom{\text{Å}}
 \DeclareSIUnit\pair{\text{pair}}
 \DeclareSIUnit\atom{\text{atom}}
+\DeclareSIUnit\percent{\text{\%}}
 
 % cemb to formate the chemical equation in chinese
 \def\cemb#1{\texorpdfstring{\;\ce{#1}\mbox{\;}}{#1}}
