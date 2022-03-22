@@ -699,6 +699,7 @@
 \cline{2-2}\\[12bp]
 \end{tabular}
 }
+\setlength\tabcolsep{6pt}
 \begin{center}
   \fontsize{36pt}{36pt}\selectfont{
     学\chinesespace 位\chinesespace 论\chinesespace 文
