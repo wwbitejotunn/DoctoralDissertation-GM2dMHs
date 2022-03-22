@@ -18,9 +18,9 @@
 
 \section{计算细节}
 
-在本章中密度泛函理论主要使用Vienna ab-initio Simulation Package (VASP) 软件包进行计算\citing{RN681-1996, RN682-1996}。由于石墨烯畴$\CCluster{24}$与\cemb{Cu}衬底均为非磁性体系，出于计算资源的限制，经过测试后在 \ref{sec:石墨烯优先生长取向} 章中均采用自旋非极化的计算设置。在密度泛函理论计算中，本论文使用广义梯度近似（GGA）下的 Perdew-Burke-Ernzerhof (PBE)泛函描述电子之间的交换关联作用\citing{RN683-1996}。平面波的截断动能取为为$\SI{400}{\electronvolt}$。为了研究\cemb{Cu}衬底表面石墨烯的生长情况，本论文采用切片模型并在垂直表面方向放置至少$\SI{20}{\angstrom}$的真空层以防止周期性条件相邻切片的影响。在原子结构优化的计算中，力收敛条件设为$\SI{2e-2}{\electronvolt \per \angstrom}$，电子结构自洽场计算的收敛条件设为$\SI{1e-6}{\electronvolt}$。
+在本章中密度泛函理论主要使用Vienna ab-initio Simulation Package （VASP） 软件包进行计算\citing{RN681-1996, RN682-1996}。由于石墨烯畴$\CCluster{24}$与\cemb{Cu}衬底均为非磁性体系，出于计算资源的限制，经过测试后在 \ref{sec:石墨烯优先生长取向} 章中均采用自旋非极化的计算设置。在密度泛函理论计算中，本论文使用广义梯度近似（GGA）下的 Perdew-Burke-Ernzerhof （PBE）泛函描述电子之间的交换关联作用\citing{RN683-1996}。平面波的截断动能取为为$\SI{400}{\electronvolt}$。为了研究\cemb{Cu}衬底表面石墨烯的生长情况，本论文采用切片模型并在垂直表面方向放置至少$\SI{20}{\angstrom}$的真空层以防止周期性条件相邻切片的影响。在原子结构优化的计算中，力收敛条件设为$\SI{2e-2}{\electronvolt \per \angstrom}$，电子结构自洽场计算的收敛条件设为$\SI{1e-6}{\electronvolt}$。
 
-在 \ref{sec:石墨烯优先生长取向} 章中，由于切片模型较大的模拟晶胞尺寸，本论文在布里渊区中取 $\Gamma$ 点作为积分采样的K空间网格。
+在\ref{sec:石墨烯优先生长取向}章中，由于切片模型较大的模拟晶胞尺寸，本论文在布里渊区中取 $\Gamma$ 点作为积分采样的K空间网格。
 
 在 \ref{sec:石墨烯氧蚀刻穿透}章中，\cemb{Cu}衬底-石墨烯体系内的范德瓦尔斯作用使用Grimme的DFT-D2方法进行描述\citing{RN834-2006}。
 不失一般性的，本论文选用\cemb{Cu(111)}面作为生长多层石墨烯的衬底。在切片模型中，衬底由至少四原子层的\cemb{Cu(111)}面组成。由于切片模型较大的模拟晶胞尺寸，本论文在布里渊区中取 $\Gamma$ 点为中心的$2\times 2\times 1$网络作为积分采样的K空间网格。
@@ -30,8 +30,9 @@
 \section{衬底对化学气相沉积法中石墨烯生长晶向的作用}
 \label{sec:石墨烯优先生长取向}
 为了探究石墨烯在\cemb{Cu}衬底表面的优先生长取向，本论文使用碳团簇$\CCluster{24}$作为主要研究对象，考察石墨烯成核生长过程的早期过程中\cemb{Cu}衬底表面晶向和台阶的密度对于石墨烯生长方向的影响。对于\cemb{Cu}衬底表面晶面结构的选取，本论文选择\cemb{Cu(001)}以及\cemb{Cu(111)}晶面以及以二者为台面的台阶铜表面结构作为研究对象，以覆盖\cemb{Cu}衬底表面晶面指数为(11n)($\rm{n \geqslant 1}$)的情况。
-在本章中，本论文使用$E_{\rm{f}}$来表征不同生长方向的$\CCluster{24}$团簇在\cemb{Cu}衬底表面的形成能。
+在本章中，本论文使用$E_{\rm{f}}$来表征不同生长方向的$\CCluster{24}$团簇在\cemb{Cu}衬底表面的形成能，其计算方法如式\eqref{eq:GO_formationE}所示：
 \begin{equation}
+    \label{eq:GO_formationE}
     E_{\rm{f}}=
     (E_{\rm{Cu+\CCluster{24}}}-E_{\rm{Cu}}-E_{\rm{\CCluster{24}}})
 \end{equation}
@@ -129,7 +130,6 @@
 
 对于以\cemb{Cu(001)}为台面的铜(11n)($\rm{n \geqslant 3}$)衬底。由于石墨烯团簇与\cemb{Cu}衬底的相互作用主要集中在团簇边缘的未饱和碳原子。并且台阶作为台面的边缘会极大的影响石墨烯团簇与\cemb{Cu}衬底的形成能。为了不失一般性，本论文以$\CCluster{24}$团簇的直径作为参考，建立了三个代表性的\cemb{Cu}衬底模型。
 这三个模型分别对应于台面长度小于$\CCluster{24}$团簇直径的铜(115)晶面；台面长度大致等于$\CCluster{24}$团簇直径的铜(117)晶面；以及台面长度远大于小于$\CCluster{24}$团簇直径的(11X)($\rm X \gg 7 $)晶面。
-
 
 %figure 11X
 \begin{figure}[htb]
@@ -262,8 +262,9 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
     \label{tab:GO_energyDiff_barrier}
 \end{table}
 
-在图\ref{fig:GO_C24_energyDiff_barrier}和表\ref{tab:GO_energyDiff_barrier}中，本论文总结了(11n)($\rm{n \geqslant 1}$)这一系列的\cemb{Cu}衬底上石墨烯$\CCluster{24}$团簇的定向生长能量指标。可以看到，在能够实现$\CCluster{24}$团簇定向生长的衬底中，铜(115)晶面具有最高的最优-次优生长角度能量差值，为$\SI{0.64 }{\electronvolt}$。根据热力学的统计定律，可以计算$\CCluster{24}$团簇在热平衡状态下处于最优生长角度和次优生长角度的比例$r$\chinesecolon
+在图\ref{fig:GO_C24_energyDiff_barrier}和表\ref{tab:GO_energyDiff_barrier}中，本论文总结了(11n)($\rm{n \geqslant 1}$)这一系列的\cemb{Cu}衬底上石墨烯$\CCluster{24}$团簇的定向生长能量指标。可以看到，在能够实现$\CCluster{24}$团簇定向生长的衬底中，铜(115)晶面具有最高的最优-次优生长角度能量差值，为$\SI{0.64 }{\electronvolt}$。根据热力学的统计定律，可以计算$\CCluster{24}$团簇在热平衡状态下处于最优生长角度和次优生长角度的比例$r$如式\eqref{eq:GO_angleRate}所示\chinesecolon
 \begin{equation}
+    \label{eq:GO_angleRate}
     r=e^{-\frac{\rm{\Delta} \it E}{k_{\rm B}T}}
 \end{equation}
 其中$\rm{\Delta} \it E$为两个态之间的能量差，$k_{\rm B}$为玻尔兹曼常数，$T$为温度。对于$\CCluster{24}$团簇在铜(115)晶面的成核生长，取温度$T$为常见的化学气相沉积生长石墨烯的温度$\SI{1300 }{\kelvin}$，可以计算得出$\CCluster{24}$团簇处于处于最优生长角度和次优生长角度的比例$r\approx 0.0037$。即在热平衡状态写只有不到$\SI{0.4}{\percent}$的石墨烯$\CCluster{24}$团簇处于非定向生长的状态。而对于最优-次优生长角度差值较低的铜(112)晶面，同样计算可得$\CCluster{24}$团簇在其上生长的$r\approx 0.053$。相比于铜(115)面，铜(112)面的非定向石墨烯畴的比例上升了一个数量级。
@@ -335,8 +336,9 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
 
 考虑到蚀刻物质中$\cemb{O}$、$\cemb{OH}$、$\cemb{HO2}$以及$\cemb{O2}$等物质都对石墨烯具有一定的蚀刻作用，且各蚀刻物质之间的浓度较为接近。为了探究石墨烯在含氧化学气相沉积环境下的蚀刻过程，本论文引入氧原子的化学势$\muO{}$来代表生长气氛中蚀刻物质的整体反应活性。因此，化学势$\muO{}$的变化范围为$\halfEOm$ 至 $\EOa$，对应于氧原子在氧气分子（$\cemb{O2}$）内的能级水平和氧原子在氧自由基（$\cemb{O}$）中的能级水平。随着在蚀刻石墨烯的反应中涉及的高活性蚀刻物质（如氧自由基O）浓度的上升，化学势$\muO{}$逐渐上升并接近$\EOa$，同时伴随着更多的石墨烯被蚀刻。
 
-随后，利用密度泛函理论，在$\muO{}$的框架内计算了氧原子蚀刻石墨烯的反应能$\rm{\Delta} \it E$。
+随后，利用密度泛函理论，在$\muO{}$的框架内利用式\eqref{eq:FLG_etchEnergy}计算了氧原子蚀刻石墨烯的反应能$\rm{\Delta} \it E$。
 \begin{equation}
+    \label{eq:FLG——etchEnergy}
     \rm{\Delta} \it E = E_{\rm product} - E_{\rm initial} - \muO{}
 \end{equation}
 其中，$E_{\rm product}$和 $E_{\rm initial}$分别为各反应步骤中生成物和反应物的能量。
@@ -395,7 +397,7 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
 在图\ref{fig:FLG_DFT_CHOpene}中，本论文绘制了\cemb{Cu}衬底上不同位点的石墨烯表面吸附的\cemb{CHO}的穿透反应过程，包含无氧缺陷的原生位点以及双氧原子替位缺陷\cemb{2O_{Cu}}的氧缺陷位点。对比\cemb{CHO}在铜表面原生位点的石墨烯穿透反应，铜表面的氧缺陷位点对于游离碳有更高的亲和性，消除了\cemb{CHO}穿透石墨烯的上升势。具体而言，在\cemb{Cu}衬底的氧缺陷位点，吸附在石墨烯表面的\cemb{CHO}的穿透反应能为$\SI{-1.27}{\electronvolt}$。同时，在穿透反应完成后，石墨烯上残留的\cemb{OH}官能团能与气氛中的氢反应，进一步降低体系能量并且释放处氧缺陷位点，使得\cemb{CHO}在氧缺陷位点的穿透反应能够持续不断的进行。虽然穿透反应过程中的交换作用使得原石墨烯单层表面的碳原子进入界面成为游离碳，但是\cemb{CHO}对于石墨烯表面的\cemb{Cu}衬底位点选择性穿透使得在界面处生长的石墨烯多层的碳原子主要来源于含氧气氛内的碳源。倘若穿透反应能够在石墨烯单层表面的任意位点进行，那么由于石墨烯表面吸附分子的扩散作用，穿透进入界面的游离碳并成核生长为石墨烯多层点的碳原子应该主要来自于原石墨烯单层的碳原子。因为在随机作用下，只有很少的位点会产生多层点穿透的现象。如果穿透反应对于\cemb{Cu}衬底的氧缺陷位点具有选择性，氧缺陷位点处产生的穿透通道使得大部分的穿透都在氧缺陷位点上方进行，由此会产生在石墨烯单层表面多层点穿透的情况，如此一来穿透进入界面的游离碳并成核生长为石墨烯多层点的碳原子则主要来源于生长气氛。因此，通过同位素标记法区别原石墨烯单层表面的碳原子以及含氧气氛中的碳原子，可以通过实验验证穿透的机制的选择性\citing{RN1262-2021}。
 
 \subsection{氧辅助多层石墨烯蚀刻生长模型及模式切换相图}
-综合考虑氧气的引入对于界面处石墨烯多层蚀刻和生长的影响，可以发现氧对二者均有促进作用。对于氧蚀刻反应，根据通入的氧流量的不同导致生长气氛中氧的化学势$\muO{}$的变化，本论文将蚀刻反应分为两个阶段。在第一个阶段中，只有界面处的游离碳通过与石墨烯单层的交换左右，被气氛中的氧蚀刻，导致界面游离碳的浓度$\Cdis$下降，界面石墨烯多层点减少。第二个阶段是当通入的氧流量足够高时，氧的化学势超过蚀刻石墨烯单层的平衡化学势$\muO{} \geqslant \muO{eg}$，导致石墨烯单层开始被氧蚀刻。可以将氧对石墨烯的蚀刻作用总结为以下化学表达式\chinesecolon
+综合考虑氧气的引入对于界面处石墨烯多层蚀刻和生长的影响，可以发现氧对二者均有促进作用。对于氧蚀刻反应，根据通入的氧流量的不同导致生长气氛中氧的化学势$\muO{}$的变化，本论文将蚀刻反应分为两个阶段。在第一个阶段中，只有界面处的游离碳通过与石墨烯单层的交换左右，被气氛中的氧蚀刻，导致界面游离碳的浓度$\Cdis$下降，界面石墨烯多层点减少。第二个阶段是当通入的氧流量足够高时，氧的化学势超过蚀刻石墨烯单层的平衡化学势$\muO{} \geqslant \muO{eg}$，导致石墨烯单层开始被氧蚀刻。可以将氧对石墨烯的蚀刻作用总结为式\eqref{chemeq:OetchReaction}所示的化学表达式\chinesecolon
 \begin{equation}
     \label{chemeq:OetchReaction}
     \begin{split}
@@ -403,14 +405,15 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
         \cemb{C(graphene) + O($\rm ads.$) + 2H &->[\vphantom{graphene}] CO(g) } \mbox{ only if $\muO{} \geqslant \muO{eg}$}
     \end{split}
 \end{equation}
-根据\ref{subsec:Opene}章，氧辅助的穿透反应可以写为\chinesecolon
+根据\ref{subsec:Opene}章，氧辅助的穿透反应可以写为式\eqref{chemeq:OpeneReaction}\chinesecolon
 \begin{align}
     \label{chemeq:OpeneReaction}
     \cemb{C2H2(g) + 2O($\rm ads.$) + 2H(g) ->[graphene][Cu oxygen defect] 2C(adlayer) + H2O(g)}
 \end{align}
 
-根据反应式\eqref{chemeq:OetchReaction}，可以写出理想状况下的蚀刻速率\chinesecolon
+根据反应式\eqref{chemeq:OetchReaction}，可以写出理想状况下的蚀刻速率如式\eqref{chemeq:etchRate}所示\chinesecolon
 \begin{equation}
+    \label{chemeq:etchRate}
     \RateV{e}{}=\rule[0ex]{0ex}{8ex}\left\{
         \begin{array}{ll}
         \smash[t]{\overbrace{\RateK{e}{dis.}\Cdis\Oads}^{\mathclap{{\mbox{\normalsize $\RateV{e}{dis.}$}}}}} & \mbox{}  \\
@@ -420,22 +423,26 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
         %    \rule[10ex]{1ex}{4ex}\\\hline
         %\end{array}
 \end{equation}
-和穿透速率\chinesecolon
+和穿透速率如式\eqref{chemeq:peneRate}\chinesecolon
 \begin{equation}
+    \label{chemeq:peneRate}
     \RateV{g}{}=\RateK{g}{}\cemb{[C2H2][H2]^2}\Oads^2
 \end{equation}
 其中，$\RateK{e}{dis.}$、$\RateK{e}{g}$和$\RateK{g}{}$分别为游离碳蚀刻，石墨烯单层蚀刻，石墨烯多层生长的反应常数。$\Cdis$、$\cemb{[C2H2]}$、$\cemb{[H]}$和$\Oads$代表界面游离碳、$\cemb{C2H2}$化合物、$\cemb{H}$自由基以及石墨烯上吸附氧的浓度。
 
-考虑蚀刻石墨烯多层时，氧原子对于的界面游离碳消耗\chinesecolon
+考虑蚀刻石墨烯多层时，氧原子对于的界面游离碳消耗可以用式\eqref{eq:FLG_Odis_cost}进行描述\chinesecolon
 \begin{equation}
+    \label{eq:FLG_Odis_cost}
     \RateV{e}{dis.}=\RateK{e}{dis.}\left(\Cdis-\RateV{e}{dis.}\right)\Oads
 \end{equation}
-其中，$t$为反应的时间。随着氧原子对石墨烯多层蚀刻的进行，界面游离碳逐渐被消耗，$\Cdis$的下降同时降低了石墨烯多层蚀刻反应的速率。将反应速率$\RateV{e}{dis.}$对反应时间$\ReactTime{O}{}$积分并取平均，可以得到$\ReactTime{O}{}$时间段内的氧气对游离碳的平均蚀刻反应速率\chinesecolon
+其中，$t$为反应的时间。随着氧原子对石墨烯多层蚀刻的进行，界面游离碳逐渐被消耗，$\Cdis$的下降同时降低了石墨烯多层蚀刻反应的速率。将反应速率$\RateV{e}{dis.}$对反应时间$\ReactTime{O}{}$积分并取平均，可以得到$\ReactTime{O}{}$时间段内的氧气对游离碳的平均蚀刻反应速率如式\eqref{eq:FLG_avgEtchRate}所示\chinesecolon
 \begin{equation}
+    \label{eq:FLG_avgEtchRate}
     \overline{\RateV{e}{dis.}}=\frac{\int_{0}^{\ReactTime{O}{}} \RateV{e}{dis.} \,dt }{\ReactTime{O}{}}=\frac{\int_{0}^{\ReactTime{O}{}} \frac{\RateK{e}{dis.}\Cdis\Oads}{\RateK{e}{dis.}\Oads \ReactTime{}{} + 1} \,dt}{\ReactTime{O}{}}
 \end{equation}
-而对于生长反应，$\cemb{CHO}$在石墨烯表面的选择性吸附使得生长反应速率$\RateV{g}{}$存在一个由\cemb{Cu}衬底表面氧缺陷位点数量限制的上界。可以写出在氧缺陷处的穿透通道被饱和之前的生长反应的平均速率\chinesecolon
+而对于生长反应，$\cemb{CHO}$在石墨烯表面的选择性吸附使得生长反应速率$\RateV{g}{}$存在一个由\cemb{Cu}衬底表面氧缺陷位点数量限制的上界。可以写出在氧缺陷处的穿透通道被饱和之前的生长反应的平均速率如式\eqref{eq:FLG_avgPeneRate}所示\chinesecolon
 \begin{equation}
+    \label{eq:FLG_avgPeneRate}
     \overline{\RateV{g}{}}=\frac{\int_{0}^{\ReactTime{O}{}} \RateV{g}{} \,dt }{\ReactTime{O}{}}= \frac{\int_{0}^{\ReactTime{O}{}} \RateK{g}{}\cemb{[C2H2][H2]^2}\Oads^2 \,dt }{\ReactTime{O}{}}
 \end{equation}
 在这些化合物的浓度中，$\cemb{[C2H2]}$和$\cemb{[H]}$本论文使用\ref{subsec:FLG_gasPhase}节中模拟出的相应化合物的稳态浓度数据。而对于$Odis$，虽然在\ref{subsec:FLG_gasPhase}章中的模拟证明生长环境中的化合物很快就达到了稳态平衡，但由于氧自由基（$\cemb{O}$）较低的浓度以及氧分子（$\cemb{O2}$）在石墨烯表面较低的吸附能。氧气的吸附过程可能会需要很长的一段时间才会达到饱和。为了获得$\Oads$在石墨烯多层生长过程中随时间的变化情况，本论文使用晶格随机顺序吸附模型（lattice random sequential adsorption model ）对氧气以及氧原子在石墨烯表面的吸附进行模拟。
@@ -446,9 +453,9 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
     \centering
     \caption{\cemb{O}和\cemb{O2}在石墨烯表面的吸附能力}
     \begin{tabular}{
-        m{0.2\textwidth}
-        m{0.3\textwidth}
-        m{0.3\textwidth}
+        >{\centering}m{0.2\textwidth}
+        >{\centering}m{0.3\textwidth}
+        >{\centering\arraybackslash}m{0.3\textwidth}
     }
         \toprule
         覆盖率  & $\cemb{O}$的吸附能（\si{\electronvolt}） & $\cemb{O2}$的吸附能（\si{\electronvolt}） \\
@@ -462,15 +469,18 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
 
 同时，有别于氧自由基（$\cemb{O}$）的直接吸附，氧气分子$\cemb{O2}$在石墨烯上的吸附的同时需要较高的能量进行进行裂解。本论文通过在氧气分子吸附的过程中添加$\SI{2.39}{\electronvolt}$的势垒来对这个裂解过程进行描述\citing{RN838-2012}。为了将随机吸附模拟过程中的模拟时间时长与实际通入氩氧混合气的时长进行对应，本论文根据气体的麦克斯韦-玻尔兹曼分布计算了氧自由基（$\cemb{O}$）和氧气分子$\cemb{O2}$的碰撞频率，气氛中氧自由基（$\cemb{O}$）和氧气分子$\cemb{O2}$的浓度也根据\ref{subsec:FLG_gasPhase}节中的模拟数据进行计算。
 
-在图\ref{fig:FLG_RSA_Oadsorb}中，本论文计算了通入不同流量的氩氧混合气的情况下石墨烯上吸附的氧原子浓度$\Oads$随时间的变化情况。计算结果显示模拟得出的$\Oads$服从指数增长定律$\Oads\left(\it t\right)=\Oads\left(\it \infty \right)-\it De^{\it -\sigma t}$，和先前的研究一致\citing{RN837-1990,RN836-1991}。由于$\Oads$的指数形式，直接将$\Oads$带入计算$\overline{\RateV{e}{dis.}}$中的积分项为非初等函数。考虑到在实际的化学气相沉积生长过程中，氧原子在低浓度氧环境中需要花费数天甚至一个月的时间才能达到饱和吸附，远超本论文所考虑的生长时间范畴。而高浓度氧环境中会导致石墨烯被完全蚀刻，也不在本论文所关心的范围内。因此本论文将研究范围集中在氧原子吸附浓度$\Oads$的线性吸附区，这时$\Oads$相对于时间的变化关系可以简化为$\Oads\left(\it t\right)\approx \it D \sigma t$。
+在图\ref{fig:FLG_RSA_Oadsorb}中，本论文计算了通入不同流量的氩氧混合气的情况下石墨烯上吸附的氧原子浓度$\Oads$随时间的变化情况。
 
 \begin{figure}[htb]
     \includegraphics{pic/FLG_RSA_Oadsorb.png}
-    \caption{不同氩氧混合气通入流量下氧原子在石墨烯表面吸附浓度随时间的变化情况。}
+    \captionsetup{width=\textwidth}
+    \caption{不同氩氧混合气通入流量下氧原子在石墨烯表面吸附浓度随时间的变化情况}
     \label{fig:FLG_RSA_Oadsorb}
 \end{figure}
 
-为了确认$\Oads$线性简化是否会因为晶格随机顺序吸附模拟过程中所使用的屏蔽系数参数的变动而失效。如图\ref{fig:FLG_RSA_OabsorbPera}所示，本论文计算了在中等氧通量的情况下（氩氧混合气流量为\SI{100}{SCCM}），多种模拟参数组合下氧原子在石墨烯表面进行吸附模拟的结果。可以看到，氧气$\cemb{O2}$屏蔽系数的变化几乎无法传到至最后吸附浓度的变化。这可能是由于氧气较高的解离势垒导致尽管生长气氛中的氧气浓度较高，但氧气在石墨烯表面解离吸附在石墨烯上的能力仍然较弱。而对于氧自由基$\cemb{O}$，屏蔽系数由$1$变为$\frac{1}{2}$会降低吸附氧原子的浓度。但考虑到通常化学气相沉积法对石墨烯的生长过程通常在$\SI{10}{\hour}$以内\citing{RN1262-2021}。在这个时间范围之内，氧自由基$\cemb{O}$屏蔽系数的变化对吸附氧原子浓度的影响较小。同时也并不会影响吸附氧原子浓度在$\SI{10}{\hour}$之内随时间的线性增长关系。因此，本论文认为对氧原子吸附浓度$\Oads$使用$\Oads\left(\it t\right)\approx \it D \sigma t$进行简化并不会受模拟过程中屏蔽系数参数选取的影响。
+计算结果显示模拟得出的$\Oads$服从指数增长定律$\Oads\left(\it t\right)=\Oads\left(\it \infty \right)-\it De^{\it -\sigma t}$，和先前的研究一致\citing{RN837-1990,RN836-1991}。由于$\Oads$的指数形式，直接将$\Oads$带入计算$\overline{\RateV{e}{dis.}}$中的积分项为非初等函数。考虑到在实际的化学气相沉积生长过程中，氧原子在低浓度氧环境中需要花费数天甚至一个月的时间才能达到饱和吸附，远超本论文所考虑的生长时间范畴。而高浓度氧环境中会导致石墨烯被完全蚀刻，也不在本论文所关心的范围内。因此本论文将研究范围集中在氧原子吸附浓度$\Oads$的线性吸附区，这时$\Oads$相对于时间的变化关系可以简化为$\Oads\left(\it t\right)\approx \it D \sigma t$。
+
+为了确认$\Oads$线性简化是否会因为晶格随机顺序吸附模拟过程中所使用的屏蔽系数参数的变动而失效。如图\ref{fig:FLG_RSA_OabsorbPera}所示，本论文计算了在中等氧通量的情况下（氩氧混合气流量为\SI{100}{SCCM}），多种模拟参数组合下氧原子在石墨烯表面进行吸附模拟的结果。
 
 \begin{figure}[htb]
     \includegraphics{pic/FLG_RSA_OabsorbPera.png}
@@ -478,7 +488,10 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
     \label{fig:FLG_RSA_OabsorbPera}
 \end{figure}
 
-由此，可以计算通入$\ReactTime{O}{}$的氩氧混合气后，石墨烯的蚀刻平均速率为\chinesecolon
+可以看到，氧气$\cemb{O2}$屏蔽系数的变化几乎无法传到至最后吸附浓度的变化。这可能是由于氧气较高的解离势垒导致尽管生长气氛中的氧气浓度较高，但氧气在石墨烯表面解离吸附在石墨烯上的能力仍然较弱。而对于氧自由基$\cemb{O}$，屏蔽系数由$1$变为$\frac{1}{2}$会降低吸附氧原子的浓度。但考虑到通常化学气相沉积法对石墨烯的生长过程通常在$\SI{10}{\hour}$以内\citing{RN1262-2021}。在这个时间范围之内，氧自由基$\cemb{O}$屏蔽系数的变化对吸附氧原子浓度的影响较小。同时也并不会影响吸附氧原子浓度在$\SI{10}{\hour}$之内随时间的线性增长关系。因此，本论文认为对氧原子吸附浓度$\Oads$使用$\Oads\left(\it t\right)\approx \it D \sigma t$进行简化并不会受模拟过程中屏蔽系数参数选取的影响。
+
+
+由此，可以计算通入$\ReactTime{O}{}$的氩氧混合气后，石墨烯的蚀刻平均速率为式\eqref{eq:FLG_avgVe}\chinesecolon
 \begin{equation}
     \label{eq:FLG_avgVe}
     \overline{\RateV{e}{}}=
@@ -489,7 +502,7 @@ $\CCluster{24}$团簇在铜(117)以及(115)晶面的台阶处的生长情况与�
 \end{equation}
 其中，界面游离碳的初始浓度$\Cdis_0$本论文取相应生长温度下碳的饱和蒸汽进行近似。$\Oads| \,_{t=\ReactTime{O}{}}$为氩氧混合气的时间为$\ReactTime{O}{}$时的石墨烯上的吸附氧原子浓度。
 
-同样，也可以求得在\cemb{Cu}衬底氧缺陷产生的穿透通道饱和前，石墨烯的生长平均速率为\chinesecolon
+同样，也可以求得在\cemb{Cu}衬底氧缺陷产生的穿透通道饱和前，石墨烯的生长平均速率为式\eqref{eq:FLG_avgVg}\chinesecolon
 \begin{equation}
     \label{eq:FLG_avgVg}
     \overline{\RateV{g}{}} =\frac{1}{3}\RateK{g}{}\cemb{[C2H2]}\cemb{[H]^2}\left(\Oads |_{\,\ReactTime{}{}=\ReactTime{O}{}} \right)

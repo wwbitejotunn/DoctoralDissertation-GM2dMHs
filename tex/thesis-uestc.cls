@@ -794,7 +794,7 @@
   Discipline: & \multirow[t]{2}{*}{\en@themajor} \\
 \cline{2-2}
 & \\
-\cline{2-2}
+%\cline{2-2}
 Author: & \en@theauthor \\
 \cline{2-2}
 Student ID: & \thestudentnumber \\

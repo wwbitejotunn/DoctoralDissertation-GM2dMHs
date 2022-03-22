@@ -3,7 +3,7 @@
 % 第二章 理论计算方法简介
 \chapter{计算原理与方法}
 \section{第一性原理计算方法}
-第一性原理计算方法利用量子力学的基本原理，在无实验参数介入的情况下对量子系统进行模拟。对于一个包含电子和原子核的物理系统，在不考虑相对论效应的情况下，可以根据量子力学理论，将整个系统的定态薛定谔方程$\hat{H}\Psi =E\Psi$可以具体写成以下的形式\chinesecolon
+第一性原理计算方法利用量子力学的基本原理，在无实验参数介入的情况下对量子系统进行模拟。对于一个包含电子和原子核的物理系统，在不考虑相对论效应的情况下，可以根据量子力学理论，将整个系统的定态薛定谔方程$\hat{H}\Psi =E\Psi$可以具体写成式\eqref{eq:DFT_ti-schEqu_tot}的形式\chinesecolon
 \begin{equation}
     \label{eq:DFT_ti-schEqu_tot}
     \begin{split}
@@ -13,7 +13,7 @@
 \end{equation}
 其中，$m_e$和$M_u$为系统内电子和原子核的质量；$e$和$Z_u$为电子和原子核的电荷量；${\bm r}_i$和${\bm R}_u$为电子和原子和在物理系统中的空间坐标向量；$\hbar$和$\epsilon_0$为约化普朗克常数和真空电容率常数。
 
-考虑到在量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上。因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\eqref{eq:DFT_ti-schEqu_tot}可以进行进一步地简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\eqref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程\chinesecolon
+考虑到在量子体系中，原子核的质量$M_u$通常比电子的质量$m_e$高三个数量级以上。因此在电子和原子核产生相互作用时，电子的运动速度通常远高于原子核的运动速度。此时可以运用绝热近似（波恩-奥本海默近似），将总波函数$\Psi_{\rm e+n}$中电子坐标和原子的坐标近似分离，写成二者的乘积形式\citing{RN1457-2014}。对于一个拥有$I$个电子和$M$个原子核的物理系统，绝热近似下的总波函数$\Psi_{\rm e+n}$可以写为\chinesecolon $\Psi_{\rm e+n}=\Psi_{\rm e}\left({\bm r}_1,{\bm r}_2,\cdots,{\bm r}_I\right)\Psi_{\rm n}\left({\bm R}_1,{\bm R}_2,\cdots,{\bm R}_U\right)$。在绝热近似下，式\eqref{eq:DFT_ti-schEqu_tot}可以进行进一步地简化。此时，原子核的动能项$\sum_{u} \frac{\hbar^2}{2M_u}\nabla_u^2$近似为0，而原子核与原子核之间的势能项$ \frac{1}{2} \sum_{u\neq v}\frac{e^2}{4\pi\epsilon_0}\frac{Z_uZ_v}{\left\lvert {\bm R}_u-{\bm R}_v\right\rvert}$为固定常数。由此，式\eqref{eq:DFT_ti-schEqu_tot}简化为关于电子能量的薛定谔方程（式\eqref{eq:DFT_schEqu_e}）\chinesecolon
 \begin{equation}
     \label{eq:DFT_schEqu_e}
     \left[-\sum_{i}\frac{\hbar}{2m_e}\nabla_i^2 -\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert} + \frac{1}{2}\sum_{i\neq j}\frac{e^2}{4\pi\epsilon_0} \frac{1}{\left\lvert {\bm r}_i - {\bm r}_j \right\rvert} \right]\Psi_{\rm e}=E_{\rm e}\Psi_{\rm e}
@@ -25,15 +25,16 @@
 \subsection{密度泛函理论} 
 通常来说，当考虑的物理系统中包含大量电子时，式\eqref{eq:DFT_schEqu_e}中关于电子-电子相互作用项的求解将变得极为复杂。对于单电子体系，其波函数的希尔伯特空间为$L^2\left(R^3\right)\bigotimes \mathbb{C}^2$。而具有$N$个电子的物理系统，其电子的波函数$\Psi_{\rm e}\in L^2\left(R^{3N}\right)\bigotimes \mathbb{C}^{2^N}$。由此导致计算$N$电子体系的计算资源需求按$3N$的指数倍增长，使得式\eqref{eq:DFT_schEqu_e}几乎无法在现有的计算条件下运用至待研究的物理体系中。为此，研究者发展出了许多近似方法来降低式\eqref{eq:DFT_schEqu_e}的计算复杂度，例如Hatree-Fork方法将电子-电子相互作用简化为电子与其他电子形成的平均场之间的作用，大大减少了计算量\citing{RN1460-2015}。而随后发展出的密度泛函理论方法进一步推进了第一性原理计算在计算固体领域的实用化进程。
 
-密度泛函理论计算方法的理论基础由Hohenberg和Kohn于1964年提出并证明\citing{RN1459-1964}\chinesecolon 体系的基态能量$\energyVar{e0}{}$是体系中电子密度的唯一泛函，也就是
-\[
+密度泛函理论计算方法的理论基础由Hohenberg和Kohn于1964年提出并证明\citing{RN1459-1964}\chinesecolon 体系的基态能量$\energyVar{e0}{}$是体系中电子密度的唯一泛函，如式\eqref{eq:DFT_erho}所示
+\begin{equation}
+    \label{eq:DFT_erho}
     \energyVar{e0}{}=\energyVar{e0}{}\left[\rho\right]
-\]
+\end{equation}
 但这个电子密度的唯一泛函$\energyVar{e0}{}\left[\rho\right]$的具体形式仍未可知。
 
 在1965年，Kohn和Sham假设存在一个虚拟的无相互作用的多电子系统作为辅助。这个无相互作用的多电子系统的电子密度分布和所考察的原体系的电子密度分布相同\citing{RN1461-1965}。由此，可以将基态能量$\energyVar{e0}{}$表示为这个辅助系统的电子密度的泛函。也就是$\energyVar{e0}{}=\energyVar{e0}{}\left[\rho'\right]$。其中$\rho'=\sum_i\left\lvert \psi' _i\left(r\right)\right\rvert^2$为引入的无相互作用的多电子系统的电子密度，$\psi'_i$为单电子的态密度。
 
-此时的电子基态总能可以写为\chinesecolon
+此时的电子基态总能可以写为式\eqref{eq:DFT_Ee0_ks}\chinesecolon
 \begin{equation}
     \label{eq:DFT_Ee0_ks}
     \begin{split}
@@ -46,87 +47,100 @@
 
 倘若能够精确地知道交换关联项$\energyVar{xc}{}$的具体形式并且进行精确求解，就能够将体系的原哈密顿量对应成基态能量的泛函。在这个过程中仅仅使用了绝热近似将电子和原子核的波函数进行分离。然而，由于交换关联项$\energyVar{xc}{}$包含了体系内所有电子多体作用，因此其本质上求解复杂的度与求解原多体问题一致。因此，需要在交换关联能中针对不同的体系引入相应的近似，在足够精确的情况下快速地对体系进行求解。
 
-将式\eqref{eq:DFT_Ee0_ks}进行变分，就可以将电子基态能量改写为关于辅助单电子波函数的泛函的形式\chinesecolon
+将式\eqref{eq:DFT_Ee0_ks}进行变分，就可以将电子基态能量改写为关于辅助单电子波函数的泛函的形式（式\eqref{eq:DFT_KSequ}）\chinesecolon
 \begin{equation}
     \label{eq:DFT_KSequ}
     \left[-\frac{1}{2}\nabla^2+V_{\rm u}({\bm r})+V_{\rm H}\left({\bm r}\right)+V_{\rm xc}\left({\bm r}\right)\right]\psi'_i\left({\bm r}\right)=\varepsilon'_i\psi'_i\left({\bm r}\right) 
 \end{equation}
-其中，$V_{\rm u}({\bm r})$对于原子核对于电子的作用势场，对应于式\eqref{eq:DFT_schEqu_e}中的$-\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert}$；$V_{\rm H}\left({\bm r}\right)$对应于不考虑相互作用时，电子-电子之间的库伦作用。而交换关联势$V_{\rm xc}\left({\bm r}\right)$的定义为\chinesecolon
-\[
+其中，$V_{\rm u}({\bm r})$对于原子核对于电子的作用势场，对应于式\eqref{eq:DFT_schEqu_e}中的$-\sum_{i,u}\frac{e^2}{4\pi\epsilon_0}\frac{Z_{\rm u}}{\left\lvert{\bm r}_i - {\bm R}_u\right\rvert}$；$V_{\rm H}\left({\bm r}\right)$对应于不考虑相互作用时，电子-电子之间的库伦作用。而交换关联势$V_{\rm xc}\left({\bm r}\right)$的定义为式\eqref{eq:DFT_EexDef}\chinesecolon
+\begin{equation}
+    \label{eq:DFT_EexDef}
     V_{\rm xc}\left({\bm r}\right)\psi'_i\left({\bm r}\right)=\frac{\delta \energyVar{xc}{}\left[\psi'^*\left({\bm r}\right),\psi'\left({\bm r}\right)\right]}{\delta \psi_i^*\left({\bm r}\right)}
-\]
+\end{equation}
 
 式\eqref{eq:DFT_KSequ}被称为Kohn-Sham方程，具有与单电子薛定谔方程具有相似的形式，并且可以通过自洽的方式进行求解。
 
 \subsection{交换关联泛函}
 
-对于式\eqref{eq:DFT_Ee0_ks}中，交换关联能项$\energyVar{xc}{}$的近似，最简单的形式是使用局域密度近似法（local density approximation, LDA）\citing{RN1462-1981,RN1463-1980}。在此方法中，近似地交换关联能$\energyVar{xc}{LDA}$只和空间点的电荷密度有关\chinesecolon
+对于式\eqref{eq:DFT_Ee0_ks}中，交换关联能项$\energyVar{xc}{}$的近似，最简单的形式是使用局域密度近似法（local density approximation, LDA）\citing{RN1462-1981,RN1463-1980}。在此方法中，近似地交换关联能$\energyVar{xc}{LDA}$只和空间点的电荷密度有关（式\eqref{eq:DFT_LDA}）\chinesecolon
 \begin{equation}
     \label{eq:DFT_LDA}
     \energyVar{xc}{LDA}\left[\rho\right]=\int \rho({\bm r}) \epsilon_{\rm xc}^{\rm unif} \left(\rho\left({\bm r}\right)\right) d{\bm r}
 \end{equation}
-其中，$\epsilon_{\rm xc}^{\rm unif}\left(\rho\left({\bm r}\right)\right)$为每个电子在无限均匀且密度为$\rho$的电子其中的交换关联能。局域密度近似法较为适合电子密度变化缓慢的体系，如今固体材料计算领域更为常用的基于广域梯度近似法的PBE泛函在局域密度近似法的基础上进一步考虑了空间点电荷的变化梯度\citing{RN683-1996}\chinesecolon
+其中，$\epsilon_{\rm xc}^{\rm unif}\left(\rho\left({\bm r}\right)\right)$为每个电子在无限均匀且密度为$\rho$的电子其中的交换关联能。局域密度近似法较为适合电子密度变化缓慢的体系，如今固体材料计算领域更为常用的基于广域梯度近似法的PBE泛函在局域密度近似法的基础上进一步考虑了空间点电荷的变化梯度\citing{RN683-1996}，如式\eqref{eq:DFT_GGA}所示\chinesecolon
 \begin{equation}
+    \label{eq:DFT_GGA}
     \energyVar{xc}{GGA}\left[\rho\right]=\int\epsilon_{\rm xc}^{GGA}\left(\rho\left({\bm r}\right),\nabla\rho\left({\bm r}\right)\right)d{\bm r}
 \end{equation}
 
-通常，交换关联能$\energyVar{xc}{}$可以分解为交换作用和关联作用的独立贡献\chinesecolon $\energyVar{xc}{}=\energyVar{x}{}+\energyVar{c}{}$。对于广域梯度近似法的关联作用，PBE泛函使用如下的形式进行构造\chinesecolon
+通常，交换关联能$\energyVar{xc}{}$可以分解为交换作用和关联作用的独立贡献\chinesecolon $\energyVar{xc}{}=\energyVar{x}{}+\energyVar{c}{}$。对于广域梯度近似法的关联作用，PBE泛函使用如下的形式进行构造（式\eqref{eq:DFT_PBE}）\chinesecolon
 \begin{equation}
+    \label{eq:DFT_PBE}
     \energyVar{C}{GGA}\left[\rho\right]=\int \rho\left[\epsilon_{\rm c}^{\rm unif}\left(r_{\rm s},\zeta\right)+H\left(r_{\rm s},\zeta,t\right)\right] d{\bm r}
 \end{equation}
 其中，$\epsilon_{\rm C}^{\rm unif}\left(r_{\rm s},\zeta\right)$为局域电子密度对于关联能的贡献。$r_s$为局域塞茨半径（Seitz redius）；$\zeta$为自旋极化量；$t$为无量纲密度梯度参数。PBE泛函数使用以下三个渐进行为对泛函内电子密度的梯度贡献项$H\left(r_{\rm s},\zeta,t\right)$进行构造。
 
 \begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
-    \item 当电子密度变化非常缓慢时（$t\rightarrow 0$）,$H$趋近与自己的二阶梯度展开\citing{RN1467-1991}\chinesecolon
-    \[
+    \item 当电子密度变化非常缓慢时（$t\rightarrow 0$）,$H$趋近与自己的二阶梯度展开\citing{RN1467-1991}（式\eqref{eq:DFT_PBE_cd1}）\chinesecolon
+    \begin{equation}
+        \label{eq:DFT_PBE_cd1}
         \lim_{t\rightarrow0}H=\frac{e^2}{a_{0}}\beta\phi^3t^2
-        \]
+        \end{equation}
     其中，$\phi$为自旋因子，$\phi\left(\zeta\right)=\frac{1}{2}\left[\left(1+\zeta\right)^{2/ 3}+\left(1-\zeta\right)^{2/ 3}\right]$；$a_{0}$、$\beta$为常数。
-    \item 当电子密度变化非常剧烈时（$t\rightarrow \infty$）
-    \[
+    \item 当电子密度变化非常剧烈时（$t\rightarrow \infty$），有式\eqref{eq:DFT_PBE_cd1}
+    \begin{equation}
+        \label{eq:DFT_PBE_cd2}
         \lim_{t\rightarrow\infty}H=-\epsilon_{\rm c}^{\rm unif}
-    \]
+    \end{equation}
     确保此时的关联能为0，以符合现实物理体系中电子密度分布的远端交换作用占主导的情况。
-    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在关联作用中以常数放缩形式表现出来\citing{RN1468-1989}。要满足这个条件，$H$必须在此变化极限条件下对$\epsilon_{\rm c}^{\rm unif}$项中的对数函数进行的约化。此时，一个$H$需要满足的渐进行为为
-    \[
+    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在关联作用中以常数放缩形式表现出来\citing{RN1468-1989}。要满足这个条件，$H$必须在此变化极限条件下对$\epsilon_{\rm c}^{\rm unif}$项中的对数函数进行的约化。此时，一个$H$需要满足的渐进行为为式\eqref{eq:DFT_PBE_cd3}
+    \begin{equation}
+        \label{eq:DFT_PBE_cd3}
         H\rightarrow\left(\frac{e^2}{a_0}\right)\gamma\phi^3\ln t^2
-    \]
+    \end{equation}
     其中，$\gamma$为$\zeta$的函数，在这里近似地取为常数$\gamma=\frac{1-\ln2}{\pi^2}$
 \end{enumerate}
 
-    结合以上条件，可以构造出$H$有如下的形式\chinesecolon
+    结合以上条件，可以构造出$H$有如式\eqref{eq:DFT_PBE_H}的形式\chinesecolon
     \begin{equation}
+        \label{eq:DFT_PBE_H}
         H=\left(\frac{e^2}{a_0}\right)\gamma\phi^3\times \ln\left[1+\frac{\beta}{\gamma}t^2\left(\frac{1+At^2}{1+At^2+A^2t^4}\right)\right]
     \end{equation}
-    其中$A$为\chinesecolon
-    \[
+    其中$A$为式\eqref{eq:DFT_PBE_H_A}\chinesecolon
+    \begin{equation}
+        \label{eq:DFT_PBE_H_A}
         A=\frac{\beta}{\gamma}\left[\exp\left(\frac{-\epsilon_{\rm c}^{\rm unif}}{\gamma\phi^3e^2/ a_0}\right)-1\right]^{-1}
-    \]
+    \end{equation}
 
 而对于交换作用$\energyVar{x}{GGA}$，PBE泛函认为其需要满足以下四个渐进行为\chinesecolon
 \begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
-    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在交换作用中以$\lambda$的线性放缩形式表现出来\citing{RN1469-1985}。此时，有\chinesecolon
-    \[
+    \item 对电子密度进行线性放缩的变换（$\rho\left({\bm r}\right)\rightarrow \lambda^3\rho(\lambda {\bm r}), \lambda\rightarrow \infty$）必须在交换作用中以$\lambda$的线性放缩形式表现出来\citing{RN1469-1985}。此时，有式\eqref{eq:DFT_PBE_EX_cd1}\chinesecolon
+    \begin{equation}
+        \label{eq:DFT_PBE_EX_cd1}
         \energyVar{x}{GGA}=\int\rho\left({\bm r}\right)\epsilon_x^{\rm unif}\left(\rho\right)F_{\rm x}\left(s\right)
-    \]
+    \end{equation}
     其中，$\epsilon_x^{\rm unif}=-\frac{3e^2k_{\rm F}}{4\pi}$，$k_{\rm F}$为费米波数。同时，由于需要满足均匀电子气极限条件，可以得到$F_{x}\left(0\right)=1$
-    \item 交换能需要满足自旋缩放关系\citing{RN1470-1979}\chinesecolon
-    \[
+    \item 交换能需要满足如式\eqref{eq:DFT_PBE_EX_cd2}所示的自旋缩放关系\citing{RN1470-1979}\chinesecolon
+    \begin{equation}
+        \label{eq:DFT_PBE_EX_cd2}
         \energyVar{x}{GGA}\left(\rho_{\rm up},\rho_{\rm down}\right)=\frac{\energyVar{x}{GGA}\left(2\rho_{\rm up}\right)+\energyVar{x}{GGA}\left(2\rho_{\rm donw}\right)}{2}
-    \]
-    \item 在自旋非极化的均匀电子气中，LDA形式的交换关联能非常好地描述该电子体系的物理状态。因此，PBE的交换关联能$\energyVar{xc}{GGA}$在这种情况下有与LDA交换关联能$\energyVar{xc}{LDA}$相同的线性相应，此时需要\chinesecolon
-    \[
+    \end{equation}
+    \item 在自旋非极化的均匀电子气中，LDA形式的交换关联能非常好地描述该电子体系的物理状态。因此，PBE的交换关联能$\energyVar{xc}{GGA}$在这种情况下有与LDA交换关联能$\energyVar{xc}{LDA}$相同的线性相应，此时需要符合式\eqref{eq:DFT_PBE_EX_cd3}\chinesecolon
+    \begin{equation}
+        \label{eq:DFT_PBE_EX_cd3}
         F_{\rm x}\left(s\right)\rightarrow 1+\mu s^2
-    \]
+    \end{equation}
     其中，$\mu$为等效梯度参数。
-    \item 交换能需要满足利勃-牛津不等式\chinesecolon
-    \[
+    \item 交换能需要满足式\eqref{eq:DFT_PBE_EX_cd1}所示的利勃-牛津不等关系\chinesecolon
+    \begin{equation}
+        \label{eq:DFT_PBE_EX_cd4}
         \energyVar{x}{GGA}\left(\rho\right)\geqslant\energyVar{xc}{GGA}\left(\rho\right)\geqslant -1.679e^2\int \rho\left({\bm r}\right)^{\frac{4}{3}} d{\bm r}
-    \]
+    \end{equation}
 \end{enumerate}
 
-根据以上条件，可以构造出$F_{\rm x}\left(s\right)$有如下的形式\chinesecolon
+根据以上条件，可以构造出$F_{\rm x}\left(s\right)$有如式\eqref{eq:DFT_PBE_Fx}的形式\chinesecolon
 \begin{equation}
+    \label{eq:DFT_PBE_Fx}
     F_{\rm x}\left(s\right)=1+\kappa -\frac{\kappa }{1+\frac{\mu s^2}{\kappa}}
 \end{equation}
 其中$\kappa$为常数，取0.804。
@@ -137,17 +151,19 @@
 \section{气相反应动力学模拟}
 通过求解气相中各种化合物之间复杂的化学动力学方程组，可以对气体的热力学状态，化学组成组成成分等参量进行模拟。
 
-对于由$I$个基元反应并涉及$K$个分子的化学环境，通常可以写出如下的反应通式
+对于由$I$个基元反应并涉及$K$个分子的化学环境，通常可以写出如式\eqref{eq:CHEM_chem_reaction}的反应通式
 \begin{equation}
+    \label{eq:CHEM_chem_reaction}
     \sum_{k=1}^Kv'_{ki}\chi_k\Leftrightarrow \sum_{k=1}^K v''_{ki}\chi_k\enspace\left(i=1,\cdots,I\right)
 \end{equation}
 其中，$v'_{ki}$为第$k$个化学分子在第$i$个基元反应中的正向化学反应计量数，$v''_{ki}$为相应的逆向化学反应计量数。$\chi_k$为第$k$个化学分子的化学式。
 
-基于上述基元反应组，可以将第$k$个化学分子的产率$w_k$表示为\chinesecolon
+基于上述基元反应组，可以将第$k$个化学分子的产率$w_k$表示为式\eqref{eq:CHEM_productRate}\chinesecolon
 \begin{equation}
+    \label{eq:CHEM_productRate}
     w_k=\sum_{i=1}^Iv_{ki}q_i
 \end{equation}
-其中，净化学反应计量数$v_{ki}$为正负反应计量数之差$v_{ki}=v'_{ki}-v''_{ki}$；$q_i$为第$i$个化学反应的反应进度。对于一个化学反应，其反应进度可以用正负反应速率之差进行表示\chinesecolon
+其中，净化学反应计量数$v_{ki}$为正负反应计量数之差$v_{ki}=v'_{ki}-v''_{ki}$；$q_i$为第$i$个化学反应的反应进度。对于一个化学反应，其反应进度可以用正负反应速率之差进行表示（式\eqref{eq:CHEM_rateOfProgress}）\chinesecolon
 \begin{equation}
     \label{eq:CHEM_rateOfProgress}
     q_i=k'_i\prod_{k=1}^{K}\left[X_k\right]^{v'_{ki}}-k''_i\prod_{k=1}^{K}\left[X_k\right]^{v''_{ki}}
@@ -155,69 +171,75 @@
 
 在式\eqref{eq:CHEM_rateOfProgress}中，$\left[X_k\right]$为第$k$个化合物的浓度。$k'_i$和$k'’_i$为第$i$个反应的正负反应速率常数。化学反应的速率和分子的浓度有关。通常来说，参与反应的分子的浓度越高，分子与分子之间碰撞、发生反应的概率越大，从而导致反应速率的增加。同时，化学方程式中化学物质的计量数会指数式地影响反应分子浓度变换导致的反应速率的变化。
 
-而对于化学反应的反应速率常数$k'_i$和$k''_i$，其体现了温度对于化学反应速率的影响。在温度较高的情况下，分子的运动更加剧烈，同样会导致分子与分子之间碰撞的概率越大，导致反应速率的增加。同时，温度的上升会提升分子的平均动能，使得有更多的反应物分子具有足够的能量翻越化学反应所需要克服的活化能$\energyVar{a}{}$。温度对于反应速率常数的影响通常使用阿伦尼乌斯公式（Arrhenius equation）进行描述。对于正向反应的反应速率，阿伦尼乌斯公式的具体形式为\chinesecolon
+而对于化学反应的反应速率常数$k'_i$和$k''_i$，其体现了温度对于化学反应速率的影响。在温度较高的情况下，分子的运动更加剧烈，同样会导致分子与分子之间碰撞的概率越大，导致反应速率的增加。同时，温度的上升会提升分子的平均动能，使得有更多的反应物分子具有足够的能量翻越化学反应所需要克服的活化能$\energyVar{a}{}$。温度对于反应速率常数的影响通常使用阿伦尼乌斯公式（Arrhenius equation）进行描述。对于正向反应的反应速率，阿伦尼乌斯公式的具体形式为式\eqref{eq:CHEM_aE}\chinesecolon
 \begin{equation}
+    \label{eq:CHEM_aE}
     k'_i=A_iT^{\beta_i}\exp\left(-\frac{E_a^i}{R_{\rm c}T}\right)
 \end{equation}
 其中，$A_i$为反应$i$的指前因子，$\beta_i$为温度指数，$R$为普适气体常数，$E_a^i$为反应的激活能。在模拟中，对于化学反应的动力学描述就来源于利用实验或者理论计算预先测定的基元反应的三个反应参数$A_i$、$\beta_i$和$E_a^i$。
 
-而对于逆向反应的反应速率$k''_i$，其和正向反应速率$k'_i$和浓度标的平衡常数$K_i^{\rm equ}$在热力学系统中可以通过下列的公式进行关联\chinesecolon
-\[
-    K_i^{\rm equ}=\frac{k'_i}{k''_i}
-\]
-
-根据范特霍夫方程，在不同温度下化学反应的平衡常数$K_i^{\rm equ}$可以写为\chinesecolon
+而对于逆向反应的反应速率$k''_i$，其和正向反应速率$k'_i$和浓度标的平衡常数$K_i^{\rm equ}$在热力学系统中可以通过式\eqref{eq:CHEM_rateAndEqub}进行关联\chinesecolon
 \begin{equation}
+    \label{eq:CHEM_rateAndEqub}
+    K_i^{\rm equ}=\frac{k'_i}{k''_i}
+\end{equation}
+
+根据范特霍夫方程，在不同温度下化学反应的平衡常数$K_i^{\rm equ}$可以写为式\eqref{eq:CHEM_Kequb}\chinesecolon
+\begin{equation}
+    \label{eq:CHEM_Kequb}
     K_i^{\rm equ}=\exp\left(\frac{\Delta S_i^0}{R}-\frac{\Delta H_i^0}{RT}\right)\times\left(\frac{P}{RT}\right)^{\sum_k v_{ki}}
 \end{equation}
-其中，$\Delta S_i^0$和$\Delta H_i^0$为化学反应的焓变和熵变，$P$为气压。化学反应的焓变和熵变可以通过反应中涉及的化学物质的标准生成焓计算而来\chinesecolon
-\[
+其中，$\Delta S_i^0$和$\Delta H_i^0$为化学反应的焓变和熵变，$P$为气压。化学反应的焓变和熵变可以通过反应中涉及的化学物质的标准生成焓计算而来（式\eqref{eq:CHEM_HandS}）\chinesecolon
+\begin{equation}
+    \label{eq:CHEM_HandS}
     \begin{split}
         \frac{\Delta S_i^0}{R}&=\sum_{k=1}^K v_{ki}\frac{S_k^0}{R}\\
         \frac{\Delta H_i^0}{RT}&=\sum_{k=1}^K v_{ki}\frac{H_k^0}{RT}
     \end{split}
-\]
+\end{equation}
 
 至此，就可以通过气相反应中的基元化学反应方程式和化学物质的热力学参数对整个气相反应动力学进行描述。
 
 \subsection{管道流的流体力学模拟}
 通常，在化学气相沉积等方法中，用于参与反应的前驱体通过气流的方式源源不断得向衬底表面进行输送。在这个过程中，前驱体在气流中完成化学反应，并与气流一起形成了衬底表面薄膜生长的化学环境。因此，需要对反应炉中的气流进行流体动力学模拟，以反应气流状态对于生长化学气氛的影响。
 
-对于管式反应炉中气流，可以将其简化为圆柱形管道中稳流的流体动力学问题，并使用二维轴对称连续纳维-斯托克斯方程进行进行描述。纳维-斯托克斯方程基于流体的守恒关系，给出了流体的连续运动方程，其通常的形式为\chinesecolon
+对于管式反应炉中气流，可以将其简化为圆柱形管道中稳流的流体动力学问题，并使用二维轴对称连续纳维-斯托克斯方程进行进行描述。纳维-斯托克斯方程基于流体的守恒关系，给出了流体的连续运动方程，其通常的形式为式\eqref{eq:CHEM_massC}和式\eqref{eq:CHEM_kinectC}\chinesecolon
 \begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
     \item 质量守恒
-    \[
+    \begin{equation}
+        \label{eq:CHEM_massC}
         \begin{split}
             \frac{\partial \rho}{\partial t}+{\nabla}\cdot\left(\rho{\textbf V}\right)&=0 \\[+1ex]
             \frac{D\rho}{Dt}+\rho{\nabla}\cdot{\textbf V}&=0
         \end{split}
-    \]
+    \end{equation}
     \item 动量守恒
-    \[
+    \begin{equation}
+        \label{eq:CHEM_kinectC}
         \rho\frac{D{\textbf V}}{Dt}=\rho\left[\frac{\partial{\textbf V}}{\partial t}+\left(\textbf{V}\cdot\nabla\right)\textbf{V}\right]
-    \]
+    \end{equation}
 \end{enumerate}
-其中，$\rho$为流体质量密度，$\textbf{V}$为流体速度，$D/Dt$为随体导数算符。在圆柱坐标下$\left(z,r,\theta\right)$，纳维-斯托克斯公式可以写为\chinesecolon
+其中，$\rho$为流体质量密度，$\textbf{V}$为流体速度，$D/Dt$为随体导数算符。在圆柱坐标下$\left(z,r,\theta\right)$，纳维-斯托克斯公式可以写为式\eqref{eq:CHEM_NS_1}到式\eqref{eq:CHEM_NS_4}\chinesecolon
 \begin{align}
-    \mbox{质量守恒\chinesecolon} & \frac{\partial \rho}{t}+\frac{\partial \rho u}{\partial z}+\frac{1}{r}\frac{\partial r \rho v}{\partial r}+\frac{1}{r}\frac{\partial\rho w}{\partial \theta}=0\\[1ex]
-    \mbox{动量守恒（z轴）\chinesecolon} &  \rho\left(\frac{Du}{Dt}\right)=\rho\left(\frac{\partial u}{\partial t}+u\frac{\partial u}{\partial z}+v\frac{\partial u}{\partial r}+\frac{w}{r}\frac{\partial u}{\partial \theta}\right)\\[1ex]
-    \mbox{动量守恒（r轴）\chinesecolon} & \rho\left(\frac{Dv}{Dt}-\frac{w^2}{r}\right) = \rho\left(\frac{\partial v}{\partial t}+u\frac{\partial v}{\partial z}+v\frac{\partial v}{\partial r}+\frac{w}{r}\frac{\partial v}{\partial \theta} - \frac{w^2}{r}\right)\\[1ex]
-    \mbox{动量守恒（$\theta$轴）\chinesecolon} & \rho\left(\frac{Dw}{Dt}+\frac{vw}{r}\right)=\rho\left(\frac{\partial w}{\partial t}+u\frac{\partial w}{\partial z}+ v\frac{\partial w}{\partial r}+\frac{w}{r}\frac{\partial w}{\partial \theta}+\frac{vw}{r}\right)
+    \label{eq:CHEM_NS_1} \mbox{质量守恒\chinesecolon} & \frac{\partial \rho}{t}+\frac{\partial \rho u}{\partial z}+\frac{1}{r}\frac{\partial r \rho v}{\partial r}+\frac{1}{r}\frac{\partial\rho w}{\partial \theta}=0\\[1ex]
+    \label{eq:CHEM_NS_2} \mbox{动量守恒（z轴）\chinesecolon} &  \rho\left(\frac{Du}{Dt}\right)=\rho\left(\frac{\partial u}{\partial t}+u\frac{\partial u}{\partial z}+v\frac{\partial u}{\partial r}+\frac{w}{r}\frac{\partial u}{\partial \theta}\right)\\[1ex]
+    \label{eq:CHEM_NS_3} \mbox{动量守恒（r轴）\chinesecolon} & \rho\left(\frac{Dv}{Dt}-\frac{w^2}{r}\right) = \rho\left(\frac{\partial v}{\partial t}+u\frac{\partial v}{\partial z}+v\frac{\partial v}{\partial r}+\frac{w}{r}\frac{\partial v}{\partial \theta} - \frac{w^2}{r}\right)\\[1ex]
+    \label{eq:CHEM_NS_4} \mbox{动量守恒（$\theta$轴）\chinesecolon} & \rho\left(\frac{Dw}{Dt}+\frac{vw}{r}\right)=\rho\left(\frac{\partial w}{\partial t}+u\frac{\partial w}{\partial z}+ v\frac{\partial w}{\partial r}+\frac{w}{r}\frac{\partial w}{\partial \theta}+\frac{vw}{r}\right)
 \end{align}
 其中，$u$，$v$，$w$分别为$z$，$r$，$\theta$轴的速度分量，$p$为压强。
 
-对于圆柱形管道中均匀稳流，可以忽略其绕对称轴旋转（$\theta$轴）的运动。因此在没有收体积外力的情况下，圆柱形管道中均匀稳流的纳维-斯托克斯公式可以进一步简化为\chinesecolon
+对于圆柱形管道中均匀稳流，可以忽略其绕对称轴旋转（$\theta$轴）的运动。因此在没有收体积外力的情况下，圆柱形管道中均匀稳流的纳维-斯托克斯公式可以进一步简化为式\eqref{eq:CHEM_NS_Clin_1}至式\eqref{eq:CHEM_NS_Clin_3}\chinesecolon
 \begin{align}
-    \mbox{质量守恒\chinesecolon} & \frac{\partial \rho u}{\rho z}+\frac{1}{r}\frac{\partial r \rho v}{\partial r}=0\\[1ex]
-    \mbox{轴向动量守恒\chinesecolon} & \begin{aligned}[t] \rho u \frac{\partial u}{\partial z} + \rho v \frac{\partial u}{\partial r} = & - \frac{\partial P}{\partial z}  + \frac{\partial}{z}\left(\frac{4}{3}\mu\frac{\partial u}{\partial z}-\frac{2}{3}\mu\frac{1}{r}\frac{\partial rv}{\partial r}\right)\\[1ex]
+    \label{eq:CHEM_NS_Clin_1} \mbox{质量守恒\chinesecolon} & \frac{\partial \rho u}{\rho z}+\frac{1}{r}\frac{\partial r \rho v}{\partial r}=0\\[1ex]
+    \label{eq:CHEM_NS_Clin_2} \mbox{轴向动量守恒\chinesecolon} & \begin{aligned}[t] \rho u \frac{\partial u}{\partial z} + \rho v \frac{\partial u}{\partial r} = & - \frac{\partial P}{\partial z}  + \frac{\partial}{z}\left(\frac{4}{3}\mu\frac{\partial u}{\partial z}-\frac{2}{3}\mu\frac{1}{r}\frac{\partial rv}{\partial r}\right)\\[1ex]
                  & + \frac{1}{r}\frac{\partial}{\partial r}\left[\mu r\left(\frac{\partial v}{\partial z}+\frac{\partial u}{\partial r}\right)\right]
                                         \end{aligned}\\[1ex]
-    \mbox{径向动量守恒\chinesecolon} & \begin{aligned}[t] \rho u \frac{\partial v}{\partial z} +\rho v \frac{\partial v}{\partial r} = & -\frac{\partial P}{\partial r} + \frac{\partial }{\partial z}\left[\mu\left(\frac{\partial v}{\partial z}+\frac{\partial u}{\partial r}\right)\right]+\frac{2\mu}{r}\left[\frac{\partial u}{\partial r}-\frac{v}{r}\right]\\[1ex]
+    \label{eq:CHEM_NS_Clin_3} \mbox{径向动量守恒\chinesecolon} & \begin{aligned}[t] \rho u \frac{\partial v}{\partial z} +\rho v \frac{\partial v}{\partial r} = & -\frac{\partial P}{\partial r} + \frac{\partial }{\partial z}\left[\mu\left(\frac{\partial v}{\partial z}+\frac{\partial u}{\partial r}\right)\right]+\frac{2\mu}{r}\left[\frac{\partial u}{\partial r}-\frac{v}{r}\right]\\[1ex]
         & + \frac{\partial }{\partial r}\left[\frac{4}{3}\mu\frac{\partial v}{\partial r}-\frac{2}{3}\mu\left(\frac{\partial u}{\partial z}+\frac{v}{r}\right)\right]
     \end{aligned}
 \end{align}
 
-除了纳维-斯托克斯公式外，由于气相反应发生在流体中，因此流体内有不止一种化学物质，这些化学物质同样要满足各自的质量守恒方程以及化学反应过程中的能量守恒方程\chinesecolon
+除了纳维-斯托克斯公式外，由于气相反应发生在流体中，因此流体内有不止一种化学物质，这些化学物质同样要满足各自的质量守恒方程以及化学反应过程中的能量守恒方程（式\eqref{eq:CFD_specis_origin}和式\eqref{eq:CFD_energy_origin}）\chinesecolon
 \begin{align}
     \label{eq:CFD_specis_origin}
     \mbox{分子质量守恒\chinesecolon}& \left(\frac{dm_k}{dt}\right)_{\rm system}=\left[\rho\frac{DY_k}{Dt}\right]\delta V=-\int_S{\bf j}_k\cdot{\bf n}dA+\int_Vw_kW_kdV\\[1ex]
@@ -229,10 +251,10 @@
 
 在能量守恒中，能量的变化等于做功的能量$\frac{Dp}{Dt}$加上热交换的能量$\nabla\cdot\left(\lambda\nabla T\right)-\sum_k^K \nabla\cdot h_k{\bf j}_k$以及耗散能$\Phi $。其中，$\lambda$为流体的平均热导率；$h_k$为物质$k$的焓。
 
-将方程\ref{eq:CFD_specis_origin}和\ref{eq:CFD_specis_origin}转化为圆柱坐标并进行相应的简化，可以得到圆柱形管道中均匀稳流的分子质量守恒方程和能量守恒方程\chinesecolon
+将方程\ref{eq:CFD_specis_origin}和\ref{eq:CFD_specis_origin}转化为圆柱坐标并进行相应的简化，可以得到圆柱形管道中均匀稳流的分子质量守恒方程和能量守恒方程如式\eqref{eq:CFD_species_result}和式\eqref{eq:CFD_energy_result}所示\chinesecolon
 \begin{align}
-    \mbox{分子质量守恒\chinesecolon}&\rho u\frac{\partial Y_k}{\partial z} + \rho v \frac{\partial Y_k}{\partial r}=\left(\frac{\partial j_{kz}}{\partial z}+\frac{1}{r}\frac{\partial r j_{k,r}}{\partial r}\right)+w_kW_k\\[1ex]
-    \mbox{能量守恒\chinesecolon}&\begin{aligned}[t]\rho c_p u\frac{\partial T}{\partial Z}+\rho c_p v \frac{\partial T}{\partial R}=&u\frac{\partial P}{\partial z}+\frac{\partial}{\partial z}\left(\lambda \frac{\partial T}{\partial z}\right)+\frac{1}{r}\frac{\partial}{\partial r}\left(r\lambda\frac{\partial T}{\partial r}\right)\\[1ex]
+    \label{eq:CFD_species_result} \mbox{分子质量守恒\chinesecolon}&\rho u\frac{\partial Y_k}{\partial z} + \rho v \frac{\partial Y_k}{\partial r}=\left(\frac{\partial j_{kz}}{\partial z}+\frac{1}{r}\frac{\partial r j_{k,r}}{\partial r}\right)+w_kW_k\\[1ex]
+    \label{eq:CFD_energy_result} \mbox{能量守恒\chinesecolon}&\begin{aligned}[t]\rho c_p u\frac{\partial T}{\partial Z}+\rho c_p v \frac{\partial T}{\partial R}=&u\frac{\partial P}{\partial z}+\frac{\partial}{\partial z}\left(\lambda \frac{\partial T}{\partial z}\right)+\frac{1}{r}\frac{\partial}{\partial r}\left(r\lambda\frac{\partial T}{\partial r}\right)\\[1ex]
         &-\sum_k^K c_{pk}\left(j_{kz}\frac{\partial T}{\partial z}+j_{kr}\frac{\partial T}{\partial r}\right)-\sum_k^Kh_kw_kW_k
     \end{aligned}
 \end{align}
@@ -240,12 +262,14 @@
 至此，推导出了圆柱形管道中的均匀稳流的控制方程，包括质量守恒方程、动能守恒方程、分子质量守恒方程以及能量守恒方程。通过以上守恒方程，可以对圆柱形管道中的均匀稳流进行模拟。
 
 \section{自由分子流模拟}
-    在流体动力学中，克鲁森数（Knudsen number）通常用来区分连续流体和稀薄流体以及所适用的流体力学控制方程。克鲁森数$\rm Kn$的定义为\chinesecolon
+    在流体动力学中，克鲁森数（Knudsen number）通常用来区分连续流体和稀薄流体以及所适用的流体力学控制方程。克鲁森数$\rm Kn$的定义为式\eqref{eq:FM_Kn}\chinesecolon
     \begin{equation}
+        \label{eq:FM_Kn}
         {\rm Kn}=\frac{\lambda}{l}
     \end{equation}
-    其中$\lambda$为气体分子运动的平均自由程\chinesecolon，$l$为所考虑体系的特征长度。气体分子运动的平均自由程$\lambda$可以表示为\chinesecolon
+    其中$\lambda$为气体分子运动的平均自由程\chinesecolon，$l$为所考虑体系的特征长度。气体分子运动的平均自由程$\lambda$可以表示为式\eqref{eq:FM_freePath}\chinesecolon
     \begin{equation}
+        \label{eq:FM_freePath}
         \lambda=\frac{\mu \sqrt{\frac{2k_{\rm B}T}{m}}}{P}
     \end{equation}
     $\kbconst$为玻尔兹曼常数，$m$是气体分子的质量，$T$是气体的温度，$P$为气体的气压。
@@ -258,21 +282,23 @@
     
     \subsection{自由分子流的速度分布函数}
 
-    假设边界壁对气体分子不存在长时间的吸附作用，气体分子在碰撞到边界壁后直接出射、扩散至气体环境中。在这种情况下，可以计算边界壁表面出射的密度分布函数$\rho\left(\theta, v\right)$。其中$\theta$为气体分子的出射角度，$v$为气体分子的出射速度。此时，气体分子反射的角度分布满足余弦公式\chinesecolon
+    假设边界壁对气体分子不存在长时间的吸附作用，气体分子在碰撞到边界壁后直接出射、扩散至气体环境中。在这种情况下，可以计算边界壁表面出射的密度分布函数$\rho\left(\theta, v\right)$。其中$\theta$为气体分子的出射角度，$v$为气体分子的出射速度。此时，气体分子反射的角度分布满足余弦公式（式\eqref{eq:FM_COSIN}）\chinesecolon
     \begin{equation}
+        \label{eq:FM_COSIN}
         f\left(\theta\right)d\theta =\frac{1}{2}\cos\theta d\theta 
     \end{equation}    
     考虑二维的情况，反射角度$\theta$的取值范围为$\left(-\frac{\pi}{2},\frac{\pi}{2}\right)$
 
-    假设密度分布函数$\rho\left(\theta, v\right)$中随机变量反射角度$\theta$和反射速度$v$相互独立，可以将$\rho\left(\theta, v\right)$写成一下形式\chinesecolon
-    \[
+    假设密度分布函数$\rho\left(\theta, v\right)$中随机变量反射角度$\theta$和反射速度$v$相互独立，可以将$\rho\left(\theta, v\right)$写成式\eqref{eq:FM_rho_theta_v}的形式\chinesecolon
+    \begin{equation}
+        \label{eq:FM_rho_theta_v}
         \rho\left(\sin\theta,v\right)=\rho_v\left(v\right)\rho_\theta\left(\sin\theta\right)
-    \]
+    \end{equation}
     为方便后续计算，这里将密度分布函数$\rho\left(\theta, v\right)$中反射角度$\theta$写成正弦的形式，既$\rho(\sin\theta,v)$。
 
     在二维的情况下，可以将反射分子的速度$v$分解为$v_x$和$v_y$，分别对应于反射分子平行于边界壁表面和垂直于边界壁表面的速度分量。$v_x$和$v_y$满足$v_x=v\sin\theta$和$v_y=v\cos\theta$。
 
-    对于平行于边界壁表面的速度分量，由于对称性的关系，认为气态分子在边界壁反射的$v_x$分量服从玻尔兹曼分布\chinesecolon
+    对于平行于边界壁表面的速度分量，由于对称性的关系，认为气态分子在边界壁反射的$v_x$分量服从式\eqref{eq:FM_vxDensity}所示的玻尔兹曼分布\chinesecolon
     \begin{equation}
         \label{eq:FM_vxDensity}
         \rho_x\left(v_x\right)=\sqrt{\frac{m}{2\pi\kbconst T}}\exp\left({-\frac{mv_x^2}{2\kbconst T}}\right)
@@ -280,18 +306,20 @@
 
     然而，在边界壁的表面，垂直方向的反射运动并不满足对称性要求，因此垂直于边界壁表面的速度分量$v_y$并不满足玻尔兹曼分布。接下来对垂直于边界壁方向的分子速度分量分布进行推导。
     
-    应用二维直角坐标系和极坐标系之间变换的雅可比行列式\chinesecolon
+    应用二维直角坐标系和极坐标系之间变换的雅可比行列式（式\eqref{eq:FM_jac}）\chinesecolon
     \begin{equation}
+        \label{eq:FM_jac}
         \left\lvert \frac{\partial \left(v_x,v_y\right)}{\partial \left(v,\sin\theta\right)}\right\rvert=\frac{v}{\cos\theta}
     \end{equation}
-    可以写出分子速度的密度分布函数$\rho\left(\sin\theta,v\right)$的极坐标形式和直角坐标形式的关系如下\chinesecolon
-    \[
+    可以写出分子速度的密度分布函数$\rho\left(\sin\theta,v\right)$的极坐标形式和直角坐标形式的关系如式\eqref{eq:FM_rho_coodConvert}\chinesecolon
+    \begin{equation}
+        \label{eq:FM_rho_coodConvert}
         \rho\left(\sin\theta, v\right)=\frac{v}{\cos\theta}\rho\left(v_x,v_y\right)
-    \]
+    \end{equation}
 
     类似于$\rho\left(\sin\theta,v\right)$，极坐标下的速度分量$v_x$和$v_y$为独立的随机变量$\rho\left(v_x,v_y\right)=\rho_x\left(v_x\right)\rho_y\left(v_y\right)$
 
-    将密度分布函数$\rho\left(\sin\theta,v\right)$求全角度积分，可以得到速度模量的密度分布函数
+    将密度分布函数$\rho\left(\sin\theta,v\right)$求全角度积分，可以得到速度模量的密度分布函数如式\eqref{eq:FM_vDensity}所示
     \begin{equation}
         \label{eq:FM_vDensity}
         \begin{split}
@@ -300,13 +328,13 @@
         \end{split}
     \end{equation}
 
-    对于密度分布函数$\rho\left(\sin\theta,v\right)$，其应该满足归一化条件\chinesecolon
+    对于密度分布函数$\rho\left(\sin\theta,v\right)$，其应该满足归一化条件式\eqref{eq:FM_normalze_vDensity}\chinesecolon
     \begin{equation}
         \label{eq:FM_normalze_vDensity}
         \int_{0}^{\infty} \rho_v\left(v\right) \,dv = 1
     \end{equation}
     
-    将式\eqref{eq:FM_vDensity}和式\eqref{eq:FM_vxDensity}带入归一化条件（式\eqref{eq:FM_normalze_vDensity}），可以得到关于垂直边界壁方向速度密度分布函数的方程\chinesecolon
+    将式\eqref{eq:FM_vDensity}和式\eqref{eq:FM_vxDensity}带入归一化条件（式\eqref{eq:FM_normalze_vDensity}），可以得到关于垂直边界壁方向速度密度分布函数的方程（式\eqref{eq:FM_vyDensity}）\chinesecolon
     \begin{equation}
         \label{eq:FM_vyDensity}
         \begin{split}
@@ -315,8 +343,9 @@
         \end{split}
     \end{equation}
 
-    结合式\eqref{eq:FM_vxDensity}和式\eqref{eq:FM_vyDensity}，可以得到气态分子在边界壁反射的具体速度密度分布函数$\rho_v\left(v\right)$\chinesecolon
+    结合式\eqref{eq:FM_vxDensity}和式\eqref{eq:FM_vyDensity}，可以得到气态分子在边界壁反射的具体速度密度分布函数$\rho_v\left(v\right)$如式\eqref{eq:FM_reflect_vRho}所示\chinesecolon
     \begin{equation}
+        \label{eq:FM_reflect_vRho}
         \rho_v\left(v\right)=\sqrt{\frac{2}{\pi}} \left(\frac{m}{\kbconst T}\right)^{3/ 2}v^2\exp{\left(-\frac{mv^2}{2\kbconst T}\right)}
     \end{equation}
 
