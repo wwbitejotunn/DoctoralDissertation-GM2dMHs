@@ -39,8 +39,8 @@
     \label{eq:DFT_Ee0_ks}
     \begin{split}
         \energyVar{e0}{}&=\energyVar{k}{}+\energyVar{u}{}+\energyVar{H}{}+\energyVar{xc}{}\\[+1ex]
-        &=\overbrace{\rule[0ex]{0ex}{3.2ex}-\frac{1}{2}\sum_i\int\psi'^*_i\left({\bm r}\right)\nabla^2\psi'_i\left({\bm r}\right)d{\bm r}}^{\energyVar{k}{}} + \overbrace{\rule[0ex]{0ex}{3.2ex}\int\rho'\left({\bm r}\right)V_{\rm u}d{\bm r}}^{\energyVar{u}{}}\\[+1ex]
-        &+\overbrace{\int\int \frac{\rho'\left({\bm r}_1\right)\rho’\left({\bm r}_2\right)}{\left\lvert{\bm r}_1 - {\bm r}_2\right\rvert}d{\bm r}_1d{\bm r}_2}^{\energyVar{H}{}}+\energyVar{ex}{}\left(\rho'\right)
+        &=\overbrace{\rule[0ex]{0ex}{3.2ex}-\frac{1}{2}\sum_i\int\psi'^*_i\left({\bm r}\right)\nabla^2\psi'_i\left({\bm r}\right)d{\bm r}}^{\mbox{\normalsize $\energyVar{k}{}$}} + \overbrace{\rule[0ex]{0ex}{3.2ex}\int\rho'\left({\bm r}\right)V_{\rm u}d{\bm r}}^{\mbox{\normalsize $\energyVar{u}{}$}}\\[+1ex]
+        &+\overbrace{\int\int \frac{\rho'\left({\bm r}_1\right)\rho’\left({\bm r}_2\right)}{\left\lvert{\bm r}_1 - {\bm r}_2\right\rvert}d{\bm r}_1d{\bm r}_2}^{\mbox{\normalsize $\energyVar{H}{}$}}+\energyVar{ex}{}\left(\rho'\right)
     \end{split}
 \end{equation}
 其中，$\energyVar{k}{}$为电子动能，$\energyVar{u}{}$为体系内原子核对电子的相互作用势能；$\energyVar{H}{}$为电子与电子之间不考虑多体作用时的库伦作用能，又称为Hatree势能；$\energyVar{xc}{}$为包含体系内所有电子多体作用的交换关联能。
@@ -67,18 +67,18 @@
     \label{eq:DFT_LDA}
     \energyVar{xc}{LDA}\left[\rho\right]=\int \rho({\bm r}) \epsilon_{\rm xc}^{\rm unif} \left(\rho\left({\bm r}\right)\right) d{\bm r}
 \end{equation}
-其中，$\epsilon_{\rm xc}^{\rm unif}\left(\rho\left({\bm r}\right)\right)$为每个电子在无限均匀且密度为$\rho$的电子其中的交换关联能。局域密度近似法较为适合电子密度变化缓慢的体系，如今固体材料计算领域更为常用的基于广域梯度近似法的PBE泛函在局域密度近似法的基础上进一步考虑了空间点电荷的变化梯度\citing{RN683-1996}，如式\eqref{eq:DFT_GGA}所示\chinesecolon
+其中，$\epsilon_{\rm xc}^{\rm unif}\left(\rho\left({\bm r}\right)\right)$为每个电子在无限均匀且密度为$\rho$的电子其中的交换关联能。局域密度近似法较为适合电子密度变化缓慢的体系，如今固体材料计算领域更为常用的基于广域梯度近似法的Perdew-Burke-Ernzerhof（PBE）泛函在局域密度近似法的基础上进一步考虑了空间点电荷的变化梯度\citing{RN683-1996}，如式\eqref{eq:DFT_GGA}所示\chinesecolon
 \begin{equation}
     \label{eq:DFT_GGA}
     \energyVar{xc}{GGA}\left[\rho\right]=\int\epsilon_{\rm xc}^{GGA}\left(\rho\left({\bm r}\right),\nabla\rho\left({\bm r}\right)\right)d{\bm r}
 \end{equation}
 
-通常，交换关联能$\energyVar{xc}{}$可以分解为交换作用和关联作用的独立贡献\chinesecolon $\energyVar{xc}{}=\energyVar{x}{}+\energyVar{c}{}$。对于广域梯度近似法的关联作用，PBE泛函使用如下的形式进行构造（式\eqref{eq:DFT_PBE}）\chinesecolon
+通常，交换关联能$\energyVar{xc}{}$可以分解为交换作用和关联作用的独立贡献\chinesecolon $\energyVar{xc}{}=\energyVar{x}{}+\energyVar{c}{}$。对于广域梯度近似法的关联作用$\energyVar{C}{GGA}$，PBE泛函使用式\eqref{eq:DFT_PBE}的形式进行构造\chinesecolon
 \begin{equation}
     \label{eq:DFT_PBE}
     \energyVar{C}{GGA}\left[\rho\right]=\int \rho\left[\epsilon_{\rm c}^{\rm unif}\left(r_{\rm s},\zeta\right)+H\left(r_{\rm s},\zeta,t\right)\right] d{\bm r}
 \end{equation}
-其中，$\epsilon_{\rm C}^{\rm unif}\left(r_{\rm s},\zeta\right)$为局域电子密度对于关联能的贡献。$r_s$为局域塞茨半径（Seitz redius）；$\zeta$为自旋极化量；$t$为无量纲密度梯度参数。PBE泛函数使用以下三个渐进行为对泛函内电子密度的梯度贡献项$H\left(r_{\rm s},\zeta,t\right)$进行构造。
+其中，$\epsilon_{\rm C}^{\rm unif}\left(r_{\rm s},\zeta\right)$为局域电子密度对于关联能的贡献。$r_s$为局域塞茨半径（Seitz redius）；$\zeta$为自旋极化量；$t$为无量纲密度梯度参数。PBE泛函要求其泛函内的电子密度的梯度贡献项$H\left(r_{\rm s},\zeta,t\right)$需要满足以下三个渐进行为\chinesecolon
 
 \begin{enumerate}[labelsep=0em,label=（\arabic*）,wide]
     \item 当电子密度变化非常缓慢时（$t\rightarrow 0$）,$H$趋近与自己的二阶梯度展开\citing{RN1467-1991}（式\eqref{eq:DFT_PBE_cd1}）\chinesecolon
@@ -87,7 +87,7 @@
         \lim_{t\rightarrow0}H=\frac{e^2}{a_{0}}\beta\phi^3t^2
         \end{equation}
     其中，$\phi$为自旋因子，$\phi\left(\zeta\right)=\frac{1}{2}\left[\left(1+\zeta\right)^{2/ 3}+\left(1-\zeta\right)^{2/ 3}\right]$；$a_{0}$、$\beta$为常数。
-    \item 当电子密度变化非常剧烈时（$t\rightarrow \infty$），有式\eqref{eq:DFT_PBE_cd1}
+    \item 当电子密度变化非常剧烈时（$t\rightarrow \infty$），有式\eqref{eq:DFT_PBE_cd2}
     \begin{equation}
         \label{eq:DFT_PBE_cd2}
         \lim_{t\rightarrow\infty}H=-\epsilon_{\rm c}^{\rm unif}
@@ -143,12 +143,13 @@
     \label{eq:DFT_PBE_Fx}
     F_{\rm x}\left(s\right)=1+\kappa -\frac{\kappa }{1+\frac{\mu s^2}{\kappa}}
 \end{equation}
-其中$\kappa$为常数，取0.804。
+其中$\kappa$为常数，在计算中取0.804。
 
 至此，本文分别构造了PBE泛函中交换关联能的交换作用贡献$\energyVar{x}{GGA}$和关联作用贡献$\energyVar{c}{GGA}$。使用PBE泛函作为交换关联能的近似，能够在大幅减少式\eqref{eq:DFT_KSequ}的自洽计算的复杂度，并且保持相当高水平的精确度。
 %\subsection{投影缀加波函数方法赝势}
 %//TODO optional PAW
-\section{气相反应动力学模拟}
+\section{化学气相沉积法中生长气氛的模拟}
+\subsection{化学反应的动力学控制方程}
 通过求解气相中各种化合物之间复杂的化学动力学方程组，可以对气体的热力学状态，化学组成组成成分等参量进行模拟。
 
 对于由$I$个基元反应并涉及$K$个分子的化学环境，通常可以写出如式\eqref{eq:CHEM_chem_reaction}的反应通式
@@ -193,14 +194,14 @@
 \begin{equation}
     \label{eq:CHEM_HandS}
     \begin{split}
-        \frac{\Delta S_i^0}{R}&=\sum_{k=1}^K v_{ki}\frac{S_k^0}{R}\\
+        \frac{\Delta S_i^0}{R}&=\sum_{k=1}^K v_{ki}\frac{S_k^0}{R}\\[+1ex]
         \frac{\Delta H_i^0}{RT}&=\sum_{k=1}^K v_{ki}\frac{H_k^0}{RT}
     \end{split}
 \end{equation}
 
 至此，就可以通过气相反应中的基元化学反应方程式和化学物质的热力学参数对整个气相反应动力学进行描述。
 
-\subsection{管道流的流体力学模拟}
+\subsection{管道流的流体力学控制方程}
 通常，在化学气相沉积等方法中，用于参与反应的前驱体通过气流的方式源源不断得向衬底表面进行输送。在这个过程中，前驱体在气流中完成化学反应，并与气流一起形成了衬底表面薄膜生长的化学环境。因此，需要对反应炉中的气流进行流体动力学模拟，以反应气流状态对于生长化学气氛的影响。
 
 对于管式反应炉中气流，可以将其简化为圆柱形管道中稳流的流体动力学问题，并使用二维轴对称连续纳维-斯托克斯方程进行进行描述。纳维-斯托克斯方程基于流体的守恒关系，给出了流体的连续运动方程，其通常的形式为式\eqref{eq:CHEM_massC}和式\eqref{eq:CHEM_kinectC}\chinesecolon
@@ -219,7 +220,7 @@
         \rho\frac{D{\textbf V}}{Dt}=\rho\left[\frac{\partial{\textbf V}}{\partial t}+\left(\textbf{V}\cdot\nabla\right)\textbf{V}\right]
     \end{equation}
 \end{enumerate}
-其中，$\rho$为流体质量密度，$\textbf{V}$为流体速度，$D/Dt$为随体导数算符。在圆柱坐标下$\left(z,r,\theta\right)$，纳维-斯托克斯公式可以写为式\eqref{eq:CHEM_NS_1}到式\eqref{eq:CHEM_NS_4}\chinesecolon
+其中，$\rho$为流体质量密度，$\textbf{V}$为流体速度，$D/Dt$为随体导数算符。在圆柱坐标下$\left(z,r,\theta\right)$，纳维-斯托克斯公式可以写为式\eqref{eq:CHEM_NS_1}到式\eqref{eq:CHEM_NS_4}的守恒关系\chinesecolon
 \begin{align}
     \label{eq:CHEM_NS_1} \mbox{质量守恒\chinesecolon} & \frac{\partial \rho}{t}+\frac{\partial \rho u}{\partial z}+\frac{1}{r}\frac{\partial r \rho v}{\partial r}+\frac{1}{r}\frac{\partial\rho w}{\partial \theta}=0\\[1ex]
     \label{eq:CHEM_NS_2} \mbox{动量守恒（z轴）\chinesecolon} &  \rho\left(\frac{Du}{Dt}\right)=\rho\left(\frac{\partial u}{\partial t}+u\frac{\partial u}{\partial z}+v\frac{\partial u}{\partial r}+\frac{w}{r}\frac{\partial u}{\partial \theta}\right)\\[1ex]
@@ -262,6 +263,7 @@
 至此，推导出了圆柱形管道中的均匀稳流的控制方程，包括质量守恒方程、动能守恒方程、分子质量守恒方程以及能量守恒方程。通过以上守恒方程，可以对圆柱形管道中的均匀稳流进行模拟。
 
 \section{自由分子流模拟}
+    \subsection{克鲁森数与自由分子流}
     在流体动力学中，克鲁森数（Knudsen number）通常用来区分连续流体和稀薄流体以及所适用的流体力学控制方程。克鲁森数$\rm Kn$的定义为式\eqref{eq:FM_Kn}\chinesecolon
     \begin{equation}
         \label{eq:FM_Kn}
@@ -281,7 +283,6 @@
     在角参数法计算中，需要统计任一边界壁表面基元上从其他所有可能的表面基元直线入射的气体分子的流量。因此，需要计算在有边界壁的情况下，气态分子与边界壁相互作用下的速度分布函数。
     
     \subsection{自由分子流的速度分布函数}
-
     假设边界壁对气体分子不存在长时间的吸附作用，气体分子在碰撞到边界壁后直接出射、扩散至气体环境中。在这种情况下，可以计算边界壁表面出射的密度分布函数$\rho\left(\theta, v\right)$。其中$\theta$为气体分子的出射角度，$v$为气体分子的出射速度。此时，气体分子反射的角度分布满足余弦公式（式\eqref{eq:FM_COSIN}）\chinesecolon
     \begin{equation}
         \label{eq:FM_COSIN}
@@ -311,7 +312,7 @@
         \label{eq:FM_jac}
         \left\lvert \frac{\partial \left(v_x,v_y\right)}{\partial \left(v,\sin\theta\right)}\right\rvert=\frac{v}{\cos\theta}
     \end{equation}
-    可以写出分子速度的密度分布函数$\rho\left(\sin\theta,v\right)$的极坐标形式和直角坐标形式的关系如式\eqref{eq:FM_rho_coodConvert}\chinesecolon
+    可以写出分子速度的密度分布函数$\rho\left(\sin\theta,v\right)$的极坐标形式和直角坐标形式的关系如式\eqref{eq:FM_rho_coodConvert}所示\chinesecolon
     \begin{equation}
         \label{eq:FM_rho_coodConvert}
         \rho\left(\sin\theta, v\right)=\frac{v}{\cos\theta}\rho\left(v_x,v_y\right)
@@ -334,7 +335,7 @@
         \int_{0}^{\infty} \rho_v\left(v\right) \,dv = 1
     \end{equation}
     
-    将式\eqref{eq:FM_vDensity}和式\eqref{eq:FM_vxDensity}带入归一化条件（式\eqref{eq:FM_normalze_vDensity}），可以得到关于垂直边界壁方向速度密度分布函数的方程（式\eqref{eq:FM_vyDensity}）\chinesecolon
+    将式\eqref{eq:FM_vDensity}和式\eqref{eq:FM_vxDensity}带入式\eqref{eq:FM_normalze_vDensity}所描述的归一化条件，可以得到关于垂直边界壁方向速度密度分布函数的方程（式\eqref{eq:FM_vyDensity}）\chinesecolon
     \begin{equation}
         \label{eq:FM_vyDensity}
         \begin{split}
@@ -349,4 +350,4 @@
         \rho_v\left(v\right)=\sqrt{\frac{2}{\pi}} \left(\frac{m}{\kbconst T}\right)^{3/ 2}v^2\exp{\left(-\frac{mv^2}{2\kbconst T}\right)}
     \end{equation}
 
-    至此，就可以通过计算每一个界壁表面基元上入射的气体分子的总流量，从而对体系内的自由分子流进行模拟。
+    利用上述公式，可以通过计算每一个界壁表面基元上入射的气体分子的总流量，对考察体系内的自由分子流进行模拟。
