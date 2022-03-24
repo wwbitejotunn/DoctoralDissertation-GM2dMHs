@@ -932,8 +932,9 @@ School: & \en@theschool \\
   \ifdefined\@BODY
   \else
     \ifnum\value{chapter}=1
-      \ifchinesebook{\chaptermark{绪论}}{\chaptermark{Introduction}}
+      \ifchinesebook{\chaptermark{绪\hspace{6pt}论}}{\chaptermark{Introduction}}
       \setcounter{page}{1}
+      %\fancyhead[CO]{\fontsize{10.5pt}{12.6pt}\selectfont 绪\hspace{6pt}论}
     \fi
   \fi
   \def\@BODY{\null}
