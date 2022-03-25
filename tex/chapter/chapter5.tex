@@ -20,12 +20,12 @@
 
 \section{计算参量设定}
 
-在本章中密度泛函理论主要使用VASP）软件包进行计算。在密度泛函理论计算中，本研究使用广义梯度近似（GGA）框架下的PBE泛函描述电子之间的交换关联作用。平面波的截断动能取为为$\SI{500}{\electronvolt}$。为了研究\cemb{Cu}/\cemb{h-BN}衬底表面石墨烯的生长情况，本研究采用切片模型并在垂直表面方向放置至少$\SI{20}{\angstrom}$的真空层以防止周期性条件相邻切片的影响。切片模型中，作为石墨烯生长衬底的\cemb{Cu}/\cemb{h-BN}包含四原子层的\cemb{Cu(111)}以及单原子层的\cemb{h-BN}。在\cemb{Cu}的表面，经过计算，\cemb{h-BN}的最优堆叠方式为\cemb{N}原子位于\cemb{Cu}衬底的顶位，\cemb{B}原子位于\cemb{Cu}衬底的面心立方位(fcc site)。
+本章中的密度泛函理论主要使用VASP软件包进行计算。在密度泛函理论计算中，本研究使用广义梯度近似（GGA）框架下的PBE泛函描述电子之间的交换关联作用。平面波的截断动能取为为$\SI{500}{\electronvolt}$。为了研究\cemb{Cu}/\cemb{h-BN}衬底表面石墨烯的生长情况，本研究采用切片模型并在垂直表面方向放置至少$\SI{20}{\angstrom}$的真空层以防止周期性条件相邻切片的影响。在切片模型中，作为石墨烯生长衬底的\cemb{Cu}/\cemb{h-BN}包含四原子层的\cemb{Cu(111)}以及单原子层的\cemb{h-BN}。在\cemb{Cu}的表面，经过计算，\cemb{h-BN}的最优堆叠方式为\cemb{N}原子位于\cemb{Cu}衬底的顶位，\cemb{B}原子位于\cemb{Cu}衬底的面心立方位。
 在原子结构优化的计算中，力收敛条件设为$\SI{2e-2}{\electronvolt \per \angstrom}$，电子结构自洽场计算的收敛条件设为$\SI{1e-6}{\electronvolt}$。
 
-对于碳团簇（\cemb{C_x}）、石墨烯、\cemb{h-BN}、\cemb{Cu}衬底之间之间的范德瓦尔斯作用使用Grimme的DFT-D3方法进行描述，并带有Becke-Johnson阻尼作用 \citing{RN937-2010, RN938-2011}。对于石墨烯、\cemb{VSe2}之间的范德瓦尔斯作用，本研究使用Grimme的DFT-D2方法进行描述。
+对于碳团簇（\cemb{C_x}）、石墨烯、\cemb{h-BN}、\cemb{Cu}衬底之间之间的范德瓦尔斯作用使用Grimme的DFT-D3方法进行描述，并带有Becke-Johnson阻尼作用 \citing{RN937-2010, RN938-2011}。对于石墨烯、\cemb{VSe2}之间的范德瓦尔斯作用，本研究使用Grimme的DFT-D2方法进行描述\citing{RN834-2006}。
 
-对于过渡态的计算，本研究采用CI-NEB（Climbing Image Nudged Elastic Band）方法对始末反应状态之间的能量鞍点进行搜寻，以确定反应势垒的大小\citing{RN790-2000}。对于过渡态计算，力收敛条件设为$\SI{3e-2}{\electronvolt \per \angstrom}$。
+对于过渡态的计算，本研究采用CI-NEB方法对始末反应状态之间的能量鞍点进行搜寻，以确定反应势垒的大小\citing{RN790-2000}。对于过渡态计算，力收敛条件设为$\SI{3e-2}{\electronvolt \per \angstrom}$。
 
 \section{石墨烯/\cembNHS{h-BN}纵向异质结的生长机理}
     \label{cap:CG}
@@ -43,7 +43,7 @@
         \label{fig:CG_diagram_CVD}
     \end{figure}
 
-    图\ref{fig:CG_diagram_routine}和图\ref{fig:CG_diagram_growthSketch}为本研究设计的利用\cemb{Cu}蒸气近邻催化效应在\cemb{h-BN}表面直接堆叠生长石墨烯的装置示意图和生长机理示意图。首先，可以在下方的\cemb{Cu}衬底表面利用常规的低压化学气相沉积法大面积的生长\cemb{h-BN}。这里本研究使用液态环硼氮烷（borazine）作为生长前驱体。下方的加热器为\cemb{h-BN}大面积生长时提供合适的生长温度。当\cemb{h-BN}覆盖满下方\cemb{Cu}衬底的表面时，本研究在上方的加热器处引入第二片\cemb{Cu}源用于蒸发产生\cemb{Cu}蒸气。蒸发开始了额一段时间之后，\cemb{Cu}蒸气在扩散作用下充满\cemb{h-BN}上方的空间，此时引入甲烷\cemb{CH4}作为石墨烯生长的前驱体，通过调整\cemb{h-BN}和上方铜蒸发源之间的距离至合适的位置，就可以在下方\cemb{Cu}表面的已生长\cemb{h-BN}的表面直接堆叠生长石墨烯。需要注意的是，由于作为前驱体的甲烷\cemb{CH4}直接通入衬底和蒸发源之间的间隙，因此会在上方\cemb{Cu}蒸发源的表面形成石墨烯，当石墨烯覆盖满上方的\cemb{Cu}蒸发源的表面后，\cemb{Cu}蒸发源将会失去产生原有的\cemb{Cu}蒸气的能力，无法继续为\cemb{h-BN}表面甲烷的裂解提供气态催化剂。这时需要通过机械装置（图\ref{fig:CG_diagram_routine}）替换掉已经蒸发能力衰减的\cemb{Cu}蒸发源，利用新换上的表面无石墨烯的\cemb{Cu}蒸发源继续提供\cemb{Cu}蒸气在\cemb{h-BN}表面生长石墨烯。
+    图\ref{fig:CG_diagram_routine}和图\ref{fig:CG_diagram_growthSketch}为本研究中采用的利用\cemb{Cu}蒸气近邻催化效应在\cemb{h-BN}表面直接堆叠生长石墨烯的装置示意图和生长机理示意图。首先，可以在下方的\cemb{Cu}衬底表面利用常规的低压化学气相沉积法大面积的生长\cemb{h-BN}。这里使用液态环硼氮烷（borazine）作为生长前驱体。下方的加热器为\cemb{h-BN}大面积生长时提供合适的生长温度。当\cemb{h-BN}覆盖满下方\cemb{Cu}衬底的表面时，在生长区域上方引入带有加热器的第二片\cemb{Cu}源用于蒸发产生\cemb{Cu}蒸气催化剂。蒸发开始了额一段时间之后，\cemb{Cu}蒸气在扩散作用下充满\cemb{h-BN}上方的空间，此时引入甲烷\cemb{CH4}作为石墨烯生长的前驱体，通过调整\cemb{h-BN}和上方铜蒸发源之间的距离至合适的位置，就可以在下方\cemb{Cu}表面的已生长\cemb{h-BN}的表面直接堆叠生长石墨烯。需要注意的是，由于作为前驱体的甲烷\cemb{CH4}直接通入衬底和蒸发源之间的间隙，因此会在上方\cemb{Cu}蒸发源的表面形成石墨烯，当石墨烯覆盖满上方的\cemb{Cu}蒸发源的表面后，\cemb{Cu}蒸发源将会失去产生原有的\cemb{Cu}蒸气的能力，无法继续为\cemb{h-BN}表面甲烷的裂解提供气态催化剂。这时需要通过机械装置（图\ref{fig:CG_diagram_routine}）替换掉已经蒸发能力衰减的\cemb{Cu}蒸发源，利用新换上的表面无石墨烯的\cemb{Cu}蒸发源继续提供\cemb{Cu}蒸气在\cemb{h-BN}表面生长石墨烯。
 
     \subsection{气态\cemb{Cu}催化剂的扩散}
     \label{CG:FEM_CuVapor}
