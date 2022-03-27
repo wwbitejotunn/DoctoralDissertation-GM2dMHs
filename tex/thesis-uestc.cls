@@ -149,7 +149,8 @@
 
 %\captionsetup{format=hang}
 %\captionsetup{width=\textwidth - 42pt}
-
+% 图题，段前6磅，段后12磅
+% 表题，段前12磅，段后6磅
 \setlength{\floatsep}{6bp}
 \setlength{\textfloatsep}{6bp}
 \setlength{\intextsep}{6bp}
@@ -165,15 +166,16 @@
   skip           = 6bp,
   figureposition = bottom,
   tableposition  = top,
-  width=\textwidth - 84pt,
+  width=\textwidth - 96pt,
 }
 
 \captionsetup[subfigure]{font=small, belowskip=6pt, width=36pt}
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
 \newcommand{\floatcontinue}{\end{figure}\clearpage\begin{figure}[tb]\ContinuedFloat}
-
+% 经过与学校样例对比，调整为8bp
 \captionsetup[figure]{belowskip=8bp,
 }
+% 经过与学校样例对比，调整为7bp
 \captionsetup[table]{
   belowskip = 7bp,
 }
