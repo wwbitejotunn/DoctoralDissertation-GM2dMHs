@@ -26,14 +26,14 @@
 
 \RequirePackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \RequirePackage{graphicx}
-\RequirePackage[font={doublespacing, small}, labelsep=space, skip=6pt]{caption}
+\RequirePackage{caption}
 
 \RequirePackage{array}
 \RequirePackage{booktabs}
-\setlength{\heavyrulewidth}{0.9pt}
-\setlength{\lightrulewidth}{0.5pt}
-\setlength{\arrayrulewidth}{0.5pt}
-\setlength{\cmidrulewidth}{0.5pt}
+\setlength{\heavyrulewidth}{1.5pt}
+\setlength{\lightrulewidth}{0.75pt}
+\setlength{\arrayrulewidth}{0.75pt}
+\setlength{\cmidrulewidth}{0.75pt}
 
 \RequirePackage{setspace}
 \RequirePackage{multirow}
@@ -116,9 +116,6 @@
 
 \RequirePackage[titles]{tocloft}
 \RequirePackage[labelformat=simple]{subcaption}
-\captionsetup[subfigure]{font=small, belowskip=6pt, width=36pt}
-\renewcommand{\thesubfigure}{(\alph{subfigure})}
-\newcommand{\floatcontinue}{\end{figure}\clearpage\begin{figure}[tb]\ContinuedFloat}
 
 \urlstyle{rm}
 \raggedbottom
@@ -152,11 +149,62 @@
 
 %\captionsetup{format=hang}
 %\captionsetup{width=\textwidth - 42pt}
-\captionsetup{width=\textwidth - 84pt}
-\captionsetup[figure]{aboveskip=6pt, belowskip=0pt}
-\captionsetup[table]{aboveskip=9pt, belowskip=0pt}
 
-\setlength{\intextsep}{9pt}
+\setlength{\floatsep}{6bp}
+\setlength{\textfloatsep}{6bp}
+\setlength{\intextsep}{6bp}
+
+\DeclareCaptionFont{capf}{%
+    \fontsize{10.5bp}{20bp}\selectfont
+}
+
+%\captionsetup[subfigure]{font=uestc, belowskip=6bp, width=36pt}
+\captionsetup{
+  font           = {capf},
+  labelsep       = space,
+  skip           = 6bp,
+  figureposition = bottom,
+  tableposition  = top,
+  width=\textwidth - 84pt,
+}
+
+\captionsetup[subfigure]{font=small, belowskip=6pt, width=36pt}
+\renewcommand{\thesubfigure}{(\alph{subfigure})}
+\newcommand{\floatcontinue}{\end{figure}\clearpage\begin{figure}[tb]\ContinuedFloat}
+
+\captionsetup[figure]{belowskip=8bp,
+}
+\captionsetup[table]{
+  belowskip = 7bp,
+}
+\patchcmd{\@addtocurcol}%
+  {\vskip \intextsep}%
+  {\edef\save@first@penalty{\the\lastpenalty}\unpenalty
+   \ifnum \lastpenalty = \@M  % hopefully the OR penalty
+     \unpenalty
+   \else
+     \penalty \save@first@penalty \relax % put it back
+   \fi
+   \ifnum\outputpenalty <-\@Mii
+     \addvspace\intextsep
+     \vskip\parskip
+   \else
+     \addvspace\intextsep
+   \fi}%
+  {}{\ustc@patch@error{\@addtocurcol}}
+\patchcmd{\@addtocurcol}%
+  {\vskip\intextsep \ifnum\outputpenalty <-\@Mii \vskip -\parskip\fi}%
+  {\ifnum\outputpenalty <-\@Mii
+     \aftergroup\vskip\aftergroup\intextsep
+     \aftergroup\nointerlineskip
+   \else
+     \vskip\intextsep
+   \fi}%
+  {}{\ustc@patch@error{\@addtocurcol}}
+\patchcmd{\@getpen}{\@M}{\@Mi}
+  {}{\ustc@patch@error{\@getpen}}
+
+
 
 \AtBeginEnvironment{figure}{%
   \def\@floatboxreset{\centering}%
