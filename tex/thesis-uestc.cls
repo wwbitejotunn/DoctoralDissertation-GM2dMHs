@@ -172,9 +172,10 @@
 \renewcommand{\thesubfigure}{(\alph{subfigure})}
 \newcommand{\floatcontinue}{\end{figure}\clearpage\begin{figure}[tb]\ContinuedFloat}
 
-\captionsetup[figure]{belowskip=6bp,}
+\captionsetup[figure]{belowskip=8bp,
+}
 \captionsetup[table]{
-  belowskip = 6bp,
+  belowskip = 7bp,
 }
 \patchcmd{\@addtocurcol}%
   {\vskip \intextsep}%
