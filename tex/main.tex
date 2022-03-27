@@ -5,6 +5,7 @@
 \usepackage{xparse}
 \usepackage{xstring}
 
+
 %comile flag here, check before publish
 
 \ifdef{\MYCAPFLAG}{}{
@@ -39,6 +40,25 @@
 \def\csigmaVar#1#2{\it \widehat{\sigma}_{\rm #1}^{\rm #2} \it}
 \def\kbconst{\it k_{\rm B} \it}
 
+\let \oldsection \section
+\renewcommand{\section}[2][]{
+    \FloatBarrier
+    \oldsection#1{#2}
+}
+
+
+\let \oldsubsection \subsection
+\renewcommand{\subsection}[2][]{
+    \FloatBarrier
+    \oldsubsection#1{#2}
+}
+
+
+\let \oldsubsubsection \subsubsection
+\renewcommand{\subsubsection}[2][]{
+    \FloatBarrier
+    \oldsubsubsection#1{#2}
+}
 
 \IfSubStr{\MYDRIFTFLAG}{Y}{
 % disable figure compile for speed up compile in drift mode
