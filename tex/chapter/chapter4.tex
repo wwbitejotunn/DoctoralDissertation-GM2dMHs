@@ -1,8 +1,9 @@
 % LTeX: language=zh-CN
 \chapter{\ce{Bi}衬底表面双层\cemb{InSb}的生长机理和极性演化研究}
+\label{cap:InSb}
 \section{引言}
 
-\ref{cap:石墨烯的生长机理研究}对化学气相沉积环境下石墨烯的生长机理进行了探究。以石墨烯为代表的单元素平面二维材料在理想的晶格状态下所有原子都处于同一平面，具有平面外方向的镜面对称性和反演对称性\citing{RN664-2017, RN903-2020}。而对于晶格结构以闪锌矿（zinc blende，ZB）和纤锌矿（wurtzite，WZ）为主的III-V族化合物半导体，其晶格对称性决定了在<111>晶向缺少反演对称。反演对称性的破缺使得III-V族化合物半导体的(111)晶面具有两个不同的端面\chinesecolon 以III族元素为端点的III极性和以V族元素为端点的V极性。不同极性表面原子的不同导致了III-V化合物半导体不同极性的(111)面表现出不同的物理化学特性\citing{RN910-2004}。III-V化合物半导体的表面极性同时也对生长过程中的III-V化合物的生长机理以及生长形貌产生影响\citing{RN929-2015, RN916-2018}。先前的研究表明，\cemb{InSb(111)}表面的许多新奇的物理现象与所处的极性息息相关。例如在特定极性的\cemb{InSb(111)}表面可以异质外延生长具有优异电子性质的新型材料 \citing{RN902-2016, RN852-2021, RN901-2019, RN900-2017, RN891-2019}。
+在\ref{cap:石墨烯的生长机理研究}中，本论文对化学气相沉积环境下石墨烯的生长机理进行了探究。以石墨烯为代表的单元素平面二维材料的原子结构平面外方向的镜面对称性和反演对称性\citing{RN664-2017, RN903-2020}，即所有的原子都处于同一二维平面内。而对于晶格结构以闪锌矿（zinc blende，ZB）和纤锌矿（wurtzite，WZ）为主的III-V族化合物半导体，其晶格对称性决定了在<111>晶向缺少反演对称。反演对称性的破缺使得III-V族化合物半导体的(111)晶面具有两个不同类型的端面\chinesecolon 以III族元素为端点的III极性和以V族元素为端点的V极性。不同极性表面原子的不同导致了III-V化合物半导体不同极性的(111)面表现出不同的物理化学特性\citing{RN910-2004}。III-V化合物半导体的表面极性同时也对生长过程中的III-V化合物的生长机理以及生长形貌产生影响\citing{RN929-2015, RN916-2018}。先前的研究表明，\cemb{InSb(111)}表面的许多新奇的物理现象与所处的极性息息相关。例如在特定极性的\cemb{InSb(111)}表面可以异质外延生长具有优异电子性质的新型材料 \citing{RN902-2016, RN852-2021, RN901-2019, RN900-2017, RN891-2019}。
 
 分子束外延（MBE）技术以及各种先进材料观测技术（如球差矫正透射电子显微镜）的发展使得研究者能够进一步研究III-V化合物半导体生长过程中极性的演化及调控手段。1994年，研究者发现在\cemb{InSb/Sn/InSb}异质结构中，底端\cemb{InSb}的极性可以透过5原子层的\cemb{Sn}薄膜，对上层的\cemb{InSb}的极性产生影响。随后的研究发现，大多数的III-V化合物半导体倾向于生长V极性的纳米结构\citing{RN864-2019, RN930-1998, RN931-2010}，通过不同的生长手段，也有研究者生长出了III极性的表面\citing{RN930-1998, RN931-2010}。通过对实验参数和生长环境进行细致地控制，研究者能够利用分子束外延的方法对所合成的III-V化合物半导体纳米结构进行生长极性控制 \citing{RN913-2016, RN858-2019, RN889-2011, RN911-2019}。得益于合成技术的发展，研究者对于III-V半导体的生长机制进行了大量的实验观测和理论探究，力图对其中的极性演化规律产生更深的理解，从而能够更好的对III-V化合物半导体低维纳米结构进行定极性生长\citing{RN878-2020, RN940-1979, RN886-2021, RN932-2018, RN934-2018, RN941-2016}。
 
@@ -550,17 +551,17 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 
 在四面体法中，针对不同极性的\cemb{InSb}表面需要分别构造了四个大小不一的四面体团簇从而对式\eqref{eq:IS_cluster_totEnergy}中的线性方程组进行求解。为了尽量减小计算的误差，在本章的研究中针对不同极性的\cemb{InSb}表面分别选用两大两小的四面体进行计算。如图\ref{fig:IS_structure_cluster}所示，用于计算的四种四面体团簇的尺寸分别为2、3、7、8。
 
-\begin{figure}[htb]
-%\begin{figure}[!b]
+%\begin{figure}[htb]
+\begin{figure}[!b]
     \subfloat[]{
         \includegraphics[width=0.35\textwidth]{pic/IS_structure_cluster_2.png}
     }
     \subfloat[]{
         \includegraphics[width=0.35\textwidth]{pic/IS_structure_cluster_3.png}
     }
-    \\
-%\end{figure}
-%\begin{figure}\ContinuedFloat        
+    %\\
+\end{figure}
+\begin{figure}\ContinuedFloat        
     \subfloat[]{
         \includegraphics[width=0.35\textwidth]{pic/IS_structure_cluster_7.png}
     }
@@ -572,6 +573,7 @@ III-V族化合物半导体被认为是下一代电子器件和光电子器件有
 \end{figure}
 
 要进一步验证在西面体方法中计算所得的片面处的\cemb{Sb}原子的赝氢原子的赝化学势$\tmuVar{H\left(Sb\right)}{face}$是否能够较好的对切片模型中钝化底部原子赝氢的$\tmuVar{H\left(Sb\right)}{}$进行近似，可以通过构造了一个上下表面均被赝氢钝化的\cemb{InSb}切片模型进行自收敛测试。在这样的切片模型中，上下表面赝氢的赝化学势之和可以写成如式\eqref{eq:IS_pseMuH_Sum}的形式\chinesecolon
+
 \begin{equation}
     \label{eq:IS_pseMuH_Sum}
     \tmuVar{H\left(Sb\right)}{}+\tmuVar{H\left(In\right)}{}=\frac{1}{N_{\rm H \left(In/ Sb\right)}} \left(\energyVar{slab}{}-N_{\rm In}\muVar{In}{}-N_{\rm Sb}\muVar{Sb}{}\right)
@@ -643,4 +645,4 @@ $\TfourSite$位\cemb{In}原子的归位使得\InSbMLpolar{2}{2}条形构型的�
 考虑到表面重构后，重构的\cemb{InSb}表面相比未重构的\cemb{InSb}具有较大程度的表面能下降。综合以上计算可以认为，当生长了第二层具有重构表面的\cemb{InSb}后，第一层\cemb{InSb}的极化现象主要来源于第二层重构表面大幅下降的表面能。表面能的大幅下降克服了非晶态\cemb{InSb}第一层与\cemb{Bi}衬底之间强烈的界面作用，第二层\cemb{InSb}通过界面作用的方式使得非晶态\cemb{InSb}第一层不得不向\cemb{In}极性的构型进行转变，用减小双层\cemb{InSb}内部界面能的方式弥补与\cemb{Bi}衬底之间界面吸附的减弱。
 
 \section{本章小结}
-本章基于密度泛函理论的计算系统的探究了\cemb{Bi(001)}衬底表面双层\cemb{InSb(111)}薄膜从原子吸附到非晶态单层生长再到双层\cemb{In}极性自极化整个过程的生长序列和形貌演化规律。研究表明，对于\cemb{Bi(001)}衬底上生长的单层\cemb{InSb(111)}，在衬底的作用下单层\cemb{InSb(111)}表现出以多种混合极性平衡而成的非晶态。而当\cemb{Bi(001)}衬底上的\cemb{InSb(111)}生长至双层，第一层非晶态的\cemb{InSb}会在第二层的作用下极化至\cemb{In}极性。同时，为了能够进一步了解生长环境和沉积时间对于双层\cemb{InSb}生长过程和极性演化的作用绘制了双层\cemb{InSb}在不同\cemb{In}原子化学势$\muVar{In}{}$条件下包含不同沉积原子数的生长相图。进一步的机理分析将第二层\cemb{InSb}对第一层\cemb{InSb}的极化作用归功于重构\cemb{InSb}表面大幅下降的表面能。表面重构结构具有的低表面能在与\cemb{Bi}衬底和\cemb{InSb}产生的界面能的竞争中占据上风，通过双层\cemb{InSb}之间的界面作用将第一层\cemb{InSb}转变为\cemb{InSb}极性的构型。\cemb{Bi(001)}衬底上\cemb{InSb(111)}生长极性相图和极性演化机理的研究有助于加深对低维III-V化合物半导体纳米结构生长过程的理解，同时帮助对低维III-V化合物半导体纳米结构的生长过程和生长形貌进行更有效的控制。
+本章将二维材料的生长机理研究扩展至非平面的二维材料。以\cemb{InSb}材料为研究对象，选取\cemb{Bi(001)}作为生长衬底，利用密度泛函理论的计算方法系统的探究了\cemb{InSb(111)}从原子吸附到非晶态单层生长再到双层\cemb{In}极性自极化整个过程的生长序列和形貌演化规律。研究表明，对于\cemb{Bi(001)}衬底上生长的单层\cemb{InSb(111)}，在衬底的作用下单层\cemb{InSb(111)}表现出以多种混合极性平衡而成的非晶态。而当\cemb{Bi(001)}衬底上的\cemb{InSb(111)}生长至双层，第一层非晶态的\cemb{InSb}会在第二层的作用下极化至\cemb{In}极性。同时，为了能够进一步了解生长环境和沉积时间对于双层\cemb{InSb}生长过程和极性演化的作用绘制了双层\cemb{InSb}在不同\cemb{In}原子化学势$\muVar{In}{}$条件下包含不同沉积原子数的生长相图。进一步的机理分析将第二层\cemb{InSb}对第一层\cemb{InSb}的极化作用归功于重构\cemb{InSb}表面大幅下降的表面能。表面重构结构具有的低表面能在与\cemb{Bi}衬底和\cemb{InSb}产生的界面能的竞争中占据上风，通过双层\cemb{InSb}之间的界面作用将第一层\cemb{InSb}转变为\cemb{InSb}极性的构型。\cemb{Bi(001)}衬底上\cemb{InSb(111)}生长极性相图和极性演化机理的研究有助于加深对低维III-V化合物半导体纳米结构生长过程的理解，同时帮助对低维III-V化合物半导体纳米结构的生长过程和生长形貌进行更有效的控制。
