@@ -1141,6 +1141,7 @@ School: & \en@theschool \\
 
 \newcommand{\bstlabelmark}{lo}
 \newcommand{\thesisloadbibliography}[2][]{
+  \standardheader
   \hyphenpenalty=5000
   \tolerance=1000
   \ifthenelse{
@@ -1180,6 +1181,7 @@ School: & \en@theschool \\
 }
 
 \newcommand{\thesisloadaccomplish}[1]{
+  \standardheader
   \hyphenpenalty=5000
   \tolerance=1000
   \nociteaccomplish{*}
